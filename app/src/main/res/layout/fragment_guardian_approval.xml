@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="guardianApproval"
+            type="com.ci.act.ui.home.mainEventScreenRegister.fragments.guardianApproval.GuardianApprovalViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.home.mainEventScreenRegister.fragments.guardianApproval.GuardianApprovalFragment">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtGuardianApproval"
+                style="@style/extra_large_text"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Guardian Approval"
+                android:textColor="@color/ruby_red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtLegalGuardianApproval"
+                style="@style/extra_large_text"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:gravity="center"
+                android:maxLines="4"
+                android:text="IF YOU ARE UNDER THE AGE OF 18, THE\nFOLLOWING SECTION MUST BE SIGNED BY\nYOUR LEGAL GUARDIAN:"
+                android:textColor="#707070"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtGuardianApproval" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtRepresentGuardianApproval"
+                style="@style/large_text"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:gravity="center"
+                android:maxLines="4"
+                android:text="I represent that I am a parent or legal guardian of the\nminor who ha signed this agreement, I hereby\nconsentand agree that we both shall be bound\nthereby."
+                android:textColor="#707070"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtLegalGuardianApproval" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtGetGuardianApproval"
+                style="@style/extra_large_text"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:gravity="center"
+                android:maxLines="4"
+                android:text="GET YOUR GUARDIAN SIGNATURE BY:"
+                android:textColor="#707070"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtRepresentGuardianApproval" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtDigitalSign"
+                style="@style/extra_large_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp30"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/red_line_sign_shape"
+                android:gravity="start"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp15"
+                android:paddingEnd="@dimen/dp50"
+                android:paddingBottom="@dimen/dp15"
+                android:text="Digital Sign"
+                app:layout_constraintStart_toStartOf="@id/txtGetGuardianApproval"
+                app:layout_constraintTop_toBottomOf="@id/txtGetGuardianApproval" />
+
+            <ImageView
+                android:id="@+id/ImgDigitalSign"
+                style="@style/extra_large_text"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginEnd="@dimen/dp4"
+                android:src="@drawable/screenshot18"
+                app:layout_constraintBottom_toBottomOf="@id/txtDigitalSign"
+                app:layout_constraintEnd_toEndOf="@id/txtDigitalSign"
+                app:layout_constraintTop_toTopOf="@id/txtDigitalSign" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtDigitalSignUpload"
+                style="@style/extra_large_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp30"
+                android:background="@drawable/red_line_sign_shape"
+                android:gravity="start"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp15"
+                android:paddingEnd="@dimen/dp70"
+                android:paddingBottom="@dimen/dp15"
+                android:text="Upload"
+                app:layout_constraintEnd_toEndOf="@id/txtGetGuardianApproval"
+                app:layout_constraintTop_toBottomOf="@id/txtGetGuardianApproval" />
+
+            <ImageView
+                android:id="@+id/imgDigitalSignUpload"
+                style="@style/extra_large_text"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginEnd="@dimen/dp4"
+                android:src="@drawable/screenshot19"
+                app:layout_constraintBottom_toBottomOf="@id/txtDigitalSignUpload"
+                app:layout_constraintEnd_toEndOf="@id/txtDigitalSignUpload"
+                app:layout_constraintTop_toTopOf="@id/txtDigitalSignUpload" />
+
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtPaymentQuestionsInformation"
+                style="@style/large_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp30"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginEnd="@dimen/dp30"
+                android:background="@drawable/shape_edit_text_settings_email_and_password"
+                android:maxLines="1"
+                android:padding="@dimen/dp15"
+                android:text="View Terms"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/imgDigitalSignUpload" />
+
+            <ImageView
+                android:id="@+id/imgAdding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp30"
+                android:src="@drawable/screenshot20"
+                app:layout_constraintBottom_toBottomOf="@id/txtPaymentQuestionsInformation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtPaymentQuestionsInformation" />
+
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtInformationAnswers1"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:maxLines="4"
+                android:padding="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp20"
+                android:text="Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@id/mainSecondaryConstraint"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/dp30"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/dp30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPaymentQuestionsInformation" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainSecondaryConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp40"
+                android:background="@color/ruby_red"
+                android:padding="@dimen/dp30"
+                app:layout_constraintTop_toBottomOf="@id/txtInformationAnswers1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLineLeft2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.03" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLineRight2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.97" />
+
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:scaleX="1.70"
+                    android:scaleY="1.70"
+                    android:textSize="@dimen/sp20"
+                    app:layout_constraintBottom_toBottomOf="@id/txtCheckAgreements2"
+                    app:layout_constraintEnd_toStartOf="@id/txtCheckAgreements2"
+                    app:layout_constraintStart_toStartOf="@id/guideLineLeft2"
+                    app:layout_constraintTop_toTopOf="@id/txtCheckAgreements2" />
+
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/txtCheckAgreements2"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:maxLines="3"
+                    android:text="I hereby declare that the above entered event registration information are true and correct\nto the best of my knowledge."
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/guideLineRight2"
+                    app:layout_constraintStart_toEndOf="@id/checkBox3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.ci.act.widgets.CustomButton
+                    android:id="@+id/btnSignatureBox"
+                    style="@style/extra_large_text_semi_bold"
+                    android:layout_width="@dimen/dp280"
+                    android:layout_height="@dimen/dp70"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:background="@drawable/white_rounded_button"
+                    android:text="Register"
+                    android:textColor="@color/ruby_red"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guideLineRight2"
+                    app:layout_constraintStart_toStartOf="@id/guideLineLeft2"
+                    app:layout_constraintTop_toBottomOf="@id/txtCheckAgreements2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</layout>

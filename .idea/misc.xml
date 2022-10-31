@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/drawable/calendar.xml" value="0.101" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/drawable/check_circle.xml" value="0.101" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/drawable/ic_backspace.xml" value="0.1" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.101" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/drawable/orange_freelance.xml" value="0.1" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/drawable/radio_button_unchecked.xml" value="0.101" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/drawable/rounded_button.xml" value="0.101" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/drawable/rounded_edittext.xml" value="0.101" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/drawable/shape_edit_text_settings_email_and_password.xml" value="0.101" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/drawable/view_line.xml" value="0.1" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/activity_access_location.xml" value="0.2" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/activity_different_sports.xml" value="0.2" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/activity_forgot_password.xml" value="0.2" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/activity_live_data_example.xml" value="0.1" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/activity_on_boarding.xml" value="0.2" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/activity_push_notification.xml" value="0.2" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/activity_sign_in.xml" value="0.2" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/activity_social_media.xml" value="0.2" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/fragment_cant_access_account.xml" value="0.2" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/fragment_confirmation.xml" value="0.1859375" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/fragment_on_boarding_screens.xml" value="0.2" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/fragment_required_details.xml" value="0.2" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/fragment_surity.xml" value="0.2" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/layout/sports_items.xml" value="0.18" />
+        <entry key="..\:/Users/Praveen/AndroidStudioProjects/ACT/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

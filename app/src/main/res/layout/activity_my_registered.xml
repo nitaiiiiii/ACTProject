@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="myRegisteredEvents"
+            type="com.ci.act.ui.home.myRegisteredEvents.MyRegisteredViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey"
+        tools:context=".ui.home.myRegisteredEvents.MyRegisteredActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtRegisteredEventsMy"
+            style="@style/extra_large_text_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edit_text_settings_email_and_password"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="@dimen/dp20"
+            android:text="MY EVENTS"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgRegisteredEvents"
+            android:layout_width="@dimen/dp35"
+            android:layout_height="@dimen/dp35"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="@id/txtRegisteredEventsMy"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toTopOf="@id/txtRegisteredEventsMy" />
+
+        <View
+            android:id="@+id/firstView"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp100"
+            android:background="@color/ruby_red"
+            app:layout_constraintBottom_toTopOf="@id/rvMyRegistered"
+            app:layout_constraintEnd_toStartOf="@id/secondView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtRegisteredEventsMy" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtRegisteredMy"
+            style="@style/extra_large_text_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="8\nRegistered"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/firstView"
+            app:layout_constraintEnd_toEndOf="@id/firstView"
+            app:layout_constraintStart_toStartOf="@id/firstView"
+            app:layout_constraintTop_toTopOf="@id/firstView" />
+
+        <View
+            android:id="@+id/secondView"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp100"
+            android:background="@color/red"
+            app:layout_constraintBottom_toTopOf="@id/rvMyRegistered"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/firstView"
+            app:layout_constraintTop_toBottomOf="@id/txtRegisteredEventsMy" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtParticipatedMy"
+            style="@style/extra_large_text_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="5\nParticipants"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/secondView"
+            app:layout_constraintEnd_toEndOf="@id/secondView"
+            app:layout_constraintStart_toStartOf="@id/secondView"
+            app:layout_constraintTop_toTopOf="@id/secondView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMyRegistered"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/secondView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="signatureBox"
+            type="com.ci.act.ui.customDialogFragments.signatureBox.SignatureBoxViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.customDialogFragments.signatureBox.SignatureBoxFragment">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSignatureBox"
+                style="@style/extra_large_bebas_bold"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp10"
+                android:text="SIGNATURE BOX"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/imgSignatureRedLine"
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:background="#E91E63"
+                android:foregroundGravity="center"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtSignatureBox" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtFillSignatureBox"
+                style="@style/extra_large_text_bold"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp2"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Sign with your fingers (or) touch pen."
+                android:textColor="@color/grey"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/imgSignatureRedLine" />
+
+            <com.ci.act.widgets.MutliLineEditText
+                android:id="@+id/edtAccessAccountSignatureMultiLine"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/shape_edit_text_settings_email_and_password"
+                android:gravity="start"
+                android:lines="10"
+                android:maxLength="250"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp5"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtFillSignatureBox" />
+
+            <ImageView
+                android:id="@+id/imgSignature"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:src="@drawable/refresh"
+                app:layout_constraintBottom_toBottomOf="@id/edtAccessAccountSignatureMultiLine"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSignature"
+                style="@style/large_text"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Clear"
+                app:layout_constraintBottom_toBottomOf="@id/imgSignature"
+                app:layout_constraintEnd_toStartOf="@id/imgSignature"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="@id/imgSignature" />
+
+            <com.ci.act.widgets.CustomButton
+                android:id="@+id/btnSignatureBox"
+                style="@style/extra_large_text_semi_bold"
+                android:layout_width="@dimen/dp280"
+                android:layout_height="@dimen/dp70"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/rounded_button"
+                android:text="Save"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/txtSignatureBoxClose"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/edtAccessAccountSignatureMultiLine" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSignatureBoxClose"
+                style="@style/large_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp30"
+                android:background="@drawable/shape_edit_text_settings_email_and_password"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp20"
+                android:text="Close"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

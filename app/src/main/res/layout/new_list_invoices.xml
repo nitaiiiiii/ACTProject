@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp5"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/dp4">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp10">
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtInvoicesListPremiumPlan"
+            style="@style/extra_large_text_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Premium Plan"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtInvoicesListPremiumDate"
+            style="@style/large_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Apr 10,2018"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtInvoicesListPremiumPlan" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtInvoicesListPremiumExpirationDate"
+            style="@style/large_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp50"
+            android:maxLines="1"
+            android:text="Expires on: May 10, 2018"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtInvoicesListPremiumDate" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtInvoicesListPremiumDatePrice"
+            style="@style/extra_large_text_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$10.97"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtInvoicesListDateResult"
+            style="@style/medium_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Success"
+            android:textColor="@color/green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtInvoicesListPremiumDatePrice" />
+
+        <ImageView
+            android:id="@+id/imgListInvoices"
+            android:layout_width="@dimen/dp35"
+            android:layout_height="@dimen/dp35"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/ic_baseline_file_download_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

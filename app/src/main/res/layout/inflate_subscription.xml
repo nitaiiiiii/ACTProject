@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_10dp"
+        app:cardCornerRadius="@dimen/dp5">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbarSize="0dp"
+            android:scrollbars="none">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/premiumSubscription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/mainCardSubscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/dp40"
+                        app:cardCornerRadius="@dimen/dp5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.ci.act.widgets.CustomTextView
+                                android:id="@+id/txtPremiumPlan"
+                                style="@style/extra_large_text_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:padding="@dimen/dp5"
+                                android:text="PREMIUM PLAN"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <View
+                                android:id="@+id/imgPremiumPlanSubscription"
+                                android:layout_width="40dp"
+                                android:layout_height="4dp"
+                                android:background="#E91E63"
+                                android:foregroundGravity="center"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/txtPremiumPlan" />
+
+                            <com.ci.act.widgets.CustomTextView
+                                android:id="@+id/txtPremiumPlanMonthlyRate"
+                                style="@style/extra_large_text_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp15"
+                                android:layout_marginTop="@dimen/dp30"
+                                android:maxLines="1"
+                                android:text="$19.97"
+                                app:layout_constraintEnd_toEndOf="@id/txtPremiumPlanFirstMonth"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/imgPremiumPlanSubscription" />
+
+                            <com.ci.act.widgets.CustomTextView
+                                android:id="@+id/txtPremiumPlanFirstMonth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp15"
+                                android:maxLines="1"
+                                android:text="1st Month"
+                                android:textColor="@color/ruby_red"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/txtPremiumPlanMonthlyRate" />
+
+                            <com.ci.act.widgets.CustomTextView
+                                android:id="@+id/txtPremiumPlanAfterMonthlyRate"
+                                style="@style/extra_large_text_bold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp30"
+                                android:layout_marginEnd="@dimen/dp15"
+                                android:maxLines="1"
+                                android:text="$19.97"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/imgPremiumPlanSubscription" />
+
+                            <com.ci.act.widgets.CustomTextView
+                                android:id="@+id/txtPremiumPlanAfterFirstMonth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/dp15"
+                                android:maxLines="1"
+                                android:text="Month After"
+                                android:textColor="@color/ruby_red"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@id/txtPremiumPlanAfterMonthlyRate"
+                                app:layout_constraintTop_toBottomOf="@id/txtPremiumPlanAfterMonthlyRate" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:id="@+id/imgTickCorrect"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/ic_baseline_check_24"
+                        app:layout_constraintBottom_toBottomOf="@id/txtNationalRanking"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/mainCardSubscription" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtNationalRanking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="National Ranking"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgTickCorrect"
+                        app:layout_constraintStart_toEndOf="@id/imgTickCorrect"
+                        app:layout_constraintTop_toBottomOf="@id/mainCardSubscription" />
+
+                    <ImageView
+                        android:id="@+id/imgAccessTickCorrect"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/ic_baseline_check_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgTickCorrect" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtAccessGuide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="Access to Resource Guide"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgAccessTickCorrect"
+                        app:layout_constraintStart_toEndOf="@id/imgAccessTickCorrect"
+                        app:layout_constraintTop_toTopOf="@id/imgAccessTickCorrect" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtWeeklyTraining"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp30"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="- Weekly Training Guide"
+                        android:textColor="@color/grey"
+                        app:layout_constraintBottom_toBottomOf="@id/imgAccessTickCorrect"
+                        app:layout_constraintStart_toEndOf="@id/imgAccessTickCorrect"
+                        app:layout_constraintTop_toBottomOf="@id/txtAccessGuide" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtNutrition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp30"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:maxLines="1"
+                        android:text="- Nutrition"
+                        android:textColor="@color/grey"
+                        app:layout_constraintStart_toEndOf="@id/imgAccessTickCorrect"
+                        app:layout_constraintTop_toBottomOf="@id/txtWeeklyTraining" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtRecruiting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp30"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:maxLines="1"
+                        android:text="- Recruiting"
+                        android:textColor="@color/grey"
+                        app:layout_constraintStart_toEndOf="@id/imgAccessTickCorrect"
+                        app:layout_constraintTop_toBottomOf="@id/txtNutrition" />
+
+                    <ImageView
+                        android:id="@+id/imgUpdatedTickCorrect"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/ic_baseline_check_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtRecruiting" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtExpandedGuide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="Access to Resource Guide"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgUpdatedTickCorrect"
+                        app:layout_constraintStart_toEndOf="@id/imgUpdatedTickCorrect"
+                        app:layout_constraintTop_toTopOf="@id/imgUpdatedTickCorrect" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtRankingTraining"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp30"
+                        android:maxLines="1"
+                        android:text="- College Ranking"
+                        android:textColor="@color/grey"
+                        app:layout_constraintStart_toEndOf="@id/imgUpdatedTickCorrect"
+                        app:layout_constraintTop_toBottomOf="@id/txtExpandedGuide" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtNationalRankingTesting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp30"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:maxLines="1"
+                        android:text="- National Ranking In Each Test"
+                        android:textColor="@color/grey"
+                        app:layout_constraintStart_toEndOf="@id/imgUpdatedTickCorrect"
+                        app:layout_constraintTop_toBottomOf="@id/txtRankingTraining" />
+
+                    <ImageView
+                        android:id="@+id/imgLeaderSubscription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/ic_baseline_check_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtNationalRankingTesting" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtExpandedGuideLeaderBoard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="Access to Resource Guide"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgLeaderSubscription"
+                        app:layout_constraintStart_toEndOf="@id/imgLeaderSubscription"
+                        app:layout_constraintTop_toTopOf="@id/imgLeaderSubscription" />
+
+                    <com.ci.act.widgets.CustomButton
+                        android:id="@+id/btnSignatureBox"
+                        style="@style/extra_large_text_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:layout_marginBottom="@dimen/dp30"
+                        android:background="@drawable/rounded_button"
+                        android:paddingStart="@dimen/dp30"
+                        android:paddingEnd="@dimen/dp30"
+                        android:text="Subscribe Now!"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtExpandedGuideLeaderBoard" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/platinumSubscription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/mainCardSubscription1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:elevation="@dimen/dp40"
+                            app:cardCornerRadius="@dimen/dp5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imgSpecialOffer"
+                                    android:layout_width="@dimen/dp100"
+                                    android:layout_height="@dimen/dp100"
+                                    android:layout_marginBottom="@dimen/dp20"
+                                    android:src="@drawable/special_offer"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.ci.act.widgets.CustomTextView
+                                    android:id="@+id/txtPremiumPlan1"
+                                    style="@style/extra_large_text_bold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:padding="@dimen/dp5"
+                                    android:text="PLATINUM PLAN"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <View
+                                    android:id="@+id/imgPremiumPlanSubscription1"
+                                    android:layout_width="40dp"
+                                    android:layout_height="4dp"
+                                    android:background="#E91E63"
+                                    android:foregroundGravity="center"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/txtPremiumPlan1" />
+
+                                <com.ci.act.widgets.CustomTextView
+                                    android:id="@+id/txtPremiumPlanMonthlyRate1"
+                                    style="@style/extra_large_text_bold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp30"
+                                    android:maxLines="1"
+                                    android:text="$99.97"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/imgPremiumPlanSubscription1" />
+
+                                <com.ci.act.widgets.CustomTextView
+                                    android:id="@+id/txtPremiumPlanFirstMonth1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="Per Year"
+                                    android:textColor="@color/ruby_red"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/txtPremiumPlanMonthlyRate1" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <ImageView
+                            android:id="@+id/imgTickCorrect1"
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_marginTop="@dimen/dp30"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/image"
+                            app:layout_constraintBottom_toBottomOf="@id/txtNationalRanking1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/mainCardSubscription1" />
+
+                        <com.ci.act.widgets.CustomTextView
+                            android:id="@+id/txtNationalRanking1"
+                            style="@style/large_text"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp30"
+                            android:maxLines="1"
+                            android:padding="@dimen/dp5"
+                            android:text="All features in Premium Membership"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="@id/imgTickCorrect1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/imgTickCorrect1"
+                            app:layout_constraintTop_toBottomOf="@id/mainCardSubscription1" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25"
+                            android:src="@drawable/ic_baseline_add_24"
+                            app:layout_constraintBottom_toTopOf="@id/imgAccessTickCorrect1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtNationalRanking1" />
+
+                        <ImageView
+                            android:id="@+id/imgAccessTickCorrect1"
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_marginTop="@dimen/dp50"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/image"
+                            app:layout_constraintBottom_toBottomOf="@id/txtAccessGuide1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/imgTickCorrect1" />
+
+                        <com.ci.act.widgets.CustomTextView
+                            android:id="@+id/txtAccessGuide1"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp40"
+                            android:maxLines="1"
+                            android:padding="@dimen/dp5"
+                            android:text="VIP Entrance Line for all ACT Events."
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="@id/imgAccessTickCorrect1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/imgAccessTickCorrect1" />
+
+
+                        <ImageView
+                            android:id="@+id/imgUpdatedTickCorrect1"
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/image"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtAccessGuide1" />
+
+                        <com.ci.act.widgets.CustomTextView
+                            android:id="@+id/txtExpandedGuide1"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:maxLines="2"
+                            android:padding="@dimen/dp5"
+                            android:text="Entered Monthly in a scholarship\ngiveaway."
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="@id/imgUpdatedTickCorrect1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/imgUpdatedTickCorrect1"
+                            app:layout_constraintTop_toTopOf="@id/imgUpdatedTickCorrect1" />
+
+
+                        <ImageView
+                            android:id="@+id/imgLeaderSubscription1"
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/image"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtExpandedGuide1" />
+
+                        <com.ci.act.widgets.CustomTextView
+                            android:id="@+id/txtExpandedGuideLeaderBoard1"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:maxLines="1"
+                            android:padding="@dimen/dp5"
+                            android:text="Over 50% in Savings!"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="@id/imgLeaderSubscription1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/imgLeaderSubscription1"
+                            app:layout_constraintTop_toTopOf="@id/imgLeaderSubscription1" />
+
+                        <com.ci.act.widgets.CustomButton
+                            android:id="@+id/btnSignatureBox1"
+                            style="@style/extra_large_text_semi_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_marginTop="@dimen/dp90"
+                            android:layout_marginBottom="@dimen/dp30"
+                            android:background="@drawable/rounded_button"
+                            android:paddingStart="@dimen/dp30"
+                            android:paddingEnd="@dimen/dp30"
+                            android:text="Subscribe Now!"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtExpandedGuideLeaderBoard1" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <ImageView
+        android:id="@+id/imgEventsLiveStream"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp300"
+        android:layout_marginBottom="@dimen/dp6"
+        android:scaleType="fitXY"
+        android:src="@drawable/football_event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtFootBallCamp"
+        style="@style/extra_large_text"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp3"
+        android:padding="@dimen/dp5"
+        android:text="FOOTBALL CAMP"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/imgFootBallCamp"
+        app:layout_constraintStart_toStartOf="@id/guideLineLeft" />
+
+    <ImageView
+        android:id="@+id/imgFootBallCamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp5"
+        android:src="@drawable/location_on"
+        app:layout_constraintBottom_toTopOf="@id/imgFootBallCampGroups"
+        app:layout_constraintStart_toStartOf="@id/guideLineLeft" />
+
+    <TextView
+        android:id="@+id/txtFootBallCountry"
+        style="@style/large_text"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:text="California"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/imgFootBallCamp"
+        app:layout_constraintBottom_toTopOf="@id/txtFootBallCountryParticipated"
+        app:layout_constraintStart_toEndOf="@id/imgFootBallCamp"
+        app:layout_constraintTop_toTopOf="@id/imgFootBallCamp" />
+
+    <ImageView
+        android:id="@+id/imgFootBallCampGroups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp5"
+        android:src="@drawable/groups"
+        app:layout_constraintBottom_toBottomOf="@id/imgEventsLiveStream"
+        app:layout_constraintStart_toStartOf="@id/guideLineLeft" />
+
+    <TextView
+        android:id="@+id/txtFootBallCountryParticipants"
+        style="@style/extra_large_text_bold"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp5"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/imgEventsLiveStream"
+        app:layout_constraintStart_toEndOf="@id/imgFootBallCampGroups" />
+
+    <TextView
+        android:id="@+id/txtFootBallCountryParticipated"
+        style="@style/large_text"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp5"
+        android:text="Participants"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/imgEventsLiveStream"
+        app:layout_constraintStart_toEndOf="@id/txtFootBallCountryParticipants" />
+
+    <ImageView
+        android:id="@+id/imgFootBallCampFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp5"
+        app:layout_constraintBottom_toBottomOf="@id/imgEventsLiveStream"
+        app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+        app:layout_constraintTop_toTopOf="@id/txtFootBallCountryParticipated" />
+
+    <TextView
+        android:id="@+id/txtFootBallCountryParticipantsLikes"
+        style="@style/extra_large_text_bold"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp5"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/imgEventsLiveStream"
+        app:layout_constraintEnd_toStartOf="@id/imgFootBallCampFavorites" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="faqEmpty"
+            type="com.ci.act.ui.home.faqEmpty.FaqEmptyViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.faqEmpty.FaqEmptyActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtFaqEmpty"
+            style="@style/extra_large_text_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edit_text_settings_email_and_password"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="@dimen/dp20"
+            android:text="FAQ's"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgFaqEmpty"
+            android:layout_width="@dimen/dp35"
+            android:layout_height="@dimen/dp35"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="@id/txtFaqEmpty"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toTopOf="@id/txtFaqEmpty" />
+
+        <ImageView
+            android:id="@+id/imgPlayingFaqEmpty"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp250"
+            android:layout_marginTop="@dimen/dp20"
+            android:src="@drawable/faq"
+            android:padding="@dimen/dp10"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/txtFaqEmpty" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtHintFaqEmpty"
+            style="@style/extra_large_text_bold"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingStart="@dimen/dp5"
+            android:text="No FAQ's Found!"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/imgPlayingFaqEmpty" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtFillFaqEmpty"
+            style="@style/extra_large_text"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="3"
+            android:text="Our team is working hard to bring\nquick helpful FAQ's for you."
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/txtHintFaqEmpty" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtEmptyRelevantQuestions"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            style="@style/large_text"
+            android:padding="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp10"
+            android:text="Can't find relevant\nquestion?"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnEmptyRelevantQuestions"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft" />
+
+        <com.ci.act.widgets.CustomButton
+            android:id="@+id/btnEmptyRelevantQuestions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Us"
+            android:textColor="@color/white"
+            android:paddingStart="@dimen/dp40"
+            android:paddingEnd="@dimen/dp40"
+            android:textAllCaps="false"
+            android:background="@drawable/rounded_button"
+            app:layout_constraintBottom_toBottomOf="@id/txtEmptyRelevantQuestions"
+            app:layout_constraintTop_toTopOf="@id/txtEmptyRelevantQuestions"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

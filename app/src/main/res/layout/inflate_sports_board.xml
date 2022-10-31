@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainSportsBoardCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/imgSportsBoardKing"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:src="@drawable/crown_img"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/imgSportsBoardPicture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.ci.act.widgets.CustomTextView
+        android:id="@+id/txtPositionSportsBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2."
+        app:layout_constraintTop_toTopOf="@id/imgSportsBoardKing"
+        app:layout_constraintStart_toStartOf="@id/imgSportsBoardKing"
+        app:layout_constraintEnd_toEndOf="@id/imgSportsBoardKing"
+        app:layout_constraintBottom_toBottomOf="@id/imgSportsBoardKing"/>
+
+    <ImageView
+        android:id="@+id/imgSportsBoardPicture"
+        android:layout_width="@dimen/dp70"
+        android:layout_height="@dimen/dp70"
+        android:layout_marginStart="@dimen/dp10"
+        android:src="@drawable/profile_picture"
+        app:layout_constraintStart_toEndOf="@id/imgSportsBoardKing"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtSportsBoardMaria"
+        style="@style/medium_text_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp5"
+        android:maxLines="1"
+        android:text="Maria Gracia"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/imgSportsBoardPicture"
+        app:layout_constraintStart_toEndOf="@id/imgSportsBoardPicture"
+        app:layout_constraintTop_toTopOf="@id/imgSportsBoardPicture" />
+
+    <TextView
+        android:id="@+id/txtSportsBoardB17"
+        style="@style/medium_text_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_marginEnd="@dimen/dp5"
+        android:background="@drawable/background_line_red"
+        android:maxLines="1"
+        android:paddingStart="@dimen/dp10"
+        android:paddingEnd="@dimen/dp10"
+        android:paddingTop="@dimen/dp3"
+        android:paddingBottom="@dimen/dp3"
+        android:text="B17"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="@id/imgSportsBoardPicture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imgSportsBoardPicture" />
+
+    <TextView
+        android:id="@+id/txtSportsBoardTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9:35"
+        style="@style/medium_text"
+        android:layout_marginEnd="@dimen/dp10"
+        app:layout_constraintTop_toTopOf="@id/txtSportsBoardB17"
+        app:layout_constraintEnd_toStartOf="@id/txtSportsBoardB17"
+        app:layout_constraintBottom_toBottomOf="@id/txtSportsBoardB17"/>
+
+    <View
+        android:id="@+id/bottomSportsBoard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgSportsBoardPicture" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

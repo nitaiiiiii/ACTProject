@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="myProfile"
+            type="com.ci.act.ui.home.myProfile.MyProfileViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            tools:context=".ui.home.myProfile.MyProfileActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp200"
+                android:background="@color/ruby_red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgMyProfileEvents"
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
+                android:layout_marginTop="@dimen/dp5"
+                android:src="@drawable/ic"
+                app:layout_constraintEnd_toStartOf="@id/txtMyProfile"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtMyProfile"
+                style="@style/extra_large_text_bold"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:gravity="center"
+                android:text="MY PROFILE"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/imgMyProfileShare"
+                app:layout_constraintEnd_toStartOf="@id/imgMyProfileShare"
+                app:layout_constraintStart_toEndOf="@id/imgMyProfileEvents"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgMyProfileShare"
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
+                android:layout_marginTop="@dimen/dp5"
+                android:src="@drawable/share"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toEndOf="@id/txtMyProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgProfileBasketBallPlayer"
+                android:layout_width="@dimen/dp100"
+                android:layout_height="@dimen/dp100"
+                android:elevation="3dp"
+                android:src="@drawable/baseball"
+                app:layout_constraintBottom_toTopOf="@id/mainCard"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="@id/mainCard" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCard"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp80"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/imgMyProfileShare">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainConstraints"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp10">
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtProfilePlayer"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp60"
+                        android:text="Mark Johnson"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/imgProfilePlayerRedLine"
+                        android:layout_width="40dp"
+                        android:layout_height="4dp"
+                        android:background="#E91E63"
+                        android:foregroundGravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtProfilePlayer" />
+
+                    <ImageView
+                        android:id="@+id/imgPersonDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp1"
+                        android:background="@drawable/square_edit"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/edit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imgBuildingProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:src="@drawable/ic_baseline_business_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgProfilePlayerRedLine" />
+
+                    <TextView
+                        android:id="@+id/txtProfileLocated"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="Preuss School UCSD"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgBuildingProfile"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imgBuildingProfile"
+                        app:layout_constraintTop_toTopOf="@id/imgBuildingProfile" />
+
+                    <ImageView
+                        android:id="@+id/imgBuildingGrade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:src="@drawable/ic_baseline_business_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgBuildingProfile" />
+
+                    <TextView
+                        android:id="@+id/txtProfileGrade"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="12th Grade"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgBuildingGrade"
+                        app:layout_constraintStart_toEndOf="@id/imgBuildingGrade"
+                        app:layout_constraintTop_toBottomOf="@id/txtProfileLocated"
+                        app:layout_constraintTop_toTopOf="@id/imgBuildingGrade" />
+
+                    <ImageView
+                        android:id="@+id/imgBuildingPerson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp60"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:src="@drawable/ic_baseline_female_24"
+                        app:layout_constraintStart_toEndOf="@id/txtProfileGrade"
+                        app:layout_constraintTop_toBottomOf="@id/imgBuildingProfile" />
+
+                    <TextView
+                        android:id="@+id/txtProfilePerson"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="male"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgBuildingGrade"
+                        app:layout_constraintStart_toEndOf="@id/imgBuildingPerson"
+                        app:layout_constraintTop_toBottomOf="@id/txtProfileLocated"
+                        app:layout_constraintTop_toTopOf="@id/imgBuildingGrade" />
+
+                    <ImageView
+                        android:id="@+id/imgAge"
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="@dimen/dp40"
+                        android:src="@drawable/age"
+                        app:layout_constraintBottom_toBottomOf="@id/txtProfilePerson"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txtProfilePerson" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:text="18"
+                        android:textColor="@color/ruby_red"
+                        app:layout_constraintBottom_toBottomOf="@id/imgAge"
+                        app:layout_constraintEnd_toEndOf="@id/imgAge"
+                        app:layout_constraintStart_toStartOf="@id/imgAge"
+                        app:layout_constraintTop_toTopOf="@id/imgAge" />
+
+                    <com.ci.act.widgets.CustomButton
+                        android:id="@+id/btnProfile"
+                        android:layout_width="@dimen/dp280"
+                        android:layout_height="@dimen/dp60"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:background="@drawable/rounded_button"
+                        android:text="Subscribe Now!"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtAge" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCard1"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp30"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/mainCard">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainConstraints1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp10">
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtProfilePlayer1"
+                        style="@style/large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="YOUR UNIQUE IDENTIFICATION NUMBER"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imgProfileBarcode"
+                        android:layout_width="@dimen/dp120"
+                        android:layout_height="@dimen/dp60"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:src="@drawable/barcode"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtProfilePlayer1" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtProfileNumberBarcode"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25351"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgProfileBarcode" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtRedProfile"
+                        style="@style/large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="Use this bar code at all your events"
+                        android:textColor="@color/ruby_red"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtProfileNumberBarcode" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCard2"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/mainCard1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainConstraints3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp10">
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtPersonalProfile"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="PERSONAL PROFILE"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/imgPersonalProfileRedLine"
+                        android:layout_width="40dp"
+                        android:layout_height="4dp"
+                        android:background="#E91E63"
+                        android:foregroundGravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtPersonalProfile" />
+
+                    <ImageView
+                        android:id="@+id/imgPersonalRedProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp1"
+                        android:background="@drawable/square_edit"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/edit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imgBuildingPersonalProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:src="@drawable/ic_baseline_business_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgPersonalRedProfile" />
+
+                    <TextView
+                        android:id="@+id/txtPersonalProfileLocated"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="Preuss School UCSD"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgBuildingPersonalProfile"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imgBuildingPersonalProfile"
+                        app:layout_constraintTop_toTopOf="@id/imgBuildingPersonalProfile" />
+
+                    <ImageView
+                        android:id="@+id/imgBuildingPersonalProfile1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:src="@drawable/ic_baseline_business_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgBuildingPersonalProfile" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtBuildingPersonalProfile1"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:text="Preuss School UCSD"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgBuildingPersonalProfile1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imgBuildingPersonalProfile1"
+                        app:layout_constraintTop_toTopOf="@id/imgBuildingPersonalProfile1" />
+
+                    <ImageView
+                        android:id="@+id/imgBuildingPersonalProfile2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:src="@drawable/ic_baseline_business_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgBuildingPersonalProfile1" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtBuildingPersonalProfile2"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:text="Preuss School UCSD"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgBuildingPersonalProfile2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imgBuildingPersonalProfile2"
+                        app:layout_constraintTop_toTopOf="@id/imgBuildingPersonalProfile2" />
+
+                    <ImageView
+                        android:id="@+id/imgBuildingPersonalProfile3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:src="@drawable/ic_baseline_business_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgBuildingPersonalProfile2" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtBuildingPersonalProfile3"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:text="Preuss School UCSD"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgBuildingPersonalProfile3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imgBuildingPersonalProfile3"
+                        app:layout_constraintTop_toTopOf="@id/imgBuildingPersonalProfile3" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCard3"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/mainCard2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainConstraints4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp10">
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtBodyMetrics"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="BODY METRICS"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/imgBodyMetricsRedLine"
+                        android:layout_width="40dp"
+                        android:layout_height="4dp"
+                        android:background="#E91E63"
+                        android:foregroundGravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtBodyMetrics" />
+
+                    <TextView
+                        android:id="@+id/txtBodyMetricsHeight"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="Height            :"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toStartOf="@id/txtBodyMetricsNumberHeight"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgBodyMetricsRedLine" />
+
+                    <TextView
+                        android:id="@+id/txtBodyMetricsNumberHeight"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="6'2"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/txtBodyMetricsHeight"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtBodyMetricsHeight"
+                        app:layout_constraintTop_toTopOf="@id/txtBodyMetricsHeight" />
+
+                    <TextView
+                        android:id="@+id/txtBodyMetricsWeight"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="Weight            :"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toStartOf="@id/txtBodyMetricsNumberWeight"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtBodyMetricsHeight" />
+
+                    <TextView
+                        android:id="@+id/txtBodyMetricsNumberWeight"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="220lbs"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/txtBodyMetricsWeight"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtBodyMetricsWeight"
+                        app:layout_constraintTop_toTopOf="@id/txtBodyMetricsWeight" />
+
+                    <TextView
+                        android:id="@+id/txtBodyMetricsHandSize"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="Hand Size            :"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toStartOf="@id/txtBodyMetricsNumberHeight"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtBodyMetricsWeight" />
+
+                    <TextView
+                        android:id="@+id/txtBodyMetricsNumberHandSize"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="9"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/txtBodyMetricsHandSize"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtBodyMetricsHandSize"
+                        app:layout_constraintTop_toTopOf="@id/txtBodyMetricsHandSize" />
+
+                    <TextView
+                        android:id="@+id/txtBodyMetricsWingSpan"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="Wing Span            :"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toStartOf="@id/txtBodyMetricsNumberHandSize"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtBodyMetricsHandSize" />
+
+                    <TextView
+                        android:id="@+id/txtBodyMetricsNumberWingSpan"
+                        style="@style/large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="80"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/txtBodyMetricsWingSpan"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtBodyMetricsWingSpan"
+                        app:layout_constraintTop_toTopOf="@id/txtBodyMetricsWingSpan" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCard4"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/mainCard3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainConstraints5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp10">
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtMySports"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="MY SPORTS"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/imgMySportsRedLine"
+                        android:layout_width="40dp"
+                        android:layout_height="4dp"
+                        android:background="#E91E63"
+                        android:foregroundGravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtMySports" />
+
+                    <ImageView
+                        android:id="@+id/imgMySportsRedProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp1"
+                        android:background="@drawable/square_edit"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/edit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroups"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgMySportsRedLine" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCard5"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp20"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/mainCard4">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainConstraints6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp10">
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtSocialLinks"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="SOCIAL LINKS"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/imgSocialLinksRedLine"
+                        android:layout_width="40dp"
+                        android:layout_height="4dp"
+                        android:background="#E91E63"
+                        android:foregroundGravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtSocialLinks" />
+
+                    <ImageView
+                        android:id="@+id/imgSocialLinksRedProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp1"
+                        android:background="@drawable/square_edit"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/edit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/imgSocialLinksFacebook"
+                        android:layout_width="@dimen/dp50"
+                        android:layout_height="@dimen/dp50"
+                        android:src="@drawable/facebook3x"
+                        android:layout_marginTop="@dimen/dp20"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/imgSocialLinksHUDL"
+                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksRedLine"/>
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtSocialLinksFacebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FaceBook"
+                        style="@style/medium_text"
+                        app:layout_constraintStart_toStartOf="@id/imgSocialLinksFacebook"
+                        app:layout_constraintEnd_toEndOf="@id/imgSocialLinksFacebook"
+                        app:layout_constraintBottom_toBottomOf="@id/mainConstraints6"
+                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksFacebook"/>
+
+                    <ImageView
+                        android:id="@+id/imgSocialLinksHUDL"
+                        android:layout_width="@dimen/dp50"
+                        android:layout_height="@dimen/dp50"
+                        android:src="@drawable/hudl"
+                        android:layout_marginTop="@dimen/dp20"
+                        app:layout_constraintEnd_toStartOf="@id/imgSocialLinksGoogle"
+                        app:layout_constraintStart_toEndOf="@id/imgSocialLinksFacebook"
+                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksRedLine"/>
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtSocialLinksHUDL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HUDL"
+                        style="@style/medium_text"
+                        app:layout_constraintStart_toStartOf="@id/imgSocialLinksHUDL"
+                        app:layout_constraintEnd_toEndOf="@id/imgSocialLinksHUDL"
+                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksHUDL"/>
+
+                    <ImageView
+                        android:id="@+id/imgSocialLinksGoogle"
+                        android:layout_width="@dimen/dp50"
+                        android:layout_height="@dimen/dp50"
+                        android:src="@drawable/search"
+                        android:layout_marginTop="@dimen/dp20"
+                        app:layout_constraintStart_toEndOf="@id/imgSocialLinksHUDL"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksRedLine"/>
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtSocialLinksGoogle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Google"
+                        style="@style/medium_text"
+                        app:layout_constraintStart_toStartOf="@id/imgSocialLinksGoogle"
+                        app:layout_constraintEnd_toEndOf="@id/imgSocialLinksGoogle"
+                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksGoogle"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

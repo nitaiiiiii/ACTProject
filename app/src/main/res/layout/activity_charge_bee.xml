@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="chargeBee"
+            type="com.ci.act.ui.home.chargebee.ChargeBeeViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ruby_red"
+        tools:context=".ui.home.chargebee.ChargeBeeActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtPaymentInstructions"
+            style="@style/extra_large_text_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="@dimen/dp20"
+            android:text="PAYMENT INSTRUCTIONS"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgPaymentInstructions"
+            android:layout_width="@dimen/dp35"
+            android:layout_height="@dimen/dp35"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="@id/txtPaymentInstructions"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toTopOf="@id/txtPaymentInstructions" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp0"
+            android:layout_margin="@dimen/_10dp"
+            app:cardCornerRadius="@dimen/dp5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/txtPaymentInstructions">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/platinumSubscription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtMakingPayment"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:gravity="center"
+                        android:text="YOU ARE MAKING\nA PAYMENT THROUGH"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imgMakingChargeBee"
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="@dimen/dp80"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:src="@drawable/chargebee_logo_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtMakingPayment" />
+
+                    <ImageView
+                        android:id="@+id/txtMakingChargeBee"
+                        android:layout_width="@dimen/dp200"
+                        android:layout_height="@dimen/dp80"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:src="@drawable/chargebee_logo_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgMakingChargeBee" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtMakeSureChargeBee"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:gravity="center"
+                        android:text="Make Sure you are ready\nwith the below list."
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtMakingChargeBee" />
+
+                    <ImageView
+                        android:id="@+id/imgAccessTickCorrect1"
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/image"
+                        app:layout_constraintBottom_toBottomOf="@id/txtAccessGuide1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtMakeSureChargeBee" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtAccessGuide1"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp5"
+                        android:text="Credit/Debit Card Details."
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgAccessTickCorrect1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imgAccessTickCorrect1"
+                        app:layout_constraintTop_toBottomOf="@id/txtMakeSureChargeBee" />
+
+
+                    <ImageView
+                        android:id="@+id/imgUpdatedTickCorrect1"
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtAccessGuide1" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtExpandedGuide1"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:padding="@dimen/dp5"
+                        android:text="CVV Number."
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgUpdatedTickCorrect1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imgUpdatedTickCorrect1"
+                        app:layout_constraintTop_toTopOf="@id/imgUpdatedTickCorrect1" />
+
+
+                    <ImageView
+                        android:id="@+id/imgLeaderSubscription1"
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:padding="@dimen/dp5"
+                        android:src="@drawable/image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtExpandedGuide1" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtExpandedGuideLeaderBoard1"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp5"
+                        android:text="Assigned Mobile number For OTP."
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgLeaderSubscription1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imgLeaderSubscription1"
+                        app:layout_constraintTop_toTopOf="@id/imgLeaderSubscription1" />
+
+
+                    <com.ci.act.widgets.CustomButton
+                        android:id="@+id/btnSignatureBox1"
+                        style="@style/extra_large_text_semi_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp90"
+                        android:layout_marginBottom="@dimen/dp30"
+                        android:background="@drawable/rounded_button"
+                        android:paddingStart="@dimen/dp30"
+                        android:paddingEnd="@dimen/dp30"
+                        android:text="Yes Continue"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

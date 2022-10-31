@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="signIn"
+            type="com.ci.act.ui.authentication.signin.SignInViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/splash"
+            tools:context=".ui.authentication.signin.SignInActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+            <ImageView
+                android:id="@+id/imgBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_backspace"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgSignInTesting"
+                android:layout_width="@dimen/dp300"
+                android:layout_height="@dimen/dp150"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgBackButton"
+
+                />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSignIn"
+                style="@style/extra_large_text"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="SIGN IN"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/imgSignInTesting" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/white"
+                android:hint="Email Address"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@null"
+                app:layout_constraintTop_toBottomOf="@id/txtSignIn" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/white"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@null"
+                app:layout_constraintTop_toBottomOf="@id/editText" />
+
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtForgetPasswordHeading"
+                style="@style/large_text"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="@dimen/dp5"
+                android:text="Forgot Password?"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
+
+            <com.ci.act.widgets.CustomButton
+                android:id="@+id/btnSignIn"
+                style="@style/extra_large_text_semi_bold"
+                android:layout_width="@dimen/dp300"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginTop="@dimen/dp60"
+                android:background="@drawable/orange_freelance"
+                android:text="Sign In"
+                android:textColor="@color/ruby_red"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtForgetPasswordHeading" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSocialMediaAccountScreen"
+                style="@style/medium_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp50"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Don't Have An Account?"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnSignIn" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSignInEmailSignUpScreen"
+                style="@style/large_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtSocialMediaAccountScreen" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSocialMediaCantAccessScreen"
+                style="@style/extra_large_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp50"
+                android:layout_marginBottom="@dimen/dp30"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Can't Access Your Account?"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtSignInEmailSignUpScreen" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

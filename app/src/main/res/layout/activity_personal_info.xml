@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="personalInfo"
+            type="com.ci.act.ui.personalInfo.PersonalInfoViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.personalInfo.PersonalInfoActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtPersonalInfo"
+                style="@style/extra_large_text_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edit_text_settings_email_and_password"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp20"
+                android:text="PERSONAL INFO"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgPersonalInfo"
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/ic_baseline_close_24"
+                app:layout_constraintBottom_toBottomOf="@id/txtPersonalInfo"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="@id/txtPersonalInfo" />
+
+            <EditText
+                android:id="@+id/editPersonalInfoTextFirstName"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/warmGreyTwo"
+                android:hint="First Name"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/warmGreyTwo"
+                android:textColorHint="@color/warmGreyTwo"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtPersonalInfo" />
+
+            <EditText
+                android:id="@+id/editPersonalInfoTextEmailAddress"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/warmGreyTwo"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/warmGreyTwo"
+                android:textColorHint="@color/warmGreyTwo"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editPersonalInfoTextFirstName" />
+
+            <EditText
+                android:id="@+id/editPersonalInfoTextHomeAddress"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/warmGreyTwo"
+                android:hint="Home Address"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/warmGreyTwo"
+                android:textColorHint="@color/warmGreyTwo"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editPersonalInfoTextEmailAddress" />
+
+            <EditText
+                android:id="@+id/editPersonalInfoTextCountry"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/warmGreyTwo"
+                android:hint="Country"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/warmGreyTwo"
+                android:textColorHint="@color/warmGreyTwo"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editPersonalInfoTextHomeAddress" />
+
+            <EditText
+                android:id="@+id/editPersonalInfoTextState"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/warmGreyTwo"
+                android:hint="State"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/warmGreyTwo"
+                android:textColorHint="@color/warmGreyTwo"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editPersonalInfoTextCountry" />
+
+            <EditText
+                android:id="@+id/editPersonalInfoTextCity"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/warmGreyTwo"
+                android:hint="City"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/warmGreyTwo"
+                android:textColorHint="@color/warmGreyTwo"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editPersonalInfoTextState" />
+
+            <EditText
+                android:id="@+id/editPersonalInfoTextZipCode"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/warmGreyTwo"
+                android:hint="Zip Code"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/warmGreyTwo"
+                android:textColorHint="@color/warmGreyTwo"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editPersonalInfoTextCity" />
+
+            <EditText
+                android:id="@+id/editPersonalInfoTextInsuranceCompany"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/warmGreyTwo"
+                android:hint="Insurance Company"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/warmGreyTwo"
+                android:textColorHint="@color/warmGreyTwo"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editPersonalInfoTextZipCode" />
+
+            <EditText
+                android:id="@+id/editPersonalInfoTextPolicyNumber"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/warmGreyTwo"
+                android:hint="Policy Number"
+                android:inputType="number"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/warmGreyTwo"
+                android:textColorHint="@color/warmGreyTwo"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editPersonalInfoTextInsuranceCompany" />
+
+            <com.ci.act.widgets.CustomButton
+                android:id="@+id/btnPersonalInfoSave"
+                style="@style/extra_large_text_semi_bold"
+                android:layout_width="@dimen/dp150"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15"
+                android:background="@drawable/rounded_button"
+                android:paddingStart="@dimen/dp10"
+                android:paddingEnd="@dimen/dp0"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:layout_marginBottom="@dimen/dp15"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editPersonalInfoTextPolicyNumber" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

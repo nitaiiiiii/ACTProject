@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="eventsReport"
+            type="com.ci.act.ui.home.eventsReport.EventsReportViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ruby_red"
+            tools:context=".ui.home.eventsReport.EventsReportActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtEventsReport"
+                style="@style/extra_large_text_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edit_text_settings_email_and_password"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp20"
+                android:text="EVENT REPORT"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgEventsReport"
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintBottom_toBottomOf="@id/txtEventsReport"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="@id/txtEventsReport" />
+
+            <ImageView
+                android:id="@+id/imgEventsReportShare"
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/ic_baseline_ios_share_24"
+                app:layout_constraintBottom_toBottomOf="@id/txtEventsReport"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintTop_toTopOf="@id/txtEventsReport" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCard1"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp30"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtEventsReport">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainConstraints1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp10">
+
+                    <ImageView
+                        android:id="@+id/imgEventsReportsLiveStream"
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="@dimen/dp100"
+                        android:src="@drawable/football_event"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtEventsReportFootBallCamp"
+                        style="@style/extra_large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:maxLines="1"
+                        android:text="FOOTBALL"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toEndOf="@id/imgEventsReportsLiveStream"
+                        app:layout_constraintTop_toTopOf="@id/imgEventsReportsLiveStream" />
+
+                    <TextView
+                        android:id="@+id/txtEventsReportRedFootBallCamp"
+                        style="@style/medium_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:maxLines="1"
+                        android:text="Jan 06-08"
+                        android:textColor="@color/ruby_red"
+                        app:layout_constraintStart_toEndOf="@id/imgEventsReportsLiveStream"
+                        app:layout_constraintTop_toBottomOf="@id/txtEventsReportFootBallCamp" />
+
+                    <ImageView
+                        android:id="@+id/imgEventsReportFootBallCamp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp2"
+                        android:src="@drawable/ic_baseline_location_on_24"
+                        app:layout_constraintStart_toEndOf="@id/imgEventsReportsLiveStream"
+                        app:layout_constraintTop_toBottomOf="@id/txtEventsReportRedFootBallCamp" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportInflateLocation"
+                        style="@style/small_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:paddingStart="@dimen/dp5"
+                        android:text="16800 Shoemaker Ave\nCerittos, California\n90703"
+                        android:textColor="@color/warmGreyTwo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imgEventsReportFootBallCamp"
+                        app:layout_constraintTop_toTopOf="@id/imgEventsReportFootBallCamp" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportsLiveEventsOne"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:maxLines="1"
+                        android:text="485"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgEventsReportsLiveStream" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportsParticipated"
+                        style="@style/small_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp4"
+                        android:maxLines="1"
+                        android:text="Participants"
+                        android:textColor="@color/grey"
+                        app:layout_constraintBottom_toBottomOf="@id/txtEventsReportsLiveEventsOne"
+                        app:layout_constraintStart_toEndOf="@id/txtEventsReportsLiveEventsOne"
+                        app:layout_constraintTop_toTopOf="@id/txtEventsReportsLiveEventsOne" />
+
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportRegisteredRanker"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:gravity="center_horizontal"
+                        android:text="11"
+                        android:textColor="@color/ruby_red"
+                        app:layout_constraintBottom_toBottomOf="@id/txtEventsReportsParticipated"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txtEventsReportsParticipated" />
+
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportRegisteredSubScript"
+                        style="@style/small_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp15"
+                        android:gravity="center_horizontal"
+                        android:text="TH"
+                        android:textColor="@color/ruby_red"
+                        app:layout_constraintBottom_toTopOf="@id/txtEventsReportRegisteredRanker"
+                        app:layout_constraintStart_toStartOf="@id/txtEventsReportRegisteredRanker" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportsLiveEventsOneRank"
+                        style="@style/large_text_bold"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp1"
+                        android:maxLines="1"
+                        android:text="RANK"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtEventsReportRegisteredRanker" />
+
+                    <com.ci.act.widgets.CustomButton
+                        android:id="@+id/btnEventsReport"
+                        style="@style/extra_large_text_semi_bold"
+                        android:layout_width="@dimen/dp280"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:background="@drawable/rounded_button"
+                        android:text="Download My Report"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtEventsReportsLiveEventsOneRank" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCard2"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp30"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/mainCard1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainConstraints2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp10">
+
+                    <ImageView
+                        android:id="@+id/imgEventsReportsPlayerProfile"
+                        android:layout_width="@dimen/dp60"
+                        android:layout_height="@dimen/dp60"
+                        android:src="@drawable/profile_picture"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtEventsReportPlayerFootBallCamp"
+                        style="@style/medium_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:maxLines="2"
+                        android:text="MARK\nJOHNSON"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toEndOf="@id/imgEventsReportsPlayerProfile"
+                        app:layout_constraintTop_toTopOf="@id/imgEventsReportsPlayerProfile" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportPlayerRedFootBallCamp"
+                        style="@style/small_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:maxLines="1"
+                        android:text="markj@gmail.com"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@id/imgEventsReportsPlayerProfile"
+                        app:layout_constraintStart_toEndOf="@id/imgEventsReportsPlayerProfile"
+                        app:layout_constraintTop_toBottomOf="@id/txtEventsReportPlayerFootBallCamp" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportId"
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="@dimen/dp40"
+                        android:background="@drawable/rounded_button"
+                        android:gravity="center"
+                        android:padding="@dimen/dp10"
+                        android:text="ID: 317"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportRegisteredInches"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:gravity="center_horizontal"
+                        android:text="68.5"
+                        android:textColor="@color/ruby_red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtEventsReportPlayerRedFootBallCamp" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportsHeightParticipated"
+                        style="@style/medium_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Height(inches)"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtEventsReportRegisteredInches" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportRegisteredPosition"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:gravity="center_horizontal"
+                        android:text="DB"
+                        android:textColor="@color/ruby_red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtEventsReportsHeightParticipated" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportsPositionParticipated"
+                        style="@style/medium_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Position"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtEventsReportRegisteredPosition" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportRegisteredWeight"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:gravity="center"
+                        android:text="165"
+
+                        android:textColor="@color/ruby_red"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtEventsReportRegisteredInches"
+                        app:layout_constraintTop_toBottomOf="@id/txtEventsReportPlayerRedFootBallCamp" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportsWeightParticipated"
+                        style="@style/medium_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="Weight (lbs)"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtEventsReportsHeightParticipated"
+                        app:layout_constraintTop_toBottomOf="@id/txtEventsReportRegisteredInches" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportRegisteredGraduationYear"
+                        style="@style/extra_large_text_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp40"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:gravity="center"
+                        android:text="2020"
+                        android:textColor="@color/ruby_red"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtEventsReportRegisteredPosition"
+                        app:layout_constraintTop_toBottomOf="@id/txtEventsReportsWeightParticipated" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtEventsReportsParticipatedGraduationYear"
+                        style="@style/medium_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp50"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="Graduation Year"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtEventsReportsPositionParticipated"
+                        app:layout_constraintTop_toBottomOf="@id/txtEventsReportRegisteredGraduationYear" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCard3"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp30"
+                android:background="@color/white"
+                android:layout_marginBottom="@dimen/dp20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/mainCard2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMyEventsReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp30"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

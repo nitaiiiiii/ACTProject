@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="signOut"
+            type="com.ci.act.ui.customDialogFragments.signOut.SignOutViewModel" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.customDialogFragments.signOut.SignOutFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSignOut"
+            style="@style/extra_large_bebas_bold"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="@dimen/dp10"
+            android:text="SIGN OUT"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/imgSignOut"
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:background="#E91E63"
+            android:foregroundGravity="center"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/txtSignOut" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtFillSignOut"
+            style="@style/extra_large_text_bold"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Are you sure you want to\nSign Out?"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/imgSignOut" />
+
+        <com.ci.act.widgets.CustomButton
+            android:id="@+id/btnSignatureBox"
+            style="@style/extra_large_text_semi_bold"
+            android:layout_width="@dimen/dp120"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp30"
+            android:background="@drawable/rounded_button"
+            android:text="Ok"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/txtSignatureBoxClose"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/txtFillSignOut" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSignatureBoxClose"
+            style="@style/large_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"
+            android:background="@drawable/shape_edit_text_settings_email_and_password"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="@dimen/dp20"
+            android:text="Cancel"
+            android:textColor="@color/ruby_red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSignatureBox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

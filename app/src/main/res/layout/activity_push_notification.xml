@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="pushNotification"
+            type="com.ci.act.ui.authentication.pushNotification.PushNotificationViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            tools:context=".ui.authentication.pushNotification.PushNotificationActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+            <ImageView
+                android:id="@+id/imgPushNotifications"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0"
+                android:scaleType="fitXY"
+                android:src="@drawable/push_notification_img"
+                app:layout_constraintDimensionRatio="w,1:1.2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtPushNotification"
+                style="@style/extra_large_text_semi_bold"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp35"
+                android:gravity="center"
+                android:maxLines="1"
+                android:background="@drawable/screenshot12"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/imgPushNotifications" />
+
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtCurrentUpdates"
+                style="@style/extra_large_text"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="3"
+                android:background="@drawable/screenshot14_cleanup"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtPushNotification" />
+
+            <com.ci.act.widgets.CustomButton
+                android:id="@+id/btnPushNotification"
+                style="@style/extra_large_text_semi_bold"
+                android:layout_width="@dimen/dp280"
+                android:layout_height="@dimen/dp70"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/rounded_button"
+                android:text="Allow Access"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtCurrentUpdates" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSignInEmailSignUpScreen"
+                style="@style/large_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginBottom="@dimen/dp30"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Skip"
+                android:textColor="@color/warmGrey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnPushNotification" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

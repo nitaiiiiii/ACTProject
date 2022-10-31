@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="socialMedia"
+            type="com.ci.act.ui.authentication.socialMedia.SocialMediaViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash"
+        tools:context=".ui.authentication.socialMedia.SocialMediaActivity">
+
+        <ImageView
+            android:id="@+id/imgSocialMediaTesting"
+            android:layout_width="@dimen/dp300"
+            android:layout_height="@dimen/dp150"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <ImageView
+            android:id="@+id/imgFacebookSocialMedia"
+            android:layout_width="@dimen/dp300"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp50"
+            android:src="@drawable/facebook"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgSocialMediaTesting" />
+
+        <ImageView
+            android:id="@+id/imgGoogleSocialMedia"
+            android:layout_width="@dimen/dp300"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp20"
+            android:src="@drawable/google"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgFacebookSocialMedia" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSocialMediaScreen"
+            style="@style/medium_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/termsAndConditions"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgGoogleSocialMedia" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSocialMediaOrScreen"
+            style="@style/medium_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/socialmedia"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSocialMediaScreen"
+
+            />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSocialMediaEmailLoginScreen"
+            style="@style/large_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp25"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="SignIn With Email"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSocialMediaOrScreen" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSocialMediaAccountScreen"
+            style="@style/small_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp120"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Don't Have An Account?"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSocialMediaEmailLoginScreen" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSocialMediaEmailSignUpScreen"
+            style="@style/large_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSocialMediaAccountScreen" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

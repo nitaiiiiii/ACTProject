@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="radiusThirdFragment"
+            type="com.ci.act.ui.home.settingsPage.fragments.radiusThirdFragment.RadiusThirdViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.home.settingsPage.fragments.radiusThirdFragment.RadiusThirdFragment">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtRadiusSetting"
+                style="@style/extra_large_text_bold"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:gravity="center"
+                android:text="Set Your Radius"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtRadiusStartTime"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="The ACT App will display events based\non your radius"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtRadiusSetting" />
+
+            <ImageView
+                android:id="@+id/imgConcentricCircles"
+                android:layout_width="@dimen/dp300"
+                android:layout_height="@dimen/dp180"
+                android:layout_marginTop="@dimen/dp10"
+                android:src="@drawable/concentric_circles"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtRadiusStartTime" />
+
+            <SeekBar
+                android:id="@+id/sb_radius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="40dp"
+                android:max="500"
+                android:min="5"
+                android:progress="5"
+                android:progressDrawable="@drawable/seekbar_drawable_progress"
+                android:splitTrack="false"
+                android:thumb="@drawable/slider"
+                app:layout_constraintTop_toBottomOf="@id/imgConcentricCircles">
+            </SeekBar>
+
+            <com.ci.act.widgets.CustomButton
+                android:id="@+id/btnSaveRadius"
+                style="@style/extra_large_text_semi_bold"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="@dimen/dp70"
+                android:layout_margin="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp40"
+                android:background="@drawable/rounded_button"
+                android:text="Save Radius"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/sb_radius" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

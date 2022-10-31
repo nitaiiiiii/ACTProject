@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="myZeroRegisteredEvents"
+            type="com.ci.act.ui.home.myZeroRegisteredEvents.MyZeroRegisteredViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.myZeroRegisteredEvents.MyZeroRegisteredActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtZeroRegisteredEvents"
+            style="@style/extra_large_text_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edit_text_settings_email_and_password"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="@dimen/dp20"
+            android:text="MY EVENTS"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgZeroRegisteredEvents"
+            android:layout_width="@dimen/dp35"
+            android:layout_height="@dimen/dp35"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="@id/txtZeroRegisteredEvents"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toTopOf="@id/txtZeroRegisteredEvents" />
+
+        <ImageView
+            android:id="@+id/imgZeroRegisteredPlaying"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp250"
+            android:layout_marginTop="@dimen/dp60"
+            android:src="@drawable/no_myevents"
+            app:layout_constraintBottom_toTopOf="@id/txtZeroRegisteredHintEvents"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/txtZeroRegisteredEvents" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtZeroRegisteredHintEvents"
+            style="@style/extra_large_text_bold"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingStart="@dimen/dp5"
+            android:text="No Registered Events!"
+            app:layout_constraintBottom_toTopOf="@id/txtZeroRegisteredFillEvents"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/imgZeroRegisteredPlaying" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtZeroRegisteredFillEvents"
+            style="@style/large_text"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="3"
+            android:text="You are not yet registered in any event to\ndisplay your events information here."
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/txtZeroRegisteredHintEvents" />
+
+
+        <com.ci.act.widgets.CustomButton
+            android:id="@+id/btnZeroRegistered"
+            style="@style/extra_large_text_semi_bold"
+            android:layout_width="@dimen/dp280"
+            android:layout_height="@dimen/dp70"
+            android:layout_marginTop="@dimen/dp30"
+            android:background="@drawable/rounded_button"
+            android:text="View Upcoming Events"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/txtZeroRegisteredFillEvents" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

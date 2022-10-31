@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="signUp"
+            type="com.ci.act.ui.authentication.signup.SignUpViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.authentication.signup.SignUpActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSignUp"
+                style="@style/extra_large_text_semi_bold"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="30dp"
+                android:text="SIGN UP"
+                android:textColor="@color/red"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/mainSignUpView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/splash"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtSignUp" />
+
+
+            <ImageView
+                android:id="@+id/imgSignUp"
+                android:layout_width="@dimen/dp100"
+                android:layout_height="@dimen/dp100"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/athlete"
+                app:layout_constraintBottom_toTopOf="@id/mainSignUpView"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@+id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="@id/mainSignUpView" />
+
+            <EditText
+                android:id="@+id/editTextFirstName"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/white"
+                android:hint="First Name"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/imgSignUp" />
+
+            <EditText
+                android:id="@+id/editTextLastName"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/white"
+                android:hint="LastName"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editTextFirstName" />
+
+            <EditText
+                android:id="@+id/editTextDateOfBirth"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/white"
+                android:hint="Date Of Birth"
+                android:inputType="date"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editTextLastName" />
+
+            <ImageView
+                android:id="@+id/imgSignUpCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10"
+                android:src="@drawable/calendar"
+                app:layout_constraintBottom_toBottomOf="@id/editTextDateOfBirth"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintTop_toTopOf="@id/editTextDateOfBirth" />
+
+            <EditText
+                android:id="@+id/editTextEmailAddress"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/white"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editTextDateOfBirth" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtHint"
+                style="@style/medium_text"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="@dimen/dp5"
+                android:text="Hint : Use one email ID for each athlete to register"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editTextEmailAddress" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/white"
+                android:hint="Password"
+                android:inputType="numberPassword"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtHint" />
+
+
+            <com.ci.act.widgets.CustomButton
+                android:id="@+id/btnSignUp"
+                style="@style/extra_large_text_semi_bold"
+                android:layout_width="@dimen/dp300"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginTop="@dimen/dp60"
+                android:background="@drawable/orange_freelance"
+                android:text="Sign Up"
+                android:textColor="@color/ruby_red"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSignUpSocialMediaAccountScreen"
+                style="@style/medium_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp50"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Already Have An Account?"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnSignUp" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSignInEmailSignUpScreen"
+                style="@style/large_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp20"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Sign In"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtSignUpSocialMediaAccountScreen" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

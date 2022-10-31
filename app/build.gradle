@@ -1,0 +1,130 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply from: 'autodimension.gradle'
+
+apply plugin: 'kotlin-kapt'
+
+
+static def getDate() {
+    return new Date().format('MMM-dd-yyyy')
+}
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.ci.basearchitecture"
+        minSdkVersion 23
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        }
+        kotlinOptions {
+            jvmTarget = "1.8"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        l  {
+            minifyEnabled true
+            shrinkResources true
+        }
+    }
+    flavorDimensions "default"
+
+    productFlavors {
+        dev {
+            applicationIdSuffix ".dev"
+
+            buildConfigField "String", "base_url", "\"https://reqres.in/api/\""
+            buildConfigField "String", "base_url_json", "\"\""
+            buildConfigField "String", "preference_name", "\"CiApp\""
+            buildConfigField "String", "api_key", "\"AhcE2MFWRx7ICg91k1L5Y4wWaevHlVHDmFL5yo6I19EQkaeMV5ArBFTQS0c759O0\""
+            buildConfigField "String", "socket_url", "\"\""
+            buildConfigField "String", "file_provider_uri", "\"\""
+            buildConfigField "String", "aes_secret_key", "\"wXzsnZMHAKbLaCZvpnG25JbcmirDyWcx\""
+            buildConfigField "String", "aes_iv", "\"F01zy7hxdBA2y7c0\""
+            buildConfigField "String", "build_date", "\"${getDate()}\""
+
+            resValue "string", "app_name", "ACT App"
+            resValue "string", "menu", "Menu Dev"
+        }
+        qa {
+            applicationIdSuffix ".qa"
+
+            buildConfigField "String", "base_url", "\"http://3.81.179.221:1001/app/v1/\""
+            buildConfigField "String", "base_url_json", "\"\""
+            buildConfigField "String", "preference_name", "\"CiApp\""
+            buildConfigField "String", "api_key", "\"AhcE2MFWRx7ICg91k1L5Y4wWaevHlVHDmFL5yo6I19EQkaeMV5ArBFTQS0c759O0\""
+            buildConfigField "String", "socket_url", "\"\""
+            buildConfigField "String", "file_provider_uri", "\"c\""
+            buildConfigField "String", "aes_secret_key", "\"wXzsnZMHAKbLaCZvpnG25JbcmirDyWcx\""
+            buildConfigField "String", "aes_iv", "\"F01zy7hxdBA2y7c0\""
+            buildConfigField "String", "build_date", "\"${getDate()}\""
+
+            resValue "string", "app_name", "Base Architecture QA"
+            resValue "string", "menu", "Menu QA"
+
+        }
+        live {
+            buildConfigField "String", "base_url", "\"http://3.81.179.221:1002/app/v1/\""
+            buildConfigField "String", "base_url_json", "\"\""
+            buildConfigField "String", "preference_name", "\"CiApp\""
+            buildConfigField "String", "api_key", "\"L5Y4wWaevHlAhcE2MFVHDmFL5yo6I19EQkaeMV5ArBFTQS0c759O0Rx7ICg91k1\""
+            buildConfigField "String", "socket_url", "\"\""
+            buildConfigField "String", "file_provider_uri", "\"\""
+            buildConfigField "String", "aes_secret_key", "\"AKcLaDHvpvXysnXMHnP25JbcmirXyWcy\""
+            buildConfigField "String", "aes_iv", "\"G01ky7gxdCB1y8c1\""
+            buildConfigField "String", "build_date", "\"${getDate()}\""
+
+            resValue "string", "app_name", "Base Architecture"
+            resValue "string", "menu", "Menu"
+        }
+
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0-rc01'
+    implementation 'com.google.android.material:material:1.4.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.3.1"
+    implementation 'com.androidadvance:topsnackbar:1.1.1'
+    implementation 'org.jetbrains.anko:anko-commons:0.10.8'
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
+    implementation 'com.romandanylyk:pageindicatorview:1.0.1'
+    //GLide
+    implementation "com.github.bumptech.glide:glide:$gradleVersion"
+    kapt "com.github.bumptech.glide:compiler:$gradleVersion"
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.7.1'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.18.1'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.18.1'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.18.1'
+
+}

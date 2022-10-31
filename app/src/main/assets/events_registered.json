@@ -1,0 +1,74 @@
+[
+  {
+    "registered": "8",
+    "participated": "5",
+    "eventsList": [
+      {
+        "event_name": "BASEBALL",
+        "event_location": "Preuss School UCSD 9500 Gilman Dr., La Jolla, Califonia 92093",
+        "is_event_completed": true,
+        "rank": "11",
+        "sub_script": "TH",
+        "total_participated": "226 Participants",
+        "event_date": "MAR 29 - 30",
+        "days_left": "",
+        "logo": "my_events_logo"
+      },
+      {
+        "event_name": "BASEBALL",
+        "event_location": "16800 Shoemaker Ave., Cerritos, Califonia 92093",
+        "is_event_completed": false,
+        "rank": "",
+        "sub_script": "",
+        "total_participated": "",
+        "event_date": "JAN 06 - 08",
+        "days_left": "2",
+        "logo": "my_events_logo"
+      },
+      {
+        "event_name": "BASEBALL",
+        "event_location": "5172 Orange Ave., Cypress, California 90630",
+        "is_event_completed": true,
+        "rank": "15",
+        "sub_script": "TH",
+        "total_participated": "485 Participants",
+        "event_date": "JAN 06 - 08",
+        "days_left": "",
+        "logo": "under_armour_logo"
+      },
+      {
+        "event_name": "BASEBALL",
+        "event_location": "Preuss School UCSD 9500 Gilman Dr., La Jolla, Califonia 92093",
+        "is_event_completed": true,
+        "rank": "11",
+        "sub_script": "TH",
+        "total_participated": "226 Participants",
+        "event_date": "MAR 29 - 30",
+        "days_left": "",
+        "logo": "my_events_logo"
+      },
+      {
+        "event_name": "BASEBALL",
+        "event_location": "16800 Shoemaker Ave., Cerritos, Califonia 92093",
+        "is_event_completed": false,
+        "rank": "",
+        "sub_script": "",
+        "total_participated": "",
+        "event_date": "JAN 06 - 08",
+        "days_left": "2",
+        "logo": "my_events_logo"
+      },
+      {
+        "event_name": "BASEBALL",
+        "event_location": "5172 Orange Ave., Cypress, California 90630",
+        "is_event_completed": true,
+        "rank": "15",
+        "sub_script": "TH",
+        "total_participated": "485 Participants",
+        "event_date": "JAN 06 - 08",
+        "days_left": "",
+        "logo": "under_armour_logo"
+      }
+    ]
+  }
+]

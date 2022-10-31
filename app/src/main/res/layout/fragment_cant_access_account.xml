@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cantAccessFragment"
+            type="com.ci.act.ui.customDialogFragments.cantAccessAccount.CantAccessAccountViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F0F0F0"
+            tools:context=".ui.customDialogFragments.cantAccessAccount.CantAccessAccountFragment">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtCantAccess"
+                style="@style/extra_large_bebas_bold"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp15"
+                android:text="CAN'T ACCESS YOUR ACCOUNT?"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtFillDetails"
+                style="@style/large_text"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="Please fill the below fields, W'll help you."
+                android:textColor="#5E5E5E"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtCantAccess" />
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/warmGreyTwo"
+                android:hint="First Name"
+                android:inputType="text"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/warmGreyTwo"
+                android:textColorHint="@color/warmGreyTwo"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtFillDetails" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/warmGreyTwo"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/warmGreyTwo"
+                android:textColorHint="@color/warmGreyTwo"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editTextName" />
+
+            <EditText
+                android:id="@+id/editTextMobile"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:backgroundTint="@color/warmGreyTwo"
+                android:hint="Mobile Number"
+                android:inputType="number"
+                android:padding="@dimen/dp15"
+                android:paddingStart="@dimen/dp5"
+                android:textColor="@color/warmGreyTwo"
+                android:textColorHint="@color/warmGreyTwo"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+
+            <com.ci.act.widgets.MutliLineEditText
+                android:id="@+id/edtAccessAccountMultiLine"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/shape_edit_text_settings_email_and_password"
+                android:gravity="start"
+                android:hint="description"
+                android:lines="7"
+                android:maxLength="250"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp5"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/editTextMobile" />
+
+            <com.ci.act.widgets.CustomButton
+                android:id="@+id/btnAccessAccount"
+                style="@style/extra_large_text_semi_bold"
+                android:layout_width="@dimen/dp280"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/rounded_button"
+                android:text="Submit"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintBottom_toTopOf="@id/txtCantAccountAccess"
+                app:layout_constraintTop_toBottomOf="@id/edtAccessAccountMultiLine" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtCantAccountAccess"
+                style="@style/large_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp30"
+                android:background="@drawable/shape_edit_text_settings_email_and_password"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp20"
+                android:text="Close"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnAccessAccount" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

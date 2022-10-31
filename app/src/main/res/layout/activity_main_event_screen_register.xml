@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="screenRegister"
+            type="com.ci.act.ui.home.mainEventScreenRegister.MainEventScreenRegisterViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.home.mainEventScreenRegister.MainEventScreenRegisterActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSignatureBox"
+                style="@style/extra_large_text_bold"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp10"
+                android:text="EVENT REGISTRATION"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/imgSignatureRedLine"
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:background="#E91E63"
+                android:foregroundGravity="center"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtSignatureBox" />
+
+
+            <ImageView
+                android:id="@+id/imgPersonDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/person_circle"
+                android:padding="@dimen/dp15"
+                android:src="@drawable/person_24"
+                app:layout_constraintEnd_toStartOf="@id/imgBuildingDetails"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/imgSignatureRedLine" />
+
+            <ImageView
+                android:id="@+id/imgBuildingDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/builiding_details"
+                android:padding="@dimen/dp15"
+                android:src="@drawable/ic_baseline_business_24"
+                app:layout_constraintEnd_toStartOf="@id/imgHomeDetails"
+                app:layout_constraintStart_toEndOf="@id/imgPersonDetails"
+                app:layout_constraintTop_toBottomOf="@id/imgSignatureRedLine" />
+
+            <ImageView
+                android:id="@+id/imgHomeDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/house_details"
+                android:padding="@dimen/dp15"
+                android:src="@drawable/ic_baseline_home_24"
+                app:layout_constraintEnd_toStartOf="@id/imgGuardianApproval"
+                app:layout_constraintStart_toEndOf="@id/imgBuildingDetails"
+                app:layout_constraintTop_toBottomOf="@id/imgSignatureRedLine" />
+
+            <ImageView
+                android:id="@+id/imgGuardianApproval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/house_details"
+                android:padding="@dimen/dp15"
+                android:src="@drawable/ic_baseline_group_24"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toEndOf="@id/imgHomeDetails"
+                app:layout_constraintTop_toBottomOf="@id/imgSignatureRedLine" />
+
+            <FrameLayout
+                android:id="@+id/signUpFragmentContainer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp20"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/imgHomeDetails" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.ci.act.widgets.CustomTextView
+        android:id="@+id/txtPaymentQuestionsInformation"
+        style="@style/large_text"
+        android:maxLines="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp15"
+        android:text="How do i update the payment information?"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgAdding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@id/txtPaymentQuestionsInformation"/>
+
+    <ImageView
+        android:id="@+id/imgClosing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintBottom_toBottomOf="@id/txtPaymentQuestionsInformation"/>
+
+    <View
+        android:id="@+id/bottomQuestionViewLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPaymentQuestionsInformation" />
+    <com.ci.act.widgets.CustomTextView
+        android:id="@+id/txtInformationAnswers"
+        android:layout_width="@dimen/dp0"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:padding="@dimen/dp15"
+        android:visibility="gone"
+        android:text="Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPaymentQuestionsInformation"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

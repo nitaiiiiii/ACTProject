@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="locationFirstFragment"
+            type="com.ci.act.ui.home.settingsPage.fragments.locationSecondFragment.LocationFirstViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.home.settingsPage.fragments.locationSecondFragment.LocationFirstFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mainLocationFirstCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainLocationConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/whiteFour">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLineLeft2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.03" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLineRight2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.97" />
+
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/txtGetLocationNotifications"
+                    style="@style/extra_large_text_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp10"
+                    android:text="Set Your Location"
+                    app:layout_constraintEnd_toEndOf="@id/guideLineRight2"
+                    app:layout_constraintStart_toStartOf="@id/guideLineLeft2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/txtLocationStartTime"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:padding="@dimen/dp10"
+                    android:gravity="center"
+                    android:text="The ACT App would like to access your location\nto identify events in your area."
+                    app:layout_constraintStart_toStartOf="@id/guideLineLeft2"
+                    app:layout_constraintEnd_toEndOf="@id/guideLineRight2"
+                    app:layout_constraintTop_toBottomOf="@id/txtGetLocationNotifications" />
+
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/txtNotificationFirstAccess"
+                    style="@style/extra_large_text"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp10"
+                    android:paddingStart="@dimen/dp1"
+                    android:text="Allow Location Access"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/guideLineLeft2"
+                    app:layout_constraintTop_toBottomOf="@id/txtLocationStartTime" />
+
+                <Switch
+                    android:id="@+id/mainLocationSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    app:layout_constraintBottom_toBottomOf="@id/txtNotificationFirstAccess"
+                    app:layout_constraintEnd_toEndOf="@id/guideLineRight2"
+                    app:layout_constraintTop_toTopOf="@id/txtNotificationFirstAccess" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtManualLocationFirstTyping"
+            style="@style/extra_large_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp25"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="No,I will enter the details manually"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainLocationFirstCard" />
+
+        <EditText
+            android:id="@+id/editTextLocationFirstName"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp70"
+            android:layout_margin="@dimen/dp20"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Enter Your State"
+            android:inputType="text"
+            android:padding="@dimen/dp15"
+            android:paddingStart="@dimen/dp15"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey"
+            android:textCursorDrawable="@null"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/txtManualLocationFirstTyping" />
+
+        <EditText
+            android:id="@+id/editTextLocationEndName"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp70"
+            android:layout_margin="@dimen/dp20"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Enter Your City"
+            android:inputType="text"
+            android:padding="@dimen/dp15"
+            android:paddingStart="@dimen/dp15"
+            android:textColor="@color/grey"
+            android:gravity="center"
+            android:textColorHint="@color/grey"
+            android:textCursorDrawable="@null"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/editTextLocationFirstName" />
+
+        <com.ci.act.widgets.CustomButton
+            android:id="@+id/btnAccessLocation"
+            style="@style/extra_large_text_semi_bold"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp70"
+            android:layout_margin="@dimen/dp20"
+            android:background="@drawable/rounded_button"
+            android:text="Save Location"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/dp40"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/editTextLocationEndName" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

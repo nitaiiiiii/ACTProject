@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp10"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/dp10"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dp80" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/dp180" />
+
+        <ImageView
+            android:id="@+id/registeredACT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/act"
+            app:layout_constraintBottom_toTopOf="@id/txtRegistered"
+            app:layout_constraintEnd_toEndOf="@id/guideLineVertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtRegistered"
+            style="@style/extra_large_text_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center_horizontal"
+            android:text="2\nDAYS"
+            android:visibility="gone"
+            android:textColor="@color/ruby_red"
+            app:layout_constraintBottom_toTopOf="@id/txtRegisteredBlackText"
+            app:layout_constraintEnd_toEndOf="@id/registeredACT"
+            app:layout_constraintStart_toStartOf="@id/registeredACT"
+            app:layout_constraintTop_toBottomOf="@id/registeredACT" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtRegisteredRanker"
+            style="@style/extra_large_text_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center_horizontal"
+            android:text="11"
+            android:textColor="@color/ruby_red"
+            app:layout_constraintBottom_toTopOf="@id/txtRegisteredBlackText"
+            app:layout_constraintEnd_toEndOf="@id/registeredACT"
+            app:layout_constraintStart_toStartOf="@id/registeredACT"
+            app:layout_constraintTop_toBottomOf="@id/txtRegisteredSubScript" />
+
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtRegisteredSubScript"
+            style="@style/medium_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="TH"
+            android:layout_marginStart="@dimen/dp5"
+            android:textColor="@color/ruby_red"
+            app:layout_constraintTop_toTopOf="@id/txtRegistered"
+            app:layout_constraintStart_toEndOf="@id/txtRegistered"
+             />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtRegisteredBlackText"
+            style="@style/extra_large_text_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center_horizontal"
+            android:text="TO GO"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/guideLineHorizontal"
+            app:layout_constraintEnd_toEndOf="@id/registeredACT"
+            app:layout_constraintStart_toStartOf="@id/registeredACT"
+            app:layout_constraintTop_toBottomOf="@id/txtRegisteredBlackText" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtRegisteredBlackTextRank"
+            style="@style/extra_large_text_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center_horizontal"
+            android:text="RANK"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/guideLineHorizontal"
+            app:layout_constraintEnd_toEndOf="@id/registeredACT"
+            app:layout_constraintStart_toStartOf="@id/registeredACT"
+            app:layout_constraintTop_toBottomOf="@id/txtRegistered" />
+
+        <View
+            android:layout_width="@dimen/dp1"
+            android:layout_height="@dimen/dp0"
+            android:background="@color/light_grey"
+            app:layout_constraintBottom_toTopOf="@id/guideLineHorizontal"
+            app:layout_constraintEnd_toStartOf="@id/txtInflateLocationRegistered"
+            app:layout_constraintStart_toEndOf="@id/txtRegisteredBlackText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtEventsGameRegistered"
+            style="@style/extra_large_text"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp15"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:text="BASKET BALL"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideLineVertical"
+            app:layout_constraintTop_toTopOf="@id/mainConstraint" />
+
+        <ImageView
+            android:id="@+id/imgInflateLocationRegistered"
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            android:layout_margin="@dimen/dp10"
+            android:src="@drawable/ic_baseline_location_on_24"
+            app:layout_constraintStart_toStartOf="@id/guideLineVertical"
+            app:layout_constraintTop_toBottomOf="@id/txtEventsGameRegistered" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtInflateLocationRegistered"
+            style="@style/medium_text"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:paddingStart="@dimen/dp5"
+            android:text="Preuss School UCSD, 9500 Gilman DR., La Jolla, California\n92093"
+            android:textColor="@color/warmGreyTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgInflateLocationRegistered"
+            app:layout_constraintTop_toTopOf="@id/imgInflateLocationRegistered" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtEventsRegisteredPeople"
+            style="@style/large_text"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp20"
+            android:text="226 Participants"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/txtInflateLocationRegistered"
+            app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal"
+            app:layout_constraintStart_toStartOf="@id/guideLineVertical"
+             />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtLiveEventsOneReg"
+            style="@style/medium_text"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp20"
+            android:text="May 29-31"
+            android:textColor="@color/black"
+            android:layout_marginEnd="@dimen/dp20"
+            app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtInflateLocationRegistered"
+
+            />
+
+        <View
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideLineHorizontal" />
+
+        <com.ci.act.widgets.CustomButton
+            android:id="@+id/btnGreyCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp40"
+            android:background="@drawable/btn_registered_events"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:layout_marginEnd="@dimen/dp10"
+            app:layout_constraintBottom_toBottomOf="@id/bottomView"
+            app:layout_constraintEnd_toEndOf="@id/bottomView"
+            app:layout_constraintTop_toTopOf="@id/guideLineHorizontal" />
+
+        <View
+            android:id="@+id/bottomView1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideLineHorizontal" />
+
+        <ImageView
+            android:id="@+id/imgLeaderBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/live2"
+            android:layout_marginStart="@dimen/dp10"
+            app:layout_constraintEnd_toStartOf="@id/txtLeaderBoard"
+            app:layout_constraintTop_toTopOf="@id/guideLineHorizontal"
+            app:layout_constraintBottom_toBottomOf="@id/bottomView1"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtLeaderBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LeaderBoard"
+            style="@style/medium_text"
+            android:textColor="@color/ruby_red"
+            android:layout_marginStart="@dimen/dp10"
+            app:layout_constraintStart_toEndOf="@id/imgLeaderBoard"
+            app:layout_constraintTop_toTopOf="@id/imgLeaderBoard"
+            app:layout_constraintBottom_toBottomOf="@id/imgLeaderBoard"/>
+
+        <ImageView
+            android:id="@+id/imgLeaderBoardReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp20"
+            android:src="@drawable/live2"
+            app:layout_constraintBottom_toBottomOf="@id/bottomView1"
+            app:layout_constraintEnd_toStartOf="@id/txtLeaderBoardReport"
+            app:layout_constraintTop_toTopOf="@id/guideLineHorizontal" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtLeaderBoardReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Report"
+            style="@style/medium_text"
+            android:textColor="@color/ruby_red"
+            android:layout_marginEnd="@dimen/dp20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imgLeaderBoardReport"
+            app:layout_constraintBottom_toBottomOf="@id/imgLeaderBoardReport"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="faqList"
+            type="com.ci.act.ui.home.faqList.FaqListViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.home.faqList.FaqListActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtListFAQs"
+                style="@style/extra_large_text_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edit_text_settings_email_and_password"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp20"
+                android:text="FAQ's"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgListFAQs"
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintBottom_toBottomOf="@id/txtListFAQs"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="@id/txtListFAQs" />
+
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtPaymentInformation"
+                style="@style/extra_large_text_bold"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp15"
+                android:maxLines="1"
+                android:text="Payment Information Question"
+                android:textColor="@color/ruby_red"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtListFAQs" />
+
+            <View
+                android:id="@+id/bottomViewLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/light_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtPaymentInformation" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvListFAQs"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="@dimen/dp0"
+                app:layout_constraintBottom_toTopOf="@id/txtRelevantQuestions"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/bottomViewLine" />
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtRelevantQuestions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                style="@style/large_text"
+                android:padding="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp10"
+                android:text="Can't find relevant\nquestion?"
+                app:layout_constraintTop_toBottomOf="@id/rvListFAQs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft" />
+
+            <com.ci.act.widgets.CustomButton
+                android:id="@+id/btnRelevantQuestions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:textColor="@color/white"
+                android:paddingStart="@dimen/dp40"
+                android:paddingEnd="@dimen/dp40"
+                android:textAllCaps="false"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="@drawable/rounded_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvListFAQs"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

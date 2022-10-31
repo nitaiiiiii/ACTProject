@@ -1,0 +1,53 @@
+<layout>
+
+    <data>
+
+        <variable
+            name="onBoardingScreenFragment"
+            type="com.ci.act.ui.onboarding.pages.OnBoardingScreensViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context="com.ci.act.ui.onboarding.pages.OnBoardingScreensFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideOnBoardingScreenLeft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideOnBoardingScreenRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideBottomOnBoardingScreenDivider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.80" />
+
+
+        <ImageView
+            android:id="@+id/imgOnBoardScreenImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="bottom"
+            android:scaleType="fitXY"
+            android:src="@drawable/onboarding1"
+            app:layout_constraintBottom_toTopOf="@id/guideBottomOnBoardingScreenDivider"
+            app:layout_constraintLeft_toLeftOf="@id/guideOnBoardingScreenLeft"
+            app:layout_constraintRight_toRightOf="@id/guideOnBoardingScreenRight"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

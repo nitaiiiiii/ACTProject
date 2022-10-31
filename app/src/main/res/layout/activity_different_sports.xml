@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="differentSports"
+            type="com.ci.act.ui.differentSports.DifferentSportsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.differentSports.DifferentSportsActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtDifferentSports"
+            style="@style/extra_large_text"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp0"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:text="Choose Your"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/txtSportsScreen"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toTopOf="@id/guideLineTop" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSports"
+            style="@style/extra_large_text_bold"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp0"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:text="Sports"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/txtSportsScreen"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/txtDifferentSports" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSportsScreen"
+            style="@style/large_text"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp2"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:text="Select All"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/imgSelectSports"
+            app:layout_constraintEnd_toStartOf="@id/imgSelectSports"
+            app:layout_constraintStart_toEndOf="@id/txtSports"
+            app:layout_constraintTop_toTopOf="@id/guideLineTop" />
+
+        <ImageView
+            android:id="@+id/imgSelectSports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/radio_button_unchecked"
+            app:layout_constraintBottom_toBottomOf="@id/txtSports"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintTop_toTopOf="@id/txtDifferentSports" />
+
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSkip"
+            style="@style/extra_large_text_semi_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            android:textColor="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@id/guideLineBottom"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toTopOf="@id/txtNext" />
+
+        <ImageView
+            android:id="@+id/imgForwardArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            app:layout_constraintBottom_toBottomOf="@id/guideLineBottom"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtNext"
+            style="@style/extra_large_text_semi_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textColor="@color/ruby_red"
+            app:layout_constraintBottom_toBottomOf="@id/guideLineBottom"
+            app:layout_constraintEnd_toStartOf="@id/imgForwardArrow"
+            app:layout_constraintTop_toTopOf="@id/imgForwardArrow" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDifferentSports"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp0"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@id/txtSkip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSports" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

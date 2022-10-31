@@ -1,0 +1,268 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/ruby_red</item>
+        <item name="colorPrimaryDark">@color/ruby_red</item>
+        <item name="colorAccent">@color/ruby_red</item>
+    </style>
+
+    <!-- Base application theme no Actionbar. -->
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="dialog_open_animation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_for_bottom_sheet</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_for_bottom_sheet</item>
+    </style>
+
+    <style name="EditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
+    <style name="EditTextTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/warmGreyTwo</item>
+        <item name="colorControlActivated">@color/warmGreyTwo</item>
+        <item name="colorControlHighlight">@color/warmGreyTwo</item>
+    </style>
+
+    <style name="OutlinedRoundBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxCornerRadiusBottomEnd">32dp</item>
+        <item name="boxCornerRadiusBottomStart">32dp</item>
+        <item name="boxCornerRadiusTopEnd">32dp</item>
+        <item name="boxCornerRadiusTopStart">32dp</item>
+    </style>
+
+    <style name="MyDialogPopup" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="windowFixedWidthMajor">90%</item>
+        <item name="windowFixedWidthMinor">90%</item>
+        <item name="android:windowSoftInputMode">stateHidden|adjustResize</item>
+        <item name="dialogCornerRadius">@dimen/dp10</item>
+        <item name="colorAccent">@color/menu_screen_main_color</item>
+        <item name="android:fontFamily">@fonts/acumin_regular_pro</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/greyishBlue</item>
+        <item name="colorControlActivated">@color/red</item>
+    </style>
+
+    <!--Full Screen Theme-->
+    <style name="FullScreenTheme"
+        parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+
+    <!--custom widgets starts-->
+    <declare-styleable name="CustomTextView">
+        <attr name="setFont" format="enum">
+            <enum name="HelveticaNeue" value="0" />
+            <enum name="HelveticaNeue-LightItalic" value="1" />
+            <enum name="HelveticaNeue-Light" value="2" />
+            <enum name="HelveticaNeue-Medium" value="3" />
+            <enum name="HelveticaNeue-Italic" value="4" />
+            <enum name="HelveticaNeue-Bold" value="5" />
+            <enum name="BebasNeue" value="6" />
+            <enum name="ci_icons" value="7" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomViews">
+        <attr name="setFonts" format="enum">
+            <enum name="HelveticaNeue" value="0" />
+            <enum name="HelveticaNeue-LightItalic" value="1" />
+            <enum name="HelveticaNeue-Light" value="2" />
+            <enum name="HelveticaNeue-Medium" value="3" />
+            <enum name="HelveticaNeue-Italic" value="4" />
+            <enum name="HelveticaNeue-Bold" value="5" />
+            <enum name="BebasNeue" value="6" />
+        </attr>
+    </declare-styleable>
+    <!--EditText-->
+    <declare-styleable name="LREditText">
+        <attr name="setEditTextFont" format="enum">
+            <enum name="helveticaneue" value="0" />
+            <enum name="helveticaNeue_bold" value="1" />
+            <enum name="helveticaneue_italic" value="2" />
+            <enum name="helveticaneue_light" value="3" />
+            <enum name="helveticaneue_lightitalic" value="4" />
+            <enum name="helveticaneue_medium" value="5" />
+            <enum name="location_icon" value="6" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="MultiStateToggleButton">
+        <attr name="mstbPrimaryColor" format="reference" />
+        <attr name="mstbSecondaryColor" format="reference" />
+        <attr name="mstbColorPressedText" format="reference" />
+        <attr name="mstbColorPressedBackground" format="reference" />
+        <attr name="mstbColorPressedBackgroundResource" format="reference" />
+        <attr name="mstbColorNotPressedText" format="reference" />
+        <attr name="mstbColorNotPressedBackground" format="reference" />
+        <attr name="mstbColorNotPressedBackgroundResource" format="reference" />
+    </declare-styleable>
+
+    <style name="custom_toggle_button">
+        <item name="android:textSize">@dimen/_12sp</item>
+        <item name="setFont">HelveticaNeue-Light</item>
+        <item name="android:padding">@dimen/dp10</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <string-array name="FontNames">
+        <item>HelveticaNeue.ttf</item>
+        <item>HelveticaNeue-LightItalic.ttf</item>
+        <item>HelveticaNeue-Light.ttf</item>
+        <item>HelveticaNeue-Medium.ttf</item>
+        <item>HelveticaNeue-Italic.ttf</item>
+        <item>HelveticaNeue-Bold.ttf</item>
+        <item>BebasNeue.otf</item>
+        <item>CI-People.ttf</item>
+    </string-array>
+    <!--custom widgets ends-->
+
+
+    <!--    Text styles starts-->
+    <style name="small_text">
+        <item name="android:textSize">@dimen/_10sp</item>
+        <item name="setFont">HelveticaNeue-Light</item>
+    </style>
+
+    <style name="small_text_semi_bold">
+        <item name="android:textSize">@dimen/_10sp</item>
+        <item name="setFont">HelveticaNeue-Medium</item>
+    </style>
+
+    <style name="small_text_bold">
+        <item name="android:textSize">@dimen/_10sp</item>
+        <item name="setFont">HelveticaNeue-Bold</item>
+    </style>
+
+    <style name="small_text_italic">
+        <item name="android:textSize">@dimen/_10sp</item>
+        <item name="setFont">HelveticaNeue-Italic</item>
+    </style>
+
+    <style name="very_small_text_italic">
+        <item name="android:textSize">@dimen/_8sp</item>
+        <item name="setFont">HelveticaNeue-Italic</item>
+    </style>
+
+    <style name="medium_small_text">
+        <item name="android:textSize">@dimen/_11sp</item>
+        <item name="setFont">HelveticaNeue-Light</item>
+    </style>
+
+    <style name="medium_small_text_semi_bold">
+        <item name="android:textSize">@dimen/_11sp</item>
+        <item name="setFont">HelveticaNeue-Medium</item>
+    </style>
+
+    <style name="medium_small_text_bold">
+        <item name="android:textSize">@dimen/_11sp</item>
+        <item name="setFont">HelveticaNeue-Bold</item>
+    </style>
+
+    <style name="medium_small_text_italic">
+        <item name="android:textSize">@dimen/_11sp</item>
+        <item name="setFont">HelveticaNeue-Italic</item>
+    </style>
+
+    <style name="medium_text">
+        <item name="android:textSize">@dimen/_12sp</item>
+        <item name="setFont">HelveticaNeue-Light</item>
+    </style>
+
+    <style name="medium_text_semi_bold">
+        <item name="android:textSize">@dimen/_12sp</item>
+        <item name="setFont">HelveticaNeue-Medium</item>
+    </style>
+
+    <style name="medium_text_bold">
+        <item name="android:textSize">@dimen/_12sp</item>
+        <item name="setFont">HelveticaNeue-Bold</item>
+    </style>
+
+    <style name="medium_text_italic">
+        <item name="android:textSize">@dimen/_12sp</item>
+        <item name="setFont">HelveticaNeue-Italic</item>
+    </style>
+
+    <style name="medium_large_text_semi_bold">
+        <item name="android:textSize">@dimen/_13sp</item>
+        <item name="setFont">HelveticaNeue-Medium</item>
+    </style>
+
+    <style name="medium_large_text_bold">
+        <item name="android:textSize">@dimen/_13sp</item>
+        <item name="setFont">HelveticaNeue-Bold</item>
+    </style>
+
+    <style name="medium_large_text_italic">
+        <item name="android:textSize">@dimen/_13sp</item>
+        <item name="setFont">HelveticaNeue-Italic</item>
+    </style>
+
+
+    <style name="large_text">
+        <item name="android:textSize">@dimen/_14sp</item>
+        <item name="setFont">HelveticaNeue-Light</item>
+    </style>
+
+    <style name="large_text_semi_bold">
+        <item name="android:textSize">@dimen/_14sp</item>
+        <item name="setFont">HelveticaNeue-Medium</item>
+    </style>
+
+    <style name="large_text_bold">
+        <item name="android:textSize">@dimen/_14sp</item>
+        <item name="setFont">HelveticaNeue-Bold</item>
+    </style>
+
+    <style name="extra_large_text" parent="android:Widget">
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="setFont">HelveticaNeue-Light</item>
+    </style>
+
+    <style name="extra_large_text_semi_bold" parent="android:Widget">
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="setFont">HelveticaNeue-Medium</item>
+    </style>
+
+    <style name="extra_large_text_bold" parent="android:Widget">
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="setFont">HelveticaNeue-Bold</item>
+    </style>
+
+    <style name="extra_large_bebas_bold" parent="android:Widget">
+        <item name="android:textSize">@dimen/sp22</item>
+        <item name="setFont">BebasNeue</item>
+    </style>
+    <!--    Text styles ends-->
+
+</resources>

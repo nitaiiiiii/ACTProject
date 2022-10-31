@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="splashScreen"
+            type="com.ci.act.ui.splashscreen.SplashScreenViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash"
+
+        tools:context="com.ci.act.ui.splashscreen.SplashScreenActivity">
+
+        <ImageView
+            android:id="@+id/imgSplashScreenLogo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp0"
+            android:src="@drawable/splashscreen_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="w,1:2.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.40" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSplashScreen"
+            style="@style/extra_large_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:background="@drawable/screenshot5_cleanup"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgSplashScreenLogo" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtLoading"
+            style="@style/large_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:background="@drawable/screenshot6_cleanup"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgLoading" />
+
+        <ImageView
+            android:id="@+id/imgLoading"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:src="@drawable/loading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/txtLoading"
+            app:layout_constraintTop_toBottomOf="@id/txtSplashScreen"
+            app:layout_constraintVertical_chainStyle="packed" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

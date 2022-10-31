@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="sportsBoard"
+            type="com.ci.act.ui.home.sportsBoard.SportsBoardViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.sportsBoard.SportsBoardActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <View
+            android:id="@+id/viewSportsBoardLocation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp220"
+            android:background="@color/ruby_red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgSportsBoard"
+            android:layout_width="@dimen/dp35"
+            android:layout_height="@dimen/dp35"
+            android:layout_marginTop="@dimen/dp5"
+            android:src="@drawable/ic"
+            app:layout_constraintEnd_toStartOf="@id/txtSportsBoard"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSportsBoard"
+            style="@style/extra_large_text_bold"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:gravity="center"
+            android:text="LEADERBOARD"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/imgSportsBoard"
+            app:layout_constraintEnd_toStartOf="@id/imgSportsBoardShare"
+            app:layout_constraintBottom_toBottomOf="@id/imgSportsBoardShare"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgSportsBoardShare"
+            android:layout_width="@dimen/dp35"
+            android:layout_height="@dimen/dp35"
+            android:layout_marginTop="@dimen/dp5"
+            android:src="@drawable/share"
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintStart_toEndOf="@id/txtSportsBoard"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgSportsBoardLiveStream"
+            android:layout_width="@dimen/dp130"
+            android:layout_height="@dimen/dp100"
+            android:src="@drawable/football_event"
+            android:layout_marginTop="@dimen/dp30"
+            app:layout_constraintStart_toEndOf="@id/imgSportsBoard"
+            app:layout_constraintTop_toBottomOf="@id/txtSportsBoard"/>
+
+        <TextView
+            android:id="@+id/txtSportsBoardFootBallCamp"
+            style="@style/large_text_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="FOOTBALL CAMP"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            app:layout_constraintStart_toStartOf="@id/imgSportsBoardLiveStream"
+            app:layout_constraintEnd_toEndOf="@id/imgSportsBoardLiveStream"
+            app:layout_constraintTop_toBottomOf="@id/imgSportsBoardLiveStream"
+             />
+
+        <ImageView
+            android:id="@+id/imgMyLeaderBoardRankings"
+            android:layout_width="@dimen/dp130"
+            android:layout_height="@dimen/dp130"
+            android:src="@drawable/rankboard"
+            app:layout_constraintTop_toTopOf="@id/imgSportsBoardLiveStream"
+            app:layout_constraintBottom_toBottomOf="@id/txtSportsBoardFootBallCamp"
+            app:layout_constraintEnd_toEndOf="@+id/guideLineRight" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSportsBoardRankingStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOU ARE\nRANKED"
+            style="@style/small_text_bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/dp20"
+            app:layout_constraintEnd_toEndOf="@id/imgMyLeaderBoardRankings"
+            app:layout_constraintTop_toTopOf="@id/imgMyLeaderBoardRankings"
+            app:layout_constraintStart_toStartOf="@id/imgMyLeaderBoardRankings"/>
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSportsBoardRegisteredRanker"
+            style="@style/extra_large_text_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp10"
+            android:gravity="center_horizontal"
+            android:text="11"
+            android:layout_marginTop="@dimen/dp25"
+            android:textColor="@color/ruby_red"
+            app:layout_constraintTop_toBottomOf="@+id/txtSportsBoardRankingStatus"
+            app:layout_constraintStart_toStartOf="@+id/txtSportsBoardRankingStatus"
+            app:layout_constraintEnd_toEndOf="@id/txtSportsBoardRankingStatus"
+            />
+
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtSportsBoardRegisteredSubScript"
+            style="@style/small_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp15"
+            android:gravity="center_horizontal"
+            android:text="TH"
+            android:textColor="@color/ruby_red"
+            app:layout_constraintBottom_toTopOf="@id/txtSportsBoardRegisteredRanker"
+            app:layout_constraintStart_toStartOf="@id/txtSportsBoardRegisteredRanker" />
+
+        <LinearLayout
+            android:id="@+id/mainSportsBoardCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@id/viewSportsBoardLocation">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/whiteFour">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLineLeft2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.03" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLineRight2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.97" />
+
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/txtYardDash"
+                    style="@style/large_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dp20"
+                    android:paddingStart="@dimen/dp1"
+                    android:text="40 YARD DASH"
+                    android:textColor="@color/black"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintEnd_toStartOf="@id/txtVertical"
+                    app:layout_constraintStart_toStartOf="@id/guideLineLeft2"
+                    app:layout_constraintTop_toTopOf="@id/mainConstraintLayout"
+                    />
+
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/txtVertical"
+                    style="@style/large_text"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp20"
+                    android:paddingStart="@dimen/dp1"
+                    android:text="VERTICAL"
+                    android:textColor="@color/black"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintEnd_toStartOf="@id/txtShuttle"
+                    app:layout_constraintStart_toEndOf="@id/txtYardDash"
+                    app:layout_constraintTop_toTopOf="@id/mainConstraintLayout" />
+
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/txtShuttle"
+                    style="@style/large_text"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp20"
+                    android:paddingStart="@dimen/dp1"
+                    android:text="SHUTTLE"
+                    android:textColor="@color/black"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintEnd_toEndOf="@id/guideLineRight2"
+                    app:layout_constraintStart_toEndOf="@id/txtVertical"
+                    app:layout_constraintTop_toTopOf="@id/mainConstraintLayout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSportsBoard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp0"
+            android:layout_marginBottom="@dimen/dp10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainSportsBoardCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
