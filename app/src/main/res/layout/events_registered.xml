@@ -36,6 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/act"
+            android:layout_marginTop="@dimen/dp10"
             app:layout_constraintBottom_toTopOf="@id/txtRegistered"
             app:layout_constraintEnd_toEndOf="@id/guideLineVertical"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,12 +44,12 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtRegistered"
-            style="@style/extra_large_text_bold"
+            style="@style/very_extra_large_bebas_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp20"
             android:gravity="center_horizontal"
-            android:text="2\nDAYS"
+            android:text="2"
             android:visibility="gone"
             android:textColor="@color/ruby_red"
             app:layout_constraintBottom_toTopOf="@id/txtRegisteredBlackText"
@@ -58,10 +59,10 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtRegisteredRanker"
-            style="@style/extra_large_text_bold"
+            style="@style/very_extra_large_bebas_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp15"
             android:gravity="center_horizontal"
             android:text="11"
             android:textColor="@color/ruby_red"
@@ -73,7 +74,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtRegisteredSubScript"
-            style="@style/medium_text"
+            style="@style/small_bebas_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -86,12 +87,12 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtRegisteredBlackText"
-            style="@style/extra_large_text_bold"
+            style="@style/small_bebas_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp100"
             android:gravity="center_horizontal"
-            android:text="TO GO"
+            android:text="\nDAYS TO GO"
             android:textColor="@color/black"
             android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@id/guideLineHorizontal"
@@ -101,17 +102,17 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtRegisteredBlackTextRank"
-            style="@style/extra_large_text_bold"
+            style="@style/extra_large_bebas_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp10"
             android:gravity="center_horizontal"
             android:text="RANK"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@id/guideLineHorizontal"
+            android:layout_marginBottom="@dimen/dp30"
+            app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal"
             app:layout_constraintEnd_toEndOf="@id/registeredACT"
             app:layout_constraintStart_toStartOf="@id/registeredACT"
-            app:layout_constraintTop_toBottomOf="@id/txtRegistered" />
+            app:layout_constraintTop_toBottomOf="@id/txtRegisteredRanker" />
 
         <View
             android:layout_width="@dimen/dp1"
@@ -124,7 +125,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtEventsGameRegistered"
-            style="@style/extra_large_text"
+            style="@style/small_lato_regular1"
             android:layout_width="@dimen/dp0"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp15"
@@ -163,7 +164,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtEventsRegisteredPeople"
-            style="@style/large_text"
+            style="@style/small_lato_regular1"
             android:layout_width="@dimen/dp0"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp15"
@@ -177,7 +178,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtLiveEventsOneReg"
-            style="@style/medium_text"
+            style="@style/small_lato_regular1"
             android:layout_width="@dimen/dp0"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp15"
@@ -236,8 +237,8 @@
             android:id="@+id/txtLeaderBoard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LeaderBoard"
-            style="@style/medium_text"
+            android:text="My LeaderBoard"
+            style="@style/small_lato_regular1"
             android:textColor="@color/ruby_red"
             android:layout_marginStart="@dimen/dp10"
             app:layout_constraintStart_toEndOf="@id/imgLeaderBoard"
@@ -259,7 +260,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="My Report"
-            style="@style/medium_text"
+            style="@style/small_lato_regular1"
             android:textColor="@color/ruby_red"
             android:layout_marginEnd="@dimen/dp20"
             app:layout_constraintEnd_toEndOf="parent"

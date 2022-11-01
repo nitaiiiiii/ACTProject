@@ -23,7 +23,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtUpcomingEventsGame"
-            style="@style/medium_text_bold"
+            style="@style/extra_lato_semi_boldr1"
             android:layout_width="@dimen/dp0"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp5"
@@ -39,7 +39,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtUpcomingLiveEventsOne"
-            style="@style/medium_text_bold"
+            style="@style/small_lato_regular1"
             android:layout_width="@dimen/dp0"
             android:layout_height="wrap_content"
             android:gravity="end"
@@ -62,7 +62,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtUpcomingInflateLocation"
-            style="@style/medium_text"
+            style="@style/small_lato_regular1"
             android:layout_width="@dimen/dp0"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -77,7 +77,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtUpcomingLiveEventsRegistered"
-            style="@style/large_text"
+            style="@style/small_lato_regular1"
             android:layout_width="@dimen/dp0"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp20"

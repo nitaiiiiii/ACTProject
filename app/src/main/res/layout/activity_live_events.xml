@@ -93,6 +93,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtEvents" />
 
+
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtMainEventName"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                style="@style/extra_lato_semi_boldr1"
+                android:text="FOOTBALL EVENT"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/dp10"
+                app:layout_constraintStart_toStartOf="@id/imgDateLocation"
+                app:layout_constraintEnd_toEndOf="@id/txtEventsLocation"
+                app:layout_constraintBottom_toTopOf="@id/imgDateLocation"/>
+
             <ImageView
                 android:id="@+id/imgDateEvents"
                 android:layout_width="@dimen/dp65"
@@ -129,7 +142,7 @@
 
             <com.ci.act.widgets.CustomButton
                 android:id="@+id/btnLiveEvents"
-                style="@style/extra_large_text_semi_bold"
+                style="@style/large_bebas_bold"
                 android:layout_width="@dimen/dp120"
                 android:layout_height="@dimen/dp40"
                 android:layout_marginTop="@dimen/dp60"

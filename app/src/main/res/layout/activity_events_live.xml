@@ -33,7 +33,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtUpcomingActiveLiveEvents"
-            style="@style/extra_large_text_bold"
+            style="@style/extra_lato_semi_boldr1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/shape_edit_text_settings_email_and_password"

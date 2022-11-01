@@ -14,6 +14,7 @@ import com.ci.act.ui.authentication.signup.SignUpActivity
 import com.ci.act.ui.authentication.socialMedia.SocialMediaActivity
 import com.ci.act.ui.customDialogFragments.cantAccessAccount.CantAccessAccountFragment
 import com.ci.act.ui.home.events.EventsActivity
+import com.ci.act.ui.home.myZeroRegisteredEvents.MyZeroRegisteredActivity
 
 
 class SignInActivity : BaseActivity<ActivitySignInBinding, SignInView, SignInViewModel>(),
@@ -99,7 +100,7 @@ class SignInActivity : BaseActivity<ActivitySignInBinding, SignInView, SignInVie
                 )
 
             } else {
-                val intent = Intent(this, EventsActivity::class.java)
+                val intent = Intent(this, MyZeroRegisteredActivity::class.java)
                 startActivity(intent)
             }
         }

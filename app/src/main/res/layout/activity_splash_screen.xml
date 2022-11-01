@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/splash"
-
         tools:context="com.ci.act.ui.splashscreen.SplashScreenActivity">
 
         <ImageView
@@ -46,7 +45,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtLoading"
-            style="@style/small_lato_regular"
+            style="@style/small_lato_regular1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -56,17 +55,16 @@
             android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@id/imgLoading"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-             />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/imgLoading"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp40"
             android:src="@drawable/loading"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

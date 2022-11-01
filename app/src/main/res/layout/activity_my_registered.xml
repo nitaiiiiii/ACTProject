@@ -57,6 +57,18 @@
             app:layout_constraintStart_toStartOf="@id/guideLineLeft"
             app:layout_constraintTop_toTopOf="@id/txtRegisteredEventsMy" />
 
+
+        <View
+            android:id="@+id/viewBlackLine"
+            android:layout_width="@dimen/dp2"
+            android:layout_height="@dimen/dp100"
+            android:background="@color/black"
+            android:elevation="@dimen/dp3"
+            app:layout_constraintTop_toTopOf="@id/firstView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/firstView"/>
+
         <View
             android:id="@+id/firstView"
             android:layout_width="@dimen/dp0"
@@ -69,16 +81,29 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtRegisteredMy"
-            style="@style/extra_large_text_bold"
+            style="@style/extra_large_bebas_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="8\nRegistered"
+            android:text="8"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@id/firstView"
+            app:layout_constraintBottom_toTopOf="@id/txtRegisteredMy1"
             app:layout_constraintEnd_toEndOf="@id/firstView"
             app:layout_constraintStart_toStartOf="@id/firstView"
             app:layout_constraintTop_toTopOf="@id/firstView" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtRegisteredMy1"
+            style="@style/large_bebas_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="REGISTERED"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/firstView"
+            app:layout_constraintEnd_toEndOf="@id/firstView"
+            app:layout_constraintBottom_toBottomOf="@id/firstView"
+            app:layout_constraintTop_toBottomOf="@id/txtRegisteredMy" />
 
         <View
             android:id="@+id/secondView"
@@ -91,17 +116,31 @@
             app:layout_constraintTop_toBottomOf="@id/txtRegisteredEventsMy" />
 
         <com.ci.act.widgets.CustomTextView
-            android:id="@+id/txtParticipatedMy"
-            style="@style/extra_large_text_bold"
+            android:id="@+id/txtParticipatedMy2"
+            style="@style/extra_large_bebas_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="5\nParticipants"
+            android:text="5"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@id/secondView"
+            app:layout_constraintBottom_toTopOf="@id/txtParticipatedMy3"
             app:layout_constraintEnd_toEndOf="@id/secondView"
             app:layout_constraintStart_toStartOf="@id/secondView"
             app:layout_constraintTop_toTopOf="@id/secondView" />
+
+        <com.ci.act.widgets.CustomTextView
+            android:id="@+id/txtParticipatedMy3"
+            style="@style/large_bebas_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="PARTICIPATED"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/secondView"
+            app:layout_constraintEnd_toEndOf="@id/secondView"
+            app:layout_constraintBottom_toBottomOf="@id/secondView"
+            app:layout_constraintTop_toBottomOf="@id/txtParticipatedMy2" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvMyRegistered"

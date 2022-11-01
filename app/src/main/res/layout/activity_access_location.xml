@@ -56,7 +56,7 @@
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtAllowAccess"
-                style="@style/extra_large_lato_bold"
+                style="@style/extra_lato_semi_boldr"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -71,7 +71,7 @@
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtSignIn"
-                style="@style/extra_lato_semi_boldr"
+                style="@style/small_lato_regular"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -203,7 +203,7 @@
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtSkipAccess"
-                style="@style/extra_lato_semi_boldr"
+                style="@style/extra_large_lato_regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp20"

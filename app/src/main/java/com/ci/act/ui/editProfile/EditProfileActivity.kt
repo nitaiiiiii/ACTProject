@@ -21,4 +21,5 @@ class EditProfileActivity: BaseActivity<ActivityEditProfileBinding,EditProfileVi
     override fun initViews(savedInstanceState: Bundle?) {
     }
 
+
 }

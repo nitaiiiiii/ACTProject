@@ -273,8 +273,22 @@
         <item name="setFont">BebasNeue</item>
     </style>
 
+    <style name="very_extra_large_bebas_bold" parent="android:Widget">
+        <item name="android:textSize">@dimen/sp30</item>
+        <item name="setFont">BebasNeue</item>
+    </style>
+    <style name="large_bebas_bold" parent="android:Widget">
+        <item name="android:textSize">@dimen/sp16</item>
+        <item name="setFont">BebasNeue</item>
+    </style>
+
+    <style name="small_bebas_bold" parent="android:Widget">
+        <item name="android:textSize">@dimen/sp13</item>
+        <item name="setFont">BebasNeue</item>
+    </style>
+
     <style name="extra_large_lato_bold" parent="android:Widget">
-        <item name="android:textSize">@dimen/sp22</item>
+        <item name="android:textSize">@dimen/sp24</item>
         <item name="setFont">Lato-Black</item>
     </style>
 
@@ -284,12 +298,22 @@
     </style>
 
     <style name="small_lato_regular" parent="android:Widget">
+        <item name="android:textSize">@dimen/sp18</item>
+        <item name="setFont">Lato-Regular</item>
+    </style>
+
+    <style name="small_lato_regular1" parent="android:Widget">
         <item name="android:textSize">@dimen/sp13</item>
         <item name="setFont">Lato-Regular</item>
     </style>
 
     <style name="extra_lato_semi_boldr" parent="android:Widget">
         <item name="android:textSize">@dimen/sp20</item>
+        <item name="setFont">Lato-Black</item>
+    </style>
+
+    <style name="extra_lato_semi_boldr1" parent="android:Widget">
+        <item name="android:textSize">@dimen/sp18</item>
         <item name="setFont">Lato-Black</item>
     </style>
     <!--    Text styles ends-->

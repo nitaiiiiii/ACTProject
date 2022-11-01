@@ -15,16 +15,17 @@
 
         <ImageView
             android:id="@+id/imgBasketBall"
-            android:layout_width="@dimen/dp120"
-            android:layout_height="@dimen/dp120"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="@dimen/dp100"
             android:scaleType="fitXY"
             android:src="@drawable/sports_basketball"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtEventsGame"
-            style="@style/extra_large_text"
+            style="@style/extra_lato_semi_boldr1"
             android:layout_width="@dimen/dp0"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp15"
@@ -48,7 +49,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtInflateLocation"
-            style="@style/medium_text"
+            style="@style/small_lato_regular1"
             android:layout_width="@dimen/dp0"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -62,7 +63,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtLiveEventsOne"
-            style="@style/medium_text"
+            style="@style/small_lato_regular1"
             android:layout_width="@dimen/dp0"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp15"
@@ -75,7 +76,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtLiveEventsRegistered"
-            style="@style/large_text"
+            style="@style/small_lato_regular1"
             android:layout_width="@dimen/dp0"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp20"

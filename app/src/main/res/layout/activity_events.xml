@@ -79,7 +79,7 @@
 
                 <com.ci.act.widgets.CustomTextView
                     android:id="@+id/txtHintEvents"
-                    style="@style/extra_large_lato_bold"
+                    style="@style/extra_lato_semi_boldr"
                     android:layout_width="@dimen/dp0"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp10"
@@ -94,14 +94,14 @@
 
                 <com.ci.act.widgets.CustomTextView
                     android:id="@+id/txtFillEvents"
-                    style="@style/extra_large_lato_regular"
+                    style="@style/small_lato_regular"
                     android:layout_width="@dimen/dp0"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp20"
                     android:ellipsize="end"
                     android:gravity="center"
                     android:maxLines="3"
-                    android:text="Our team is working heard to conduct\nevents very soon,W'll display once\nwe are ready"
+                    android:text="Our team is working heard to conduct\nevents very soon,W'll display once\nwe are ready."
                     android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                     app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -109,7 +109,7 @@
 
                 <com.ci.act.widgets.CustomTextView
                     android:id="@+id/txtHintPatience"
-                    style="@style/extra_large_lato_regular"
+                    style="@style/small_lato_regular"
                     android:layout_width="@dimen/dp0"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp15"
@@ -124,13 +124,15 @@
 
                 <com.ci.act.widgets.CustomButton
                     android:id="@+id/btnMyEvents"
-                    style="@style/extra_lato_semi_boldr"
+                    style="@style/small_lato_regular"
                     android:layout_width="@dimen/dp280"
                     android:layout_height="@dimen/dp70"
                     android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginBottom="@dimen/dp30"
                     android:background="@drawable/rounded_button"
                     android:text="View My Events"
                     android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                     app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                     app:layout_constraintTop_toBottomOf="@id/txtHintPatience" />
