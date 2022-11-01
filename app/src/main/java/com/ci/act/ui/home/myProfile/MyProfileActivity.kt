@@ -10,6 +10,7 @@ import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityMyProfileBinding
 import com.ci.act.ui.home.events.EventsActivity
+import com.ci.act.ui.mysports.MySportsActivity
 import com.google.android.material.chip.Chip
 
 class MyProfileActivity :BaseActivity<ActivityMyProfileBinding,MyProfileView,MyProfileViewModel>(),MyProfileView{
@@ -31,6 +32,10 @@ class MyProfileActivity :BaseActivity<ActivityMyProfileBinding,MyProfileView,MyP
     private fun setOnClickListener() {
         mViewDataBinding?.imgMyProfileEvents?.setOnClickListener {
             val intent = Intent(this,EventsActivity::class.java)
+            startActivity(intent)
+        }
+        mViewDataBinding?.imgMySportsRedProfile?.setOnClickListener {
+            val intent = Intent(this,MySportsActivity::class.java)
             startActivity(intent)
         }
     }

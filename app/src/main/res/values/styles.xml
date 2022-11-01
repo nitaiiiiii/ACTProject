@@ -85,7 +85,10 @@
             <enum name="HelveticaNeue-Italic" value="4" />
             <enum name="HelveticaNeue-Bold" value="5" />
             <enum name="BebasNeue" value="6" />
-            <enum name="ci_icons" value="7" />
+            <enum name="Lato-Black" value="7" />
+            <enum name="Lato-Regular" value="8" />
+
+            <enum name="ci_icons" value="9" />
         </attr>
     </declare-styleable>
 
@@ -98,6 +101,10 @@
             <enum name="HelveticaNeue-Italic" value="4" />
             <enum name="HelveticaNeue-Bold" value="5" />
             <enum name="BebasNeue" value="6" />
+            <enum name="Lato-Black" value="7" />
+            <enum name="Lato-Regular" value="8" />
+
+
         </attr>
     </declare-styleable>
     <!--EditText-->
@@ -142,6 +149,8 @@
         <item>HelveticaNeue-Italic.ttf</item>
         <item>HelveticaNeue-Bold.ttf</item>
         <item>BebasNeue.otf</item>
+        <item>Lato-Black.ttf</item>
+        <item>Lato-Regular.ttf</item>
         <item>CI-People.ttf</item>
     </string-array>
     <!--custom widgets ends-->
@@ -262,6 +271,26 @@
     <style name="extra_large_bebas_bold" parent="android:Widget">
         <item name="android:textSize">@dimen/sp22</item>
         <item name="setFont">BebasNeue</item>
+    </style>
+
+    <style name="extra_large_lato_bold" parent="android:Widget">
+        <item name="android:textSize">@dimen/sp22</item>
+        <item name="setFont">Lato-Black</item>
+    </style>
+
+    <style name="extra_large_lato_regular" parent="android:Widget">
+        <item name="android:textSize">@dimen/sp22</item>
+        <item name="setFont">Lato-Regular</item>
+    </style>
+
+    <style name="small_lato_regular" parent="android:Widget">
+        <item name="android:textSize">@dimen/sp13</item>
+        <item name="setFont">Lato-Regular</item>
+    </style>
+
+    <style name="extra_lato_semi_boldr" parent="android:Widget">
+        <item name="android:textSize">@dimen/sp20</item>
+        <item name="setFont">Lato-Black</item>
     </style>
     <!--    Text styles ends-->
 

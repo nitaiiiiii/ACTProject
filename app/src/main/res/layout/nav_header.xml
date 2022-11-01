@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/txtHeaderProfileName"
-        style="@style/extra_large_text_bold"
+        style="@style/extra_large_lato_bold"
         android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp10"
@@ -33,7 +33,7 @@
 
     <TextView
         android:id="@+id/txtHeaderProfileEmail"
-        style="@style/large_text"
+        style="@style/small_lato_regular"
         android:layout_width="@dimen/dp0"
         android:layout_height="wrap_content"
         android:maxLines="1"

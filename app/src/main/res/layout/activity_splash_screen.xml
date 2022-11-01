@@ -31,14 +31,14 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtSplashScreen"
-            style="@style/extra_large_text"
+            style="@style/extra_large_lato_regular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp10"
             android:ellipsize="end"
             android:gravity="center"
             android:maxLines="2"
-            android:background="@drawable/screenshot5_cleanup"
+            android:text="ATHLETIC CERTIFIED\nTESTING "
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -46,18 +46,18 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtLoading"
-            style="@style/large_text"
+            style="@style/small_lato_regular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:gravity="center"
             android:maxLines="1"
-            android:background="@drawable/screenshot6_cleanup"
+            android:text="LOADING"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/imgLoading"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgLoading" />
+             />
 
         <ImageView
             android:id="@+id/imgLoading"
@@ -66,8 +66,7 @@
             android:src="@drawable/loading"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/txtLoading"
-            app:layout_constraintTop_toBottomOf="@id/txtSplashScreen"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

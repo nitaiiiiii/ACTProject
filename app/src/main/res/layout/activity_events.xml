@@ -43,7 +43,7 @@
 
                 <com.ci.act.widgets.CustomTextView
                     android:id="@+id/txtEvents"
-                    style="@style/extra_large_text_bold"
+                    style="@style/extra_large_lato_regular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape_edit_text_settings_email_and_password"
@@ -79,7 +79,7 @@
 
                 <com.ci.act.widgets.CustomTextView
                     android:id="@+id/txtHintEvents"
-                    style="@style/extra_large_text_bold"
+                    style="@style/extra_large_lato_bold"
                     android:layout_width="@dimen/dp0"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp10"
@@ -94,7 +94,7 @@
 
                 <com.ci.act.widgets.CustomTextView
                     android:id="@+id/txtFillEvents"
-                    style="@style/extra_large_text"
+                    style="@style/extra_large_lato_regular"
                     android:layout_width="@dimen/dp0"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp20"
@@ -109,7 +109,7 @@
 
                 <com.ci.act.widgets.CustomTextView
                     android:id="@+id/txtHintPatience"
-                    style="@style/extra_large_text_bold"
+                    style="@style/extra_large_lato_regular"
                     android:layout_width="@dimen/dp0"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp15"
@@ -124,7 +124,7 @@
 
                 <com.ci.act.widgets.CustomButton
                     android:id="@+id/btnMyEvents"
-                    style="@style/extra_large_text_semi_bold"
+                    style="@style/extra_lato_semi_boldr"
                     android:layout_width="@dimen/dp280"
                     android:layout_height="@dimen/dp70"
                     android:layout_marginTop="@dimen/dp20"
