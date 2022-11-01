@@ -117,6 +117,7 @@
                 android:background="@drawable/rounded_button"
                 android:text="Yes, I'm sure"
                 android:textColor="@color/white"
+                android:layout_marginBottom="@dimen/dp50"
                 app:layout_constraintBottom_toTopOf="@id/txtSignatureBoxClose"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"

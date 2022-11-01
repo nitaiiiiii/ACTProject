@@ -5,9 +5,14 @@ import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseDialogFragmentNew
 import com.ci.act.databinding.FragmentPermanentDeleteBinding
+import com.ci.act.ui.authentication.signin.SignInActivity
+import com.ci.act.ui.editProfile.EditProfileActivity
 
-class PermanentDeleteFragment:BaseDialogFragmentNew<FragmentPermanentDeleteBinding,PermanentDeleteView,PermanentDeleteViewModel>(),PermanentDeleteView {
+class PermanentDeleteFragment :
+    BaseDialogFragmentNew<FragmentPermanentDeleteBinding, PermanentDeleteView, PermanentDeleteViewModel>(),
+    PermanentDeleteView {
     override fun getContentView(): Int = R.layout.fragment_permanent_delete
+
 
     override fun setViewModelClass(): Class<PermanentDeleteViewModel> {
         return PermanentDeleteViewModel::class.java
@@ -17,7 +22,19 @@ class PermanentDeleteFragment:BaseDialogFragmentNew<FragmentPermanentDeleteBindi
 
     override fun getNavigator(): PermanentDeleteView = this
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        setStyle(STYLE_NORMAL, R.style.MyDialogPopup)
+
+        isCancelable = false
+    }
+
     override fun initViews(savedInstanceState: Bundle?) {
+        mViewDataBinding?.txtSignatureBoxClose?.setOnClickListener {
+            EditProfileActivity.isShowingDelete = false
+            dialog?.dismiss()
+        }
     }
 
     override fun addObservables() {

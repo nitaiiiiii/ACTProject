@@ -9,6 +9,9 @@ import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityEventsBinding
 import com.ci.act.ui.authentication.signin.SignInActivity
 import com.ci.act.ui.customDialogFragments.cantAccessAccount.CantAccessAccountFragment
+import com.ci.act.ui.customDialogFragments.permanentDelete.PermanentDeleteFragment
+import com.ci.act.ui.customDialogFragments.signOut.SignOutFragment
+import com.ci.act.ui.editProfile.EditProfileActivity
 import com.ci.act.ui.home.aboutUs.AboutUsActivity
 import com.ci.act.ui.home.contactUs.ContactUsActivity
 import com.ci.act.ui.home.faqEmpty.FaqEmptyActivity
@@ -29,6 +32,10 @@ class EventsActivity : BaseActivity<ActivityEventsBinding, EventsView, EventsVie
 
     override fun setViewModelClass(): Class<EventsViewModel> {
         return EventsViewModel::class.java
+    }
+
+    companion object{
+        var isShowingSignOut = false
     }
 
     override fun getNavigator(): EventsView = this
@@ -93,6 +100,13 @@ class EventsActivity : BaseActivity<ActivityEventsBinding, EventsView, EventsVie
                 R.id.events7 -> {
                     val intent = Intent(this, SendLogActivity::class.java)
                     startActivity(intent)
+                }
+                R.id.events8 -> {
+                    val signOutFragment = SignOutFragment()
+                    if (!EventsActivity.isShowingSignOut){
+                        EventsActivity.isShowingSignOut = true
+                        supportFragmentManager?.let { it1 -> signOutFragment.show(it1, "Cancel Project") }
+                    }
                 }
             }
             true

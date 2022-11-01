@@ -81,7 +81,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtRegisteredMy"
-            style="@style/extra_large_bebas_bold"
+            style="@style/very_extra_large_bebas_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -94,7 +94,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtRegisteredMy1"
-            style="@style/large_bebas_bold"
+            style="@style/extra_large_bebas_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -117,7 +117,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtParticipatedMy2"
-            style="@style/extra_large_bebas_bold"
+            style="@style/very_extra_large_bebas_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -130,7 +130,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtParticipatedMy3"
-            style="@style/large_bebas_bold"
+            style="@style/extra_large_bebas_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"

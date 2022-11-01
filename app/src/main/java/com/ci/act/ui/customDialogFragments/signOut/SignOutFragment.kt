@@ -5,6 +5,8 @@ import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseDialogFragmentNew
 import com.ci.act.databinding.FragmentSignOutBinding
+import com.ci.act.ui.editProfile.EditProfileActivity
+import com.ci.act.ui.home.events.EventsActivity
 
 class SignOutFragment:BaseDialogFragmentNew<FragmentSignOutBinding,SignOutView,SignOutViewModel>(),SignOutView {
     override fun getContentView(): Int = R.layout.fragment_sign_out
@@ -17,7 +19,19 @@ class SignOutFragment:BaseDialogFragmentNew<FragmentSignOutBinding,SignOutView,S
 
     override fun getNavigator(): SignOutView = this
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        setStyle(STYLE_NORMAL, R.style.MyDialogPopup)
+
+        isCancelable = false
+    }
+
     override fun initViews(savedInstanceState: Bundle?) {
+        mViewDataBinding?.txtSignatureBoxClose?.setOnClickListener {
+            EventsActivity.isShowingSignOut = false
+            dialog?.dismiss()
+        }
     }
 
     override fun addObservables() {
