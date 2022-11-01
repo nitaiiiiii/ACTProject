@@ -1,10 +1,14 @@
 package com.ci.act.ui.customDialogFragments.requiredDetails
 
+import android.content.Intent
 import android.os.Bundle
 import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseDialogFragmentNew
 import com.ci.act.databinding.FragmentRequiredDetailsBinding
+import com.ci.act.ui.authentication.forgotPassword.ForgotPasswordActivity
+import com.ci.act.ui.authentication.signin.SignInActivity
+import com.ci.act.ui.authentication.signup.SignUpActivity
 
 class RequiredDetailsFragment :
     BaseDialogFragmentNew<FragmentRequiredDetailsBinding, RequiredDetailsView, RequiredDetailsViewModel>(),
@@ -19,7 +23,23 @@ class RequiredDetailsFragment :
 
     override fun getNavigator(): RequiredDetailsView = this
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        setStyle(STYLE_NORMAL, R.style.MyDialogPopup)
+
+        isCancelable = false
+    }
+
     override fun initViews(savedInstanceState: Bundle?) {
+        mViewDataBinding?.txtRequiredDetailsAccess?.setOnClickListener {
+            ForgotPasswordActivity.isRequiredDetails = false
+            dialog?.dismiss()
+        }
+        mViewDataBinding?.btnRequiredLocation?.setOnClickListener {
+            val intent = Intent(requireActivity(),SignUpActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun addObservables() {

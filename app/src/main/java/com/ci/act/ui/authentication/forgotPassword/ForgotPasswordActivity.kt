@@ -8,6 +8,9 @@ import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityForgotPasswordBinding
 import com.ci.act.ui.authentication.signin.SignInActivity
 import com.ci.act.ui.authentication.signup.SignUpActivity
+import com.ci.act.ui.customDialogFragments.permanentDelete.PermanentDeleteFragment
+import com.ci.act.ui.customDialogFragments.requiredDetails.RequiredDetailsFragment
+import com.ci.act.ui.editProfile.EditProfileActivity
 
 class ForgotPasswordActivity :
     BaseActivity<ActivityForgotPasswordBinding, ForgotPasswordView, ForgotPasswordViewModel>(),
@@ -16,6 +19,10 @@ class ForgotPasswordActivity :
 
     override fun setViewModelClass(): Class<ForgotPasswordViewModel> {
         return ForgotPasswordViewModel::class.java
+    }
+
+    companion object {
+        var isRequiredDetails = false
     }
 
     override fun getNavigator(): ForgotPasswordView = this
@@ -33,10 +40,14 @@ class ForgotPasswordActivity :
             startActivity(action)
             finish()
         }
+
+        mViewDataBinding?.btnSendPassword?.setOnClickListener {
+
+        }
     }
 
     private fun validateFields() {
-        mViewDataBinding?.btnSignIn?.setOnClickListener {
+        mViewDataBinding?.btnSendPassword?.setOnClickListener {
             if (mViewDataBinding?.editTextForgotPassword?.text?.isEmpty() == true) {
                 showErrorMessage(
                     "Email Address is Required..."
@@ -50,8 +61,16 @@ class ForgotPasswordActivity :
                     "Not a Valid Email Address..."
                 )
             } else {
-                val intent = Intent(this, SignUpActivity::class.java)
-                startActivity(intent)
+                val requiredDetailsFragment = RequiredDetailsFragment()
+                if (!ForgotPasswordActivity.isRequiredDetails) {
+                    ForgotPasswordActivity.isRequiredDetails = true
+                    supportFragmentManager?.let { it1 ->
+                        requiredDetailsFragment.show(
+                            it1,
+                            "Cancel Project"
+                        )
+                    }
+                }
             }
         }
     }
