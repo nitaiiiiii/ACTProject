@@ -13,6 +13,7 @@ import com.ci.act.databinding.FragmentGuardianApprovalBinding
 import com.ci.act.ui.authentication.signin.SignInActivity
 import com.ci.act.ui.customDialogFragments.cantAccessAccount.CantAccessAccountFragment
 import com.ci.act.ui.customDialogFragments.signatureBox.SignatureBoxFragment
+import com.ci.act.ui.customDialogFragments.uploadSignature.UploadSignatureFragment
 import com.ci.act.ui.home.mainEventScreenRegister.Communicator
 import com.ci.act.ui.home.mainEventScreenRegister.MainEventScreenRegisterActivity
 import kotlinx.android.synthetic.main.fragment_guardian_approval.*
@@ -25,6 +26,7 @@ class GuardianApprovalFragment :
     var check: Boolean = false
     companion object{
         var isShowingDigitalSign = false
+        var isUploadingDigitalSign = false
     }
 
 
@@ -59,6 +61,13 @@ class GuardianApprovalFragment :
             if (!GuardianApprovalFragment.isShowingDigitalSign){
                 GuardianApprovalFragment.isShowingDigitalSign = true
                 activity?.supportFragmentManager?.let { it1 -> signatureBoxFragment.show(it1, "Cancel Project") }
+            }
+        }
+        mViewDataBinding?.txtDigitalSignUpload?.setOnClickListener {
+            val uploadSignatureFragment = UploadSignatureFragment()
+            if (!GuardianApprovalFragment.isUploadingDigitalSign){
+                GuardianApprovalFragment.isUploadingDigitalSign = true
+                activity?.supportFragmentManager?.let { it1 -> uploadSignatureFragment.show(it1, "Cancel Project") }
             }
         }
 

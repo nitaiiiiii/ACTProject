@@ -118,6 +118,7 @@
                 android:layout_marginTop="@dimen/dp10"
                 android:background="@drawable/rounded_button"
                 android:text="Save"
+                android:layout_marginBottom="@dimen/dp30"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toTopOf="@id/txtSignatureBoxClose"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"

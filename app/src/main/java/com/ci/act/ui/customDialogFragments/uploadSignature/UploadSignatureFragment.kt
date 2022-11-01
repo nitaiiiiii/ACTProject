@@ -6,6 +6,7 @@ import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseDialogFragmentNew
 import com.ci.act.databinding.FragmentUploadSignatureBinding
+import com.ci.act.ui.home.mainEventScreenRegister.fragments.guardianApproval.GuardianApprovalFragment
 
 class UploadSignatureFragment:BaseDialogFragmentNew<FragmentUploadSignatureBinding,UploadSignatureView,UploadSignatureViewModel>(),UploadSignatureView {
     override fun getContentView(): Int = R.layout.fragment_upload_signature
@@ -18,7 +19,19 @@ class UploadSignatureFragment:BaseDialogFragmentNew<FragmentUploadSignatureBindi
 
     override fun getNavigator(): UploadSignatureView = this
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        setStyle(STYLE_NORMAL, R.style.MyDialogPopup)
+
+        isCancelable = false
+    }
+
     override fun initViews(savedInstanceState: Bundle?) {
+        mViewDataBinding?.txtUploadSignatureBoxClose?.setOnClickListener {
+            GuardianApprovalFragment.isUploadingDigitalSign = false
+            dialog?.dismiss()
+        }
     }
 
     override fun addObservables() {
