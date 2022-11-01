@@ -3,7 +3,7 @@ package com.ci.act.ui.listInvoices.model
 
 import com.google.gson.annotations.SerializedName
 
-class ListInvoicesModel : ArrayList<ListInvoicesModel.ListInvoicesModelItem>(){
+class ListInvoicesModel : ArrayList<ListInvoicesModel.ListInvoicesModelItem>() {
     data class ListInvoicesModelItem(
         @SerializedName("amount")
         var amount: String?,

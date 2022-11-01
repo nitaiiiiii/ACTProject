@@ -151,9 +151,14 @@ class MainEventScreenRegisterActivity :
 
         mViewDataBinding?.txtSignatureBox?.setOnClickListener {
             val cantAccessFragment = CantAccessAccountFragment()
-            if (!SignInActivity.isShowingCancelProjectDialog){
+            if (!SignInActivity.isShowingCancelProjectDialog) {
                 SignInActivity.isShowingCancelProjectDialog = true
-                supportFragmentManager?.let { it1 -> cantAccessFragment.show(it1, "Cancel Project") }
+                supportFragmentManager?.let { it1 ->
+                    cantAccessFragment.show(
+                        it1,
+                        "Cancel Project"
+                    )
+                }
             }
         }
     }
@@ -162,7 +167,7 @@ class MainEventScreenRegisterActivity :
         supportFragmentManager.beginTransaction().replace(R.id.signUpFragmentContainer, fragment)
             .addToBackStack(null).commit()
 
-        when (fragmentPage){
+        when (fragmentPage) {
             1 -> {
                 imgPersonDetails?.setBackgroundResource(R.drawable.person_circle)
                 imgBuildingDetails?.setBackgroundResource(R.drawable.builiding_details)
@@ -174,7 +179,12 @@ class MainEventScreenRegisterActivity :
                 imgHomeDetails?.setImageResource(R.drawable.ic_baseline_home_24)
                 imgHomeDetails?.setColorFilter(ContextCompat.getColor(this, R.color.light_grey))
                 imgGuardianApproval?.setImageResource(R.drawable.ic_baseline_group_24)
-                imgGuardianApproval?.setColorFilter(ContextCompat.getColor(this, R.color.light_grey))
+                imgGuardianApproval?.setColorFilter(
+                    ContextCompat.getColor(
+                        this,
+                        R.color.light_grey
+                    )
+                )
             }
             2 -> {
                 imgPersonDetails?.setBackgroundResource(R.drawable.builiding_details)
@@ -217,7 +227,12 @@ class MainEventScreenRegisterActivity :
                 imgHomeDetails?.setImageResource(R.drawable.ic_baseline_home_24)
                 imgHomeDetails?.setColorFilter(ContextCompat.getColor(this, R.color.light_grey))
                 imgGuardianApproval?.setImageResource(R.drawable.ic_baseline_group_24)
-                imgGuardianApproval?.setColorFilter(ContextCompat.getColor(this, R.color.light_grey))
+                imgGuardianApproval?.setColorFilter(
+                    ContextCompat.getColor(
+                        this,
+                        R.color.light_grey
+                    )
+                )
 
             }
         }

@@ -29,7 +29,7 @@ class SecondAdapter : RecyclerView.Adapter<SecondAdapter.SecondViewHolder>() {
             txtLikedComment?.text = notificationsModelItem.message
             txtMinutesAgo?.text = notificationsModelItem.time
 
-            
+
         }
 
     }

@@ -15,9 +15,11 @@ import com.ci.act.ui.home.upcomingEvents.adapter.UpcomingEventAdapter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class UpcomingEventsActivity: BaseActivity<ActivityUpcomingEventsBinding,UpcomingEventsView,UpcomingEventsViewModel>(),UpcomingEventsView{
+class UpcomingEventsActivity :
+    BaseActivity<ActivityUpcomingEventsBinding, UpcomingEventsView, UpcomingEventsViewModel>(),
+    UpcomingEventsView {
 
-    private var adapter:UpcomingEventAdapter? = null
+    private var adapter: UpcomingEventAdapter? = null
     private var upcoming: ArrayList<LiveEventModel.LiveEventModelItem> = ArrayList()
 
     override fun getContentView(): Int = R.layout.activity_upcoming_events
@@ -62,17 +64,15 @@ class UpcomingEventsActivity: BaseActivity<ActivityUpcomingEventsBinding,Upcomin
         return jsonString
     }
 
-    private fun setOnClickListeners(){
+    private fun setOnClickListeners() {
 
         mViewDataBinding?.imgUpcomingLiveEvents?.setOnClickListener {
-            val intent = Intent(this,LiveEventsActivity::class.java)
+            val intent = Intent(this, LiveEventsActivity::class.java)
             startActivity(intent)
             finish()
         }
 
     }
-
-
 
 
 }

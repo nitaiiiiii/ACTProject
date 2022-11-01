@@ -34,7 +34,7 @@ class EventsActivity : BaseActivity<ActivityEventsBinding, EventsView, EventsVie
         return EventsViewModel::class.java
     }
 
-    companion object{
+    companion object {
         var isShowingSignOut = false
     }
 
@@ -59,8 +59,8 @@ class EventsActivity : BaseActivity<ActivityEventsBinding, EventsView, EventsVie
     }
 
     private fun setOnClickListener() {
-        mViewDataBinding?.btnMyEvents?.setOnClickListener{
-            val intent = Intent(this,LiveEventsActivity::class.java)
+        mViewDataBinding?.btnMyEvents?.setOnClickListener {
+            val intent = Intent(this, LiveEventsActivity::class.java)
             startActivity(intent)
         }
     }
@@ -103,9 +103,14 @@ class EventsActivity : BaseActivity<ActivityEventsBinding, EventsView, EventsVie
                 }
                 R.id.events8 -> {
                     val signOutFragment = SignOutFragment()
-                    if (!EventsActivity.isShowingSignOut){
+                    if (!EventsActivity.isShowingSignOut) {
                         EventsActivity.isShowingSignOut = true
-                        supportFragmentManager?.let { it1 -> signOutFragment.show(it1, "Cancel Project") }
+                        supportFragmentManager?.let { it1 ->
+                            signOutFragment.show(
+                                it1,
+                                "Cancel Project"
+                            )
+                        }
                     }
                 }
             }

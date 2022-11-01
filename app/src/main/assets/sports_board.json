@@ -1,58 +1,58 @@
 [
   {
-    "rank" : "1.",
-    "profile_image" : "profile_picture",
-    "user_name" : "Maria Garica",
-    "time" : "9:35",
-    "user_id" : "B17"
+    "rank": "1.",
+    "profile_image": "profile_picture",
+    "user_name": "Maria Garica",
+    "time": "9:35",
+    "user_id": "B17"
   },
   {
-    "rank" : "2.",
-    "profile_image" : "profile_picture",
-    "user_name" : "Jim Brown",
-    "time" : "9:35",
-    "user_id" : "B21"
+    "rank": "2.",
+    "profile_image": "profile_picture",
+    "user_name": "Jim Brown",
+    "time": "9:35",
+    "user_id": "B21"
   },
   {
-    "rank" : "3.",
-    "profile_image" : "profile_picture",
-    "user_name" : "Johnson James",
-    "time" : "10:00",
-    "user_id" : "B18"
+    "rank": "3.",
+    "profile_image": "profile_picture",
+    "user_name": "Johnson James",
+    "time": "10:00",
+    "user_id": "B18"
   },
   {
-    "rank" : "4.",
-    "profile_image" : "profile_picture",
-    "user_name" : "You",
-    "time" : "9:35",
-    "user_id" : "B05"
+    "rank": "4.",
+    "profile_image": "profile_picture",
+    "user_name": "You",
+    "time": "9:35",
+    "user_id": "B05"
   },
   {
-    "rank" : "5.",
-    "profile_image" : "profile_picture",
-    "user_name" : "Rogor Smith",
-    "time" : "10:25",
-    "user_id" : "B11"
+    "rank": "5.",
+    "profile_image": "profile_picture",
+    "user_name": "Rogor Smith",
+    "time": "10:25",
+    "user_id": "B11"
   },
   {
-    "rank" : "6.",
-    "profile_image" : "profile_picture",
-    "user_name" : "Maria Garica",
-    "time" : "10:00",
-    "user_id" : "B40"
+    "rank": "6.",
+    "profile_image": "profile_picture",
+    "user_name": "Maria Garica",
+    "time": "10:00",
+    "user_id": "B40"
   },
   {
-    "rank" : "7.",
-    "profile_image" : "profile_picture",
-    "user_name" : "Jim Brown",
-    "time" : "10:25",
-    "user_id" : "B13"
+    "rank": "7.",
+    "profile_image": "profile_picture",
+    "user_name": "Jim Brown",
+    "time": "10:25",
+    "user_id": "B13"
   },
   {
-    "rank" : "8.",
-    "profile_image" : "profile_picture",
-    "user_name" : "Johnson James",
-    "time" : "10:35",
-    "user_id" : "B12"
+    "rank": "8.",
+    "profile_image": "profile_picture",
+    "user_name": "Johnson James",
+    "time": "10:35",
+    "user_id": "B12"
   }
 ]

@@ -89,7 +89,6 @@ open class BaseOkHttp {
     }
 
 
-
     private fun bodyToString(request: Request): String? {
         try {
             val copy = request.newBuilder().build()

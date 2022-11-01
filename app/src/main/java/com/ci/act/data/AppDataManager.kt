@@ -9,7 +9,6 @@ import com.google.gson.GsonBuilder
 class AppDataManager private constructor() : DataManager {
 
 
-
     private val apiHelper: ApiHelper = ApiHelper()
     private val preferenceHelper: PreferenceHelper = PreferenceHelper.getInstance()
 

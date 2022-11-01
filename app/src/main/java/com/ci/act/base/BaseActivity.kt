@@ -53,7 +53,7 @@ abstract class BaseActivity<T : ViewDataBinding, N : BaseNavigator, V : BaseView
      * Assign view model for appropriate screen
      */
 
-    abstract fun setViewModelClass():Class<V>
+    abstract fun setViewModelClass(): Class<V>
 
 
     /**
@@ -109,7 +109,7 @@ abstract class BaseActivity<T : ViewDataBinding, N : BaseNavigator, V : BaseView
         }
     }
 
-    override fun showSuccessMessage(message: String?){
+    override fun showSuccessMessage(message: String?) {
         message?.let {
             showSnackBar(it, this, R.color.green)
         }
@@ -121,11 +121,12 @@ abstract class BaseActivity<T : ViewDataBinding, N : BaseNavigator, V : BaseView
         }
     }
 
-    override fun showErrorMessage(message: String?){
+    override fun showErrorMessage(message: String?) {
         message?.let {
             showSnackBar(it, this, R.color.ruby_red)
         }
     }
+
     override fun showErrorMessage(icon: Int?, heading: String?, desc: String?, btnName: String?) {
         showApiErrorMessage(heading)
     }
@@ -145,8 +146,6 @@ abstract class BaseActivity<T : ViewDataBinding, N : BaseNavigator, V : BaseView
         finishLoading()
         showMessage(message)
     }
-
-
 
 
     override fun onBackPressed() {
@@ -256,7 +255,6 @@ abstract class BaseActivity<T : ViewDataBinding, N : BaseNavigator, V : BaseView
         mViewModel?.clearCalls()
         super.onDestroy()
     }
-
 
 
 }

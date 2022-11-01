@@ -179,17 +179,17 @@
                 android:id="@+id/txtInformationAnswers1"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp30"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp30"
+                android:layout_marginBottom="@dimen/dp20"
+                android:gravity="center"
                 android:maxLines="4"
                 android:padding="@dimen/dp10"
-                android:layout_marginTop="@dimen/dp20"
-                android:layout_marginBottom="@dimen/dp20"
                 android:text="Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
-                android:gravity="center"
+                android:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@id/mainSecondaryConstraint"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginStart="@dimen/dp30"
-                android:visibility="gone"
-                android:layout_marginEnd="@dimen/dp30"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtPaymentQuestionsInformation" />
 
@@ -201,10 +201,10 @@
                 android:layout_marginTop="@dimen/dp40"
                 android:background="@color/ruby_red"
                 android:padding="@dimen/dp30"
-                app:layout_constraintTop_toBottomOf="@id/txtInformationAnswers1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtInformationAnswers1">
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideLineLeft2"

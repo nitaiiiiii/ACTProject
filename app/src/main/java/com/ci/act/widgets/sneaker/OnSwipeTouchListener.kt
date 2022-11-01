@@ -63,10 +63,12 @@ abstract class OnSwipeTouchListener : OnTouchListener {
 
 
     }
+
     companion object {
         private const val SWIPE_THRESHOLD = 50
         private const val SWIPE_VELOCITY_THRESHOLD = 50
     }
+
     abstract fun onSwipeRight()
     abstract fun onSwipeLeft()
     abstract fun onSwipeTop()
@@ -75,7 +77,8 @@ abstract class OnSwipeTouchListener : OnTouchListener {
     init {
         gestureDetector = GestureDetector(GestureListener())
     }
-    private fun printLogcat(message:String){
-        Log.e("OnSwipeTouchListener",message)
+
+    private fun printLogcat(message: String) {
+        Log.e("OnSwipeTouchListener", message)
     }
 }

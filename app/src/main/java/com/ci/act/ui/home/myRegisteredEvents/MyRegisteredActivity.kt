@@ -15,7 +15,9 @@ import com.ci.act.ui.home.myRegisteredEvents.model.RegisteredModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class MyRegisteredActivity:BaseActivity<ActivityMyRegisteredBinding,MyRegisteredView,MyRegisteredViewModel>(),MyRegisteredView {
+class MyRegisteredActivity :
+    BaseActivity<ActivityMyRegisteredBinding, MyRegisteredView, MyRegisteredViewModel>(),
+    MyRegisteredView {
 
     private var adapterRegistered: MyRegisteredAdapter? = null
     private var eventsRegistered: ArrayList<RegisteredModel.RegisteredModelItem> = ArrayList()
@@ -38,7 +40,7 @@ class MyRegisteredActivity:BaseActivity<ActivityMyRegisteredBinding,MyRegistered
 
     private fun setOnClickListener() {
         mViewDataBinding?.imgRegisteredEvents?.setOnClickListener {
-            val intent = Intent(this,EventsActivity::class.java)
+            val intent = Intent(this, EventsActivity::class.java)
             startActivity(intent)
         }
     }
@@ -63,14 +65,14 @@ class MyRegisteredActivity:BaseActivity<ActivityMyRegisteredBinding,MyRegistered
     private fun getDataFromJson(): String? {
         val jsonString: String
         try {
-            jsonString = this.assets.open("events_registered.json").bufferedReader().use { it.readText() }
+            jsonString =
+                this.assets.open("events_registered.json").bufferedReader().use { it.readText() }
         } catch (e: Exception) {
             e.printStackTrace()
             return null
         }
         return jsonString
     }
-
 
 
 }

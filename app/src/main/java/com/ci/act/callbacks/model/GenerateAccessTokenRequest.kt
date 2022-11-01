@@ -6,4 +6,5 @@ import com.google.gson.annotations.SerializedName
 
 data class GenerateAccessTokenRequest(
     @SerializedName("device")
-    val device: Device? = DeviceInfo.getDevice())
+    val device: Device? = DeviceInfo.getDevice()
+)

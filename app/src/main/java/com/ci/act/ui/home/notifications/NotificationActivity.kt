@@ -6,7 +6,9 @@ import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityNotificationBinding
 
-class NotificationActivity:BaseActivity<ActivityNotificationBinding,NotificationView,NotificationViewModel>(),NotificationView {
+class NotificationActivity :
+    BaseActivity<ActivityNotificationBinding, NotificationView, NotificationViewModel>(),
+    NotificationView {
     override fun getContentView(): Int = R.layout.activity_notification
 
     override fun setViewModelClass(): Class<NotificationViewModel> {

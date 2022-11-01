@@ -9,14 +9,16 @@ import com.ci.act.databinding.FragmentCantAccessAccountBinding
 import com.ci.act.ui.authentication.signin.SignInActivity
 import com.ci.act.ui.authentication.signup.SignUpActivity
 
-class CantAccessAccountFragment: BaseDialogFragmentNew<FragmentCantAccessAccountBinding,CantAccessAccountView,CantAccessAccountViewModel>(),CantAccessAccountView{
+class CantAccessAccountFragment :
+    BaseDialogFragmentNew<FragmentCantAccessAccountBinding, CantAccessAccountView, CantAccessAccountViewModel>(),
+    CantAccessAccountView {
     override fun getContentView(): Int = R.layout.fragment_cant_access_account
 
     override fun setViewModelClass(): Class<CantAccessAccountViewModel> {
         return CantAccessAccountViewModel::class.java
     }
 
-    override fun getBindingVariable(): Int= BR.cantAccessFragment
+    override fun getBindingVariable(): Int = BR.cantAccessFragment
 
     override fun getNavigator(): CantAccessAccountView = this
 

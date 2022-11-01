@@ -101,7 +101,7 @@ class CustomTextInputLayoutDatePickers : TextInputLayout {
                         month = Integer.valueOf(it[1])
                         yearOf = Integer.valueOf(it[2])
                     }
-                }catch (e:Exception) {
+                } catch (e: Exception) {
                     e.printStackTrace()
                 }
 

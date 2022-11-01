@@ -33,7 +33,7 @@ class SchoolDetailsFragment :
         setOnClickListener()
     }
 
-    private fun setOnClickListener(){
+    private fun setOnClickListener() {
         mViewDataBinding?.btnSign?.setOnClickListener {
             val homeDetailsFragment = HomeDetailsFragment()
             communicator.loadFragments(homeDetailsFragment, true, 3)

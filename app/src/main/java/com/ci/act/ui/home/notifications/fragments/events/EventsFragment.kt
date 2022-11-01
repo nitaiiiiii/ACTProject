@@ -7,7 +7,9 @@ import com.ci.act.base.BaseFragment
 import com.ci.act.databinding.FragmentEventsBinding
 
 
-class EventsFragment:BaseFragment<FragmentEventsBinding,EventsFragmentView,EventsFragmentViewModel>(), EventsFragmentView {
+class EventsFragment :
+    BaseFragment<FragmentEventsBinding, EventsFragmentView, EventsFragmentViewModel>(),
+    EventsFragmentView {
     override fun getContentView(): Int = R.layout.fragment_events
     override fun setViewModel(): EventsFragmentViewModel = EventsFragmentViewModel()
     override fun getBindingVariable(): Int = BR.eventsViewModel

@@ -1,7 +1,6 @@
 package com.ci.act.base
 
 
-
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -37,11 +36,11 @@ open class BaseViewModel<N : BaseNavigator>(val appDataManager: AppDataManager =
         callList.add(call)
     }
 
-    fun startLoading(){
+    fun startLoading() {
         loadingStatus.value = true
     }
 
-    fun finishLoading(){
+    fun finishLoading() {
         loadingStatus.value = false
     }
 }

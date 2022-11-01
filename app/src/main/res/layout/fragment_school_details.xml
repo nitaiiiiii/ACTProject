@@ -51,6 +51,7 @@
 
             <EditText
                 android:id="@+id/editTextFirstName"
+                style="@style/large_text"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
@@ -59,7 +60,6 @@
                 android:inputType="textEmailAddress"
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
-                style="@style/large_text"
                 android:textColor="@color/warmGreyTwo"
                 android:textColorHint="@color/warmGreyTwo"
                 android:textCursorDrawable="@null"
@@ -69,6 +69,7 @@
 
             <EditText
                 android:id="@+id/editTextLastName"
+                style="@style/large_text"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
@@ -78,7 +79,6 @@
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
                 android:paddingEnd="@dimen/dp0"
-                style="@style/large_text"
                 android:textColor="@color/warmGreyTwo"
                 android:textColorHint="@color/warmGreyTwo"
                 android:textCursorDrawable="@null"
@@ -106,6 +106,7 @@
 
             <EditText
                 android:id="@+id/editTextEmailAddress"
+                style="@style/large_text"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
@@ -114,7 +115,6 @@
                 android:inputType="textEmailAddress"
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
-                style="@style/large_text"
                 android:textColor="@color/warmGreyTwo"
                 android:textColorHint="@color/warmGreyTwo"
                 android:textCursorDrawable="@null"
@@ -124,6 +124,7 @@
 
             <EditText
                 android:id="@+id/editTextPosition"
+                style="@style/large_text"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
@@ -133,7 +134,6 @@
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
                 android:paddingEnd="@dimen/dp0"
-                style="@style/large_text"
                 android:textColor="@color/warmGreyTwo"
                 android:textColorHint="@color/warmGreyTwo"
                 android:textCursorDrawable="@null"
@@ -143,6 +143,7 @@
 
             <EditText
                 android:id="@+id/editTextState"
+                style="@style/large_text"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
@@ -152,7 +153,6 @@
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
                 android:paddingEnd="@dimen/dp0"
-                style="@style/large_text"
                 android:textColor="@color/warmGreyTwo"
                 android:textColorHint="@color/warmGreyTwo"
                 android:textCursorDrawable="@null"
@@ -162,6 +162,7 @@
 
             <EditText
                 android:id="@+id/editTextCity"
+                style="@style/large_text"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
@@ -171,7 +172,6 @@
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
                 android:paddingEnd="@dimen/dp0"
-                style="@style/large_text"
                 android:textColor="@color/warmGreyTwo"
                 android:textColorHint="@color/warmGreyTwo"
                 android:textCursorDrawable="@null"
@@ -181,6 +181,7 @@
 
             <EditText
                 android:id="@+id/editTextCode"
+                style="@style/large_text"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
@@ -190,7 +191,6 @@
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
                 android:paddingEnd="@dimen/dp0"
-                style="@style/large_text"
                 android:textColor="@color/warmGreyTwo"
                 android:textColorHint="@color/warmGreyTwo"
                 android:textCursorDrawable="@null"
@@ -203,9 +203,9 @@
                 style="@style/extra_large_text_semi_bold"
                 android:layout_width="@dimen/dp280"
                 android:layout_height="@dimen/dp70"
+                android:layout_marginBottom="@dimen/dp10"
                 android:background="@drawable/rounded_button"
                 android:text="Next"
-                android:layout_marginBottom="@dimen/dp10"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"

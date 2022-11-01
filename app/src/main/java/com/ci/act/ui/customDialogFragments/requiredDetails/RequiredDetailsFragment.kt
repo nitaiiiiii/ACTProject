@@ -6,7 +6,9 @@ import com.ci.act.R
 import com.ci.act.base.BaseDialogFragmentNew
 import com.ci.act.databinding.FragmentRequiredDetailsBinding
 
-class RequiredDetailsFragment :BaseDialogFragmentNew<FragmentRequiredDetailsBinding,RequiredDetailsView,RequiredDetailsViewModel>(),RequiredDetailsView{
+class RequiredDetailsFragment :
+    BaseDialogFragmentNew<FragmentRequiredDetailsBinding, RequiredDetailsView, RequiredDetailsViewModel>(),
+    RequiredDetailsView {
     override fun getContentView(): Int = R.layout.fragment_required_details
 
     override fun setViewModelClass(): Class<RequiredDetailsViewModel> {

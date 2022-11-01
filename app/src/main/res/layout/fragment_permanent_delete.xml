@@ -114,10 +114,10 @@
                 android:layout_width="@dimen/dp280"
                 android:layout_height="@dimen/dp70"
                 android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp50"
                 android:background="@drawable/rounded_button"
                 android:text="Yes, I'm sure"
                 android:textColor="@color/white"
-                android:layout_marginBottom="@dimen/dp50"
                 app:layout_constraintBottom_toTopOf="@id/txtSignatureBoxClose"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -136,9 +136,9 @@
                 android:padding="@dimen/dp20"
                 android:text="No"
                 android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

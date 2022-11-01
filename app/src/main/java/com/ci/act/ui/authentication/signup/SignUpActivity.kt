@@ -68,7 +68,10 @@ class SignUpActivity : BaseActivity<ActivitySignUpBinding, SignUpView, SignUpVie
                 showErrorMessage(
                     "Email Address is Required..."
                 )
-            } else if(!android.util.Patterns.EMAIL_ADDRESS.matcher(mViewDataBinding?.editTextEmailAddress?.text?.trim().toString()).matches()) {
+            } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(
+                    mViewDataBinding?.editTextEmailAddress?.text?.trim().toString()
+                ).matches()
+            ) {
                 mViewDataBinding?.editTextEmailAddress?.requestFocus()
                 showErrorMessage(
                     "Not a valid Email address..."
@@ -80,12 +83,12 @@ class SignUpActivity : BaseActivity<ActivitySignUpBinding, SignUpView, SignUpVie
                 )
             } else if (mViewDataBinding?.editTextPassword?.text?.length!! < 8 || mViewDataBinding?.editTextPassword?.text?.length!! >= 16) {
                 mViewDataBinding?.editTextPassword?.requestFocus()
-            showErrorMessage(
-                "Password must be 8 to 16 characters..."
-            )
+                showErrorMessage(
+                    "Password must be 8 to 16 characters..."
+                )
 
             } else {
-                val intent = Intent(this,SignInActivity::class.java)
+                val intent = Intent(this, SignInActivity::class.java)
                 startActivity(intent)
             }
         }

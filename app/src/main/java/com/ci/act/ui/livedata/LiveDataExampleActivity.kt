@@ -50,7 +50,7 @@ class LiveDataExampleActivity :
             this,
             Observer<ArrayList<LiveDataModel>> { list ->
                 liveDataAdapter?.submitList(list)
-                showSnackBar("Items Added",this,true)
+                showSnackBar("Items Added", this, true)
             })
     }
 }

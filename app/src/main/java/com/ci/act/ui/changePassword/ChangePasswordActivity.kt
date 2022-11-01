@@ -6,7 +6,9 @@ import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityChangePasswordBinding
 
-class ChangePasswordActivity: BaseActivity<ActivityChangePasswordBinding,ChangePasswordView,ChangePasswordViewModel>(),ChangePasswordView {
+class ChangePasswordActivity :
+    BaseActivity<ActivityChangePasswordBinding, ChangePasswordView, ChangePasswordViewModel>(),
+    ChangePasswordView {
     override fun getContentView(): Int = R.layout.activity_change_password
 
     override fun setViewModelClass(): Class<ChangePasswordViewModel> {

@@ -20,7 +20,14 @@ class InputFilters {
         private var alphabetPatterns: Pattern = Pattern.compile("[a-zA-Z ]+")
 
         val allowOnlyAlphabetsFilter = object : InputFilter {
-            override fun filter(source: CharSequence, start: Int, end: Int, dest: Spanned?, dstart: Int, dend: Int): CharSequence? {
+            override fun filter(
+                source: CharSequence,
+                start: Int,
+                end: Int,
+                dest: Spanned?,
+                dstart: Int,
+                dend: Int
+            ): CharSequence? {
                 if (!alphabetPatterns.matcher(source).matches()) {
                     return ""
                 }
@@ -31,9 +38,11 @@ class InputFilters {
 
         fun lengthFilter(length: Int = 255) = InputFilter.LengthFilter(length)
 
-        fun decimalFilter(beforeDigits: Int, afterDigits: Int) = DecimalDigitsInputFilter(beforeDigits, afterDigits)
+        fun decimalFilter(beforeDigits: Int, afterDigits: Int) =
+            DecimalDigitsInputFilter(beforeDigits, afterDigits)
 
-        fun decimal5Filter(beforeDigits: Int, afterDigits: Int) = DecimalDigits5InputFilter(beforeDigits, afterDigits)
+        fun decimal5Filter(beforeDigits: Int, afterDigits: Int) =
+            DecimalDigits5InputFilter(beforeDigits, afterDigits)
 
         fun numberRangeFilter(min: Int, max: Int) = InputFilterMinMax(min, max)
     }
@@ -44,7 +53,14 @@ class InputFilters {
         private var mPattern: Pattern =
             Pattern.compile("[0-9]{0," + (digitsBeforeZero - 1) + "}+((\\.[0-9]{0," + (digitsAfterZero - 1) + "})?)||(\\.)?")
 
-        override fun filter(source: CharSequence, start: Int, end: Int, dest: Spanned, dstart: Int, dend: Int): CharSequence? {
+        override fun filter(
+            source: CharSequence,
+            start: Int,
+            end: Int,
+            dest: Spanned,
+            dstart: Int,
+            dend: Int
+        ): CharSequence? {
 
             val matcher = mPattern.matcher(dest)
             return if (!matcher.matches()) "" else null
@@ -58,7 +74,14 @@ class InputFilters {
         private var mPattern: Pattern =
             Pattern.compile("[0-9]{0," + (digitsBeforeZero - 1) + "}+((\\.[0-9]{0," + (digitsAfterZero - 1) + "})?)||(\\.)?")
 
-        override fun filter(source: CharSequence, start: Int, end: Int, dest: Spanned, dstart: Int, dend: Int): CharSequence? {
+        override fun filter(
+            source: CharSequence,
+            start: Int,
+            end: Int,
+            dest: Spanned,
+            dstart: Int,
+            dend: Int
+        ): CharSequence? {
 
             val matcher = mPattern.matcher(dest)
             return if (!matcher.matches()) {
@@ -83,7 +106,14 @@ class InputFilters {
             this.max = max.toDouble()
         }
 
-        override fun filter(source: CharSequence, start: Int, end: Int, dest: Spanned, dstart: Int, dend: Int): CharSequence? {
+        override fun filter(
+            source: CharSequence,
+            start: Int,
+            end: Int,
+            dest: Spanned,
+            dstart: Int,
+            dend: Int
+        ): CharSequence? {
             try {
                 val input = (dest.toString() + source.toString()).toDouble()
                 if (isInRange(min, max, input))

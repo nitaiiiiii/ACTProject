@@ -60,8 +60,7 @@
     </style>
 
     <!--Full Screen Theme-->
-    <style name="FullScreenTheme"
-        parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="FullScreenTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -277,6 +276,7 @@
         <item name="android:textSize">@dimen/sp30</item>
         <item name="setFont">BebasNeue</item>
     </style>
+
     <style name="large_bebas_bold" parent="android:Widget">
         <item name="android:textSize">@dimen/sp16</item>
         <item name="setFont">BebasNeue</item>

@@ -8,7 +8,8 @@ import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityContactUsBinding
 import com.ci.act.ui.home.events.EventsActivity
 
-class ContactUsActivity: BaseActivity<ActivityContactUsBinding,ContactUsView,ContactUsViewModel>(),ContactUsView {
+class ContactUsActivity :
+    BaseActivity<ActivityContactUsBinding, ContactUsView, ContactUsViewModel>(), ContactUsView {
     override fun getContentView(): Int = R.layout.activity_contact_us
 
     override fun setViewModelClass(): Class<ContactUsViewModel> {
@@ -22,8 +23,9 @@ class ContactUsActivity: BaseActivity<ActivityContactUsBinding,ContactUsView,Con
     override fun initViews(savedInstanceState: Bundle?) {
         setOnClickListener()
     }
+
     private fun setOnClickListener() {
-        mViewDataBinding?.imgContactUs?.setOnClickListener{
+        mViewDataBinding?.imgContactUs?.setOnClickListener {
             val intent = Intent(this, EventsActivity::class.java)
             startActivity(intent)
         }

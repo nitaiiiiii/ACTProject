@@ -10,7 +10,9 @@ import com.ci.act.R
 import com.ci.act.base.BaseFragment
 import com.ci.act.databinding.FragmentNotificationFirstBinding
 
-class NotificationFirstFragment: BaseFragment<FragmentNotificationFirstBinding,NotificationFirstView,NotificationFirstViewModel>(),NotificationFirstView{
+class NotificationFirstFragment :
+    BaseFragment<FragmentNotificationFirstBinding, NotificationFirstView, NotificationFirstViewModel>(),
+    NotificationFirstView {
     override fun getContentView(): Int = R.layout.fragment_notification_first
 
     override fun setViewModel(): NotificationFirstViewModel? = NotificationFirstViewModel()

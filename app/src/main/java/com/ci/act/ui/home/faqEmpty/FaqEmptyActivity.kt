@@ -33,11 +33,11 @@ class FaqEmptyActivity : BaseActivity<ActivityFaqEmptyBinding, FaqEmptyView, Faq
             startActivity(intent)
         }
         mViewDataBinding?.btnEmptyRelevantQuestions?.setOnClickListener {
-            val intent = Intent(this,ContactUsActivity::class.java)
+            val intent = Intent(this, ContactUsActivity::class.java)
             startActivity(intent)
         }
         mViewDataBinding?.imgPlayingFaqEmpty?.setOnClickListener {
-            val intent = Intent(this,FaqListActivity::class.java)
+            val intent = Intent(this, FaqListActivity::class.java)
             startActivity(intent)
         }
     }

@@ -8,57 +8,57 @@
             android:title="My Events" />
     </group>
     <group android:id="@+id/item2">
-    <item
-        android:id="@+id/events1"
-        android:icon="@drawable/present"
-        android:title="My Profile" />
+        <item
+            android:id="@+id/events1"
+            android:icon="@drawable/present"
+            android:title="My Profile" />
     </group>
 
     <group android:id="@+id/item3">
-    <item
-        android:id="@+id/events2"
-        android:icon="@drawable/note"
-        android:title="Invoices" />
+        <item
+            android:id="@+id/events2"
+            android:icon="@drawable/note"
+            android:title="Invoices" />
     </group>
 
     <group android:id="@+id/item4">
-    <item
-        android:id="@+id/events3"
-        android:icon="@drawable/outward"
-        android:title="Subscription" />
+        <item
+            android:id="@+id/events3"
+            android:icon="@drawable/outward"
+            android:title="Subscription" />
     </group>
 
     <group android:id="@+id/item5">
-    <item
-        android:id="@+id/events4"
-        android:icon="@drawable/person"
-        android:title="About Us" />
+        <item
+            android:id="@+id/events4"
+            android:icon="@drawable/person"
+            android:title="About Us" />
     </group>
 
     <group android:id="@+id/item6">
-    <item
-        android:id="@+id/events5"
-        android:icon="@drawable/mark"
-        android:title="FAQ's" />
+        <item
+            android:id="@+id/events5"
+            android:icon="@drawable/mark"
+            android:title="FAQ's" />
     </group>
 
     <group android:id="@+id/item7">
-    <item
-        android:id="@+id/events6"
-        android:icon="@drawable/post_office"
-        android:title="Contact Us" />
+        <item
+            android:id="@+id/events6"
+            android:icon="@drawable/post_office"
+            android:title="Contact Us" />
     </group>
 
     <group android:id="@+id/item8">
-    <item
-        android:id="@+id/events7"
-        android:icon="@drawable/access_time"
-        android:title="Send Log" />
+        <item
+            android:id="@+id/events7"
+            android:icon="@drawable/access_time"
+            android:title="Send Log" />
     </group>
     <group android:id="@+id/item9">
-    <item
-        android:id="@+id/events8"
-        android:icon="@drawable/logout"
-        android:title="Sign Out" />
+        <item
+            android:id="@+id/events8"
+            android:icon="@drawable/logout"
+            android:title="Sign Out" />
     </group>
 </menu>

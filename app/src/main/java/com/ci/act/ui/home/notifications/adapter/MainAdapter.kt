@@ -8,22 +8,24 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ci.act.R
 import com.ci.act.ui.home.notifications.model.NotificationsModel
 
-class MainAdapter:RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
+class MainAdapter : RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
 
     private val arrayList: ArrayList<NotificationsModel.NotificationsModelItem> = ArrayList()
 
-    class MainViewHolder(mainView: View): RecyclerView.ViewHolder(mainView) {
+    class MainViewHolder(mainView: View) : RecyclerView.ViewHolder(mainView) {
         var txtDateNotification: TextView? = mainView.findViewById(R.id.txtDateNotification)
-        var txtSelectAllNotification: TextView? = mainView.findViewById(R.id.txtSelectAllNotification)
+        var txtSelectAllNotification: TextView? =
+            mainView.findViewById(R.id.txtSelectAllNotification)
 
-        fun mainBindItems(notificationsModelItem: NotificationsModel.NotificationsModelItem){
+        fun mainBindItems(notificationsModelItem: NotificationsModel.NotificationsModelItem) {
             txtDateNotification?.text = notificationsModelItem.date
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         val mainNotification =
-            LayoutInflater.from(parent.context).inflate(R.layout.inflate_main_notification, parent, false)
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.inflate_main_notification, parent, false)
         return MainAdapter.MainViewHolder(mainNotification)
     }
 

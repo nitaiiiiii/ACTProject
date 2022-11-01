@@ -3,7 +3,7 @@ package com.ci.act.ui.home.liveEvents.model
 
 import com.google.gson.annotations.SerializedName
 
-class LiveEventModel : ArrayList<LiveEventModel.LiveEventModelItem>(){
+class LiveEventModel : ArrayList<LiveEventModel.LiveEventModelItem>() {
     data class LiveEventModelItem(
         @SerializedName("even_date")
         var evenDate: String?,

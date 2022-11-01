@@ -57,7 +57,8 @@ class UpcomingEventAdapter : RecyclerView.Adapter<UpcomingEventAdapter.UpcomingE
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UpcomingEventViewHolder {
         val liveEvents =
-            LayoutInflater.from(parent.context).inflate(R.layout.inflate_upcoming_events, parent, false)
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.inflate_upcoming_events, parent, false)
         return UpcomingEventAdapter.UpcomingEventViewHolder(liveEvents)
     }
 

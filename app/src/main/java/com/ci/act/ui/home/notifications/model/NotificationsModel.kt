@@ -3,7 +3,7 @@ package com.ci.act.ui.home.notifications.model
 
 import com.google.gson.annotations.SerializedName
 
-class NotificationsModel : ArrayList<NotificationsModel.NotificationsModelItem>(){
+class NotificationsModel : ArrayList<NotificationsModel.NotificationsModelItem>() {
     data class NotificationsModelItem(
         @SerializedName("date")
         var date: String?,

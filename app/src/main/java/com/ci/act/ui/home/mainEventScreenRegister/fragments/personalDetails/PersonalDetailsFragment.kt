@@ -13,7 +13,9 @@ import com.ci.act.ui.home.mainEventScreenRegister.fragments.schoolDetails.School
 import kotlinx.android.synthetic.main.activity_main_event_screen_register.*
 import kotlinx.android.synthetic.main.fragment_personal_details.*
 
-class PersonalDetailsFragment:BaseDialogFragmentNew<FragmentPersonalDetailsBinding,PersonalDetailsView,PersonalDetailsViewModel>(),PersonalDetailsView {
+class PersonalDetailsFragment :
+    BaseDialogFragmentNew<FragmentPersonalDetailsBinding, PersonalDetailsView, PersonalDetailsViewModel>(),
+    PersonalDetailsView {
 
     private lateinit var communicator: Communicator
     var isSelected: Boolean = true
@@ -37,8 +39,8 @@ class PersonalDetailsFragment:BaseDialogFragmentNew<FragmentPersonalDetailsBindi
 
     }
 
-    private fun setOnClickListener(){
-        mViewDataBinding?.btnSignature?.setOnClickListener{
+    private fun setOnClickListener() {
+        mViewDataBinding?.btnSignature?.setOnClickListener {
             val schoolDetails = SchoolDetailsFragment()
             communicator.loadFragments(schoolDetails, true, 2)
 

@@ -16,7 +16,8 @@ import com.ci.act.ui.home.upcomingEvents.UpcomingEventsActivity
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class EventsLiveActivity:BaseActivity<ActivityEventsLiveBinding,EventsLiveView,EventsLiveViewModel>(),EventsLiveView{
+class EventsLiveActivity :
+    BaseActivity<ActivityEventsLiveBinding, EventsLiveView, EventsLiveViewModel>(), EventsLiveView {
 
     private var adapter: EventsLiveAdapter? = null
     private var events: ArrayList<EventsLiveModel.EventsLiveModelItem> = ArrayList()
@@ -24,7 +25,7 @@ class EventsLiveActivity:BaseActivity<ActivityEventsLiveBinding,EventsLiveView,E
     override fun getContentView(): Int = R.layout.activity_events_live
 
     override fun setViewModelClass(): Class<EventsLiveViewModel> {
-       return EventsLiveViewModel::class.java
+        return EventsLiveViewModel::class.java
     }
 
     override fun getNavigator(): EventsLiveView = this
@@ -64,10 +65,10 @@ class EventsLiveActivity:BaseActivity<ActivityEventsLiveBinding,EventsLiveView,E
         return jsonString
     }
 
-    private fun setOnClickListeners(){
+    private fun setOnClickListeners() {
 
         mViewDataBinding?.imgLiveActiveEvents?.setOnClickListener {
-            val intent = Intent(this,LiveEventsActivity::class.java)
+            val intent = Intent(this, LiveEventsActivity::class.java)
             startActivity(intent)
             finish()
         }

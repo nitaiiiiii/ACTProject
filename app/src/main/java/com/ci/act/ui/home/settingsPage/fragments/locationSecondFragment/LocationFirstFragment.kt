@@ -6,7 +6,9 @@ import com.ci.act.R
 import com.ci.act.base.BaseFragment
 import com.ci.act.databinding.FragmentLocationFirstBinding
 
-class LocationFirstFragment : BaseFragment<FragmentLocationFirstBinding,LocationFirstView,LocationFirstViewModel>(),LocationFirstView{
+class LocationFirstFragment :
+    BaseFragment<FragmentLocationFirstBinding, LocationFirstView, LocationFirstViewModel>(),
+    LocationFirstView {
     override fun getContentView(): Int = R.layout.fragment_location_first
 
     override fun setViewModel(): LocationFirstViewModel? = LocationFirstViewModel()

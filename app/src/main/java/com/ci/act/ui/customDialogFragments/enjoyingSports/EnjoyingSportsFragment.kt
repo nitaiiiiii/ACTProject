@@ -6,7 +6,9 @@ import com.ci.act.R
 import com.ci.act.base.BaseDialogFragmentNew
 import com.ci.act.databinding.FragmentEnjoyingSportsBinding
 
-class EnjoyingSportsFragment : BaseDialogFragmentNew<FragmentEnjoyingSportsBinding,EnjoyingSportsView,EnjoyingSportsViewModel>(),EnjoyingSportsView{
+class EnjoyingSportsFragment :
+    BaseDialogFragmentNew<FragmentEnjoyingSportsBinding, EnjoyingSportsView, EnjoyingSportsViewModel>(),
+    EnjoyingSportsView {
     override fun getContentView(): Int = R.layout.fragment_enjoying_sports
 
     override fun setViewModelClass(): Class<EnjoyingSportsViewModel> {

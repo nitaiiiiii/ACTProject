@@ -13,7 +13,9 @@ import com.ci.act.ui.home.sportsBoard.model.SportsBoardModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class SportsBoardActivity: BaseActivity<ActivitySportsBoardBinding,SportsBoardView,SportsBoardViewModel>(),SportsBoardView {
+class SportsBoardActivity :
+    BaseActivity<ActivitySportsBoardBinding, SportsBoardView, SportsBoardViewModel>(),
+    SportsBoardView {
 
     private var adapterSportsBoard: SportsBoardAdapter? = null
     private var eventsSportsBoard: ArrayList<SportsBoardModel.SportsBoardModelItem> = ArrayList()
@@ -51,7 +53,8 @@ class SportsBoardActivity: BaseActivity<ActivitySportsBoardBinding,SportsBoardVi
     private fun getDataFromJson(): String? {
         val jsonString: String
         try {
-            jsonString = this.assets.open("sports_board.json").bufferedReader().use { it.readText() }
+            jsonString =
+                this.assets.open("sports_board.json").bufferedReader().use { it.readText() }
         } catch (e: Exception) {
             e.printStackTrace()
             return null

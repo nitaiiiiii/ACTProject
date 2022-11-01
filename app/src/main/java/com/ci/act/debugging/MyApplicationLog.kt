@@ -80,7 +80,7 @@ class MyApplicationLog private constructor() {
                 }
                 out.println("${ft.format(dNow)}  :  $logType  --->  $logMessage")
                 out.println("\n\r")
-                logListener?.let {listener->
+                logListener?.let { listener ->
                     uiThread {
                         listener.onLogUpdated()
                     }
@@ -116,7 +116,8 @@ class MyApplicationLog private constructor() {
         return folder.absolutePath
     }
 
-    private fun logFileName(): String = MyApplication.getApplicationContext().resources.getString(R.string.log_file_name)
+    private fun logFileName(): String =
+        MyApplication.getApplicationContext().resources.getString(R.string.log_file_name)
 
     fun deleteFile() {
         val file = File(getRootFolderPath(), logFileName())

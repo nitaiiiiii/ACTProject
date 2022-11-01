@@ -113,7 +113,11 @@ class MultiStateToggleButton : ToggleButton {
                     buttonPosition = BUTTON_LEFT_STATE
                 }
             } else if (index == textCount - 1) {
-                b = inflater.inflate(R.layout.view_right_toggle_button, mainLayout, false) as CustomTextView
+                b = inflater.inflate(
+                    R.layout.view_right_toggle_button,
+                    mainLayout,
+                    false
+                ) as CustomTextView
                 buttonPosition = BUTTON_RIGHT_STATE
             } else {
                 b = inflater.inflate(

@@ -32,5 +32,4 @@ interface BaseNavigator {
     fun onForceLogOut(message: String?)
 
 
-
 }

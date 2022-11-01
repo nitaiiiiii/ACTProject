@@ -7,4 +7,4 @@ import com.google.gson.annotations.SerializedName
 data class GenerateAccessTokenModel(
     @SerializedName("token")
     val token: String?
-): BaseResponse()
+) : BaseResponse()

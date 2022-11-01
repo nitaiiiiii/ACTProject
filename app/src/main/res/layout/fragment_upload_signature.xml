@@ -117,11 +117,11 @@
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp50"
                 android:gravity="center"
                 android:maxLines="1"
                 android:text="Scan"
                 android:textColor="@color/black"
-                android:layout_marginBottom="@dimen/dp50"
                 app:layout_constraintBottom_toTopOf="@id/txtUploadSignatureBoxClose"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -140,10 +140,10 @@
                 android:padding="@dimen/dp20"
                 android:text="Close"
                 android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
 
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,8 +27,8 @@ class Utils {
 
     companion object {
 
-        val  requestsDateFormat  = SimpleDateFormat("yyyy/MM/dd")
-        val  responseDateFormat  = SimpleDateFormat("yyyy-MM-dd")
+        val requestsDateFormat = SimpleDateFormat("yyyy/MM/dd")
+        val responseDateFormat = SimpleDateFormat("yyyy-MM-dd")
 
 
         /**
@@ -37,7 +37,8 @@ class Utils {
         fun hideKeyboard(activity: Activity) {
             val view = activity.findViewById<View>(android.R.id.content)
             if (view != null) {
-                val imm = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                val imm =
+                    activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
                 imm.hideSoftInputFromWindow(view.windowToken, 0)
             }
         }

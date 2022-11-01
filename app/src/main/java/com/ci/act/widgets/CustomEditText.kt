@@ -22,15 +22,21 @@ class CustomEditText : AppCompatEditText {
             initWithAttrs(context, attrs, 0)
     }
 
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         if (!isInEditMode)
             initWithAttrs(context, attrs, defStyleAttr)
     }
+
     /**
      * This method is used to set the Custom fonts
      */
     private fun initWithAttrs(context: Context, attrs: AttributeSet?, defStyleAttr: Int) {
-        val a = context.theme.obtainStyledAttributes(attrs, R.styleable.CustomViews, defStyleAttr, 0)
+        val a =
+            context.theme.obtainStyledAttributes(attrs, R.styleable.CustomViews, defStyleAttr, 0)
         val customFontIndex = a.getInt(R.styleable.CustomViews_setFonts, 0)
         val fontPath = resources.getStringArray(R.array.FontNames)[customFontIndex]
         setCustomFont(fontPath)

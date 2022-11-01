@@ -16,7 +16,9 @@ import com.ci.act.ui.listInvoices.model.ListInvoicesModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class ListInvoicesActivity:BaseActivity<ActivityListInvoicesBinding,ListInvoicesView,ListInvoicesViewModel>(),ListInvoicesView {
+class ListInvoicesActivity :
+    BaseActivity<ActivityListInvoicesBinding, ListInvoicesView, ListInvoicesViewModel>(),
+    ListInvoicesView {
 
     private var adapterListInvoices: ListInvoicesAdapter? = null
     private var liveListInvoices: ArrayList<ListInvoicesModel.ListInvoicesModelItem> = ArrayList()
@@ -39,7 +41,7 @@ class ListInvoicesActivity:BaseActivity<ActivityListInvoicesBinding,ListInvoices
 
     private fun setOnClickListener() {
         mViewDataBinding?.imgListInvoices?.setOnClickListener {
-            val intent = Intent(this,InvoicesActivity::class.java)
+            val intent = Intent(this, InvoicesActivity::class.java)
             startActivity(intent)
         }
     }
@@ -52,7 +54,7 @@ class ListInvoicesActivity:BaseActivity<ActivityListInvoicesBinding,ListInvoices
 
         val gson = Gson()
         val listMoviesType = object : TypeToken<ListInvoicesModel>() {}.type
-        liveListInvoices= gson.fromJson(differentSportsJson, listMoviesType)
+        liveListInvoices = gson.fromJson(differentSportsJson, listMoviesType)
         Log.e("hello", "${liveListInvoices}")
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView.adapter = adapterListInvoices
@@ -63,14 +65,14 @@ class ListInvoicesActivity:BaseActivity<ActivityListInvoicesBinding,ListInvoices
     private fun getDataFromJson(): String? {
         val jsonString: String
         try {
-            jsonString = this.assets.open("list_invoices.json").bufferedReader().use { it.readText() }
+            jsonString =
+                this.assets.open("list_invoices.json").bufferedReader().use { it.readText() }
         } catch (e: Exception) {
             e.printStackTrace()
             return null
         }
         return jsonString
     }
-
 
 
 }

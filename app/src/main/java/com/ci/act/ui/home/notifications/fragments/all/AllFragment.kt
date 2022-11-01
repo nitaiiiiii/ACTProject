@@ -7,7 +7,8 @@ import com.ci.act.base.BaseFragment
 import com.ci.act.databinding.FragmentAllBinding
 
 
-class AllFragment: BaseFragment<FragmentAllBinding,AllFragmentView,AllFragmentViewModel>(),AllFragmentView {
+class AllFragment : BaseFragment<FragmentAllBinding, AllFragmentView, AllFragmentViewModel>(),
+    AllFragmentView {
     override fun getContentView(): Int = R.layout.fragment_all
 
     override fun setViewModel(): AllFragmentViewModel? = AllFragmentViewModel()

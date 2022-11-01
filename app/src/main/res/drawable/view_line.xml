@@ -3,8 +3,7 @@
     android:shape="line">
 
     <stroke
-        android:color="@color/white"
         android:width="@dimen/dp5"
-        />
+        android:color="@color/white" />
 
 </shape>

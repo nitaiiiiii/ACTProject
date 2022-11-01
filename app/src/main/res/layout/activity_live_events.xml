@@ -96,15 +96,15 @@
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtMainEventName"
+                style="@style/extra_lato_semi_boldr1"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
-                style="@style/extra_lato_semi_boldr1"
+                android:layout_marginStart="@dimen/dp10"
                 android:text="FOOTBALL EVENT"
                 android:textColor="@color/white"
-                android:layout_marginStart="@dimen/dp10"
-                app:layout_constraintStart_toStartOf="@id/imgDateLocation"
+                app:layout_constraintBottom_toTopOf="@id/imgDateLocation"
                 app:layout_constraintEnd_toEndOf="@id/txtEventsLocation"
-                app:layout_constraintBottom_toTopOf="@id/imgDateLocation"/>
+                app:layout_constraintStart_toStartOf="@id/imgDateLocation" />
 
             <ImageView
                 android:id="@+id/imgDateEvents"

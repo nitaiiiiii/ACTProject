@@ -11,35 +11,35 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp10"
         android:background="@drawable/shape_edit_text_settings_email_and_password"
+        android:paddingStart="@dimen/dp30"
+        android:paddingTop="@dimen/dp10"
+        android:paddingEnd="@dimen/dp30"
+        android:paddingBottom="@dimen/dp10"
         android:text="Today"
         android:textColor="@color/ruby_red"
-        android:paddingTop="@dimen/dp10"
-        android:paddingBottom="@dimen/dp10"
-        android:paddingStart="@dimen/dp30"
-        android:paddingEnd="@dimen/dp30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.ci.act.widgets.CustomTextView
         android:id="@+id/txtSelectAllNotification"
+        style="@style/extra_large_text_bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp10"
         android:text="Select All"
         android:textColor="@color/grey"
-        style="@style/extra_large_text_bold"
-        android:layout_marginEnd="@dimen/dp10"
+        app:layout_constraintBottom_toBottomOf="@id/txtDateNotification"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/txtDateNotification"
-        app:layout_constraintBottom_toBottomOf="@id/txtDateNotification"/>
+        app:layout_constraintTop_toTopOf="@id/txtDateNotification" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainAdapterRvNotifications"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtDateNotification"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtDateNotification" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

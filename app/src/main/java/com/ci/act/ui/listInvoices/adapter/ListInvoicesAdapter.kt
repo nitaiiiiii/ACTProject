@@ -12,21 +12,26 @@ import com.bumptech.glide.Glide
 import com.ci.act.R
 import com.ci.act.ui.listInvoices.model.ListInvoicesModel
 
-class ListInvoicesAdapter:RecyclerView.Adapter<ListInvoicesAdapter.ListInvoicesViewHolder>() {
+class ListInvoicesAdapter : RecyclerView.Adapter<ListInvoicesAdapter.ListInvoicesViewHolder>() {
 
     private val listInvoices: ArrayList<ListInvoicesModel.ListInvoicesModelItem> = ArrayList()
 
-    class ListInvoicesViewHolder(listInvoicesView: View):RecyclerView.ViewHolder(listInvoicesView) {
+    class ListInvoicesViewHolder(listInvoicesView: View) :
+        RecyclerView.ViewHolder(listInvoicesView) {
         var imgListInvoices: ImageView? = listInvoicesView.findViewById(R.id.imgListInvoices)
-        var txtInvoicesListPremiumPlan: TextView? = listInvoicesView.findViewById(R.id.txtInvoicesListPremiumPlan)
-        var txtInvoicesListPremiumDate: TextView? = listInvoicesView.findViewById(R.id.txtInvoicesListPremiumDate)
-        var txtInvoicesListPremiumExpirationDate: TextView? = listInvoicesView.findViewById(R.id.txtInvoicesListPremiumExpirationDate)
-        var txtInvoicesListPremiumDatePrice: TextView? = listInvoicesView.findViewById(R.id.txtInvoicesListPremiumDatePrice)
-        var txtInvoicesListDateResult: TextView? = listInvoicesView.findViewById(R.id.txtInvoicesListDateResult)
+        var txtInvoicesListPremiumPlan: TextView? =
+            listInvoicesView.findViewById(R.id.txtInvoicesListPremiumPlan)
+        var txtInvoicesListPremiumDate: TextView? =
+            listInvoicesView.findViewById(R.id.txtInvoicesListPremiumDate)
+        var txtInvoicesListPremiumExpirationDate: TextView? =
+            listInvoicesView.findViewById(R.id.txtInvoicesListPremiumExpirationDate)
+        var txtInvoicesListPremiumDatePrice: TextView? =
+            listInvoicesView.findViewById(R.id.txtInvoicesListPremiumDatePrice)
+        var txtInvoicesListDateResult: TextView? =
+            listInvoicesView.findViewById(R.id.txtInvoicesListDateResult)
 
 
-
-        fun listInvoicesBindItems(listInvoicesModelItem: ListInvoicesModel.ListInvoicesModelItem){
+        fun listInvoicesBindItems(listInvoicesModelItem: ListInvoicesModel.ListInvoicesModelItem) {
             txtInvoicesListPremiumPlan?.text = listInvoicesModelItem.planName
             txtInvoicesListPremiumDate?.text = listInvoicesModelItem.purchasedOn
             txtInvoicesListPremiumExpirationDate?.text = listInvoicesModelItem.expiredOn
@@ -47,9 +52,9 @@ class ListInvoicesAdapter:RecyclerView.Adapter<ListInvoicesAdapter.ListInvoicesV
                     .into(it)
             }
 
-            if(listInvoicesModelItem.paymentStatus == "Success"){
+            if (listInvoicesModelItem.paymentStatus == "Success") {
                 txtInvoicesListDateResult?.setTextColor(Color.GREEN)
-            }else{
+            } else {
                 txtInvoicesListDateResult?.setTextColor(Color.RED)
             }
         }

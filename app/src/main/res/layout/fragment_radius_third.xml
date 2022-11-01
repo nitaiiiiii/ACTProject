@@ -82,8 +82,7 @@
                 android:progressDrawable="@drawable/seekbar_drawable_progress"
                 android:splitTrack="false"
                 android:thumb="@drawable/slider"
-                app:layout_constraintTop_toBottomOf="@id/imgConcentricCircles">
-            </SeekBar>
+                app:layout_constraintTop_toBottomOf="@id/imgConcentricCircles"></SeekBar>
 
             <com.ci.act.widgets.CustomButton
                 android:id="@+id/btnSaveRadius"

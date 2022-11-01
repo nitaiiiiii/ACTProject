@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="faqEmpty"
             type="com.ci.act.ui.home.faqEmpty.FaqEmptyViewModel" />
@@ -60,8 +61,8 @@
             android:layout_width="@dimen/dp0"
             android:layout_height="@dimen/dp250"
             android:layout_marginTop="@dimen/dp20"
-            android:src="@drawable/faq"
             android:padding="@dimen/dp10"
+            android:src="@drawable/faq"
             app:layout_constraintEnd_toEndOf="@id/guideLineRight"
             app:layout_constraintStart_toStartOf="@id/guideLineLeft"
             app:layout_constraintTop_toBottomOf="@id/txtFaqEmpty" />
@@ -98,12 +99,12 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtEmptyRelevantQuestions"
+            style="@style/large_text"
             android:layout_width="@dimen/dp0"
             android:layout_height="wrap_content"
-            android:maxLines="2"
-            style="@style/large_text"
-            android:padding="@dimen/dp5"
             android:layout_marginBottom="@dimen/dp10"
+            android:maxLines="2"
+            android:padding="@dimen/dp5"
             android:text="Can't find relevant\nquestion?"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btnEmptyRelevantQuestions"
@@ -113,15 +114,15 @@
             android:id="@+id/btnEmptyRelevantQuestions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Contact Us"
-            android:textColor="@color/white"
+            android:background="@drawable/rounded_button"
             android:paddingStart="@dimen/dp40"
             android:paddingEnd="@dimen/dp40"
+            android:text="Contact Us"
             android:textAllCaps="false"
-            android:background="@drawable/rounded_button"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@id/txtEmptyRelevantQuestions"
-            app:layout_constraintTop_toTopOf="@id/txtEmptyRelevantQuestions"
-            app:layout_constraintEnd_toEndOf="@id/guideLineRight"/>
+            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+            app:layout_constraintTop_toTopOf="@id/txtEmptyRelevantQuestions" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

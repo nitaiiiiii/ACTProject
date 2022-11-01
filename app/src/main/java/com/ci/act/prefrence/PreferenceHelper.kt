@@ -14,15 +14,20 @@ class PreferenceHelper private constructor() {
 
     init {
 
-        userPrefs = MyApplication.getApplicationContext().getSharedPreferences(BuildConfig.preference_name, Context.MODE_PRIVATE)
+        userPrefs = MyApplication.getApplicationContext()
+            .getSharedPreferences(BuildConfig.preference_name, Context.MODE_PRIVATE)
         appPrefs =
-            MyApplication.getApplicationContext().getSharedPreferences(BuildConfig.preference_name.plus("Permanent"), Context.MODE_PRIVATE)
+            MyApplication.getApplicationContext().getSharedPreferences(
+                BuildConfig.preference_name.plus("Permanent"),
+                Context.MODE_PRIVATE
+            )
     }
-    companion object{
-        private var preferenceHelper:PreferenceHelper? = null
 
-        fun getInstance():PreferenceHelper{
-            if(preferenceHelper == null){
+    companion object {
+        private var preferenceHelper: PreferenceHelper? = null
+
+        fun getInstance(): PreferenceHelper {
+            if (preferenceHelper == null) {
                 preferenceHelper = PreferenceHelper()
             }
             return preferenceHelper!!
@@ -30,8 +35,8 @@ class PreferenceHelper private constructor() {
     }
 
 
-    fun isOnBoardingFinished() : Boolean? {
-        return userPrefs?.getBoolean(PreferencesKeys.isOnBoardingFinished,  false)
+    fun isOnBoardingFinished(): Boolean? {
+        return userPrefs?.getBoolean(PreferencesKeys.isOnBoardingFinished, false)
     }
 
     fun finishOnBoarding() {
@@ -41,7 +46,7 @@ class PreferenceHelper private constructor() {
     }
 
     fun putString(key: String, value: String) {
-        appPrefs?.edit{
+        appPrefs?.edit {
             putString(key, value)
         }
     }

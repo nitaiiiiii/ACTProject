@@ -26,8 +26,10 @@ class SportsBoardAdapter : RecyclerView.Adapter<SportsBoardAdapter.SportsBoardVi
         var txtSportsBoardMaria: TextView? = sportsBoardView.findViewById(R.id.txtSportsBoardMaria)
         var txtSportsBoardTime: TextView? = sportsBoardView.findViewById(R.id.txtSportsBoardTime)
         var txtSportsBoardB17: TextView? = sportsBoardView.findViewById(R.id.txtSportsBoardB17)
-        var txtPositionSportsBoard: TextView? = sportsBoardView.findViewById(R.id.txtPositionSportsBoard)
-        var mainSportsBoardCardView: ConstraintLayout? =sportsBoardView.findViewById(R.id.mainSportsBoardCardView)
+        var txtPositionSportsBoard: TextView? =
+            sportsBoardView.findViewById(R.id.txtPositionSportsBoard)
+        var mainSportsBoardCardView: ConstraintLayout? =
+            sportsBoardView.findViewById(R.id.mainSportsBoardCardView)
 
 
         fun sportsBoardBindItems(sportsBoardModelItem: SportsBoardModel.SportsBoardModelItem) {
@@ -51,21 +53,23 @@ class SportsBoardAdapter : RecyclerView.Adapter<SportsBoardAdapter.SportsBoardVi
             if (sportsBoardModelItem.rank == "1.") {
                 imgSportsBoardKing?.visibility = View.VISIBLE
                 txtPositionSportsBoard?.visibility = View.INVISIBLE
-            }else{
+            } else {
                 imgSportsBoardKing?.visibility = View.INVISIBLE
                 txtPositionSportsBoard?.visibility = View.VISIBLE
             }
 
-            if(sportsBoardModelItem.userName == "You"){
+            if (sportsBoardModelItem.userName == "You") {
                 mainSportsBoardCardView?.setBackgroundColor(Color.LTGRAY)
                 txtSportsBoardB17?.setTextColor(Color.WHITE)
                 txtPositionSportsBoard?.setTextColor(Color.RED)
-                txtSportsBoardB17?.background = ContextCompat.getDrawable(itemView.context, R.drawable.rounded_button)
-            }else{
+                txtSportsBoardB17?.background =
+                    ContextCompat.getDrawable(itemView.context, R.drawable.rounded_button)
+            } else {
                 mainSportsBoardCardView?.setBackgroundColor(Color.WHITE)
                 txtSportsBoardB17?.setTextColor(Color.RED)
                 txtPositionSportsBoard?.setTextColor(Color.BLACK)
-                txtSportsBoardB17?.background = ContextCompat.getDrawable(itemView.context, R.drawable.background_line_red)
+                txtSportsBoardB17?.background =
+                    ContextCompat.getDrawable(itemView.context, R.drawable.background_line_red)
 
 
             }

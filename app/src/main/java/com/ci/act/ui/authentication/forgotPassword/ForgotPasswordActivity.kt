@@ -9,11 +9,13 @@ import com.ci.act.databinding.ActivityForgotPasswordBinding
 import com.ci.act.ui.authentication.signin.SignInActivity
 import com.ci.act.ui.authentication.signup.SignUpActivity
 
-class ForgotPasswordActivity : BaseActivity<ActivityForgotPasswordBinding,ForgotPasswordView,ForgotPasswordViewModel>(), ForgotPasswordView{
+class ForgotPasswordActivity :
+    BaseActivity<ActivityForgotPasswordBinding, ForgotPasswordView, ForgotPasswordViewModel>(),
+    ForgotPasswordView {
     override fun getContentView(): Int = R.layout.activity_forgot_password
 
     override fun setViewModelClass(): Class<ForgotPasswordViewModel> {
-       return ForgotPasswordViewModel::class.java
+        return ForgotPasswordViewModel::class.java
     }
 
     override fun getNavigator(): ForgotPasswordView = this
@@ -33,7 +35,7 @@ class ForgotPasswordActivity : BaseActivity<ActivityForgotPasswordBinding,Forgot
         }
     }
 
-    private fun validateFields(){
+    private fun validateFields() {
         mViewDataBinding?.btnSignIn?.setOnClickListener {
             if (mViewDataBinding?.editTextForgotPassword?.text?.isEmpty() == true) {
                 showErrorMessage(

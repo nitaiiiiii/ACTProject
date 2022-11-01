@@ -6,14 +6,12 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/dp10"
     android:background="@color/white"
-    app:cardCornerRadius="@dimen/dp10"
-    >
+    app:cardCornerRadius="@dimen/dp10">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/mainConstraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideLineVertical"
@@ -49,8 +47,8 @@
             android:layout_marginTop="@dimen/dp20"
             android:gravity="center_horizontal"
             android:text="2\nDAYS"
-            android:visibility="gone"
             android:textColor="@color/ruby_red"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@id/txtRegisteredBlackText"
             app:layout_constraintEnd_toEndOf="@id/registeredACT"
             app:layout_constraintStart_toStartOf="@id/registeredACT"
@@ -76,13 +74,12 @@
             style="@style/small_bebas_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp5"
             android:gravity="center_horizontal"
             android:text="TH"
-            android:layout_marginStart="@dimen/dp5"
             android:textColor="@color/ruby_red"
-            app:layout_constraintTop_toTopOf="@id/txtRegistered"
             app:layout_constraintStart_toEndOf="@id/txtRegistered"
-             />
+            app:layout_constraintTop_toTopOf="@id/txtRegistered" />
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtRegisteredBlackText"
@@ -104,10 +101,10 @@
             style="@style/extra_large_bebas_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp30"
             android:gravity="center_horizontal"
             android:text="RANK"
             android:textColor="@color/black"
-            android:layout_marginBottom="@dimen/dp30"
             app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal"
             app:layout_constraintEnd_toEndOf="@id/registeredACT"
             app:layout_constraintStart_toStartOf="@id/registeredACT"
@@ -170,10 +167,9 @@
             android:layout_marginTop="@dimen/dp20"
             android:text="226 Participants"
             android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/txtInflateLocationRegistered"
             app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal"
             app:layout_constraintStart_toStartOf="@id/guideLineVertical"
-             />
+            app:layout_constraintTop_toBottomOf="@id/txtInflateLocationRegistered" />
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtLiveEventsOneReg"
@@ -182,9 +178,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp15"
             android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
             android:text="May 29-31"
             android:textColor="@color/black"
-            android:layout_marginEnd="@dimen/dp20"
             app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txtInflateLocationRegistered"
@@ -204,10 +200,10 @@
             android:id="@+id/btnGreyCancel"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/dp40"
+            android:layout_marginEnd="@dimen/dp10"
             android:background="@drawable/btn_registered_events"
             android:text="Cancel"
             android:textColor="@color/white"
-            android:layout_marginEnd="@dimen/dp10"
             app:layout_constraintBottom_toBottomOf="@id/bottomView"
             app:layout_constraintEnd_toEndOf="@id/bottomView"
             app:layout_constraintTop_toTopOf="@id/guideLineHorizontal" />
@@ -225,24 +221,24 @@
             android:id="@+id/imgLeaderBoard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/live2"
             android:layout_marginStart="@dimen/dp10"
-            app:layout_constraintEnd_toStartOf="@id/txtLeaderBoard"
-            app:layout_constraintTop_toTopOf="@id/guideLineHorizontal"
+            android:src="@drawable/live2"
             app:layout_constraintBottom_toBottomOf="@id/bottomView1"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintEnd_toStartOf="@id/txtLeaderBoard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideLineHorizontal" />
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtLeaderBoard"
+            style="@style/small_lato_regular1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="My LeaderBoard"
-            style="@style/small_lato_regular1"
-            android:textColor="@color/ruby_red"
             android:layout_marginStart="@dimen/dp10"
+            android:text="My LeaderBoard"
+            android:textColor="@color/ruby_red"
+            app:layout_constraintBottom_toBottomOf="@id/imgLeaderBoard"
             app:layout_constraintStart_toEndOf="@id/imgLeaderBoard"
-            app:layout_constraintTop_toTopOf="@id/imgLeaderBoard"
-            app:layout_constraintBottom_toBottomOf="@id/imgLeaderBoard"/>
+            app:layout_constraintTop_toTopOf="@id/imgLeaderBoard" />
 
         <ImageView
             android:id="@+id/imgLeaderBoardReport"
@@ -256,15 +252,15 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtLeaderBoardReport"
+            style="@style/small_lato_regular1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="My Report"
-            style="@style/small_lato_regular1"
-            android:textColor="@color/ruby_red"
             android:layout_marginEnd="@dimen/dp20"
+            android:text="My Report"
+            android:textColor="@color/ruby_red"
+            app:layout_constraintBottom_toBottomOf="@id/imgLeaderBoardReport"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/imgLeaderBoardReport"
-            app:layout_constraintBottom_toBottomOf="@id/imgLeaderBoardReport"/>
+            app:layout_constraintTop_toTopOf="@id/imgLeaderBoardReport" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

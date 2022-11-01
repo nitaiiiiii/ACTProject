@@ -6,7 +6,9 @@ import com.ci.act.R
 import com.ci.act.base.BaseDialogFragmentNew
 import com.ci.act.databinding.FragmentFeedbackBinding
 
-class FeedbackFragment : BaseDialogFragmentNew<FragmentFeedbackBinding,FeedBackView,FeedbackViewModel>(),FeedBackView{
+class FeedbackFragment :
+    BaseDialogFragmentNew<FragmentFeedbackBinding, FeedBackView, FeedbackViewModel>(),
+    FeedBackView {
     override fun getContentView(): Int = R.layout.fragment_feedback
 
     override fun setViewModelClass(): Class<FeedbackViewModel> {

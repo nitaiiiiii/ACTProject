@@ -13,17 +13,17 @@ import com.ci.act.ui.differentSports.adapter.DifferentSportsAdapter
 import com.ci.act.ui.differentSports.model.DifferentSportsModel
 import com.ci.act.ui.mysports.model.MySportsModel
 
-class MySportsAdapter: RecyclerView.Adapter<MySportsAdapter.MySportsViewHolder>() {
+class MySportsAdapter : RecyclerView.Adapter<MySportsAdapter.MySportsViewHolder>() {
     private val arrayList: ArrayList<MySportsModel.MySportsModelItem> = ArrayList()
     lateinit var sportsClick: MySportsAdapter.SportsClick
 
-    class MySportsViewHolder(mySportsView: View): RecyclerView.ViewHolder(mySportsView) {
+    class MySportsViewHolder(mySportsView: View) : RecyclerView.ViewHolder(mySportsView) {
 
         var img: ImageView? = mySportsView.findViewById(R.id.imageViewSports)
         var img1: ImageView? = mySportsView.findViewById(R.id.imgCheckedCircle)
         var txt: TextView? = mySportsView.findViewById(R.id.txtDifferentActivities)
 
-        fun mySportsBindItems(mySports: MySportsModel.MySportsModelItem){
+        fun mySportsBindItems(mySports: MySportsModel.MySportsModelItem) {
 
             txt?.text = mySports.sportsName
             val resId: Int = itemView.context.resources.getIdentifier(
@@ -47,13 +47,13 @@ class MySportsAdapter: RecyclerView.Adapter<MySportsAdapter.MySportsViewHolder>(
             }
 
 
-
         }
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MySportsViewHolder {
-        val mySports = LayoutInflater.from(parent.context).inflate(R.layout.sports_items, parent, false)
+        val mySports =
+            LayoutInflater.from(parent.context).inflate(R.layout.sports_items, parent, false)
         return MySportsViewHolder(mySports)
     }
 

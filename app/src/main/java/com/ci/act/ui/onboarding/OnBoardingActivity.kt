@@ -31,32 +31,32 @@ class OnBoardingActivity :
 
     override fun onPause() {
         super.onPause()
-        Log.v("ViewModel","OnBoardingActivity is onPause")
+        Log.v("ViewModel", "OnBoardingActivity is onPause")
 
     }
 
     override fun onStop() {
         super.onStop()
-        Log.v("ViewModel","OnBoardingActivity is onStop")
+        Log.v("ViewModel", "OnBoardingActivity is onStop")
 
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.v("ViewModel","OnBoardingActivity is onRestart")
+        Log.v("ViewModel", "OnBoardingActivity is onRestart")
 
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.v("ViewModel","OnBoardingActivity is onDestroy")
+        Log.v("ViewModel", "OnBoardingActivity is onDestroy")
 
     }
 
     override fun initViews(savedInstanceState: Bundle?) {
 
         setOnClickListeners()
-        Log.v("ViewModel","OnBoardingActivity is created")
+        Log.v("ViewModel", "OnBoardingActivity is created")
         showOrHideStatusBar(false)
         val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager, addFragment())
         mViewDataBinding?.viewPagerOnBoardingScreen?.adapter = viewPagerAdapter
@@ -103,10 +103,10 @@ class OnBoardingActivity :
 
     }
 
-    private fun setOnClickListeners(){
+    private fun setOnClickListeners() {
         mViewDataBinding?.btnGetStarted?.setOnClickListener {
             PreferenceHelper.getInstance().finishOnBoarding()
-            val onBoard = Intent(this,SocialMediaActivity::class.java)
+            val onBoard = Intent(this, SocialMediaActivity::class.java)
             startActivity(onBoard)
             finish()
         }

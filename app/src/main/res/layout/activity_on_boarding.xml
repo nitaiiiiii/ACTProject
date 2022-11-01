@@ -56,12 +56,11 @@
             style="@style/extra_large_text_semi_bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp15"
             android:text="Skip"
             android:textColor="@color/white"
-            android:layout_marginBottom="@dimen/dp15"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/guideOnBoardingLeft"
-             />
+            app:layout_constraintStart_toStartOf="@id/guideOnBoardingLeft" />
 
 
         <com.rd.PageIndicatorView
@@ -69,6 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp15"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/guideOnBoardingRight"
             app:piv_animationType="scale"
@@ -76,7 +76,6 @@
             app:piv_interactiveAnimation="true"
             app:piv_padding="@dimen/dp10"
             app:piv_radius="@dimen/dp5"
-            android:layout_marginBottom="@dimen/dp15"
             app:piv_selectedColor="@color/white"
             app:piv_unselectedColor="@color/dull_white" />
 

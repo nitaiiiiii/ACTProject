@@ -32,7 +32,7 @@ class MyRegisteredAdapter : RecyclerView.Adapter<MyRegisteredAdapter.MyRegistere
         val imgLeaderBoardReport: ImageView? = view.findViewById(R.id.imgLeaderBoardReport)
         val txtLeaderBoardReport: TextView? = view.findViewById(R.id.txtLeaderBoardReport)
         val btnGreyCancel: Button? = view.findViewById(R.id.btnGreyCancel)
-        var txtRegisteredRanker:TextView? = view.findViewById(R.id.txtRegisteredRanker)
+        var txtRegisteredRanker: TextView? = view.findViewById(R.id.txtRegisteredRanker)
 
 
         fun myRegisteredBindItems(registeredModelItem: RegisteredModel.RegisteredModelItem.Events) {

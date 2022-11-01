@@ -25,7 +25,8 @@ class MyApplication : Application(), LifecycleObserver {
         fun getApplicationContext(): Context {
             return myApplication
         }
-        fun getNetworkChangeListener():LiveData<ConnectivityModel>{
+
+        fun getNetworkChangeListener(): LiveData<ConnectivityModel> {
             return networkChangeLiveData
         }
     }
@@ -56,6 +57,7 @@ class MyApplication : Application(), LifecycleObserver {
         filter.addAction("android.net.wifi.WIFI_STATE_CHANGED")
         registerReceiver(connectivityReceiver, filter)
     }
+
     private fun unRegisterNetworkReceiver() {
         unregisterReceiver(connectivityReceiver)
     }

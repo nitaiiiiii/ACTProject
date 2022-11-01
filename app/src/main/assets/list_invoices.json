@@ -43,7 +43,6 @@
     "amount": "999.73",
     "paymentStatus": "Failed",
     "image": "ic_baseline_file_download_24"
-
   },
   {
     "invoiceId": 6,
@@ -53,6 +52,5 @@
     "amount": "999.73",
     "paymentStatus": "Failed",
     "image": "ic_baseline_file_download_24"
-
   }
 ]

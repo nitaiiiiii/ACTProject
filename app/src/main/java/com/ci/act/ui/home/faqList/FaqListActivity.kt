@@ -15,9 +15,10 @@ import com.ci.act.ui.home.faqList.model.FaqListModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class FaqListActivity: BaseActivity<ActivityFaqListBinding,FaqListView,FaqListViewModel>(),FaqListView{
+class FaqListActivity : BaseActivity<ActivityFaqListBinding, FaqListView, FaqListViewModel>(),
+    FaqListView {
 
-    private var adapterFAQs:FaqListAdapter? = null
+    private var adapterFAQs: FaqListAdapter? = null
     private var liveFAQs: ArrayList<FaqListModel.FaqListModelItem> = ArrayList()
 
 
@@ -51,7 +52,7 @@ class FaqListActivity: BaseActivity<ActivityFaqListBinding,FaqListView,FaqListVi
 
         val gson = Gson()
         val listMoviesType = object : TypeToken<FaqListModel>() {}.type
-        liveFAQs= gson.fromJson(differentSportsJson, listMoviesType)
+        liveFAQs = gson.fromJson(differentSportsJson, listMoviesType)
         Log.e("hello", "${liveFAQs}")
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView.adapter = adapterFAQs
@@ -62,7 +63,8 @@ class FaqListActivity: BaseActivity<ActivityFaqListBinding,FaqListView,FaqListVi
     private fun getDataFromJson(): String? {
         val jsonString: String
         try {
-            jsonString = this.assets.open("faq_questions.json").bufferedReader().use { it.readText() }
+            jsonString =
+                this.assets.open("faq_questions.json").bufferedReader().use { it.readText() }
         } catch (e: Exception) {
             e.printStackTrace()
             return null

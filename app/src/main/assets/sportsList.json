@@ -1,57 +1,57 @@
-   [
-    {
-      "id": 1,
-      "sportsName": "Football",
-      "sportsimage": "football"
-    },
-    {
-      "id": 2,
-      "sportsName": "Basketball",
-      "sportsimage": "basketball"
-    },
-    {
-      "id": 3,
-      "sportsName": "Baseball",
-      "sportsimage": "baseball"
-    },
-    {
-      "id": 4,
-      "sportsName": "Volleyball",
-      "sportsimage": "volleyball"
-    },
-    {
-      "id": 5,
-      "sportsName": "Softball",
-      "sportsimage": "softball"
-    },
-    {
-      "id": 6,
-      "sportsName": "Soccer",
-      "sportsimage": "soccer"
-    },
-    {
-      "id": 7,
-      "sportsName": "Tennis",
-      "sportsimage": "tennis"
-    },
-    {
-      "id": 8,
-      "sportsName": "Field Hockey",
-      "sportsimage": "field_hockey"
-    },
-    {
-      "id": 9,
-      "sportsName": "Ice Hockey",
-      "sportsimage": "ice_hockey"
-    },
-    {
-      "id": 10,
-      "sportsName": "Rugby",
-      "sportsimage": "rugby"
-    },
-    {
-      "id": 11,
-      "sportsName": "Lacrosse",
-      "sportsimage": "lacrosse"
-    }
-  ]
+[
+  {
+    "id": 1,
+    "sportsName": "Football",
+    "sportsimage": "football"
+  },
+  {
+    "id": 2,
+    "sportsName": "Basketball",
+    "sportsimage": "basketball"
+  },
+  {
+    "id": 3,
+    "sportsName": "Baseball",
+    "sportsimage": "baseball"
+  },
+  {
+    "id": 4,
+    "sportsName": "Volleyball",
+    "sportsimage": "volleyball"
+  },
+  {
+    "id": 5,
+    "sportsName": "Softball",
+    "sportsimage": "softball"
+  },
+  {
+    "id": 6,
+    "sportsName": "Soccer",
+    "sportsimage": "soccer"
+  },
+  {
+    "id": 7,
+    "sportsName": "Tennis",
+    "sportsimage": "tennis"
+  },
+  {
+    "id": 8,
+    "sportsName": "Field Hockey",
+    "sportsimage": "field_hockey"
+  },
+  {
+    "id": 9,
+    "sportsName": "Ice Hockey",
+    "sportsimage": "ice_hockey"
+  },
+  {
+    "id": 10,
+    "sportsName": "Rugby",
+    "sportsimage": "rugby"
+  },
+  {
+    "id": 11,
+    "sportsName": "Lacrosse",
+    "sportsimage": "lacrosse"
+  }
+]

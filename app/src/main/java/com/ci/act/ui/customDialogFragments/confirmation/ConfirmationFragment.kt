@@ -6,8 +6,10 @@ import com.ci.act.R
 import com.ci.act.base.BaseDialogFragmentNew
 import com.ci.act.databinding.FragmentConfirmationBinding
 
-class ConfirmationFragment: BaseDialogFragmentNew<FragmentConfirmationBinding,ConfirmationView,ConfirmationViewModel>(),ConfirmationView{
-    override fun getContentView(): Int =R.layout.fragment_confirmation
+class ConfirmationFragment :
+    BaseDialogFragmentNew<FragmentConfirmationBinding, ConfirmationView, ConfirmationViewModel>(),
+    ConfirmationView {
+    override fun getContentView(): Int = R.layout.fragment_confirmation
 
     override fun setViewModelClass(): Class<ConfirmationViewModel> {
         return ConfirmationViewModel::class.java

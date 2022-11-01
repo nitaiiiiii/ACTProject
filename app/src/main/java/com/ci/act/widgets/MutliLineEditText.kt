@@ -8,6 +8,7 @@ import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
 import com.ci.act.R
+
 /**
  * Name       : vignesh
  * Created on : 18/3/2020.
@@ -25,7 +26,11 @@ class MutliLineEditText : AppCompatEditText {
 
     }
 
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         if (!isInEditMode)
             initWithAttrs(context, attrs, defStyleAttr)
     }

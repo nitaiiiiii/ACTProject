@@ -8,7 +8,9 @@ import com.ci.act.base.BaseDialogFragmentNew
 import com.ci.act.databinding.FragmentUploadSignatureBinding
 import com.ci.act.ui.home.mainEventScreenRegister.fragments.guardianApproval.GuardianApprovalFragment
 
-class UploadSignatureFragment:BaseDialogFragmentNew<FragmentUploadSignatureBinding,UploadSignatureView,UploadSignatureViewModel>(),UploadSignatureView {
+class UploadSignatureFragment :
+    BaseDialogFragmentNew<FragmentUploadSignatureBinding, UploadSignatureView, UploadSignatureViewModel>(),
+    UploadSignatureView {
     override fun getContentView(): Int = R.layout.fragment_upload_signature
 
     override fun setViewModelClass(): Class<UploadSignatureViewModel> {

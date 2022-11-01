@@ -11,14 +11,17 @@ import androidx.fragment.app.Fragment
 import com.ci.act.R
 
 
-abstract class BaseFragment< T : ViewDataBinding, N : BaseNavigator,  V : BaseViewModel<N>> :
-    Fragment()
-    , BaseNavigator {
+abstract class BaseFragment<T : ViewDataBinding, N : BaseNavigator, V : BaseViewModel<N>> :
+    Fragment(), BaseNavigator {
 
-     var mViewDataBinding: T ?= null
-     var mViewModel: V? = null
+    var mViewDataBinding: T? = null
+    var mViewModel: V? = null
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         mViewDataBinding = DataBindingUtil.inflate(inflater, getContentView(), container, false)
         this.mViewModel = if (mViewModel == null) setViewModel() else mViewModel
         mViewDataBinding?.setVariable(getBindingVariable(), mViewModel)
@@ -74,11 +77,11 @@ abstract class BaseFragment< T : ViewDataBinding, N : BaseNavigator,  V : BaseVi
         })
     }
 
-     fun startLoading() {
+    fun startLoading() {
         (activity as? BaseActivity<*, *, *>)?.startLoading()
     }
 
-     fun finishLoading() {
+    fun finishLoading() {
         (activity as? BaseActivity<*, *, *>)?.finishLoading()
     }
 

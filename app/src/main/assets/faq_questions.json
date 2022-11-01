@@ -1,37 +1,37 @@
 [
-    {
-      "id": 1,
-      "question_name": "1.How do I update my payment information?",
-      "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
-    },
-    {
-      "id": 2,
-      "question_name": "2.How do I edit or delete my pledge?",
-      "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
-    },
-    {
-      "id": 3,
-      "question_name": "3.I deleted my pledge. Why was I still charged?",
-      "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
-    },
-    {
-      "id": 4,
-      "question_name": "4.Where is my Payout?",
-      "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
-    },
-    {
-      "id": 5,
-      "question_name": "5.How do I get my Discord Rewards?",
-      "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
-    },
-    {
-      "id": 6,
-      "question_name": "6.Why I can;t I change my credit card info?",
-      "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
-    },
-    {
-      "id": 7,
-      "question_name": "7.What are the payment methods using?",
-      "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
-    }
-  ]
+  {
+    "id": 1,
+    "question_name": "1.How do I update my payment information?",
+    "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
+  },
+  {
+    "id": 2,
+    "question_name": "2.How do I edit or delete my pledge?",
+    "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
+  },
+  {
+    "id": 3,
+    "question_name": "3.I deleted my pledge. Why was I still charged?",
+    "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
+  },
+  {
+    "id": 4,
+    "question_name": "4.Where is my Payout?",
+    "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
+  },
+  {
+    "id": 5,
+    "question_name": "5.How do I get my Discord Rewards?",
+    "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
+  },
+  {
+    "id": 6,
+    "question_name": "6.Why I can;t I change my credit card info?",
+    "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
+  },
+  {
+    "id": 7,
+    "question_name": "7.What are the payment methods using?",
+    "answer": "Want to use different credit card or paypal account for your pledges? You can add new payment method and transfer your pledges any time you're logged into your account, just follow the steps below:"
+  }
+]

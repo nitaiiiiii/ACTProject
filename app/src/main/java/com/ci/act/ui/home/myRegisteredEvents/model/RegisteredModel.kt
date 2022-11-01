@@ -3,7 +3,7 @@ package com.ci.act.ui.home.myRegisteredEvents.model
 
 import com.google.gson.annotations.SerializedName
 
-class RegisteredModel : ArrayList<RegisteredModel.RegisteredModelItem>(){
+class RegisteredModel : ArrayList<RegisteredModel.RegisteredModelItem>() {
     data class RegisteredModelItem(
         @SerializedName("eventsList")
         var eventsList: ArrayList<Events>,

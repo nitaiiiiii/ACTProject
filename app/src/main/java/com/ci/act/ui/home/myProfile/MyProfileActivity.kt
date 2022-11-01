@@ -15,7 +15,8 @@ import com.ci.act.ui.mysports.MySportsActivity
 import com.ci.act.ui.personalInfo.PersonalInfoActivity
 import com.google.android.material.chip.Chip
 
-class MyProfileActivity :BaseActivity<ActivityMyProfileBinding,MyProfileView,MyProfileViewModel>(),MyProfileView{
+class MyProfileActivity :
+    BaseActivity<ActivityMyProfileBinding, MyProfileView, MyProfileViewModel>(), MyProfileView {
     override fun getContentView(): Int = R.layout.activity_my_profile
 
     override fun setViewModelClass(): Class<MyProfileViewModel> {
@@ -33,19 +34,19 @@ class MyProfileActivity :BaseActivity<ActivityMyProfileBinding,MyProfileView,MyP
 
     private fun setOnClickListener() {
         mViewDataBinding?.imgMyProfileEvents?.setOnClickListener {
-            val intent = Intent(this,EventsActivity::class.java)
+            val intent = Intent(this, EventsActivity::class.java)
             startActivity(intent)
         }
         mViewDataBinding?.imgMySportsRedProfile?.setOnClickListener {
-            val intent = Intent(this,MySportsActivity::class.java)
+            val intent = Intent(this, MySportsActivity::class.java)
             startActivity(intent)
         }
         mViewDataBinding?.imgPersonDetails?.setOnClickListener {
-            val intent = Intent(this,EditProfileActivity::class.java)
+            val intent = Intent(this, EditProfileActivity::class.java)
             startActivity(intent)
         }
         mViewDataBinding?.imgPersonalRedProfile?.setOnClickListener {
-            val intent = Intent(this,PersonalInfoActivity::class.java)
+            val intent = Intent(this, PersonalInfoActivity::class.java)
             startActivity(intent)
         }
     }
@@ -58,19 +59,25 @@ class MyProfileActivity :BaseActivity<ActivityMyProfileBinding,MyProfileView,MyP
         chipList.add("BASKETBALL")
 
         for (i in chipList.indices) {
-            val chip = Chip(ContextThemeWrapper(this, com.google.android.material.R.style.Theme_MaterialComponents_Light))
+            val chip = Chip(
+                ContextThemeWrapper(
+                    this,
+                    com.google.android.material.R.style.Theme_MaterialComponents_Light
+                )
+            )
             chip.setTextColor(ContextCompat.getColor(this, R.color.white))
             chip.text = chipList[i]
-            if (i%2==0) {
-                chip.chipBackgroundColor = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.ruby_red))
+            if (i % 2 == 0) {
+                chip.chipBackgroundColor =
+                    ColorStateList.valueOf(ContextCompat.getColor(this, R.color.ruby_red))
             } else {
-                chip.chipBackgroundColor = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.orange))
+                chip.chipBackgroundColor =
+                    ColorStateList.valueOf(ContextCompat.getColor(this, R.color.orange))
             }
 
             mViewDataBinding?.chipGroups?.addView(chip)
         }
     }
-
 
 
 }

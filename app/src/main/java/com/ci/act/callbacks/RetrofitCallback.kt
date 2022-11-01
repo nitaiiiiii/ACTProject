@@ -16,7 +16,8 @@ import java.net.SocketTimeoutException
 class RetrofitCallback<T : EncryptedResponse>(
     private val mCallback: MyCallback<T>,
     private val navigator: BaseNavigator,
-    private val myClass: Class<T>) : Callback<T> {
+    private val myClass: Class<T>
+) : Callback<T> {
     private val appDataManager = AppDataManager.getMyInstance()
     override fun onResponse(call: Call<T>, response: Response<T>) {
         if (call.isCanceled) {
@@ -32,7 +33,9 @@ class RetrofitCallback<T : EncryptedResponse>(
                     mCallback.onResponse(call, responseModel)
                 } else {
                     if (baseResponse.forceLogout == 1) {
-                        navigator.showApiDialog(baseResponse.message ?: "Your account has been logged in another device")
+                        navigator.showApiDialog(
+                            baseResponse.message ?: "Your account has been logged in another device"
+                        )
                     }
 //                    else if (baseResponse.isExpired == 1) {
 //                        Log.v("OkHttp:","app/v1/NewRefreshToken called")
@@ -67,11 +70,20 @@ class RetrofitCallback<T : EncryptedResponse>(
 //                            })
 //                    }
                     else if (baseResponse.isAccountDeleted == 1) {
-                        navigator.showApiDialog(baseResponse.message ?: "Your account has been deleted. Please contact admin")
+                        navigator.showApiDialog(
+                            baseResponse.message
+                                ?: "Your account has been deleted. Please contact admin"
+                        )
                     } else if (baseResponse.isEmailNotRegistered == 1) {
-                        navigator.showApiErrorMessage(baseResponse.message ?: "The email address you entered is not registered")
+                        navigator.showApiErrorMessage(
+                            baseResponse.message
+                                ?: "The email address you entered is not registered"
+                        )
                     } else if (baseResponse.isAccountDisabled == 1) {
-                        navigator.showApiDialog(baseResponse.message ?: "Your account has been disabled by the administrator")
+                        navigator.showApiDialog(
+                            baseResponse.message
+                                ?: "Your account has been disabled by the administrator"
+                        )
                     } else {
                         navigator.onApiFailed(baseResponse.message)
                     }

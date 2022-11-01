@@ -10,7 +10,9 @@ import com.ci.act.ui.home.settingsPage.fragments.locationSecondFragment.Location
 import com.ci.act.ui.home.settingsPage.fragments.notificationsFirstFragment.NotificationFirstFragment
 import com.ci.act.ui.home.settingsPage.fragments.radiusThirdFragment.RadiusThirdFragment
 
-class SettingsPageActivity :BaseActivity<ActivitySettingsPageBinding,SettingsPageView,SettingsPageViewModel>(),SettingsPageView{
+class SettingsPageActivity :
+    BaseActivity<ActivitySettingsPageBinding, SettingsPageView, SettingsPageViewModel>(),
+    SettingsPageView {
     override fun getContentView(): Int = R.layout.activity_settings_page
 
     override fun setViewModelClass(): Class<SettingsPageViewModel> {

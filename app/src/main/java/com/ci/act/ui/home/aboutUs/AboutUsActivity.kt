@@ -35,8 +35,8 @@ class AboutUsActivity : BaseActivity<ActivityAboutUsBinding, AboutUsView, AboutU
     }
 
     private fun setOnClickListener() {
-        mViewDataBinding?.imgAboutUs?.setOnClickListener{
-            val intent = Intent(this,EventsActivity::class.java)
+        mViewDataBinding?.imgAboutUs?.setOnClickListener {
+            val intent = Intent(this, EventsActivity::class.java)
             startActivity(intent)
         }
 
@@ -57,7 +57,8 @@ class AboutUsActivity : BaseActivity<ActivityAboutUsBinding, AboutUsView, AboutU
         mViewDataBinding?.viewPager?.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         mViewDataBinding?.viewPager?.adapter = aboutUsAdapter
 
-        mViewDataBinding?.viewPager?.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        mViewDataBinding?.viewPager?.registerOnPageChangeCallback(object :
+            ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 mViewDataBinding?.indicator?.setSelected(position)

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="sendLog"
             type="com.ci.act.ui.home.sendLog.SendLogViewModel" />
@@ -15,147 +16,147 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.home.sendLog.SendLogActivity">
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideLineLeft"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.03" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideLineRight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.97" />
-
-        <com.ci.act.widgets.CustomTextView
-            android:id="@+id/txtSendLog"
-            style="@style/extra_large_text_bold"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_edit_text_settings_email_and_password"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="1"
-            android:padding="@dimen/dp20"
-            android:text="SEND LOG"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent"
+            tools:context=".ui.home.sendLog.SendLogActivity">
 
-        <ImageView
-            android:id="@+id/imgContactUs"
-            android:layout_width="@dimen/dp35"
-            android:layout_height="@dimen/dp35"
-            android:layout_marginTop="1dp"
-            android:src="@drawable/ic_baseline_arrow_back_24"
-            app:layout_constraintBottom_toBottomOf="@id/txtSendLog"
-            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-            app:layout_constraintTop_toTopOf="@id/txtSendLog" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/mainCardSendLog"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtSendLog">
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/mainConstraintLayoutSendLog"
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSendLog"
+                style="@style/extra_large_text_bold"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/whiteFour">
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edit_text_settings_email_and_password"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp20"
+                android:text="SEND LOG"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideLineLeft2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_percent="0.03" />
+            <ImageView
+                android:id="@+id/imgContactUs"
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintBottom_toBottomOf="@id/txtSendLog"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toTopOf="@id/txtSendLog" />
 
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideLineRight2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_percent="0.97" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainCardSendLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtSendLog">
 
-                <com.ci.act.widgets.CustomTextView
-                    android:id="@+id/txtLocationAccess"
-                    style="@style/extra_large_text"
-                    android:layout_width="@dimen/dp0"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:maxLines="1"
-                    android:padding="@dimen/dp20"
-                    android:paddingStart="@dimen/dp1"
-                    android:text="Debug Mode On"
-                    android:textColor="@color/black"
-                    app:layout_constraintStart_toStartOf="@id/guideLineLeft2"
-                    app:layout_constraintTop_toTopOf="@id/mainConstraintLayoutSendLog" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainConstraintLayoutSendLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/whiteFour">
 
-                <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleX="1.5"
-                    android:scaleY="1.5"
-                    app:layout_constraintBottom_toBottomOf="@id/mainConstraintLayoutSendLog"
-                    app:layout_constraintEnd_toEndOf="@id/guideLineRight2"
-                    app:layout_constraintTop_toTopOf="@id/mainConstraintLayoutSendLog" />
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideLineLeft2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.03" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideLineRight2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.97" />
+
+                    <com.ci.act.widgets.CustomTextView
+                        android:id="@+id/txtLocationAccess"
+                        style="@style/extra_large_text"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp20"
+                        android:paddingStart="@dimen/dp1"
+                        android:text="Debug Mode On"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@id/guideLineLeft2"
+                        app:layout_constraintTop_toTopOf="@id/mainConstraintLayoutSendLog" />
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        app:layout_constraintBottom_toBottomOf="@id/mainConstraintLayoutSendLog"
+                        app:layout_constraintEnd_toEndOf="@id/guideLineRight2"
+                        app:layout_constraintTop_toTopOf="@id/mainConstraintLayoutSendLog" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:id="@+id/imgPostSendLog"
-            android:layout_width="@dimen/dp200"
-            android:layout_height="@dimen/dp200"
-            android:layout_marginTop="@dimen/dp50"
-            android:src="@drawable/log"
-            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
-            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-            app:layout_constraintTop_toBottomOf="@id/mainCardSendLog" />
+            <ImageView
+                android:id="@+id/imgPostSendLog"
+                android:layout_width="@dimen/dp200"
+                android:layout_height="@dimen/dp200"
+                android:layout_marginTop="@dimen/dp50"
+                android:src="@drawable/log"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/mainCardSendLog" />
 
-        <com.ci.act.widgets.CustomTextView
-            android:id="@+id/txtSendLogTyping"
-            style="@style/extra_large_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp25"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="3"
-            android:text="Please Continue Using the app and\nsend us the log files when you\nencounter an issue"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgPostSendLog" />
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/txtSendLogTyping"
+                style="@style/extra_large_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp25"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="3"
+                android:text="Please Continue Using the app and\nsend us the log files when you\nencounter an issue"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgPostSendLog" />
 
-        <com.ci.act.widgets.CustomButton
-            android:id="@+id/btnSendLog"
-            style="@style/extra_large_text_semi_bold"
-            android:layout_width="@dimen/dp280"
-            android:layout_height="@dimen/dp70"
-            android:layout_marginTop="@dimen/dp10"
-            android:background="@drawable/rounded_button"
-            android:text="Send Log File"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
-            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-            app:layout_constraintTop_toBottomOf="@id/txtSendLogTyping" />
+            <com.ci.act.widgets.CustomButton
+                android:id="@+id/btnSendLog"
+                style="@style/extra_large_text_semi_bold"
+                android:layout_width="@dimen/dp280"
+                android:layout_height="@dimen/dp70"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/rounded_button"
+                android:text="Send Log File"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/txtSendLogTyping" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 </layout>

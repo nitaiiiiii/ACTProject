@@ -10,26 +10,30 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ci.act.R
 import com.ci.act.ui.home.subscriptions.model.SubscriptionModel
 
-class SubscriptionViewPagerAdapter:RecyclerView.Adapter<SubscriptionViewPagerAdapter.SubscriptionViewHolder>() {
+class SubscriptionViewPagerAdapter :
+    RecyclerView.Adapter<SubscriptionViewPagerAdapter.SubscriptionViewHolder>() {
 
     val subscriptionArray = ArrayList<SubscriptionModel>()
-    private lateinit var subscriptionClick:SubscriptionClick
+    private lateinit var subscriptionClick: SubscriptionClick
 
-    inner class SubscriptionViewHolder(subscriptionView: View): RecyclerView.ViewHolder(subscriptionView) {
-        var premiumSubscription: ConstraintLayout? = subscriptionView.findViewById(R.id.premiumSubscription)
-        var platinumSubscription: ConstraintLayout? = subscriptionView.findViewById(R.id.platinumSubscription)
-        var btnSignatureBox1:Button? = subscriptionView.findViewById(R.id.btnSignatureBox1)
-        var btnSignatureBox:Button? = subscriptionView.findViewById(R.id.btnSignatureBox)
+    inner class SubscriptionViewHolder(subscriptionView: View) :
+        RecyclerView.ViewHolder(subscriptionView) {
+        var premiumSubscription: ConstraintLayout? =
+            subscriptionView.findViewById(R.id.premiumSubscription)
+        var platinumSubscription: ConstraintLayout? =
+            subscriptionView.findViewById(R.id.platinumSubscription)
+        var btnSignatureBox1: Button? = subscriptionView.findViewById(R.id.btnSignatureBox1)
+        var btnSignatureBox: Button? = subscriptionView.findViewById(R.id.btnSignatureBox)
 
 
-        fun subscriptionBindItems(subscriptionModel: SubscriptionModel){
-           if (subscriptionModel.subscriptionType == "Premium") {
-               premiumSubscription?.visibility = View.VISIBLE
-               platinumSubscription?.visibility = View.GONE
-           } else {
-               premiumSubscription?.visibility = View.GONE
-               platinumSubscription?.visibility = View.VISIBLE
-           }
+        fun subscriptionBindItems(subscriptionModel: SubscriptionModel) {
+            if (subscriptionModel.subscriptionType == "Premium") {
+                premiumSubscription?.visibility = View.VISIBLE
+                platinumSubscription?.visibility = View.GONE
+            } else {
+                premiumSubscription?.visibility = View.GONE
+                platinumSubscription?.visibility = View.VISIBLE
+            }
 
             btnSignatureBox1?.setOnClickListener {
                 subscriptionClick.subscriptionClick(subscriptionModel)
@@ -42,7 +46,8 @@ class SubscriptionViewPagerAdapter:RecyclerView.Adapter<SubscriptionViewPagerAda
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SubscriptionViewHolder {
-       val subscription = LayoutInflater.from(parent.context).inflate(R.layout.inflate_subscription, parent, false)
+        val subscription = LayoutInflater.from(parent.context)
+            .inflate(R.layout.inflate_subscription, parent, false)
         return SubscriptionViewHolder(subscription)
     }
 
@@ -54,18 +59,18 @@ class SubscriptionViewPagerAdapter:RecyclerView.Adapter<SubscriptionViewPagerAda
         return subscriptionArray.size
     }
 
-    fun addArrayList(list : ArrayList<SubscriptionModel>){
+    fun addArrayList(list: ArrayList<SubscriptionModel>) {
         subscriptionArray.clear()
         subscriptionArray.addAll(list)
         notifyDataSetChanged()
     }
 
-    fun subscriptionClick(subscriptionClick: SubscriptionClick){
+    fun subscriptionClick(subscriptionClick: SubscriptionClick) {
         this.subscriptionClick = subscriptionClick
     }
 
-    interface SubscriptionClick{
-        fun subscriptionClick(subscription : SubscriptionModel)
+    interface SubscriptionClick {
+        fun subscriptionClick(subscription: SubscriptionModel)
     }
 
 }

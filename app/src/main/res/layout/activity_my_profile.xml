@@ -719,62 +719,62 @@
                         android:id="@+id/imgSocialLinksFacebook"
                         android:layout_width="@dimen/dp50"
                         android:layout_height="@dimen/dp50"
-                        android:src="@drawable/facebook3x"
                         android:layout_marginTop="@dimen/dp20"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:src="@drawable/facebook3x"
                         app:layout_constraintEnd_toStartOf="@id/imgSocialLinksHUDL"
-                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksRedLine"/>
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksRedLine" />
 
                     <com.ci.act.widgets.CustomTextView
                         android:id="@+id/txtSocialLinksFacebook"
+                        style="@style/medium_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="FaceBook"
-                        style="@style/medium_text"
-                        app:layout_constraintStart_toStartOf="@id/imgSocialLinksFacebook"
-                        app:layout_constraintEnd_toEndOf="@id/imgSocialLinksFacebook"
                         app:layout_constraintBottom_toBottomOf="@id/mainConstraints6"
-                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksFacebook"/>
+                        app:layout_constraintEnd_toEndOf="@id/imgSocialLinksFacebook"
+                        app:layout_constraintStart_toStartOf="@id/imgSocialLinksFacebook"
+                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksFacebook" />
 
                     <ImageView
                         android:id="@+id/imgSocialLinksHUDL"
                         android:layout_width="@dimen/dp50"
                         android:layout_height="@dimen/dp50"
-                        android:src="@drawable/hudl"
                         android:layout_marginTop="@dimen/dp20"
+                        android:src="@drawable/hudl"
                         app:layout_constraintEnd_toStartOf="@id/imgSocialLinksGoogle"
                         app:layout_constraintStart_toEndOf="@id/imgSocialLinksFacebook"
-                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksRedLine"/>
+                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksRedLine" />
 
                     <com.ci.act.widgets.CustomTextView
                         android:id="@+id/txtSocialLinksHUDL"
+                        style="@style/medium_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="HUDL"
-                        style="@style/medium_text"
-                        app:layout_constraintStart_toStartOf="@id/imgSocialLinksHUDL"
                         app:layout_constraintEnd_toEndOf="@id/imgSocialLinksHUDL"
-                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksHUDL"/>
+                        app:layout_constraintStart_toStartOf="@id/imgSocialLinksHUDL"
+                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksHUDL" />
 
                     <ImageView
                         android:id="@+id/imgSocialLinksGoogle"
                         android:layout_width="@dimen/dp50"
                         android:layout_height="@dimen/dp50"
-                        android:src="@drawable/search"
                         android:layout_marginTop="@dimen/dp20"
-                        app:layout_constraintStart_toEndOf="@id/imgSocialLinksHUDL"
+                        android:src="@drawable/search"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksRedLine"/>
+                        app:layout_constraintStart_toEndOf="@id/imgSocialLinksHUDL"
+                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksRedLine" />
 
                     <com.ci.act.widgets.CustomTextView
                         android:id="@+id/txtSocialLinksGoogle"
+                        style="@style/medium_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Google"
-                        style="@style/medium_text"
-                        app:layout_constraintStart_toStartOf="@id/imgSocialLinksGoogle"
                         app:layout_constraintEnd_toEndOf="@id/imgSocialLinksGoogle"
-                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksGoogle"/>
+                        app:layout_constraintStart_toStartOf="@id/imgSocialLinksGoogle"
+                        app:layout_constraintTop_toBottomOf="@id/imgSocialLinksGoogle" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

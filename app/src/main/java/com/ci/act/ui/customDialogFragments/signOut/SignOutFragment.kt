@@ -8,7 +8,8 @@ import com.ci.act.databinding.FragmentSignOutBinding
 import com.ci.act.ui.editProfile.EditProfileActivity
 import com.ci.act.ui.home.events.EventsActivity
 
-class SignOutFragment:BaseDialogFragmentNew<FragmentSignOutBinding,SignOutView,SignOutViewModel>(),SignOutView {
+class SignOutFragment :
+    BaseDialogFragmentNew<FragmentSignOutBinding, SignOutView, SignOutViewModel>(), SignOutView {
     override fun getContentView(): Int = R.layout.fragment_sign_out
 
     override fun setViewModelClass(): Class<SignOutViewModel> {

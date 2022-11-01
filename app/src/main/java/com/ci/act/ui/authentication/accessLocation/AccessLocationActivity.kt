@@ -9,11 +9,13 @@ import com.ci.act.databinding.ActivityAccessLocationBinding
 import com.ci.act.ui.differentSports.DifferentSportsActivity
 import com.ci.act.ui.onboarding.OnBoardingActivity
 
-class AccessLocationActivity : BaseActivity<ActivityAccessLocationBinding,AccessLocationView,AccessLocationViewModel>(),AccessLocationView{
+class AccessLocationActivity :
+    BaseActivity<ActivityAccessLocationBinding, AccessLocationView, AccessLocationViewModel>(),
+    AccessLocationView {
     override fun getContentView(): Int = R.layout.activity_access_location
 
     override fun setViewModelClass(): Class<AccessLocationViewModel> {
-       return AccessLocationViewModel::class.java
+        return AccessLocationViewModel::class.java
     }
 
     override fun getNavigator(): AccessLocationView = this

@@ -14,7 +14,9 @@ import com.ci.act.ui.authentication.socialMedia.SocialMediaActivity
 import com.ci.act.ui.differentSports.DifferentSportsActivity
 import com.ci.act.ui.onboarding.OnBoardingActivity
 
-class SplashScreenActivity : BaseActivity<ActivitySplashScreenBinding,SplashScreenView,SplashScreenViewModel>(),SplashScreenView {
+class SplashScreenActivity :
+    BaseActivity<ActivitySplashScreenBinding, SplashScreenView, SplashScreenViewModel>(),
+    SplashScreenView {
     override fun setViewModelClass(): Class<SplashScreenViewModel> {
         return SplashScreenViewModel::class.java
     }
@@ -22,13 +24,13 @@ class SplashScreenActivity : BaseActivity<ActivitySplashScreenBinding,SplashScre
     override fun getContentView(): Int = R.layout.activity_splash_screen
 
 
-    override fun getNavigator(): SplashScreenView =this
+    override fun getNavigator(): SplashScreenView = this
 
     override fun getBindingVariable(): Int = BR.splashScreen
 
     override fun initViews(savedInstanceState: Bundle?) {
         showOrHideStatusBar(false)
-        changeScreenTo(OnBoardingActivity::class.java,5000)
+        changeScreenTo(OnBoardingActivity::class.java, 5000)
 
         mViewDataBinding?.imgLoading?.let {
             Glide.with(this)

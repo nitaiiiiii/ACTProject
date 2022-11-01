@@ -31,8 +31,8 @@ class HomeDetailsFragment :
         setOnClickListener()
     }
 
-    private fun setOnClickListener(){
-        mViewDataBinding?.btnSignatureBox?.setOnClickListener{
+    private fun setOnClickListener() {
+        mViewDataBinding?.btnSignatureBox?.setOnClickListener {
             val guardianApprovalFragment = GuardianApprovalFragment()
             communicator.loadFragments(guardianApprovalFragment, true, 4)
         }

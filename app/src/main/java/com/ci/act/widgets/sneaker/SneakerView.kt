@@ -9,6 +9,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.ci.act.R
 import com.ci.act.widgets.sneaker.Utils.customView
+
 /**
  * Created by TharunReddy 09/12/2020
  */
@@ -17,17 +18,24 @@ import com.ci.act.widgets.sneaker.Utils.customView
 internal class SneakerView(context: Context?) : LinearLayout(context) {
     init {
         id = R.id.mainLayout
-        layoutParams = LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        layoutParams =
+            LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
     }
 
     private val DEFAULT_VALUE = -100000
 
 
-
-    fun setTextContent(title: String, titleColor: Int, description: String, messageColor: Int, typeface: Typeface?) {
+    fun setTextContent(
+        title: String,
+        titleColor: Int,
+        description: String,
+        messageColor: Int,
+        typeface: Typeface?
+    ) {
         // Title and description
         val textLayout = LinearLayout(context)
-        val textLayoutParams = LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        val textLayoutParams =
+            LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         textLayout.layoutParams = textLayoutParams
         textLayout.orientation = VERTICAL
 
@@ -41,7 +49,12 @@ internal class SneakerView(context: Context?) : LinearLayout(context) {
             tvTitle.text = title
             tvTitle.isClickable = false
 
-            tvTitle.setPadding(46, if (description.isNotEmpty()) 26 else 0, 26, 0) // Top padding only if there is message
+            tvTitle.setPadding(
+                46,
+                if (description.isNotEmpty()) 26 else 0,
+                26,
+                0
+            ) // Top padding only if there is message
             if (titleColor != DEFAULT_VALUE) tvTitle.setTextColor(titleColor)
             if (typeface != null) tvTitle.typeface = typeface
 

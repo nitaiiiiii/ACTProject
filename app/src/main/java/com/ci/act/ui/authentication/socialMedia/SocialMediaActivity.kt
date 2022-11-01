@@ -30,6 +30,7 @@ class SocialMediaActivity :
         spannableText()
         setOnClickListener()
     }
+
     private fun setOnClickListener() {
         mViewDataBinding?.txtSocialMediaEmailLoginScreen?.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)

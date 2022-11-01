@@ -11,7 +11,8 @@ import com.bumptech.glide.Glide
 import com.ci.act.R
 import com.ci.act.ui.differentSports.model.DifferentSportsModel
 
-class DifferentSportsAdapter : RecyclerView.Adapter<DifferentSportsAdapter.DifferentSportsViewHolder>() {
+class DifferentSportsAdapter :
+    RecyclerView.Adapter<DifferentSportsAdapter.DifferentSportsViewHolder>() {
     private val arrayList: ArrayList<DifferentSportsModel.DifferentSportsModelItem> = ArrayList()
     lateinit var sportsClick: SportsClick
 
@@ -50,7 +51,8 @@ class DifferentSportsAdapter : RecyclerView.Adapter<DifferentSportsAdapter.Diffe
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DifferentSportsViewHolder {
-        val differentSports = LayoutInflater.from(parent.context).inflate(R.layout.sports_items, parent, false)
+        val differentSports =
+            LayoutInflater.from(parent.context).inflate(R.layout.sports_items, parent, false)
         return DifferentSportsViewHolder(differentSports)
     }
 

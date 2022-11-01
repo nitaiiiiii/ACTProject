@@ -7,7 +7,9 @@ import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityPersonalInfoBinding
 
-class PersonalInfoActivity:BaseActivity<ActivityPersonalInfoBinding,PersonalInfoView,PersonalInfoViewModel>(),PersonalInfoView{
+class PersonalInfoActivity :
+    BaseActivity<ActivityPersonalInfoBinding, PersonalInfoView, PersonalInfoViewModel>(),
+    PersonalInfoView {
     override fun getContentView(): Int = R.layout.activity_personal_info
 
     override fun setViewModelClass(): Class<PersonalInfoViewModel> {

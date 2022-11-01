@@ -8,7 +8,8 @@ import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivitySendLogBinding
 import com.ci.act.ui.home.events.EventsActivity
 
-class SendLogActivity:BaseActivity<ActivitySendLogBinding,SendLogView,SendLogViewModel>(),SendLogView{
+class SendLogActivity : BaseActivity<ActivitySendLogBinding, SendLogView, SendLogViewModel>(),
+    SendLogView {
     override fun getContentView(): Int = R.layout.activity_send_log
 
     override fun setViewModelClass(): Class<SendLogViewModel> {
@@ -22,8 +23,9 @@ class SendLogActivity:BaseActivity<ActivitySendLogBinding,SendLogView,SendLogVie
     override fun initViews(savedInstanceState: Bundle?) {
         setOnClickListener()
     }
+
     private fun setOnClickListener() {
-        mViewDataBinding?.imgContactUs?.setOnClickListener{
+        mViewDataBinding?.imgContactUs?.setOnClickListener {
             val intent = Intent(this, EventsActivity::class.java)
             startActivity(intent)
         }

@@ -5,5 +5,5 @@ import com.ci.act.base.BaseViewModel
 /**
  * Created by Vignesh on 23-03-2020.
  */
-class OnBoardingScreensViewModel:BaseViewModel<OnBoardingScreenView>() {
+class OnBoardingScreensViewModel : BaseViewModel<OnBoardingScreenView>() {
 }

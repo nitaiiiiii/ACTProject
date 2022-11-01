@@ -3,7 +3,7 @@ package com.ci.act.ui.differentSports.model
 
 import com.google.gson.annotations.SerializedName
 
-class DifferentSportsModel : ArrayList<DifferentSportsModel.DifferentSportsModelItem>(){
+class DifferentSportsModel : ArrayList<DifferentSportsModel.DifferentSportsModelItem>() {
     data class DifferentSportsModelItem(
         @SerializedName("id")
         var id: Int?,
@@ -12,6 +12,6 @@ class DifferentSportsModel : ArrayList<DifferentSportsModel.DifferentSportsModel
         @SerializedName("sportsimage")
         var sportsimage: String?,
 
-        var isSelected : Boolean = false
+        var isSelected: Boolean = false
     )
 }

@@ -8,24 +8,29 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ci.act.R
 import com.ci.act.ui.home.eventsReport.model.EventsReportModel
 
-class EventsReportAdapter : RecyclerView.Adapter<EventsReportAdapter.EventsReportViewHolder>(){
+class EventsReportAdapter : RecyclerView.Adapter<EventsReportAdapter.EventsReportViewHolder>() {
 
     private val reportsList: ArrayList<EventsReportModel.EventsReportModelItem> = ArrayList()
 
-    class EventsReportViewHolder(eventsView: View):RecyclerView.ViewHolder(eventsView) {
+    class EventsReportViewHolder(eventsView: View) : RecyclerView.ViewHolder(eventsView) {
 
         var textEventsGameReport: TextView? = eventsView.findViewById(R.id.txtEventsGameName)
         var txtEventsReportsRanks: TextView? = eventsView.findViewById(R.id.txtEventsReportsRanks)
         var txtEventsPosition: TextView? = eventsView.findViewById(R.id.txtEventsPosition)
-        var txtEventsReportsRanking: TextView? = eventsView.findViewById(R.id.txtEventsReportsRanking)
-        var txtEventsReportsSpeedNumber: TextView? = eventsView.findViewById(R.id.txtEventsReportsSpeedNumber)
+        var txtEventsReportsRanking: TextView? =
+            eventsView.findViewById(R.id.txtEventsReportsRanking)
+        var txtEventsReportsSpeedNumber: TextView? =
+            eventsView.findViewById(R.id.txtEventsReportsSpeedNumber)
         var txtEventsReportsSpeed: TextView? = eventsView.findViewById(R.id.txtEventsReportsSpeed)
-        var txtEventsReportsSecondsNumber: TextView? = eventsView.findViewById(R.id.txtEventsReportsSecondsNumber)
-        var txtEventsReportsSeconds: TextView? = eventsView.findViewById(R.id.txtEventsReportsSeconds)
-        var txtEventsReportsTestedNumber: TextView? = eventsView.findViewById(R.id.txtEventsReportsTestedNumber)
+        var txtEventsReportsSecondsNumber: TextView? =
+            eventsView.findViewById(R.id.txtEventsReportsSecondsNumber)
+        var txtEventsReportsSeconds: TextView? =
+            eventsView.findViewById(R.id.txtEventsReportsSeconds)
+        var txtEventsReportsTestedNumber: TextView? =
+            eventsView.findViewById(R.id.txtEventsReportsTestedNumber)
         var txtEventsReportsTested: TextView? = eventsView.findViewById(R.id.txtEventsReportsTested)
 
-        fun eventsReportBindItems(eventsReportModelItem: EventsReportModel.EventsReportModelItem){
+        fun eventsReportBindItems(eventsReportModelItem: EventsReportModel.EventsReportModelItem) {
             textEventsGameReport?.text = eventsReportModelItem.eventName
             txtEventsReportsRanks?.text = eventsReportModelItem.rank
             txtEventsPosition?.text = eventsReportModelItem.rankSupText
@@ -40,7 +45,8 @@ class EventsReportAdapter : RecyclerView.Adapter<EventsReportAdapter.EventsRepor
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventsReportViewHolder {
-        val EventsReport = LayoutInflater.from(parent.context).inflate(R.layout.inflate_events_report, parent, false)
+        val EventsReport = LayoutInflater.from(parent.context)
+            .inflate(R.layout.inflate_events_report, parent, false)
         return EventsReportAdapter.EventsReportViewHolder(EventsReport)
     }
 

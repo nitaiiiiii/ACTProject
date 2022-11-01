@@ -37,7 +37,16 @@ internal object Utils {
         val radiusInDP = convertToDp(context, cornerRadius.toFloat())
         return GradientDrawable().apply {
             shape = GradientDrawable.RECTANGLE
-            cornerRadii = floatArrayOf(radiusInDP.toFloat(), radiusInDP.toFloat(), radiusInDP.toFloat(), radiusInDP.toFloat(), radiusInDP.toFloat(), radiusInDP.toFloat(), radiusInDP.toFloat(), radiusInDP.toFloat())
+            cornerRadii = floatArrayOf(
+                radiusInDP.toFloat(),
+                radiusInDP.toFloat(),
+                radiusInDP.toFloat(),
+                radiusInDP.toFloat(),
+                radiusInDP.toFloat(),
+                radiusInDP.toFloat(),
+                radiusInDP.toFloat(),
+                radiusInDP.toFloat()
+            )
             setColor(backgroundColor)
         }
     }

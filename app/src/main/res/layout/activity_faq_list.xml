@@ -67,8 +67,8 @@
                 style="@style/extra_large_text_bold"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/dp15"
                 android:maxLines="1"
+                android:padding="@dimen/dp15"
                 android:text="Payment Information Question"
                 android:textColor="@color/ruby_red"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
@@ -96,31 +96,31 @@
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtRelevantQuestions"
+                style="@style/large_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxLines="2"
-                style="@style/large_text"
-                android:padding="@dimen/dp5"
                 android:layout_marginBottom="@dimen/dp10"
+                android:maxLines="2"
+                android:padding="@dimen/dp5"
                 android:text="Can't find relevant\nquestion?"
-                app:layout_constraintTop_toBottomOf="@id/rvListFAQs"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@id/guideLineLeft" />
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                app:layout_constraintTop_toBottomOf="@id/rvListFAQs" />
 
             <com.ci.act.widgets.CustomButton
                 android:id="@+id/btnRelevantQuestions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contact Us"
-                android:textColor="@color/white"
-                android:paddingStart="@dimen/dp40"
-                android:paddingEnd="@dimen/dp40"
-                android:textAllCaps="false"
                 android:layout_marginBottom="@dimen/dp10"
                 android:background="@drawable/rounded_button"
+                android:paddingStart="@dimen/dp40"
+                android:paddingEnd="@dimen/dp40"
+                android:text="Contact Us"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rvListFAQs"
-                app:layout_constraintEnd_toEndOf="@id/guideLineRight"/>
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                app:layout_constraintTop_toBottomOf="@id/rvListFAQs" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

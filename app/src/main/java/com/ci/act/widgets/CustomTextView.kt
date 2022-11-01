@@ -21,22 +21,27 @@ class CustomTextView : AppCompatTextView {
             initWithAttrs(context, attrs, 0)
     }
 
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         if (!isInEditMode)
             initWithAttrs(context, attrs, defStyleAttr)
     }
 
-   /**
+    /**
      * Loads a font from the given asset path
      *
      * @param customFontPath path in the assets folder to the font file
      */
-   private fun initWithAttrs(context: Context, attrs: AttributeSet?, defStyleAttr: Int) {
-        val a = context.theme.obtainStyledAttributes(attrs, R.styleable.CustomTextView, defStyleAttr, 0)
+    private fun initWithAttrs(context: Context, attrs: AttributeSet?, defStyleAttr: Int) {
+        val a =
+            context.theme.obtainStyledAttributes(attrs, R.styleable.CustomTextView, defStyleAttr, 0)
         val customFontIndex = a.getInt(R.styleable.CustomViews_setFonts, 0)
         val fontPath = resources.getStringArray(R.array.FontNames)[customFontIndex]
         setCustomFont(fontPath)
-       letterSpacing = 0.025F
+        letterSpacing = 0.025F
         includeFontPadding = false
         a.recycle()
     }

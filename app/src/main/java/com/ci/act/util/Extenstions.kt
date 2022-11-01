@@ -221,31 +221,31 @@ fun openEmailApp(emailId: String) {
 fun showSnackBar(message: String, activity: Activity?, isSuccess: Boolean) {
     val typeface = Typeface.createFromAsset(activity?.assets, "fonts/HelveticalNeue.ttf")
 
-    if (isSuccess){
-        Sneaker.with(activity?:Activity())
-            .setTitle(message?:"")
+    if (isSuccess) {
+        Sneaker.with(activity ?: Activity())
+            .setTitle(message ?: "")
             .setTypeface(typeface)
             .sneakSuccess()
-    }else{
-        Sneaker.with(activity?:Activity())
-            .setTitle(message?:"")
+    } else {
+        Sneaker.with(activity ?: Activity())
+            .setTitle(message ?: "")
             .setTypeface(typeface)
             .sneakError()
     }
 }
 
-fun showSnackBarWithWhiteTextCustomColor(message: String, activity: Activity?,color:String?) {
+fun showSnackBarWithWhiteTextCustomColor(message: String, activity: Activity?, color: String?) {
     val typeface = Typeface.createFromAsset(activity?.assets, "fonts/HelveticalNeue.ttf")
-    Sneaker.with(activity?:Activity())
-        .setTitle(message?:"")
+    Sneaker.with(activity ?: Activity())
+        .setTitle(message ?: "")
         .setTypeface(typeface)
         .sneakWithCustomColorWhiteText(color)
 }
 
-fun showSnackBarWithBlackTextCustomColor(message: String,  activity: Activity?,color:String?) {
+fun showSnackBarWithBlackTextCustomColor(message: String, activity: Activity?, color: String?) {
     val typeface = Typeface.createFromAsset(activity?.assets, "fonts/HelveticalNeue.ttf")
-    Sneaker.with(activity?:Activity())
-        .setTitle(message?:"")
+    Sneaker.with(activity ?: Activity())
+        .setTitle(message ?: "")
         .setTypeface(typeface)
         .sneakWithCustomColorBlackText(color)
 }

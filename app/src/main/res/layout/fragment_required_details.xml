@@ -67,10 +67,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp200"
                 android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/screenshotnotup"
                 android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="2"
-                android:background="@drawable/screenshotnotup"
                 android:textColor="@color/grey"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -149,8 +149,7 @@
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                 />
+                app:layout_constraintStart_toStartOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,7 @@ package com.ci.act.ui.home.sportsBoard.model
 
 import com.google.gson.annotations.SerializedName
 
-class SportsBoardModel : ArrayList<SportsBoardModel.SportsBoardModelItem>(){
+class SportsBoardModel : ArrayList<SportsBoardModel.SportsBoardModelItem>() {
     data class SportsBoardModelItem(
         @SerializedName("profile_image")
         var profileImage: String?,

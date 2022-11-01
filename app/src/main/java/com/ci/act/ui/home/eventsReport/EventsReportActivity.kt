@@ -14,15 +14,17 @@ import com.ci.act.ui.home.eventsReport.model.EventsReportModel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class EventsReportActivity:BaseActivity<ActivityEventsReportBinding,EventsReportView,EventsReportViewModel>(),EventsReportView {
+class EventsReportActivity :
+    BaseActivity<ActivityEventsReportBinding, EventsReportView, EventsReportViewModel>(),
+    EventsReportView {
 
-    private var reportsAdapter:EventsReportAdapter? = null
+    private var reportsAdapter: EventsReportAdapter? = null
     private var reportLive: ArrayList<EventsReportModel.EventsReportModelItem> = ArrayList()
 
     override fun getContentView(): Int = R.layout.activity_events_report
 
     override fun setViewModelClass(): Class<EventsReportViewModel> {
-      return EventsReportViewModel::class.java
+        return EventsReportViewModel::class.java
     }
 
     override fun getNavigator(): EventsReportView = this
@@ -43,7 +45,7 @@ class EventsReportActivity:BaseActivity<ActivityEventsReportBinding,EventsReport
 
         val gson = Gson()
         val listMoviesType = object : TypeToken<EventsReportModel>() {}.type
-        reportLive= gson.fromJson(differentSportsJson, listMoviesType)
+        reportLive = gson.fromJson(differentSportsJson, listMoviesType)
         Log.e("hello", "${reportLive}")
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView.adapter = reportsAdapter
@@ -54,7 +56,8 @@ class EventsReportActivity:BaseActivity<ActivityEventsReportBinding,EventsReport
     private fun getDataFromJson(): String? {
         val jsonString: String
         try {
-            jsonString = this.assets.open("events_report.json").bufferedReader().use { it.readText() }
+            jsonString =
+                this.assets.open("events_report.json").bufferedReader().use { it.readText() }
         } catch (e: Exception) {
             e.printStackTrace()
             return null

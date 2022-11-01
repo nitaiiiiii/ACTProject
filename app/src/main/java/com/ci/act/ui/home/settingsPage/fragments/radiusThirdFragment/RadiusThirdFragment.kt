@@ -11,7 +11,8 @@ import com.ci.act.base.BaseFragment
 import com.ci.act.databinding.FragmentRadiusThirdBinding
 
 class RadiusThirdFragment :
-    BaseFragment<FragmentRadiusThirdBinding, RadiusThirdView, RadiusThirdViewModel>(),RadiusThirdView {
+    BaseFragment<FragmentRadiusThirdBinding, RadiusThirdView, RadiusThirdViewModel>(),
+    RadiusThirdView {
     override fun getContentView(): Int = R.layout.fragment_radius_third
 
     override fun setViewModel(): RadiusThirdViewModel? = RadiusThirdViewModel()

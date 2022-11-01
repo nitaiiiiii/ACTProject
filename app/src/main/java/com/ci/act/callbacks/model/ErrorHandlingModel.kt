@@ -8,5 +8,5 @@ class ErrorHandlingModel(
     val icon: Int?,
     val heading: String?,
     val desc: String?,
-    val btnName:String? = null
+    val btnName: String? = null
 )

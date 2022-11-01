@@ -50,7 +50,14 @@ class AES {
             try {
                 val cipher = Cipher.getInstance(algorithm)
                 cipher.init(Cipher.DECRYPT_MODE, skeySpec, iv)
-                return String(cipher.doFinal(Base64.decode(encrypted, Base64.NO_WRAP or Base64.DEFAULT)))
+                return String(
+                    cipher.doFinal(
+                        Base64.decode(
+                            encrypted,
+                            Base64.NO_WRAP or Base64.DEFAULT
+                        )
+                    )
+                )
             } catch (e: Exception) {
                 e.printStackTrace()
             }

@@ -48,7 +48,10 @@ class ConnectivityReceiver(private val connectivityListener: ConnectivityReceive
 
     override fun onReceive(context: Context, arg1: Intent?) {
         val connectivityModel = isNetworkAvailable(context)
-        Log.v("NETWORK_CHANGE", " CONNECTED : ${connectivityModel.isConnected} CONNECTED TYPE : ${connectivityModel.connectedType}")
+        Log.v(
+            "NETWORK_CHANGE",
+            " CONNECTED : ${connectivityModel.isConnected} CONNECTED TYPE : ${connectivityModel.connectedType}"
+        )
         if (previousConnectivityModel?.isConnected != connectivityModel.isConnected
 //            || previousConnectivityModel?.connectedType != connectivityModel.connectedType
         ) {

@@ -16,10 +16,10 @@ import com.ci.act.ui.home.subscriptions.adapter.SubscriptionViewPagerAdapter
 class LiveEventsAdapter : RecyclerView.Adapter<LiveEventsAdapter.LiveEventsViewHolder>() {
 
     private val arrayList: ArrayList<LiveEventModel.LiveEventModelItem> = ArrayList()
-    private lateinit var liveEventsClick:LiveEventsClick
+    private lateinit var liveEventsClick: LiveEventsClick
 
 
-   inner class LiveEventsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class LiveEventsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         var imgBasket: ImageView? = view.findViewById(R.id.imgBasketBall)
         var txtEventsGame: TextView? = view.findViewById(R.id.txtEventsGame)
@@ -27,7 +27,8 @@ class LiveEventsAdapter : RecyclerView.Adapter<LiveEventsAdapter.LiveEventsViewH
         var txtInflate: TextView? = view.findViewById(R.id.txtInflateLocation)
         var eventsOne: TextView? = view.findViewById(R.id.txtLiveEventsOne)
         var registered: TextView? = view.findViewById(R.id.txtLiveEventsRegistered)
-        var mainLiveEventsConstraint: ConstraintLayout? = view.findViewById(R.id.mainLiveEventsConstraint)
+        var mainLiveEventsConstraint: ConstraintLayout? =
+            view.findViewById(R.id.mainLiveEventsConstraint)
 
 
         fun liveEventsBindItems(liveEventModelItem: LiveEventModel.LiveEventModelItem) {
@@ -84,11 +85,11 @@ class LiveEventsAdapter : RecyclerView.Adapter<LiveEventsAdapter.LiveEventsViewH
         notifyDataSetChanged()
     }
 
-    fun liveEventsClick(liveEventsClick: LiveEventsClick){
+    fun liveEventsClick(liveEventsClick: LiveEventsClick) {
         this.liveEventsClick = liveEventsClick
     }
 
-    interface LiveEventsClick{
+    interface LiveEventsClick {
         fun liveEventsClick(liveEvents: LiveEventModel.LiveEventModelItem)
     }
 }

@@ -116,9 +116,9 @@
                 android:layout_width="@dimen/dp280"
                 android:layout_height="@dimen/dp70"
                 android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp30"
                 android:background="@drawable/rounded_button"
                 android:text="Save"
-                android:layout_marginBottom="@dimen/dp30"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toTopOf="@id/txtSignatureBoxClose"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
@@ -138,10 +138,9 @@
                 android:padding="@dimen/dp20"
                 android:text="Close"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -18,8 +18,16 @@ class DeviceInfo {
 
         fun getDevice(): Device {
             return Device(
-                getFCMToken(), getDeviceKey(), getDeviceManufacture(),
-                getDeviceModel(), "android", getDeviceOsVersion(), "", "en", "android", getDeviceTimeZone()
+                getFCMToken(),
+                getDeviceKey(),
+                getDeviceManufacture(),
+                getDeviceModel(),
+                "android",
+                getDeviceOsVersion(),
+                "",
+                "en",
+                "android",
+                getDeviceTimeZone()
             )
         }
 

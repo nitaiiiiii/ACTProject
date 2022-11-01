@@ -17,9 +17,10 @@ import com.ci.act.data.AppDataManager
  * @license      Tech.us Developers GPL - https://example.com/developer-license
  * @since        1.0
  *********************************************************************************/
-open class BaseDialogFragment:DialogFragment() {
+open class BaseDialogFragment : DialogFragment() {
 
     var appDataManager: AppDataManager? = null
+
     init {
         appDataManager = AppDataManager.getMyInstance()
     }

@@ -45,7 +45,7 @@ class CustomTextInputLayoutTimePickers : TextInputLayout {
         val fontPath = resources.getStringArray(R.array.FontNames)[customFontIndex]
         setCustomFont(fontPath)
         editText?.isCursorVisible = false
-        editText?.isFocusableInTouchMode= false
+        editText?.isFocusableInTouchMode = false
         editText?.isClickable = false
         editText?.requestFocus()
         a.recycle()
@@ -60,7 +60,12 @@ class CustomTextInputLayoutTimePickers : TextInputLayout {
         editText?.setOnClickListener {
             showTimePicker()
         }
-        editText?.setCompoundDrawablesWithIntrinsicBounds(null,null, ContextCompat.getDrawable(context, R.drawable.ic_arrow_drop_down),null)
+        editText?.setCompoundDrawablesWithIntrinsicBounds(
+            null,
+            null,
+            ContextCompat.getDrawable(context, R.drawable.ic_arrow_drop_down),
+            null
+        )
     }
 
     /**
@@ -71,7 +76,7 @@ class CustomTextInputLayoutTimePickers : TextInputLayout {
         val c = Calendar.getInstance()
         val mHour = c.get(Calendar.HOUR_OF_DAY)
         val mMinute = c.get(Calendar.MINUTE)
-        if (timePickerDialog == null){
+        if (timePickerDialog == null) {
             timePickerDialog = TimePickerDialog(
                 context,
                 TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->

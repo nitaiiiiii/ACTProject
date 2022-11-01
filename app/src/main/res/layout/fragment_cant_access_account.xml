@@ -42,11 +42,11 @@
                 style="@style/extra_large_bebas_bold"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15"
                 android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="1"
                 android:padding="@dimen/dp5"
-                android:layout_marginTop="@dimen/dp15"
                 android:text="CAN'T ACCESS YOUR ACCOUNT?"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
@@ -144,9 +144,9 @@
                 android:background="@drawable/rounded_button"
                 android:text="Submit"
                 android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@id/txtCantAccountAccess"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintBottom_toTopOf="@id/txtCantAccountAccess"
                 app:layout_constraintTop_toBottomOf="@id/edtAccessAccountMultiLine" />
 
             <com.ci.act.widgets.CustomTextView

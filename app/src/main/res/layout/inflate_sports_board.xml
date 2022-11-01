@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mainSportsBoardCardView"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/imgSportsBoardKing"
@@ -21,10 +20,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2."
-        app:layout_constraintTop_toTopOf="@id/imgSportsBoardKing"
-        app:layout_constraintStart_toStartOf="@id/imgSportsBoardKing"
+        app:layout_constraintBottom_toBottomOf="@id/imgSportsBoardKing"
         app:layout_constraintEnd_toEndOf="@id/imgSportsBoardKing"
-        app:layout_constraintBottom_toBottomOf="@id/imgSportsBoardKing"/>
+        app:layout_constraintStart_toStartOf="@id/imgSportsBoardKing"
+        app:layout_constraintTop_toTopOf="@id/imgSportsBoardKing" />
 
     <ImageView
         android:id="@+id/imgSportsBoardPicture"
@@ -32,9 +31,9 @@
         android:layout_height="@dimen/dp70"
         android:layout_marginStart="@dimen/dp10"
         android:src="@drawable/profile_picture"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/imgSportsBoardKing"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtSportsBoardMaria"
@@ -59,8 +58,8 @@
         android:background="@drawable/background_line_red"
         android:maxLines="1"
         android:paddingStart="@dimen/dp10"
-        android:paddingEnd="@dimen/dp10"
         android:paddingTop="@dimen/dp3"
+        android:paddingEnd="@dimen/dp10"
         android:paddingBottom="@dimen/dp3"
         android:text="B17"
         android:textColor="@color/red"
@@ -70,14 +69,14 @@
 
     <TextView
         android:id="@+id/txtSportsBoardTime"
+        style="@style/medium_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="9:35"
-        style="@style/medium_text"
         android:layout_marginEnd="@dimen/dp10"
-        app:layout_constraintTop_toTopOf="@id/txtSportsBoardB17"
+        android:text="9:35"
+        app:layout_constraintBottom_toBottomOf="@id/txtSportsBoardB17"
         app:layout_constraintEnd_toStartOf="@id/txtSportsBoardB17"
-        app:layout_constraintBottom_toBottomOf="@id/txtSportsBoardB17"/>
+        app:layout_constraintTop_toTopOf="@id/txtSportsBoardB17" />
 
     <View
         android:id="@+id/bottomSportsBoard"

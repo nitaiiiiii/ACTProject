@@ -20,7 +20,8 @@ import com.ci.act.ui.onboarding.OnBoardingActivity
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class MySportsActivity:BaseActivity<ActivityMySportsBinding,MySportsView,MySportsViewModel>(),MySportsView {
+class MySportsActivity : BaseActivity<ActivityMySportsBinding, MySportsView, MySportsViewModel>(),
+    MySportsView {
 
     private var isSelectAllItems: Boolean = false
     private var isSelected: Boolean = false

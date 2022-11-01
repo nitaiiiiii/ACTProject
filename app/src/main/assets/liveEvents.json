@@ -3,78 +3,78 @@
     "id": 1,
     "event_name": "BASKETBALL",
     "event_banner": "sports_basketball",
-    "even_date" : "MAY 29 - 31",
+    "even_date": "MAY 29 - 31",
     "event_location": "Preuss School UCSD",
     "event_address": "Preuss School UCSD, 9500 Gilman DR., La Jolla, California 92093",
     "event_state": "California",
-    "pin" : "92093",
+    "pin": "92093",
     "event_participants": "100",
-    "is_registered" : true,
-    "is_liked" : true
+    "is_registered": true,
+    "is_liked": true
   },
   {
     "id": 2,
     "event_name": "BASEBALL",
     "event_banner": "sports_basketball",
-    "even_date" : "JUN 12 - 15",
+    "even_date": "JUN 12 - 15",
     "event_location": "Preuss School UCSD",
     "event_address": "Preuss School UCSD, 9500 Gilman DR., La Jolla, California 92093",
     "event_state": "California",
-    "pin" : "92093",
+    "pin": "92093",
     "event_participants": "123",
-    "is_registered" : false,
-    "is_liked" : false
+    "is_registered": false,
+    "is_liked": false
   },
   {
     "id": 3,
     "event_name": "SOFTBALL",
     "event_banner": "sports_basketball",
-    "even_date" : "JUN 29 - 31",
+    "even_date": "JUN 29 - 31",
     "event_location": "Preuss School UCSD",
     "event_address": "Preuss School UCSD, 9500 Gilman DR., La Jolla, California 92093",
     "event_state": "California",
-    "pin" : "92093",
+    "pin": "92093",
     "event_participants": "53",
-    "is_registered" : false,
-    "is_liked" : false
+    "is_registered": false,
+    "is_liked": false
   },
   {
     "id": 4,
     "event_name": "BASKETBALL",
     "event_banner": "sports_basketball",
-    "even_date" : "MAY 29 - 31",
+    "even_date": "MAY 29 - 31",
     "event_location": "Preuss School UCSD",
     "event_address": "Preuss School UCSD, 9500 Gilman DR., La Jolla, California 92093",
     "event_state": "California",
-    "pin" : "92093",
+    "pin": "92093",
     "event_participants": "63",
-    "is_registered" : true,
-    "is_liked" : true
+    "is_registered": true,
+    "is_liked": true
   },
   {
     "id": 5,
     "event_name": "FOOTBALL",
     "event_banner": "sports_basketball",
-    "even_date" : "APR 19 - 22",
+    "even_date": "APR 19 - 22",
     "event_location": "Preuss School UCSD",
     "event_address": "Preuss School UCSD, 9500 Gilman DR., La Jolla, California 92093",
     "event_state": "California",
-    "pin" : "92093",
+    "pin": "92093",
     "event_participants": "233",
-    "is_registered" : false,
-    "is_liked" : false
+    "is_registered": false,
+    "is_liked": false
   },
   {
     "id": 6,
     "event_name": "RUGBY",
     "event_banner": "sports_basketball",
-    "even_date" : "MAY 29 - 31",
+    "even_date": "MAY 29 - 31",
     "event_location": "Preuss School UCSD",
     "event_address": "Preuss School UCSD, 9500 Gilman DR., La Jolla, California 92093",
     "event_state": "California",
-    "pin" : "92093",
+    "pin": "92093",
     "event_participants": "189",
-    "is_registered" : true,
-    "is_liked" : true
+    "is_registered": true,
+    "is_liked": true
   }
 ]

@@ -6,7 +6,9 @@ import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityPushNotificationBinding
 
-class PushNotificationActivity :BaseActivity<ActivityPushNotificationBinding,PushNotificationView,PushNotificationViewModel>(),PushNotificationView{
+class PushNotificationActivity :
+    BaseActivity<ActivityPushNotificationBinding, PushNotificationView, PushNotificationViewModel>(),
+    PushNotificationView {
     override fun getContentView(): Int = R.layout.activity_push_notification
     override fun setViewModelClass(): Class<PushNotificationViewModel> {
         return PushNotificationViewModel::class.java

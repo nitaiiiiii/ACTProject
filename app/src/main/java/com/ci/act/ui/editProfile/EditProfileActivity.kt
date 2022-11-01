@@ -12,14 +12,16 @@ import com.ci.act.ui.changePassword.ChangePasswordActivity
 import com.ci.act.ui.customDialogFragments.cantAccessAccount.CantAccessAccountFragment
 import com.ci.act.ui.customDialogFragments.permanentDelete.PermanentDeleteFragment
 
-class EditProfileActivity: BaseActivity<ActivityEditProfileBinding,EditProfileView,EditProfileViewModel>(),EditProfileView {
+class EditProfileActivity :
+    BaseActivity<ActivityEditProfileBinding, EditProfileView, EditProfileViewModel>(),
+    EditProfileView {
     override fun getContentView(): Int = R.layout.activity_edit_profile
 
     override fun setViewModelClass(): Class<EditProfileViewModel> {
         return EditProfileViewModel::class.java
     }
 
-    companion object{
+    companion object {
         var isShowingDelete = false
     }
 
@@ -40,9 +42,14 @@ class EditProfileActivity: BaseActivity<ActivityEditProfileBinding,EditProfileVi
 
         mViewDataBinding?.txtDeleteMyAccount?.setOnClickListener {
             val permanentDeleteFragment = PermanentDeleteFragment()
-            if (!EditProfileActivity.isShowingDelete){
+            if (!EditProfileActivity.isShowingDelete) {
                 EditProfileActivity.isShowingDelete = true
-                supportFragmentManager?.let { it1 -> permanentDeleteFragment.show(it1, "Cancel Project") }
+                supportFragmentManager?.let { it1 ->
+                    permanentDeleteFragment.show(
+                        it1,
+                        "Cancel Project"
+                    )
+                }
             }
         }
     }

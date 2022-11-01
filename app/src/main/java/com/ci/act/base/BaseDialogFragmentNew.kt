@@ -28,7 +28,7 @@ abstract class BaseDialogFragmentNew<T : ViewDataBinding, N : BaseNavigator, V :
 
     var mViewDataBinding: T? = null
     var mViewModel: V? = null
- //   var mAppLocalization: AppLocalizationResponse? = null
+    //   var mAppLocalization: AppLocalizationResponse? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,10 +48,10 @@ abstract class BaseDialogFragmentNew<T : ViewDataBinding, N : BaseNavigator, V :
         super.onViewCreated(view, savedInstanceState)
         dialog?.window?.attributes?.windowAnimations = R.style.dialog_open_animation
         //mAppLocalization = mViewModel?.appDataManager?.getAppLocalization()
-   //     organizationDetails = AppDataManager.getMyInstance().getOrganisationDetails()
+        //     organizationDetails = AppDataManager.getMyInstance().getOrganisationDetails()
         initViews(savedInstanceState)
-    //    setViewText(mAppLocalization)
-     //   setThemeColors(organizationDetails)
+        //    setViewText(mAppLocalization)
+        //   setThemeColors(organizationDetails)
         addObservers()
         addObservables()
     }

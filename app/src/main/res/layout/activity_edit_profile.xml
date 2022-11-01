@@ -73,12 +73,12 @@
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtEditNameProfile"
+                style="@style/large_text"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
-                android:text="Edit Photo"
-                style="@style/large_text"
                 android:gravity="center"
+                android:text="Edit Photo"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/imgEditProfilePicture" />
@@ -87,9 +87,9 @@
                 android:id="@+id/viewEditProfile"
                 android:layout_width="40dp"
                 android:layout_height="3dp"
+                android:layout_marginTop="@dimen/dp3"
                 android:background="#E91E63"
                 android:foregroundGravity="center"
-                android:layout_marginTop="@dimen/dp3"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/txtEditNameProfile" />
@@ -267,13 +267,13 @@
                 android:id="@+id/txtChangePassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Change Password"
                 android:padding="@dimen/dp20"
+                android:text="Change Password"
                 android:textColor="@color/blue"
                 app:layout_constraintBottom_toTopOf="@id/btnEditProfileSave"
-                app:layout_constraintTop_toBottomOf="@id/editProfilerTextGrade"
+                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintEnd_toEndOf="@id/guideLineRight"/>
+                app:layout_constraintTop_toBottomOf="@id/editProfilerTextGrade" />
 
             <com.ci.act.widgets.CustomButton
                 android:id="@+id/btnEditProfileSave"
@@ -295,10 +295,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
                 android:padding="@dimen/dp20"
                 android:text="Delete My Account"
                 android:textColor="@color/red"
-                android:layout_marginBottom="@dimen/dp10"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"

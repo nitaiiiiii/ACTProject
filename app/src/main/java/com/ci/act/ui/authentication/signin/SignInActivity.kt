@@ -27,7 +27,7 @@ class SignInActivity : BaseActivity<ActivitySignInBinding, SignInView, SignInVie
         return SignInViewModel::class.java
     }
 
-    companion object{
+    companion object {
         var isShowingCancelProjectDialog = false
     }
 
@@ -67,9 +67,14 @@ class SignInActivity : BaseActivity<ActivitySignInBinding, SignInView, SignInVie
 
         mViewDataBinding?.txtSocialMediaCantAccessScreen?.setOnClickListener {
             val cantAccessFragment = CantAccessAccountFragment()
-            if (!isShowingCancelProjectDialog){
+            if (!isShowingCancelProjectDialog) {
                 isShowingCancelProjectDialog = true
-                supportFragmentManager?.let { it1 -> cantAccessFragment.show(it1, "Cancel Project") }
+                supportFragmentManager?.let { it1 ->
+                    cantAccessFragment.show(
+                        it1,
+                        "Cancel Project"
+                    )
+                }
             }
         }
 
@@ -105,7 +110,6 @@ class SignInActivity : BaseActivity<ActivitySignInBinding, SignInView, SignInVie
             }
         }
     }
-
 
 
 }
