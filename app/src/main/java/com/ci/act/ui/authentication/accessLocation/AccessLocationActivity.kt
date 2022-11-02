@@ -6,6 +6,7 @@ import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityAccessLocationBinding
+import com.ci.act.ui.authentication.pushNotification.PushNotificationActivity
 import com.ci.act.ui.differentSports.DifferentSportsActivity
 import com.ci.act.ui.onboarding.OnBoardingActivity
 
@@ -39,6 +40,10 @@ class AccessLocationActivity :
             val intent = Intent(this, OnBoardingActivity::class.java)
             startActivity(intent)
             finish()
+        }
+        mViewDataBinding?.btnAccessLocation?.setOnClickListener {
+            val intent = Intent(this, PushNotificationActivity::class.java)
+            startActivity(intent)
         }
 
     }

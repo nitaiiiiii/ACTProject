@@ -126,6 +126,7 @@
                         app:layout_constraintTop_toTopOf="@id/mainConstraintLayout" />
 
                     <Switch
+                        android:id="@+id/mainSwitching"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:scaleX="1.5"

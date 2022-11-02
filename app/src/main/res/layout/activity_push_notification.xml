@@ -50,11 +50,11 @@
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtPushNotification"
-                style="@style/extra_large_text_semi_bold"
+                style="@style/extra_large_lato_regular"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp35"
-                android:background="@drawable/screenshot12"
+                android:text="PUSH NOTIFICATION"
                 android:gravity="center"
                 android:maxLines="1"
                 android:textColor="@color/black"
@@ -65,14 +65,14 @@
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtCurrentUpdates"
-                style="@style/extra_large_text"
+                style="@style/small_lato_regular1"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
-                android:background="@drawable/screenshot14_cleanup"
                 android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="3"
+                android:text="Stay current with the latest information\non your events, news, and updates to your\nyour profile"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -80,7 +80,7 @@
 
             <com.ci.act.widgets.CustomButton
                 android:id="@+id/btnPushNotification"
-                style="@style/extra_large_text_semi_bold"
+                style="@style/extra_lato_semi_boldr1"
                 android:layout_width="@dimen/dp280"
                 android:layout_height="@dimen/dp70"
                 android:layout_marginTop="@dimen/dp20"
@@ -93,7 +93,7 @@
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtSignInEmailSignUpScreen"
-                style="@style/large_text"
+                style="@style/small_lato_regular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp30"
