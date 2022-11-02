@@ -12,6 +12,7 @@ import com.ci.act.ui.home.mainEventScreenRegister.fragments.guardianApproval.Gua
 import com.ci.act.ui.home.mainEventScreenRegister.fragments.schoolDetails.SchoolDetailsFragment
 import kotlinx.android.synthetic.main.activity_main_event_screen_register.*
 import kotlinx.android.synthetic.main.fragment_personal_details.*
+import kotlinx.coroutines.selects.select
 
 class PersonalDetailsFragment :
     BaseDialogFragmentNew<FragmentPersonalDetailsBinding, PersonalDetailsView, PersonalDetailsViewModel>(),
