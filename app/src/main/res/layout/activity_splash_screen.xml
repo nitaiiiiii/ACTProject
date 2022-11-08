@@ -45,7 +45,7 @@
 
         <com.ci.act.widgets.CustomTextView
             android:id="@+id/txtLoading"
-            style="@style/small_lato_regular1"
+            style="@style/medium_text_regular_lato"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"

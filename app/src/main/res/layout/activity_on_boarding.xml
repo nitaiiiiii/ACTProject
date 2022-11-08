@@ -89,13 +89,14 @@
         <Button
             android:id="@+id/btnGetStarted"
             android:layout_width="0dp"
+            style="@style/extra_lato_semi_boldr1"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dp30"
             android:background="@drawable/orange_freelance"
             android:text="Get Started"
+            android:visibility="gone"
             android:textAllCaps="false"
             android:textColor="@color/ruby_red"
-            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="@id/guideOnBoardingLeft"
             app:layout_constraintRight_toRightOf="@id/guideOnBoardingRight" />

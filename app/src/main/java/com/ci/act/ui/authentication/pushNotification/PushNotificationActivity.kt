@@ -28,6 +28,12 @@ class PushNotificationActivity :
         mViewDataBinding?.btnPushNotification?.setOnClickListener {
             val intent = Intent(this, OnBoardingActivity::class.java)
             startActivity(intent)
+            finish()
+        }
+        mViewDataBinding?.txtSignInEmailSignUpScreen?.setOnClickListener {
+            val intent = Intent(this, OnBoardingActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 

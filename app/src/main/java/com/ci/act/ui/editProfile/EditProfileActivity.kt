@@ -47,7 +47,7 @@ class EditProfileActivity :
                 supportFragmentManager?.let { it1 ->
                     permanentDeleteFragment.show(
                         it1,
-                        "Cancel Project"
+                        "Permanent Delete"
                     )
                 }
             }

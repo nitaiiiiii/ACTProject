@@ -30,6 +30,14 @@
         <item name="colorControlActivated">@color/white</item>
         <item name="colorControlHighlight">@color/white</item>
     </style>
+    <style name="MaterialAlertDialog_rounded" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/DialogCorners</item>
+    </style>
+
+    <style name="DialogCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
 
     <style name="EditTextTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorControlNormal">@color/warmGreyTwo</item>
@@ -293,12 +301,17 @@
     </style>
 
     <style name="extra_large_lato_regular" parent="android:Widget">
-        <item name="android:textSize">@dimen/sp22</item>
+        <item name="android:textSize">@dimen/sp20</item>
+        <item name="setFont">Lato-Regular</item>
+    </style>
+
+    <style name="medium_text_regular_lato" parent="android:Widget">
+        <item name="android:textSize">@dimen/sp15</item>
         <item name="setFont">Lato-Regular</item>
     </style>
 
     <style name="small_lato_regular" parent="android:Widget">
-        <item name="android:textSize">@dimen/sp18</item>
+        <item name="android:textSize">@dimen/sp16</item>
         <item name="setFont">Lato-Regular</item>
     </style>
 

@@ -130,4 +130,8 @@ dependencies {
     //permissions
     implementation 'com.karumi:dexter:6.2.3'
 
+    //map
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation "com.google.android.gms:play-services-location:20.0.0"
+
 }

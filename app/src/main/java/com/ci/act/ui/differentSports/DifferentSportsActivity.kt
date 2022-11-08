@@ -93,10 +93,12 @@ class DifferentSportsActivity :
         mViewDataBinding?.txtNext?.setOnClickListener {
             val intent = Intent(this, AccessLocationActivity::class.java)
             startActivity(intent)
+            finish()
         }
         mViewDataBinding?.txtSkip?.setOnClickListener {
             val intent = Intent(this, OnBoardingActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         mViewDataBinding?.imgSelectSports?.setOnClickListener {

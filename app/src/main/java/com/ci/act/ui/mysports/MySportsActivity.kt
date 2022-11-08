@@ -14,6 +14,7 @@ import com.ci.act.databinding.ActivityMySportsBinding
 import com.ci.act.ui.authentication.accessLocation.AccessLocationActivity
 import com.ci.act.ui.differentSports.adapter.DifferentSportsAdapter
 import com.ci.act.ui.differentSports.model.DifferentSportsModel
+import com.ci.act.ui.home.myProfile.MyProfileActivity
 import com.ci.act.ui.mysports.adapter.MySportsAdapter
 import com.ci.act.ui.mysports.model.MySportsModel
 import com.ci.act.ui.onboarding.OnBoardingActivity
@@ -81,6 +82,10 @@ class MySportsActivity : BaseActivity<ActivityMySportsBinding, MySportsView, MyS
         mViewDataBinding?.imgSelectSports?.setOnClickListener {
             updateSelectedClick()
             adapter?.addArray(sports)
+        }
+        mViewDataBinding?.imgMySportsEvents?.setOnClickListener {
+            val intent = Intent(this,MyProfileActivity::class.java)
+            startActivity(intent)
         }
 
     }
