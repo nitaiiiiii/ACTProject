@@ -72,38 +72,38 @@
 
                 <com.ci.act.widgets.CustomTextView
                     android:id="@+id/txtAll"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:padding="@dimen/dp30"
+                    android:padding="@dimen/dp20"
                     android:text="All" />
 
                 <com.ci.act.widgets.CustomTextView
                     android:id="@+id/txtEvents"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:padding="@dimen/dp30"
+                    android:padding="@dimen/dp20"
                     android:text="Events" />
 
                 <com.ci.act.widgets.CustomTextView
                     android:id="@+id/txtPayments"
-                    android:layout_width="@dimen/dp0"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:padding="@dimen/dp30"
+                    android:padding="@dimen/dp20"
                     android:text="Pay" />
 
                 <com.ci.act.widgets.CustomTextView
                     android:id="@+id/txtOthers"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:padding="@dimen/dp30"
+                    android:padding="@dimen/dp20"
                     android:text="Others" />
             </LinearLayout>
 

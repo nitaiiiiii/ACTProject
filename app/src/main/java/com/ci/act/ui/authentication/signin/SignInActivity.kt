@@ -107,6 +107,7 @@ class SignInActivity : BaseActivity<ActivitySignInBinding, SignInView, SignInVie
             } else {
                 val intent = Intent(this, MyZeroRegisteredActivity::class.java)
                 startActivity(intent)
+                finish()
             }
         }
     }

@@ -1,5 +1,6 @@
 package com.ci.act.ui.authentication.signup
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.text.SpannableString
@@ -9,9 +10,14 @@ import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivitySignUpBinding
 import com.ci.act.ui.authentication.signin.SignInActivity
+import java.util.*
 
 class SignUpActivity : BaseActivity<ActivitySignUpBinding, SignUpView, SignUpViewModel>(),
     SignUpView {
+
+    var calendarDay = 0
+    var calendarMonth = 0
+    var calendarYear = 0
     override fun getContentView(): Int = R.layout.activity_sign_up
 
     override fun setViewModelClass(): Class<SignUpViewModel> {
@@ -44,7 +50,41 @@ class SignUpActivity : BaseActivity<ActivitySignUpBinding, SignUpView, SignUpVie
             startActivity(action)
             finish()
         }
+        mViewDataBinding?.editTextDateOfBirth?.setOnClickListener {
+            getDateTimeCalender()
+        }
     }
+
+    private fun getDateTimeCalender() {
+        val calendar = Calendar.getInstance()
+        calendarDay = calendar.get(Calendar.DAY_OF_MONTH)
+        calendarMonth = calendar.get(Calendar.MONTH)
+        calendarYear = calendar.get(Calendar.YEAR)
+
+        DatePickerDialog(this, R.style.DatePickerTheme_Dark, DatePickerDialog.OnDateSetListener { view, year, month, day ->
+            val month = month + 1
+            var sMonth = ""
+            var sDay = ""
+            sMonth = if (month < 10) {
+                "0$month"
+            } else {
+                month.toString()
+            }
+            sDay = if (day < 10) {
+                "0$day"
+            } else {
+                day.toString()
+            }
+            val date = "$sMonth/$sDay/$year"
+            mViewDataBinding?.editTextDateOfBirth?.setText(date)
+        }, calendarYear, calendarMonth, calendarDay).let{
+            it.show()
+            it.setTitle("Date of Birth")
+            it.setMessage("Date of Birth")
+            it.datePicker.maxDate = System.currentTimeMillis()
+        }
+    }
+
 
     private fun validateFields() {
         mViewDataBinding?.btnSignUp?.setOnClickListener {

@@ -58,6 +58,12 @@
     <group android:id="@+id/item9">
         <item
             android:id="@+id/events8"
+            android:icon="@drawable/access_time"
+            android:title="Notifications" />
+    </group>
+    <group android:id="@+id/item10">
+        <item
+            android:id="@+id/events9"
             android:icon="@drawable/logout"
             android:title="Sign Out" />
     </group>

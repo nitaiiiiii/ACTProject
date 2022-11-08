@@ -10,8 +10,10 @@ import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityMyRegisteredBinding
 import com.ci.act.ui.home.events.EventsActivity
+import com.ci.act.ui.home.eventsReport.EventsReportActivity
 import com.ci.act.ui.home.myRegisteredEvents.adapter.MyRegisteredAdapter
 import com.ci.act.ui.home.myRegisteredEvents.model.RegisteredModel
+import com.ci.act.ui.home.sportsBoard.SportsBoardActivity
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
@@ -59,6 +61,19 @@ class MyRegisteredActivity :
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView.adapter = adapterRegistered
         adapterRegistered?.addArray(eventsRegistered[0].eventsList)
+
+        adapterRegistered?.myClick(object : MyRegisteredAdapter.MyClick{
+            override fun myClick(event: RegisteredModel.RegisteredModelItem.Events) {
+                val intent = Intent(applicationContext,SportsBoardActivity::class.java)
+                startActivity(intent)
+
+            }
+
+            override fun myLeaderboardClick(event: RegisteredModel.RegisteredModelItem.Events) {
+                val intent = Intent(applicationContext,EventsReportActivity::class.java)
+                startActivity(intent)
+            }
+        })
 
     }
 

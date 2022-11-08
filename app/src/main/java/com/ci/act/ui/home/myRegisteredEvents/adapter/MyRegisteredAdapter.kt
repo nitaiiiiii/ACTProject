@@ -14,8 +14,10 @@ import com.ci.act.ui.home.myRegisteredEvents.model.RegisteredModel
 class MyRegisteredAdapter : RecyclerView.Adapter<MyRegisteredAdapter.MyRegisteredViewHolder>() {
 
     private val registeredList: ArrayList<RegisteredModel.RegisteredModelItem.Events> = ArrayList()
+    private lateinit var myClick: MyClick
 
-    class MyRegisteredViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
+    inner class MyRegisteredViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var imgACT: ImageView? = view.findViewById(R.id.registeredACT)
         var txtEventsGamer: TextView? = view.findViewById(R.id.txtRegistered)
         var txtBlackEvents: TextView? = view.findViewById(R.id.txtRegisteredBlackText)
@@ -81,8 +83,17 @@ class MyRegisteredAdapter : RecyclerView.Adapter<MyRegisteredAdapter.MyRegistere
                 txtBlackEvents?.text = "DAYS\nTO GO"
             }
 
+            txtLeaderBoard?.setOnClickListener {
+                myClick.myClick(registeredModelItem)
+            }
+            txtLeaderBoardReport?.setOnClickListener {
+                myClick.myLeaderboardClick(registeredModelItem)
+
+            }
+
 
         }
+
 
     }
 
@@ -105,5 +116,14 @@ class MyRegisteredAdapter : RecyclerView.Adapter<MyRegisteredAdapter.MyRegistere
         registeredList.clear()
         registeredList.addAll(array)
         notifyDataSetChanged()
+    }
+
+    fun myClick(myClick: MyClick) {
+        this.myClick = myClick
+    }
+
+    interface MyClick {
+        fun myClick(event: RegisteredModel.RegisteredModelItem.Events)
+        fun myLeaderboardClick(event: RegisteredModel.RegisteredModelItem.Events)
     }
 }
