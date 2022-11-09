@@ -67,7 +67,7 @@
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.65" />
+                app:layout_constraintVertical_bias="0.75" />
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtSignIn"
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:maxLines="2"
-                android:text="The ACT App would like to access your\nLocation to identify events in your area."
+                android:text="The ACT App would like to access your\nlocation to identify events in your area"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="@id/imgSports"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
@@ -149,7 +149,7 @@
                 android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="2"
-                android:text="No,I will enter the details manually"
+                android:text="No, I will enter the details manually"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

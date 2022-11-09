@@ -54,8 +54,8 @@
 
             <ImageView
                 android:id="@+id/liveEvents"
-                android:layout_width="@dimen/dp45"
-                android:layout_height="@dimen/dp45"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
                 android:src="@drawable/live"
                 app:layout_constraintBottom_toBottomOf="@id/txtEvents"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -63,7 +63,7 @@
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtLiveEvents"
-                style="@style/large_text"
+                style="@style/medium_text_bold"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:text="Live"

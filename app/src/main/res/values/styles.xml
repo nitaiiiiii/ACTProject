@@ -119,8 +119,10 @@
             <enum name="BebasNeue" value="6" />
             <enum name="Lato-Black" value="7" />
             <enum name="Lato-Regular" value="8" />
+            <enum name="Lato-Bold" value="9" />
 
-            <enum name="ci_icons" value="9" />
+
+            <enum name="ci_icons" value="10" />
         </attr>
     </declare-styleable>
 
@@ -135,6 +137,8 @@
             <enum name="BebasNeue" value="6" />
             <enum name="Lato-Black" value="7" />
             <enum name="Lato-Regular" value="8" />
+            <enum name="Lato-Bold" value="9" />
+
 
 
         </attr>
@@ -183,6 +187,7 @@
         <item>BebasNeue.otf</item>
         <item>Lato-Black.ttf</item>
         <item>Lato-Regular.ttf</item>
+        <item>Lato-Bold.ttf</item>
         <item>CI-People.ttf</item>
     </string-array>
     <!--custom widgets ends-->
@@ -297,11 +302,16 @@
 
     <style name="extra_large_text_bold" parent="android:Widget">
         <item name="android:textSize">@dimen/_16sp</item>
-        <item name="setFont">HelveticaNeue-Bold</item>
+        <item name="setFont">Lato-Bold</item>
     </style>
 
     <style name="extra_large_bebas_bold" parent="android:Widget">
         <item name="android:textSize">@dimen/sp22</item>
+        <item name="setFont">BebasNeue</item>
+    </style>
+
+    <style name="extra_large_bebas_bold1" parent="android:Widget">
+        <item name="android:textSize">@dimen/sp16</item>
         <item name="setFont">BebasNeue</item>
     </style>
 
