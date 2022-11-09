@@ -17,54 +17,62 @@
     <group android:id="@+id/item3">
         <item
             android:id="@+id/events2"
-            android:icon="@drawable/note"
+            android:icon="@drawable/ic_menu_invoices"
             android:title="Invoices" />
     </group>
 
     <group android:id="@+id/item4">
         <item
             android:id="@+id/events3"
-            android:icon="@drawable/outward"
+            android:icon="@drawable/ic_menu_subscription"
             android:title="Subscription" />
     </group>
 
     <group android:id="@+id/item5">
         <item
             android:id="@+id/events4"
-            android:icon="@drawable/person"
+            android:icon="@drawable/ic_menu_about_us"
             android:title="About Us" />
     </group>
 
     <group android:id="@+id/item6">
         <item
             android:id="@+id/events5"
-            android:icon="@drawable/mark"
+            android:icon="@drawable/ic_menu_faq"
             android:title="FAQ's" />
     </group>
 
     <group android:id="@+id/item7">
         <item
             android:id="@+id/events6"
-            android:icon="@drawable/post_office"
+            android:icon="@drawable/ic_menu_contact_us"
             android:title="Contact Us" />
     </group>
 
     <group android:id="@+id/item8">
         <item
             android:id="@+id/events7"
-            android:icon="@drawable/access_time"
+            android:icon="@drawable/ic_menu_send_log_1"
             android:title="Send Log" />
     </group>
     <group android:id="@+id/item9">
         <item
             android:id="@+id/events8"
-            android:icon="@drawable/access_time"
+            android:icon="@drawable/ic_menu_notifications"
             android:title="Notifications" />
     </group>
+
     <group android:id="@+id/item10">
         <item
             android:id="@+id/events9"
-            android:icon="@drawable/logout"
+            android:icon="@drawable/ic_menu_settings"
+            android:title="Settings" />
+    </group>
+
+    <group android:id="@+id/item11">
+        <item
+            android:id="@+id/events10"
+            android:icon="@drawable/ic_menu_sign_out"
             android:title="Sign Out" />
     </group>
 </menu>

@@ -9,6 +9,9 @@ import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityLiveEventsBinding
+import com.ci.act.ui.authentication.signin.SignInActivity
+import com.ci.act.ui.customDialogFragments.cantAccessAccount.CantAccessAccountFragment
+import com.ci.act.ui.customDialogFragments.enjoyingSports.EnjoyingSportsFragment
 import com.ci.act.ui.home.chargebee.ChargeBeeActivity
 import com.ci.act.ui.home.eventsLive.EventsLiveActivity
 import com.ci.act.ui.home.liveEvents.adapter.LiveEventsAdapter
@@ -32,6 +35,10 @@ class LiveEventsActivity :
 
     }
 
+    companion object {
+        var isShowingEnjoyingSportsDialog = false
+    }
+
     override fun getNavigator(): LiveEventsView = this
 
     override fun getBindingVariable(): Int = BR.liveEvents
@@ -46,6 +53,19 @@ class LiveEventsActivity :
         mViewDataBinding?.liveEvents?.setOnClickListener {
             val intent = Intent(this, EventsLiveActivity::class.java)
             startActivity(intent)
+        }
+
+        mViewDataBinding?.btnLiveEvents?.setOnClickListener {
+            val enjoyingSportsFragment = EnjoyingSportsFragment()
+            if (!LiveEventsActivity.isShowingEnjoyingSportsDialog ) {
+                LiveEventsActivity.isShowingEnjoyingSportsDialog  = true
+                supportFragmentManager?.let { it1 ->
+                    enjoyingSportsFragment.show(
+                        it1,
+                        "Enjoying Sports"
+                    )
+                }
+            }
         }
     }
 

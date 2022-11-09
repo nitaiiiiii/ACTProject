@@ -1,20 +1,20 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme2" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/ruby_red</item>
         <item name="colorPrimaryDark">@color/ruby_red</item>
         <item name="colorAccent">@color/ruby_red</item>
     </style>
 
     <!-- Base application theme no Actionbar. -->
-    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppThemeNoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -106,6 +106,20 @@
         <item name="android:windowDisablePreview">true</item>
     </style>
 
+    <style name="ThemeOverlay.App.MaterialCalendar" parent="ThemeOverlay.MaterialComponents.TimePicker">
+        <item name="colorOnPrimary">@color/black7</item>
+        <item name="colorPrimary">@color/mainColor</item>
+        <item name="colorSurface">@color/white7</item>
+    </style>
+
+    <style name="tallerBarStyle" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@android:drawable/progress_horizontal</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_horizontal</item>
+        <item name="android:minHeight">5dip</item>
+        <item name="android:maxHeight">5dip</item>
+    </style>
+
 
     <!--custom widgets starts-->
     <declare-styleable name="CustomTextView">
@@ -120,9 +134,11 @@
             <enum name="Lato-Black" value="7" />
             <enum name="Lato-Regular" value="8" />
             <enum name="Lato-Bold" value="9" />
+            <enum name="Lato-Light" value="10" />
 
 
-            <enum name="ci_icons" value="10" />
+
+            <enum name="ci_icons" value="11" />
         </attr>
     </declare-styleable>
 
@@ -138,6 +154,7 @@
             <enum name="Lato-Black" value="7" />
             <enum name="Lato-Regular" value="8" />
             <enum name="Lato-Bold" value="9" />
+            <enum name="Lato-Light" value="10" />
 
 
 
@@ -188,6 +205,7 @@
         <item>Lato-Black.ttf</item>
         <item>Lato-Regular.ttf</item>
         <item>Lato-Bold.ttf</item>
+        <item>Lato-Light.ttf</item>
         <item>CI-People.ttf</item>
     </string-array>
     <!--custom widgets ends-->
@@ -364,6 +382,311 @@
         <item name="android:textSize">@dimen/sp18</item>
         <item name="setFont">Lato-Black</item>
     </style>
+
+    <style name="small_text_light">
+        <item name="android:textSize">@dimen/dp10</item>
+        <item name="setFont">Lato-Regular</item>
+    </style>
+
+    <style name="small_text_regular">
+        <item name="android:textSize">@dimen/dp10</item>
+        <item name="setFont">Lato-Regular</item>
+    </style>
+
+    <style name="small_text_medium">
+        <item name="android:textSize">@dimen/dp10</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="small_text_semi_bold1">
+        <item name="android:textSize">@dimen/dp10</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="small_text_bold1">
+        <item name="android:textSize">@dimen/dp10</item>
+        <item name="setFont">Lato-Regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="small_text_Heavy">
+        <item name="android:textSize">@dimen/dp10</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="regular_small_text_light">
+        <item name="android:textSize">@dimen/dp12</item>
+        <item name="setFont">Lato-Light</item>
+    </style>
+
+    <style name="regular_small_text_regular">
+        <item name="android:textSize">@dimen/dp12</item>
+        <item name="setFont">Lato-Regular</item>
+    </style>
+
+    <style name="regular_small_text_medium">
+        <item name="android:textSize">@dimen/dp12</item>
+        <item name="setFont">Lato-Light</item>
+    </style>
+
+    <style name="regular_small_text_semi_bold">
+        <item name="android:textSize">@dimen/dp12</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="regular_small_text_bold">
+        <item name="android:textSize">@dimen/dp12</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="regular_small_text_Heavy">
+        <item name="android:textSize">@dimen/dp12</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="medium_text_light">
+        <item name="android:textSize">@dimen/dp15</item>
+        <item name="setFont">Lato-Light</item>
+    </style>
+
+    <style name="medium_text_regular">
+        <item name="android:textSize">@dimen/dp15</item>
+        <item name="setFont">Lato-Regular</item>
+    </style>
+
+    <style name="medium_text_bebas">
+        <item name="android:textSize">@dimen/dp15</item>
+        <item name="setFont">BebasNeue</item>
+    </style>
+
+    <style name="medium_text_medium">
+        <item name="android:textSize">@dimen/dp15</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="medium_text_semi_bold1">
+        <item name="android:textSize">@dimen/dp15</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="medium_text_bold1">
+        <item name="android:textSize">@dimen/dp15</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="medium_text_Heavy">
+        <item name="android:textSize">@dimen/dp15</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="large_text_light">
+        <item name="android:textSize">@dimen/dp16</item>
+        <item name="setFont">Lato-Light</item>
+    </style>
+
+    <style name="large_text_regular">
+        <item name="android:textSize">@dimen/dp16</item>
+        <item name="setFont">Lato-Regular</item>
+    </style>
+
+    <style name="large_text_bebas">
+        <item name="android:textSize">@dimen/dp16</item>
+        <item name="setFont">BebasNeue</item>
+    </style>
+
+    <style name="large_text_medium">
+        <item name="android:textSize">@dimen/dp16</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="large_text_semi_bold1">
+        <item name="android:textSize">@dimen/dp16</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="large_text_bold1">
+        <item name="android:textSize">@dimen/dp16</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="large_text_Heavy">
+        <item name="android:textSize">@dimen/dp16</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="extra_large_text_light">
+        <item name="android:textSize">@dimen/dp18</item>
+        <item name="setFont">Lato-Light</item>
+    </style>
+
+    <style name="extra_large_text_regular">
+        <item name="android:textSize">@dimen/dp18</item>
+        <item name="setFont">Lato-Regular</item>
+    </style>
+
+    <style name="extra_large_text_medium">
+        <item name="android:textSize">@dimen/dp18</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="extra_large_text_semi_bold1">
+        <item name="android:textSize">@dimen/dp18</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="extra_large_text_bold1">
+        <item name="android:textSize">@dimen/dp18</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="extra_large_text_Heavy">
+        <item name="android:textSize">@dimen/dp18</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="double_extra_large_text_light">
+        <item name="android:textSize">@dimen/dp20</item>
+        <item name="setFont">Lato-Light</item>
+    </style>
+
+    <style name="double_extra_large_text_regular">
+        <item name="android:textSize">@dimen/dp20</item>
+        <item name="setFont">Lato-Regular</item>
+    </style>
+
+    <style name="double_extra_large_text_medium">
+        <item name="android:textSize">@dimen/dp20</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="double_extra_large_text_semi_bold">
+        <item name="android:textSize">@dimen/dp20</item>
+        <item name="setFont">Lato-Bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="double_extra_large_text_bold">
+        <item name="android:textSize">@dimen/dp20</item>
+        <item name="setFont">Lato-Bold</item>
+        <!--        <item name="android:textStyle">bold</item>-->
+    </style>
+
+    <style name="double_extra_large_text_Heavy">
+        <item name="android:textSize">@dimen/dp20</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="heading_text_medium">
+        <item name="android:textSize">@dimen/dp20</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="heading_double_extra_large_text_light">
+        <item name="android:textSize">@dimen/dp25</item>
+        <item name="setFont">Lato-Light</item>
+    </style>
+
+    <style name="heading_double_large_text_regular">
+        <item name="android:textSize">@dimen/dp25</item>
+        <item name="setFont">Lato-Regular</item>
+    </style>
+
+    <style name="heading_double_large_text_medium">
+        <item name="android:textSize">@dimen/dp25</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="heading_double_large_text_semi_bold">
+        <item name="android:textSize">@dimen/dp25</item>
+        <item name="setFont">Lato-Bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="heading_double_large_text_bold">
+        <item name="android:textSize">@dimen/dp25</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="rank_heading_double_large_text_bold">
+        <item name="android:textSize">@dimen/dp30</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="heading_double_large_text_Heavy">
+        <item name="android:textSize">@dimen/dp30</item>
+        <item name="setFont">Lato-Bold</item>
+    </style>
+
+    <style name="double_extra_large_text_regular_bebas">
+        <item name="android:textSize">@dimen/dp30</item>
+        <item name="setFont">BebasNeue</item>
+    </style>
+
+    <style name="extra_large_text_regular_bebas">
+        <item name="android:textSize">@dimen/dp18</item>
+        <item name="setFont">BebasNeue</item>
+    </style>
+
+    <style name="regular_text_regular_bebas">
+        <item name="android:textSize">@dimen/dp18</item>
+        <item name="setFont">BebasNeue</item>
+    </style>
+    <!--    Text styles ends-->
+
+    <style name="choose_sports_text">
+        <item name="android:textSize">@dimen/dp12</item>
+        <item name="setFont">Lato-Regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="extra_large_text_bold_bebas">
+        <item name="android:textSize">@dimen/dp18</item>
+        <item name="setFont">BebasNeue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="extra_large_text_bebas">
+        <item name="android:textSize">@dimen/dp18</item>
+        <item name="setFont">BebasNeue</item>
+    </style>
+
+    <style name="small_text_light_bebas">
+        <item name="android:textSize">@dimen/dp11</item>
+        <item name="setFont">BebasNeue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="large_text_bold_bebas">
+        <item name="android:textSize">@dimen/dp16</item>
+        <item name="setFont">BebasNeue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="regular_small_text_bold_bebas">
+        <item name="android:textSize">@dimen/dp12</item>
+        <item name="setFont">BebasNeue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="small_text_bold_bebas">
+        <item name="android:textSize">@dimen/dp10</item>
+        <item name="setFont">BebasNeue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="heading_large_text_bold_babes">
+        <item name="android:textSize">@dimen/dp20</item>
+        <item name="setFont">BebasNeue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="heading_double_large_text_bold_babes">
+        <item name="android:textSize">@dimen/dp25</item>
+        <item name="setFont">BebasNeue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
     <!--    Text styles ends-->
 
 </resources>

@@ -5,7 +5,10 @@
     <color name="colorAccent">#D81B60</color>
     <color name="snack_color">#FEA12B</color>
     <color name="white">#FFFFFF</color>
+    <color name="white7">#FFFFFFFF</color>
     <color name="black">#000000</color>
+    <color name="black7">#FF000000</color>
+
     <color name="blue">#337CE4</color>
     <color name="dull_white">#E2E0E0</color>
     <color name="red">#e90d0d</color>

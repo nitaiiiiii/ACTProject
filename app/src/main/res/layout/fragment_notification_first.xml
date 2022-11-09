@@ -55,7 +55,7 @@
                 android:maxLines="1"
                 android:padding="@dimen/dp20"
                 android:paddingStart="@dimen/dp1"
-                android:text="Enabled"
+                android:text="Disabled"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/txtLocationFirst" />
@@ -111,6 +111,16 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
+                        android:id="@+id/imgLocationFirst1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/radio_button_unchecked"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@id/txtGetNotifications"
+                        app:layout_constraintEnd_toEndOf="@id/guideLineRight2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
                         android:id="@+id/imgLocationFirst"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -150,7 +160,7 @@
                         app:layout_constraintEnd_toEndOf="@id/editTextLocationEmailAddress"
                         app:layout_constraintTop_toTopOf="@id/editTextLocationEmailAddress" />
 
-                    <EditText
+                    <com.ci.act.widgets.CustomEditText
                         android:id="@+id/editTextLocationEmailAddress"
                         android:layout_width="@dimen/dp0"
                         android:layout_height="wrap_content"
@@ -159,6 +169,8 @@
                         android:inputType="textEmailAddress"
                         android:padding="@dimen/dp15"
                         android:paddingStart="@dimen/dp5"
+                        android:cursorVisible="false"
+                        android:focusable="false"
                         android:textColor="@color/warmGreyTwo"
                         android:textColorHint="@color/warmGreyTwo"
                         android:textCursorDrawable="@null"
@@ -175,7 +187,7 @@
                         app:layout_constraintEnd_toEndOf="@id/guideLineRight2"
                         app:layout_constraintTop_toTopOf="@id/editTextLocationEmailAddress" />
 
-                    <EditText
+                    <com.ci.act.widgets.CustomEditText
                         android:id="@+id/editTextLocation2"
                         android:layout_width="@dimen/dp0"
                         android:layout_height="wrap_content"
@@ -184,6 +196,8 @@
                         android:inputType="textEmailAddress"
                         android:padding="@dimen/dp15"
                         android:paddingStart="@dimen/dp5"
+                        android:cursorVisible="false"
+                        android:focusable="false"
                         android:textColor="@color/warmGreyTwo"
                         android:textColorHint="@color/warmGreyTwo"
                         android:textCursorDrawable="@null"

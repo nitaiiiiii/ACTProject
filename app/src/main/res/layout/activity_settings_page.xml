@@ -107,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dp10"
-                android:src="@drawable/ic_baseline_notifications_24"
+                android:src="@drawable/ic_icon_location"
                 app:layout_constraintEnd_toStartOf="@id/imgRadius"
                 app:layout_constraintStart_toEndOf="@id/imgNotifications"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -127,7 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dp10"
-                android:src="@drawable/ic_baseline_notifications_24"
+                android:src="@drawable/ic_icon_radius"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight1"
                 app:layout_constraintStart_toEndOf="@id/imgLocations"
                 app:layout_constraintTop_toTopOf="parent" />

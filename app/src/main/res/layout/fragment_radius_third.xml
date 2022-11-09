@@ -59,45 +59,162 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/txtRadiusSetting" />
 
-            <ImageView
-                android:id="@+id/imgConcentricCircles"
-                android:layout_width="@dimen/dp300"
-                android:layout_height="@dimen/dp180"
-                android:layout_marginTop="@dimen/dp10"
-                android:src="@drawable/concentric_circles"
-                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
-                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toBottomOf="@id/txtRadiusStartTime" />
-
-            <SeekBar
-                android:id="@+id/sb_radius"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="48dp"
-                android:layout_marginEnd="40dp"
-                android:max="500"
-                android:min="5"
-                android:progress="5"
-                android:progressDrawable="@drawable/seekbar_drawable_progress"
-                android:splitTrack="false"
-                android:thumb="@drawable/slider"
-                app:layout_constraintTop_toBottomOf="@id/imgConcentricCircles"></SeekBar>
+                android:paddingBottom="@dimen/dp20"
+                app:layout_constraintTop_toBottomOf="@id/txtRadiusStartTime">
+
+                <!--            <ProgressBar-->
+                <!--                android:id="@+id/progressBar"-->
+                <!--                style="?android:attr/progressBarStyleHorizontal"-->
+                <!--                android:layout_width="@dimen/_250sdp"-->
+                <!--                android:layout_height="@dimen/_250sdp"-->
+                <!--                android:layout_above="@id/seekBar"-->
+                <!--                android:layout_alignParentStart="true"-->
+                <!--                android:layout_marginBottom="21dp"-->
+                <!--                android:max="500"-->
+                <!--                android:indeterminate="false"-->
+                <!--                android:progressDrawable="@drawable/circular_progress_bar"-->
+                <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                app:layout_constraintStart_toStartOf="parent"-->
+                <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+                <ImageView
+                    android:id="@+id/progressBar"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_margin="@dimen/dp50"
+                    android:background="@drawable/shape_circle"
+                    app:layout_constraintDimensionRatio="w, 1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/progressBarProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_circle"
+                    android:backgroundTint="@color/mainBtnColor"
+                    app:layout_constraintBottom_toBottomOf="@id/progressBar"
+                    app:layout_constraintDimensionRatio="w, 1:1"
+                    app:layout_constraintEnd_toEndOf="@id/progressBar"
+                    app:layout_constraintStart_toStartOf="@id/progressBar"
+                    app:layout_constraintTop_toTopOf="@id/progressBar" />
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="@dimen/dp50"
+                    android:layout_height="@dimen/dp50"
+                    android:src="@drawable/default_profile_pic"
+                    app:layout_constraintBottom_toBottomOf="@id/progressBar"
+                    app:layout_constraintEnd_toEndOf="@id/progressBar"
+                    app:layout_constraintStart_toStartOf="@id/progressBar"
+                    app:layout_constraintTop_toTopOf="@id/progressBar" />
+
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/textView"
+                    style="@style/small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/progressBar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:text="5 miles"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@id/seekBar"
+                    app:layout_constraintStart_toStartOf="@id/seekBar"
+                    app:layout_constraintTop_toBottomOf="@id/profileImage" />
+
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/seekbarTextView"
+                    style="@style/small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/progressBar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="@dimen/dp5"
+                    android:text="5 miles"
+                    android:textColor="@color/mainColor"
+                    app:layout_constraintBottom_toTopOf="@id/seekBar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    style="@style/tallerBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:max="500"
+                    android:min="5"
+                    android:progress="5"
+                    android:progressTint="@color/mainColor"
+                    android:thumb="@drawable/slider"
+                    app:layout_constraintBottom_toTopOf="@id/seekBarText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/seekBarText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="top"
+                    app:constraint_referenced_ids="tvStart, tvEnd" />
+
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/tvStart"
+                    style="@style/small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:text="5 miles"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/seekBar" />
+
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/tvEnd"
+                    style="@style/small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:text="500 miles"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/seekBar" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <com.ci.act.widgets.CustomButton
                 android:id="@+id/btnSaveRadius"
                 style="@style/extra_large_text_semi_bold"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="@dimen/dp70"
-                android:layout_margin="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp40"
                 android:layout_marginBottom="@dimen/dp40"
                 android:background="@drawable/rounded_button"
                 android:text="Save Radius"
                 android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayout"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
-                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toBottomOf="@id/sb_radius" />
+                app:layout_constraintStart_toStartOf="@id/guideLineLeft" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

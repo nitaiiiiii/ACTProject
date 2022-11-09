@@ -107,6 +107,11 @@ class EventsActivity : BaseActivity<ActivityEventsBinding, EventsView, EventsVie
                     startActivity(intent)
                 }
                 R.id.events9 -> {
+                    val intent = Intent(this, SettingsPageActivity::class.java)
+                    startActivity(intent)
+                }
+
+                R.id.events10 -> {
                     val signOutFragment = SignOutFragment()
                     if (!EventsActivity.isShowingSignOut) {
                         EventsActivity.isShowingSignOut = true
