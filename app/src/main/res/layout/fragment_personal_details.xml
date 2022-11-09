@@ -51,7 +51,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextFirstName"
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
@@ -69,7 +69,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/txtSignUp" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextLastName"
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
@@ -133,7 +133,7 @@
                 app:layout_constraintStart_toEndOf="@id/btnMale"
                 app:layout_constraintTop_toBottomOf="@id/txtGender" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextEmailAddress"
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
@@ -151,7 +151,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/btnFemale" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextMobileNumber"
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
@@ -170,7 +170,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/editTextEmailAddress" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextPosition"
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
@@ -198,7 +198,7 @@
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintTop_toTopOf="@id/editTextPosition" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextInsuranceCompany"
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
@@ -217,7 +217,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/editTextPosition" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextPolicyNumber"
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
