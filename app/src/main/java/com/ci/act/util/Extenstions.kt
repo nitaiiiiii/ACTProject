@@ -9,6 +9,7 @@ import android.util.TypedValue
 import android.view.Gravity
 import android.view.MotionEvent
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
@@ -249,6 +250,36 @@ fun showSnackBarWithBlackTextCustomColor(message: String, activity: Activity?, c
         .setTypeface(typeface)
         .sneakWithCustomColorBlackText(color)
 }
+
+fun showSnackBar(view: View, message: String, isSuccess: Boolean) {
+    val color: Int = if (isSuccess) {
+        Color.GREEN
+    } else {
+        Color.RED
+    }
+    val snackBar = TSnackbar.make(view, message, TSnackbar.LENGTH_LONG)
+        .setAction("Action", null)
+    snackBar.setActionTextColor(Color.WHITE)
+    val snackBarView = snackBar.view
+
+    val params = view.layoutParams as FrameLayout.LayoutParams
+    params.gravity = Gravity.TOP
+    params.gravity = Gravity.CENTER_HORIZONTAL
+    view.layoutParams = params
+
+    snackBarView.setBackgroundColor(color)
+    snackBarView.setPadding(0, 40, 0, 0)
+    snackBar.setMaxWidth(Int.MAX_VALUE)
+    val textView =
+        snackBarView.findViewById(com.androidadvance.topsnackbar.R.id.snackbar_text) as? TextView
+    textView?.setTextColor(Color.WHITE)
+//    textView?.typeface = ResourcesCompat.getFont(view.context, R.font.pacifico_regular)
+    textView?.textAlignment = View.TEXT_ALIGNMENT_CENTER
+    textView?.gravity = Gravity.CENTER
+    textView?.maxLines = 3
+    snackBar.show()
+}
+
 
 
 
