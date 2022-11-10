@@ -30,13 +30,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.home.notifications.NotificationActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".ui.home.faqEmpty.FaqEmptyActivity"
             android:exported="false">
             <meta-data

@@ -18,7 +18,6 @@ import com.ci.act.ui.home.faqEmpty.FaqEmptyActivity
 import com.ci.act.ui.home.liveEvents.LiveEventsActivity
 import com.ci.act.ui.home.myProfile.MyProfileActivity
 import com.ci.act.ui.home.myRegisteredEvents.MyRegisteredActivity
-import com.ci.act.ui.home.notifications.NotificationActivity
 import com.ci.act.ui.home.sendLog.SendLogActivity
 import com.ci.act.ui.home.settingsPage.SettingsPageActivity
 import com.ci.act.ui.home.settingsPage.SettingsPageView
@@ -103,8 +102,6 @@ class EventsActivity : BaseActivity<ActivityEventsBinding, EventsView, EventsVie
                     startActivity(intent)
                 }
                 R.id.events8 -> {
-                    val intent = Intent(this, NotificationActivity::class.java)
-                    startActivity(intent)
                 }
                 R.id.events9 -> {
                     val intent = Intent(this, SettingsPageActivity::class.java)
