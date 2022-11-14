@@ -3,6 +3,9 @@ package com.ci.act.prefrence
 
 class PreferencesKeys {
     companion object {
+        const val act= "ACT"
+        const val isChooseSportsFinished = "isChooseSportsFinished"
+        const val pushNotifications = "pushNotifications"
         const val application_status: String = "application_status"
         const val fcm_token: String = "fcm_token"
         const val access_token = "access_token"

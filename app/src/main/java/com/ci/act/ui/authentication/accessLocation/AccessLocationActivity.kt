@@ -164,7 +164,7 @@ class AccessLocationActivity :
 
         mViewDataBinding?.btnAccessLocation?.setOnClickListener {
             if (switchState) {
-                val intent = Intent(this,PushNotificationActivity::class.java)
+                val intent = Intent(this,OnBoardingActivity::class.java)
                 startActivity(intent)
             } else {
                 if (mViewDataBinding?.editTextLocationFirstName?.text?.isEmpty()!!) {
@@ -174,7 +174,7 @@ class AccessLocationActivity :
                     mViewDataBinding?.editTextLocationFirstName?.requestFocus()
                     Toast.makeText(this,"this is toast message",Toast.LENGTH_SHORT).show()
                 } else {
-                    val intent = Intent(this,PushNotificationActivity::class.java)
+                    val intent = Intent(this,OnBoardingActivity::class.java)
                     startActivity(intent)
                     finish()
                 }

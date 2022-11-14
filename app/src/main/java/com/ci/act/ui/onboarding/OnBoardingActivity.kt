@@ -110,6 +110,12 @@ class OnBoardingActivity :
             startActivity(onBoard)
             finish()
         }
+        mViewDataBinding?.txtSkip?.setOnClickListener {
+            PreferenceHelper.getInstance().finishOnBoarding()
+            val onBoard1 = Intent(this, SocialMediaActivity::class.java)
+            startActivity(onBoard1)
+            finish()
+        }
 
     }
 }

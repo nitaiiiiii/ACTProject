@@ -5,16 +5,20 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.style.UnderlineSpan
+import androidx.navigation.Navigation
 import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivitySignInBinding
+import com.ci.act.prefrence.PreferenceHelper
 import com.ci.act.ui.authentication.forgotPassword.ForgotPasswordActivity
+import com.ci.act.ui.authentication.pushNotification.PushNotificationActivity
 import com.ci.act.ui.authentication.signup.SignUpActivity
 import com.ci.act.ui.authentication.socialMedia.SocialMediaActivity
 import com.ci.act.ui.customDialogFragments.cantAccessAccount.CantAccessAccountFragment
 import com.ci.act.ui.home.events.EventsActivity
 import com.ci.act.ui.home.myZeroRegisteredEvents.MyZeroRegisteredActivity
+import com.ci.act.util.showSnackBar
 
 
 class SignInActivity : BaseActivity<ActivitySignInBinding, SignInView, SignInViewModel>(),
@@ -105,9 +109,17 @@ class SignInActivity : BaseActivity<ActivitySignInBinding, SignInView, SignInVie
                 )
 
             } else {
-                val intent = Intent(this, MyZeroRegisteredActivity::class.java)
-                startActivity(intent)
-                finish()
+                showSuccessMessage("success...")
+                if(PreferenceHelper.getInstance().isPushNotificationFinished()) {
+                    val onBoard = Intent(this, MyZeroRegisteredActivity::class.java)
+                    startActivity(onBoard)
+                    finish()
+                } else {
+                    val onBoard1 = Intent(this,PushNotificationActivity::class.java)
+                    startActivity(onBoard1)
+                    finish()
+
+                }
             }
         }
     }

@@ -11,6 +11,8 @@ class PreferenceHelper private constructor() {
 
     private var userPrefs: SharedPreferences? = null
     private var appPrefs: SharedPreferences? = null
+    private var sharedPreferences: SharedPreferences = MyApplication.getApplicationContext().getSharedPreferences(PreferencesKeys.act, Context.MODE_PRIVATE)
+
 
     init {
 
@@ -32,6 +34,16 @@ class PreferenceHelper private constructor() {
             }
             return preferenceHelper!!
         }
+    }
+
+    fun isPushNotificationFinished() : Boolean {
+        return sharedPreferences.getBoolean(PreferencesKeys.pushNotifications.plus("Permanent"),  false)
+    }
+
+    fun finishPushNotification() {
+        val edit = sharedPreferences.edit()
+        edit.putBoolean(PreferencesKeys.pushNotifications.plus("Permanent"), true)
+        edit.apply()
     }
 
 

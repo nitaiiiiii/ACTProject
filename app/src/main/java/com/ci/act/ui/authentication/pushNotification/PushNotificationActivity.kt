@@ -2,10 +2,13 @@ package com.ci.act.ui.authentication.pushNotification
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.navigation.Navigation
 import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityPushNotificationBinding
+import com.ci.act.prefrence.PreferenceHelper
+import com.ci.act.ui.home.myZeroRegisteredEvents.MyZeroRegisteredActivity
 import com.ci.act.ui.onboarding.OnBoardingActivity
 
 class PushNotificationActivity :
@@ -26,11 +29,13 @@ class PushNotificationActivity :
 
     private fun setOnClickListener() {
         mViewDataBinding?.btnPushNotification?.setOnClickListener {
-            val intent = Intent(this, OnBoardingActivity::class.java)
-            startActivity(intent)
+            PreferenceHelper.getInstance().finishPushNotification()
+            val intent1 = Intent(this, MyZeroRegisteredActivity::class.java)
+            startActivity(intent1)
             finish()
         }
         mViewDataBinding?.txtSignInEmailSignUpScreen?.setOnClickListener {
+            PreferenceHelper.getInstance().finishPushNotification()
             val intent = Intent(this, OnBoardingActivity::class.java)
             startActivity(intent)
             finish()
