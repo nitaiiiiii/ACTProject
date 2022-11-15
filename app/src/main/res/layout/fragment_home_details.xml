@@ -51,7 +51,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextFirstName"
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
@@ -80,7 +80,7 @@
                 app:layout_constraintTop_toTopOf="@id/editTextPosition" />
 
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextPosition"
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
@@ -88,6 +88,8 @@
                 android:layout_marginTop="@dimen/dp10"
                 android:backgroundTint="@color/warmGreyTwo"
                 android:hint="Country"
+                android:cursorVisible="false"
+                android:focusable="false"
                 android:inputType="text"
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
@@ -99,7 +101,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/editTextFirstName" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextState"
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
@@ -118,7 +120,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/editTextPosition" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextCity"
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
@@ -137,7 +139,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/editTextState" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextCode"
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
@@ -145,6 +147,7 @@
                 android:layout_marginTop="@dimen/dp10"
                 android:backgroundTint="@color/warmGreyTwo"
                 android:hint="Zip Code"
+                android:maxLength="10"
                 android:inputType="number"
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
@@ -156,7 +159,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/editTextCity" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextCoder"
                 style="@style/large_text"
                 android:layout_width="@dimen/dp0"
@@ -165,6 +168,7 @@
                 android:backgroundTint="@color/warmGreyTwo"
                 android:hint="Home Phone"
                 android:inputType="number"
+                android:maxLength="14"
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
                 android:paddingEnd="@dimen/dp0"
