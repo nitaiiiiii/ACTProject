@@ -91,38 +91,9 @@ class PersonalDetailsFragment :
 
     private fun setTextWatchers() {
         mViewDataBinding?.editTextMobileNumber?.addTextChangedListener(com.ci.act.util.PhoneNumberFormattingTextWatcher(mViewDataBinding?.editTextMobileNumber, null))
+        mViewDataBinding?.editTextPolicyNumber?.addTextChangedListener(com.ci.act.util.PhoneNumberFormattingTextWatcher(mViewDataBinding?.editTextPolicyNumber, null))
 
-        mViewDataBinding?.editTextPolicyNumber?.addTextChangedListener(object : TextWatcher {
 
-            var keyDel :Int?= null
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                mViewDataBinding?.editTextPolicyNumber?.setOnKeyListener(object : View.OnKeyListener {
-                    override fun onKey(v: View?, keyCode: Int, event: KeyEvent?): Boolean {
-                        if (keyCode == KeyEvent.KEYCODE_DEL) keyDel = 1
-                        return false
-                    }
-                })
-
-                if (keyDel == 0) {
-                    val len: Int = mViewDataBinding?.editTextPolicyNumber?.text?.length!!
-                    if (len == 3 || len == 6) {
-                        mViewDataBinding?.editTextPolicyNumber?.setText(mViewDataBinding?.editTextPolicyNumber?.text.toString() + "-")
-                        mViewDataBinding?.editTextPolicyNumber?.setSelection(mViewDataBinding?.editTextPolicyNumber?.text?.length!!)
-                    }
-                } else {
-                    keyDel = 0
-                }
-//                if(abs(count - before) == 1){
-//                    mViewDataBinding?.etPolicy?.setText(policyNumberFormat(s?.trim().toString()))
-//                }
-//                mViewDataBinding?.etPolicy?.setSelection(mViewDataBinding?.etPolicy?.text?.length!!)
-            }
-
-            override fun afterTextChanged(s: Editable?) {}
-        })
     }
 
     private fun policyNumberFormat(policy: String): String {
