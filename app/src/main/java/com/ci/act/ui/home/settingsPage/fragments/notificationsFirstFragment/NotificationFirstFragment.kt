@@ -137,5 +137,8 @@ class NotificationFirstFragment :
         }
     }
 
+    override fun addObservables() {
+            }
+
 
 }

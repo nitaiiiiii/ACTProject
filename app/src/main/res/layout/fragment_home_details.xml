@@ -14,7 +14,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:background="@color/white">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -87,7 +88,7 @@
                 android:layout_marginTop="@dimen/dp10"
                 android:backgroundTint="@color/warmGreyTwo"
                 android:hint="Country"
-                android:inputType="number"
+                android:inputType="text"
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
                 android:paddingEnd="@dimen/dp0"
@@ -106,7 +107,7 @@
                 android:layout_marginTop="@dimen/dp10"
                 android:backgroundTint="@color/warmGreyTwo"
                 android:hint="State"
-                android:inputType="number"
+                android:inputType="text"
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
                 android:paddingEnd="@dimen/dp0"
@@ -125,7 +126,7 @@
                 android:layout_marginTop="@dimen/dp10"
                 android:backgroundTint="@color/warmGreyTwo"
                 android:hint="City"
-                android:inputType="number"
+                android:inputType="text"
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
                 android:paddingEnd="@dimen/dp0"
@@ -162,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
                 android:backgroundTint="@color/warmGreyTwo"
-                android:hint="Zip Code"
+                android:hint="Home Phone"
                 android:inputType="number"
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"

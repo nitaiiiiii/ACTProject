@@ -60,5 +60,9 @@ class OnBoardingScreensFragment :
         )
     }
 
+    override fun addObservables() {
+
+    }
+
 
 }

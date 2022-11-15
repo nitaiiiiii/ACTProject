@@ -10,6 +10,7 @@ import com.ci.act.ui.home.mainEventScreenRegister.Communicator
 import com.ci.act.ui.home.mainEventScreenRegister.fragments.guardianApproval.GuardianApprovalFragment
 import com.ci.act.ui.home.mainEventScreenRegister.fragments.personalDetails.PersonalDetailsFragment
 import com.ci.act.ui.home.mainEventScreenRegister.fragments.schoolDetails.SchoolDetailsFragment
+import com.ci.act.util.showSnackBar
 
 class HomeDetailsFragment :
     BaseDialogFragmentNew<FragmentHomeDetailsBinding, HomeDetailsView, HomeDetailsViewModel>(),
@@ -33,9 +34,32 @@ class HomeDetailsFragment :
 
     private fun setOnClickListener() {
         mViewDataBinding?.btnSignatureBox?.setOnClickListener {
-            val guardianApprovalFragment = GuardianApprovalFragment()
-            communicator.loadFragments(guardianApprovalFragment, true, 4)
+            validatePersonalDetails()
         }
+    }
+
+    private fun validatePersonalDetails() {
+        mViewDataBinding?.btnSignatureBox?.setOnClickListener {
+            if (mViewDataBinding?.editTextFirstName?.text?.isEmpty() == true) {
+                mViewDataBinding?.editTextFirstName?.requestFocus()
+                showSnackBar(requireView(), "School name is required...", false)
+            }  else if (mViewDataBinding?.editTextState?.text?.isEmpty() == true) {
+                showSnackBar(requireView(), "State is required...", false)
+
+            } else if (mViewDataBinding?.editTextCity?.text?.isEmpty() == true) {
+                showSnackBar(requireView(), "City is required...", false)
+
+            } else if (mViewDataBinding?.editTextCode?.text?.isEmpty() == true) {
+                showSnackBar(requireView(), "Zip Code is required...", false)
+
+            }  else if (mViewDataBinding?.editTextCoder?.text?.isEmpty() == true) {
+                showSnackBar(requireView(), "Home Phone is required...", false)
+
+            }  else {
+                val guardianApprovalFragment = GuardianApprovalFragment()
+                communicator.loadFragments(guardianApprovalFragment, true, 4)            }
+        }
+
     }
 
 

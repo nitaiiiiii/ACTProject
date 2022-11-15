@@ -11,160 +11,178 @@
 
     </data>
 
-    <ScrollView
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/mainDrawerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="false">
+        tools:openDrawer="end">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:context=".ui.home.liveEvents.LiveEventsActivity">
+            android:layout_height="match_parent"
+            android:fillViewport="false">
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideLineLeft"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.03" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideLineRight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.97" />
-
-            <com.ci.act.widgets.CustomTextView
-                android:id="@+id/txtEvents"
-                style="@style/extra_large_text_bold"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/shape_edit_text_settings_email_and_password"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:maxLines="1"
-                android:padding="@dimen/dp20"
-                android:text="EVENTS"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toTopOf="@id/imgPlayerEvent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                tools:context=".ui.home.liveEvents.LiveEventsActivity">
 
-            <ImageView
-                android:id="@+id/liveEvents"
-                android:layout_width="@dimen/dp40"
-                android:layout_height="@dimen/dp40"
-                android:src="@drawable/live"
-                app:layout_constraintBottom_toBottomOf="@id/txtEvents"
-                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toTopOf="@id/txtEvents" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLineLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.03" />
 
-            <com.ci.act.widgets.CustomTextView
-                android:id="@+id/txtLiveEvents"
-                style="@style/medium_text_bold"
-                android:layout_width="@dimen/dp0"
-                android:layout_height="wrap_content"
-                android:text="Live"
-                android:textColor="@color/ruby_red"
-                app:layout_constraintBottom_toBottomOf="@id/liveEvents"
-                app:layout_constraintStart_toEndOf="@id/liveEvents"
-                app:layout_constraintTop_toTopOf="@id/liveEvents" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLineRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.97" />
 
-            <ImageView
-                android:id="@+id/imgEvents"
-                android:layout_width="@dimen/dp35"
-                android:layout_height="@dimen/dp35"
-                android:layout_marginTop="1dp"
-                android:src="@drawable/icons_menu_24"
-                app:layout_constraintBottom_toBottomOf="@id/txtEvents"
-                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
-                app:layout_constraintTop_toTopOf="@id/txtEvents" />
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/txtEvents"
+                    style="@style/extra_large_text_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edit_text_settings_email_and_password"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp20"
+                    android:text="EVENTS"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@id/imgPlayerEvent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imgPlayerEvent"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp230"
-                android:layout_marginTop="1dp"
-                android:background="@drawable/soccercamp"
-                app:layout_constraintBottom_toTopOf="@id/rvLiveEvents"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtEvents" />
+                <ImageView
+                    android:id="@+id/liveEvents"
+                    android:layout_width="@dimen/dp40"
+                    android:layout_height="@dimen/dp40"
+                    android:src="@drawable/live"
+                    app:layout_constraintBottom_toBottomOf="@id/txtEvents"
+                    app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                    app:layout_constraintTop_toTopOf="@id/txtEvents" />
 
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/txtLiveEvents"
+                    style="@style/medium_text_bold"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:text="Live"
+                    android:textColor="@color/ruby_red"
+                    app:layout_constraintBottom_toBottomOf="@id/liveEvents"
+                    app:layout_constraintStart_toEndOf="@id/liveEvents"
+                    app:layout_constraintTop_toTopOf="@id/liveEvents" />
 
-            <com.ci.act.widgets.CustomTextView
-                android:id="@+id/txtMainEventName"
-                style="@style/extra_lato_semi_boldr1"
-                android:layout_width="@dimen/dp0"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp10"
-                android:text="FOOTBALL EVENT"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toTopOf="@id/imgDateLocation"
-                app:layout_constraintEnd_toEndOf="@id/txtEventsLocation"
-                app:layout_constraintStart_toStartOf="@id/imgDateLocation" />
+                <ImageView
+                    android:id="@+id/imgEvents"
+                    android:layout_width="@dimen/dp35"
+                    android:layout_height="@dimen/dp35"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/icons_menu_24"
+                    app:layout_constraintBottom_toBottomOf="@id/txtEvents"
+                    app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                    app:layout_constraintTop_toTopOf="@id/txtEvents" />
 
-            <ImageView
-                android:id="@+id/imgDateEvents"
-                android:layout_width="@dimen/dp65"
-                android:layout_height="@dimen/dp65"
-                android:layout_marginTop="1dp"
-                android:src="@drawable/days_to_go"
-                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
-                app:layout_constraintTop_toTopOf="@id/imgPlayerEvent" />
-
-            <ImageView
-                android:id="@+id/imgDateLocation"
-                android:layout_width="@dimen/dp25"
-                android:layout_height="@dimen/dp25"
-                android:layout_margin="@dimen/dp10"
-                android:src="@drawable/location_on"
-                app:layout_constraintBottom_toBottomOf="@id/txtEventsLocation"
-                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toTopOf="@id/txtEventsLocation" />
-
-            <com.ci.act.widgets.CustomTextView
-                android:id="@+id/txtEventsLocation"
-                style="@style/medium_text"
-                android:layout_width="@dimen/dp0"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="2"
-                android:paddingStart="@dimen/dp5"
-                android:text="Preuss School UCSD, 9500\nGilman DR., La Jolla, California 92093"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="@id/btnLiveEvents"
-                app:layout_constraintEnd_toStartOf="@id/btnLiveEvents"
-                app:layout_constraintStart_toEndOf="@id/imgDateLocation"
-                app:layout_constraintTop_toTopOf="@id/btnLiveEvents" />
-
-            <com.ci.act.widgets.CustomButton
-                android:id="@+id/btnLiveEvents"
-                style="@style/large_bebas_bold"
-                android:layout_width="@dimen/dp120"
-                android:layout_height="@dimen/dp40"
-                android:layout_marginTop="@dimen/dp60"
-                android:layout_marginBottom="@dimen/dp20"
-                android:background="@drawable/orange_freelance"
-                android:text="DETAILS"
-                android:textColor="@color/ruby_red"
-                app:layout_constraintBottom_toBottomOf="@id/imgPlayerEvent"
-                app:layout_constraintEnd_toEndOf="@id/guideLineRight" />
+                <ImageView
+                    android:id="@+id/imgPlayerEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp230"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/soccercamp"
+                    app:layout_constraintBottom_toTopOf="@id/rvLiveEvents"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtEvents" />
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvLiveEvents"
-                android:layout_width="@dimen/dp0"
-                android:layout_height="wrap_content"
-                android:nestedScrollingEnabled="false"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
-                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toBottomOf="@id/imgPlayerEvent" />
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/txtMainEventName"
+                    style="@style/extra_lato_semi_boldr1"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:text="FOOTBALL EVENT"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@id/imgDateLocation"
+                    app:layout_constraintEnd_toEndOf="@id/txtEventsLocation"
+                    app:layout_constraintStart_toStartOf="@id/imgDateLocation" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:id="@+id/imgDateEvents"
+                    android:layout_width="@dimen/dp65"
+                    android:layout_height="@dimen/dp65"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/days_to_go"
+                    app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                    app:layout_constraintTop_toTopOf="@id/imgPlayerEvent" />
 
-    </ScrollView>
+                <ImageView
+                    android:id="@+id/imgDateLocation"
+                    android:layout_width="@dimen/dp25"
+                    android:layout_height="@dimen/dp25"
+                    android:layout_margin="@dimen/dp10"
+                    android:src="@drawable/location_on"
+                    app:layout_constraintBottom_toBottomOf="@id/txtEventsLocation"
+                    app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                    app:layout_constraintTop_toTopOf="@id/txtEventsLocation" />
+
+                <com.ci.act.widgets.CustomTextView
+                    android:id="@+id/txtEventsLocation"
+                    style="@style/medium_text"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingStart="@dimen/dp5"
+                    android:text="Preuss School UCSD, 9500\nGilman DR., La Jolla, California 92093"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/btnLiveEvents"
+                    app:layout_constraintEnd_toStartOf="@id/btnLiveEvents"
+                    app:layout_constraintStart_toEndOf="@id/imgDateLocation"
+                    app:layout_constraintTop_toTopOf="@id/btnLiveEvents" />
+
+                <com.ci.act.widgets.CustomButton
+                    android:id="@+id/btnLiveEvents"
+                    style="@style/large_bebas_bold"
+                    android:layout_width="@dimen/dp120"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_marginTop="@dimen/dp60"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:background="@drawable/orange_freelance"
+                    android:text="DETAILS"
+                    android:textColor="@color/ruby_red"
+                    app:layout_constraintBottom_toBottomOf="@id/imgPlayerEvent"
+                    app:layout_constraintEnd_toEndOf="@id/guideLineRight" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLiveEvents"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guideLineRight"
+                    app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+                    app:layout_constraintTop_toBottomOf="@id/imgPlayerEvent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/nav_menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
 </layout>

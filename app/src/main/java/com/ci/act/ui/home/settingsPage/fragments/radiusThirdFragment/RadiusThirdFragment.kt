@@ -67,4 +67,8 @@ class RadiusThirdFragment :
         })
     }
 
+    override fun addObservables() {
+
+    }
+
 }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseDialogFragmentNew
@@ -47,7 +48,23 @@ class PersonalDetailsFragment :
     }
 
     private fun setOnClickListener() {
+        mViewDataBinding?.btnMale?.setOnClickListener {
+            mViewDataBinding?.btnMale?.setBackgroundResource(R.drawable.btn_round_background)
+            mViewDataBinding?.btnMale?.setTextColor(ContextCompat.getColor(requireContext(), R.color.textColor))
+            mViewDataBinding?.btnMale!!.compoundDrawables[0].setTint(ContextCompat.getColor(requireContext(), R.color.textColor))
+            mViewDataBinding?.btnFemale?.setBackgroundResource(R.drawable.shape_btn_outline)
+            mViewDataBinding?.btnFemale?.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
+            mViewDataBinding?.btnFemale!!.compoundDrawables[0].setTint(ContextCompat.getColor(requireContext(), R.color.black))
+        }
 
+        mViewDataBinding?.btnFemale?.setOnClickListener {
+            mViewDataBinding?.btnFemale?.setBackgroundResource(R.drawable.btn_round_background)
+            mViewDataBinding?.btnFemale?.setTextColor(ContextCompat.getColor(requireContext(), R.color.textColor))
+            mViewDataBinding?.btnFemale!!.compoundDrawables[0].setTint(ContextCompat.getColor(requireContext(), R.color.textColor))
+            mViewDataBinding?.btnMale?.setBackgroundResource(R.drawable.shape_btn_outline)
+            mViewDataBinding?.btnMale?.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
+            mViewDataBinding?.btnMale!!.compoundDrawables[0].setTint(ContextCompat.getColor(requireContext(), R.color.black))
+        }
     }
 
     private fun validatePersonalDetails() {
@@ -93,6 +110,7 @@ class PersonalDetailsFragment :
                 communicator.loadFragments(schoolDetails, true, 2)
             }
         }
+
     }
 
 

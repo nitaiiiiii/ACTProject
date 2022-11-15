@@ -9,6 +9,7 @@ import com.ci.act.databinding.FragmentSchoolDetailsBinding
 import com.ci.act.ui.home.mainEventScreenRegister.Communicator
 import com.ci.act.ui.home.mainEventScreenRegister.fragments.guardianApproval.GuardianApprovalFragment
 import com.ci.act.ui.home.mainEventScreenRegister.fragments.homeDetails.HomeDetailsFragment
+import com.ci.act.util.showSnackBar
 
 
 class SchoolDetailsFragment :
@@ -35,12 +36,38 @@ class SchoolDetailsFragment :
 
     private fun setOnClickListener() {
         mViewDataBinding?.btnSign?.setOnClickListener {
-            val homeDetailsFragment = HomeDetailsFragment()
-            communicator.loadFragments(homeDetailsFragment, true, 3)
+          validatePersonalDetails()
         }
 
 
     }
+
+    private fun validatePersonalDetails() {
+        mViewDataBinding?.btnSign?.setOnClickListener {
+            if (mViewDataBinding?.editTextFirstName?.text?.isEmpty() == true) {
+                mViewDataBinding?.editTextFirstName?.requestFocus()
+                showSnackBar(requireView(), "School name is required...", false)
+            } else if (mViewDataBinding?.editTextLastName?.text?.isEmpty() == true) {
+                mViewDataBinding?.editTextLastName?.requestFocus()
+                showSnackBar(requireView(), "Grade is required...", false)
+
+            } else if (mViewDataBinding?.editTextState?.text?.isEmpty() == true) {
+                showSnackBar(requireView(), "State is required...", false)
+
+            } else if (mViewDataBinding?.editTextState?.text?.isEmpty() == true) {
+                showSnackBar(requireView(), "City is required...", false)
+
+            } else if (mViewDataBinding?.editTextState?.text?.isEmpty() == true) {
+                showSnackBar(requireView(), "Zip Code is required...", false)
+
+            }  else {
+                val homeDetailsFragment = HomeDetailsFragment()
+                communicator.loadFragments(homeDetailsFragment, true, 3)
+            }
+        }
+
+    }
+
 
     override fun addObservables() {
     }

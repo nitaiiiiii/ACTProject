@@ -137,4 +137,7 @@ dependencies {
     //navigation components
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.4'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.4'
+
+    //signature
+    implementation 'com.kyanogen.signatureview:signature-view:1.2'
 }

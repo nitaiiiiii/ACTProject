@@ -33,6 +33,7 @@ abstract class BaseFragment<T : ViewDataBinding, N : BaseNavigator, V : BaseView
         super.onViewCreated(view, savedInstanceState)
         initViews(savedInstanceState)
         addObservers()
+        addObservables()
     }
 
 
@@ -146,4 +147,6 @@ abstract class BaseFragment<T : ViewDataBinding, N : BaseNavigator, V : BaseView
         mViewModel?.clearCalls()
         super.onDestroy()
     }
+
+    abstract fun addObservables()
 }
