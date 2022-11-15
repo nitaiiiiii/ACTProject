@@ -94,7 +94,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/txtEditNameProfile" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editProfileTextFirstName"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/viewEditProfile" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editProfileTextLastName"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
@@ -148,8 +148,8 @@
                 android:layout_width="@dimen/dp150"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
-                android:background="@drawable/rounded_button"
-                android:drawableStart="@drawable/ic_baseline_person_24"
+                android:background="@drawable/btn_round_background"
+                android:drawableStart="@drawable/ic_person_gender"
                 android:paddingStart="@dimen/dp10"
                 android:paddingEnd="@dimen/dp0"
                 android:text="MALE"
@@ -164,8 +164,8 @@
                 android:layout_width="@dimen/dp150"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
-                android:background="@drawable/shape_edit_text_settings_email_and_password"
-                android:drawableStart="@drawable/ic_baseline_female_24"
+                android:background="@drawable/shape_btn_outline"
+                android:drawableStart="@drawable/ic_person_gender_f"
                 android:paddingStart="@dimen/dp10"
                 android:paddingEnd="@dimen/dp0"
                 android:text="FEMALE"
@@ -174,7 +174,7 @@
                 app:layout_constraintStart_toEndOf="@id/btnEditProfileMale"
                 app:layout_constraintTop_toBottomOf="@id/txtEditProfileGender" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextProfileDateOfBirth"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
@@ -201,7 +201,7 @@
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintTop_toTopOf="@id/editTextProfileDateOfBirth" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editProfileTextInsuranceCompany"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
@@ -219,7 +219,7 @@
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/editTextProfileDateOfBirth" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editProfilerTextGrade"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
@@ -246,7 +246,7 @@
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintTop_toTopOf="@id/editTextProfileYear" />
 
-            <EditText
+            <com.ci.act.widgets.CustomEditText
                 android:id="@+id/editTextProfileYear"
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
@@ -256,6 +256,8 @@
                 android:inputType="textEmailAddress"
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
+                android:cursorVisible="false"
+                android:focusable="false"
                 android:textColor="@color/warmGreyTwo"
                 android:textColorHint="@color/warmGreyTwo"
                 android:textCursorDrawable="@null"

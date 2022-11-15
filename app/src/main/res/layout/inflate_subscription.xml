@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/_10dp"
-        app:cardCornerRadius="@dimen/dp5">
+        app:cardCornerRadius="@dimen/dp25">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -28,7 +28,8 @@
                     android:id="@+id/premiumSubscription"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:visibility="gone">
+                    android:visibility="gone"
+                    >
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/mainCardSubscription"
@@ -120,11 +121,11 @@
 
                     <ImageView
                         android:id="@+id/imgTickCorrect"
-                        android:layout_width="@dimen/dp0"
-                        android:layout_height="wrap_content"
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp25"
                         android:layout_marginTop="@dimen/dp20"
                         android:padding="@dimen/dp5"
-                        android:src="@drawable/ic_baseline_check_24"
+                        android:src="@drawable/image"
                         app:layout_constraintBottom_toBottomOf="@id/txtNationalRanking"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/mainCardSubscription" />
@@ -143,11 +144,11 @@
 
                     <ImageView
                         android:id="@+id/imgAccessTickCorrect"
-                        android:layout_width="@dimen/dp0"
-                        android:layout_height="wrap_content"
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp25"
                         android:layout_marginTop="@dimen/dp5"
                         android:padding="@dimen/dp5"
-                        android:src="@drawable/ic_baseline_check_24"
+                        android:src="@drawable/image"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/imgTickCorrect" />
 
@@ -202,11 +203,11 @@
 
                     <ImageView
                         android:id="@+id/imgUpdatedTickCorrect"
-                        android:layout_width="@dimen/dp0"
-                        android:layout_height="wrap_content"
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp25"
                         android:layout_marginTop="@dimen/dp5"
                         android:padding="@dimen/dp5"
-                        android:src="@drawable/ic_baseline_check_24"
+                        android:src="@drawable/image"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/txtRecruiting" />
 
@@ -247,10 +248,10 @@
 
                     <ImageView
                         android:id="@+id/imgLeaderSubscription"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp25"
                         android:padding="@dimen/dp5"
-                        android:src="@drawable/ic_baseline_check_24"
+                        android:src="@drawable/image"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/txtNationalRankingTesting" />
 
@@ -288,7 +289,8 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/platinumSubscription"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    >
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -307,6 +309,7 @@
                             app:layout_constraintTop_toTopOf="parent">
 
                             <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/mainViewConstraint"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
