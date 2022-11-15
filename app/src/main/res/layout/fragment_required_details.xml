@@ -103,6 +103,8 @@
                 android:hint="Date Of Birth"
                 android:imeOptions="actionDone"
                 android:inputType="date"
+                android:cursorVisible="false"
+                android:focusable="false"
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
                 android:textColor="@color/warmGreyTwo"
