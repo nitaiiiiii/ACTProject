@@ -1,5 +1,6 @@
 package com.ci.act.ui.editProfile
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,12 +23,17 @@ import com.ci.act.ui.home.mainEventScreenRegister.fragments.personalDetails.mode
 import com.ci.act.widgets.CustomEditText
 import com.ci.act.widgets.CustomTextView
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import java.util.*
+import kotlin.collections.ArrayList
 
 class EditProfileActivity :
     BaseActivity<ActivityEditProfileBinding, EditProfileView, EditProfileViewModel>(),
     EditProfileView {
     private var bottomSheetDialog: BottomSheetDialog? = null
     private val graduationArray: ArrayList<BottomSheetModel> = ArrayList()
+    var calendarDay = 0
+    var calendarMonth = 0
+    var calendarYear = 0
 
     override fun getContentView(): Int = R.layout.activity_edit_profile
 
@@ -56,6 +62,10 @@ class EditProfileActivity :
 
         mViewDataBinding?.editTextProfileYear?.setOnClickListener {
             showGraduationListBottomSheet(mViewDataBinding?.editTextProfileYear!!)
+        }
+
+        mViewDataBinding?.editTextProfileDateOfBirth?.setOnClickListener {
+            getDateTimeCalender()
         }
 
         mViewDataBinding?.txtDeleteMyAccount?.setOnClickListener {
@@ -161,6 +171,42 @@ class EditProfileActivity :
         return 0
     }
 
+    private fun getDateTimeCalender() {
+        val calendar = Calendar.getInstance()
+        calendarDay = calendar.get(Calendar.DAY_OF_MONTH)
+        calendarMonth = calendar.get(Calendar.MONTH)
+        calendarYear = calendar.get(Calendar.YEAR)
+
+        val datePickerDialog = DatePickerDialog(
+            this,
+            R.style.DatePickerTheme_Dark,
+            DatePickerDialog.OnDateSetListener { view, year, month, day ->
+                val month = month + 1
+                var sMonth = ""
+                var sDay = ""
+                sMonth = if (month < 10) {
+                    "0$month"
+                } else {
+                    month.toString()
+                }
+                sDay = if (day < 10) {
+                    "0$day"
+                } else {
+                    day.toString()
+                }
+                val date = "$sMonth/$sDay/$year"
+                mViewDataBinding?.editTextProfileDateOfBirth?.setText(date)
+            },
+            calendarYear,
+            calendarMonth,
+            calendarDay
+        ).let {
+            it.show()
+            it.setTitle("Date of Birth")
+            it.setMessage("Date of Birth")
+            it.datePicker.maxDate = System.currentTimeMillis()
+        }
+    }
 
 
 }

@@ -184,6 +184,8 @@
                 android:inputType="date"
                 android:padding="@dimen/dp15"
                 android:paddingStart="@dimen/dp5"
+                android:cursorVisible="false"
+                android:focusable="false"
                 android:textColor="@color/warmGreyTwo"
                 android:textColorHint="@color/warmGreyTwo"
                 android:textCursorDrawable="@null"
