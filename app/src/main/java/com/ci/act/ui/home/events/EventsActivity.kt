@@ -7,24 +7,18 @@ import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityEventsBinding
-import com.ci.act.ui.authentication.signin.SignInActivity
-import com.ci.act.ui.customDialogFragments.cantAccessAccount.CantAccessAccountFragment
-import com.ci.act.ui.customDialogFragments.permanentDelete.PermanentDeleteFragment
 import com.ci.act.ui.customDialogFragments.signOut.SignOutFragment
-import com.ci.act.ui.editProfile.EditProfileActivity
 import com.ci.act.ui.home.aboutUs.AboutUsActivity
 import com.ci.act.ui.home.contactUs.ContactUsActivity
 import com.ci.act.ui.home.faqEmpty.FaqEmptyActivity
 import com.ci.act.ui.home.liveEvents.LiveEventsActivity
 import com.ci.act.ui.home.myProfile.MyProfileActivity
 import com.ci.act.ui.home.myRegisteredEvents.MyRegisteredActivity
+import com.ci.act.ui.home.notifications.activity.NotificationActivity
 import com.ci.act.ui.home.sendLog.SendLogActivity
 import com.ci.act.ui.home.settingsPage.SettingsPageActivity
-import com.ci.act.ui.home.settingsPage.SettingsPageView
-import com.ci.act.ui.home.sportsBoard.SportsBoardActivity
 import com.ci.act.ui.home.subscriptions.SubscriptionActivity
 import com.ci.act.ui.invoice.InvoicesActivity
-import com.ci.act.ui.listInvoices.ListInvoicesActivity
 
 class EventsActivity : BaseActivity<ActivityEventsBinding, EventsView, EventsViewModel>(),
     EventsView {
@@ -102,6 +96,10 @@ class EventsActivity : BaseActivity<ActivityEventsBinding, EventsView, EventsVie
                     startActivity(intent)
                 }
                 R.id.events8 -> {
+
+                    val intent = Intent(this, NotificationActivity::class.java)
+                    startActivity(intent)
+//                    supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer,NotificationsFragment()).commit()
                 }
                 R.id.events9 -> {
                     val intent = Intent(this, SettingsPageActivity::class.java)
