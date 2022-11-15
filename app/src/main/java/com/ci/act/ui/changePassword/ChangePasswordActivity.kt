@@ -29,6 +29,7 @@ class ChangePasswordActivity :
         mViewDataBinding?.imgPasswordChange?.setOnClickListener {
             val intent = Intent(this,EditProfileActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 
