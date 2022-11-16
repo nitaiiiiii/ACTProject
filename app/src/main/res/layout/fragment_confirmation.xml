@@ -19,7 +19,6 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#F0F0F0"
             tools:context=".ui.customDialogFragments.confirmation.ConfirmationFragment">
 
             <androidx.constraintlayout.widget.Guideline
@@ -62,7 +61,7 @@
                 android:gravity="center"
                 android:maxLines="2"
                 android:text="You have entered a correct email\nAddress? If not please update here."
-                android:textColor="#5E5E5E"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/txtRequiredDetails" />
@@ -72,7 +71,7 @@
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
-                android:backgroundTint="@color/warmGreyTwo"
+                android:backgroundTint="@color/black"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:padding="@dimen/dp15"
@@ -95,7 +94,7 @@
                 android:maxLines="3"
                 android:padding="@dimen/dp5"
                 android:text="We'll send an activation email to the\nabove email address, so make sure\nentered email is correct."
-                android:textColor="#5E5E5E"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/editTextRequiredDetailsEmail" />
@@ -103,12 +102,15 @@
             <com.ci.act.widgets.CustomButton
                 android:id="@+id/btnRequiredLocation"
                 style="@style/extra_large_text_semi_bold"
-                android:layout_width="@dimen/dp280"
-                android:layout_height="@dimen/dp70"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp40"
                 android:layout_marginTop="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp40"
+                android:layout_marginBottom="@dimen/dp20"
                 android:background="@drawable/rounded_button"
                 android:text="Submit"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/txtFillSure" />
@@ -119,7 +121,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp30"
-                android:background="@drawable/shape_edit_text_settings_email_and_password"
                 android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="1"

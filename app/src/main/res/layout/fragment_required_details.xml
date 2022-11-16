@@ -19,7 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#F0F0F0"
+            android:background="@color/dialog_bg"
             tools:context=".ui.customDialogFragments.requiredDetails.RequiredDetailsFragment">
 
             <androidx.constraintlayout.widget.Guideline
@@ -81,7 +81,7 @@
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
-                android:backgroundTint="@color/warmGreyTwo"
+                android:backgroundTint="@color/black"
                 android:hint="Email Address"
                 android:imeOptions="actionNext"
                 android:inputType="textEmailAddress"
@@ -99,7 +99,7 @@
                 android:layout_width="@dimen/dp0"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
-                android:backgroundTint="@color/warmGreyTwo"
+                android:backgroundTint="@color/black"
                 android:hint="Date Of Birth"
                 android:imeOptions="actionDone"
                 android:inputType="date"
@@ -119,6 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp10"
+                app:tint="@color/black"
                 android:src="@drawable/ic_calendar_month"
                 app:layout_constraintBottom_toBottomOf="@id/editTextRequiredDetailsDateOfBirth"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
@@ -133,7 +134,7 @@
                 android:layout_marginBottom="@dimen/dp50"
                 android:background="@drawable/rounded_button"
                 android:text="Submit"
-                android:textColor="@color/white"
+                android:textColor="@color/textColor"
                 app:layout_constraintBottom_toTopOf="@id/txtRequiredDetailsAccess"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -145,7 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp30"
-                android:background="@drawable/shape_edit_text_settings_email_and_password"
+                android:backgroundTint="@color/black"
                 android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="1"
