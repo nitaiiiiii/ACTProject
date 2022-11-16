@@ -73,7 +73,7 @@
                     android:layout_width="@dimen/dp0"
                     android:layout_height="wrap_content"
                     android:text="Live"
-                    android:textColor="@color/ruby_red"
+                    android:textColor="@color/mainColor"
                     app:layout_constraintBottom_toBottomOf="@id/liveEvents"
                     app:layout_constraintStart_toEndOf="@id/liveEvents"
                     app:layout_constraintTop_toTopOf="@id/liveEvents" />
@@ -107,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp10"
                     android:text="FOOTBALL EVENT"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textColor1"
                     app:layout_constraintBottom_toTopOf="@id/imgDateLocation"
                     app:layout_constraintEnd_toEndOf="@id/txtEventsLocation"
                     app:layout_constraintStart_toStartOf="@id/imgDateLocation" />
@@ -140,7 +140,7 @@
                     android:maxLines="2"
                     android:paddingStart="@dimen/dp5"
                     android:text="Preuss School UCSD, 9500\nGilman DR., La Jolla, California 92093"
-                    android:textColor="@color/white"
+                    android:textColor="@color/textColor1"
                     app:layout_constraintBottom_toBottomOf="@id/btnLiveEvents"
                     app:layout_constraintEnd_toStartOf="@id/btnLiveEvents"
                     app:layout_constraintStart_toEndOf="@id/imgDateLocation"
@@ -154,8 +154,9 @@
                     android:layout_marginTop="@dimen/dp60"
                     android:layout_marginBottom="@dimen/dp20"
                     android:background="@drawable/orange_freelance"
+                    android:backgroundTint="@color/white"
                     android:text="DETAILS"
-                    android:textColor="@color/ruby_red"
+                    android:textColor="@color/mainColor"
                     app:layout_constraintBottom_toBottomOf="@id/imgPlayerEvent"
                     app:layout_constraintEnd_toEndOf="@id/guideLineRight" />
 

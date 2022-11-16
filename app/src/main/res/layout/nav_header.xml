@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/ruby_red"
+    android:background="@drawable/splash"
 
     android:orientation="vertical">
 
@@ -25,7 +25,7 @@
         android:layout_marginStart="@dimen/dp10"
         android:maxLines="1"
         android:text="MARK JOHNSON"
-        android:textColor="@color/white"
+        android:textColor="@color/textColor1"
         app:layout_constraintBottom_toTopOf="@id/txtHeaderProfileEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/imgHeaderProfile"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:maxLines="1"
         android:text="markj@gmail.com"
-        android:textColor="@color/white"
+        android:textColor="@color/textColor1"
         app:layout_constraintBottom_toBottomOf="@id/imgHeaderProfile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/txtHeaderProfileName"

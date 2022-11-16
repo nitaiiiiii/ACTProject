@@ -69,7 +69,7 @@
             android:maxLines="3"
             android:paddingStart="@dimen/dp5"
             android:text="Preuss School UCSD, 9500 Gilman DR., La Jolla, California 92093"
-            android:textColor="@color/warmGreyTwo"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@id/imgUpcomingInflateLocation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imgUpcomingInflateLocation"

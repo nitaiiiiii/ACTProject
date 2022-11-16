@@ -20,6 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2."
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/imgSportsBoardKing"
         app:layout_constraintEnd_toEndOf="@id/imgSportsBoardKing"
         app:layout_constraintStart_toStartOf="@id/imgSportsBoardKing"
@@ -74,6 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/dp10"
         android:text="9:35"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/txtSportsBoardB17"
         app:layout_constraintEnd_toStartOf="@id/txtSportsBoardB17"
         app:layout_constraintTop_toTopOf="@id/txtSportsBoardB17" />

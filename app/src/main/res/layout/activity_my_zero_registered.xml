@@ -14,6 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/dialog_bg"
         tools:context=".ui.home.myZeroRegisteredEvents.MyZeroRegisteredActivity">
 
         <androidx.constraintlayout.widget.Guideline
@@ -101,15 +102,22 @@
 
         <com.ci.act.widgets.CustomButton
             android:id="@+id/btnZeroRegistered"
-            style="@style/extra_large_text_semi_bold"
-            android:layout_width="@dimen/dp280"
-            android:layout_height="@dimen/dp70"
+            style="@style/large_text_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp40"
             android:layout_marginTop="@dimen/dp30"
-            android:background="@drawable/rounded_button"
-            android:text="View Upcoming Events"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
-            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            android:layout_marginEnd="@dimen/dp40"
+            android:layout_marginBottom="@dimen/dp30"
+            android:background="@drawable/btn_round_background"
+            android:backgroundTint="@color/mainBtnColor"
+            android:padding="@dimen/dp10"
+            android:text="View My Events"
+            android:textAllCaps="false"
+            android:textColor="@color/textColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txtZeroRegisteredFillEvents" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

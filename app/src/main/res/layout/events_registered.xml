@@ -47,7 +47,7 @@
             android:layout_marginTop="@dimen/dp20"
             android:gravity="center_horizontal"
             android:text="2\nDAYS"
-            android:textColor="@color/ruby_red"
+            android:textColor="@color/mainColor"
             android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@id/txtRegisteredBlackText"
             app:layout_constraintEnd_toEndOf="@id/registeredACT"
@@ -62,7 +62,7 @@
             android:layout_marginTop="@dimen/dp15"
             android:gravity="center_horizontal"
             android:text="11"
-            android:textColor="@color/ruby_red"
+            android:textColor="@color/mainColor"
             app:layout_constraintBottom_toTopOf="@id/txtRegisteredBlackText"
             app:layout_constraintEnd_toEndOf="@id/registeredACT"
             app:layout_constraintStart_toStartOf="@id/registeredACT"
@@ -77,7 +77,7 @@
             android:layout_marginStart="@dimen/dp5"
             android:gravity="center_horizontal"
             android:text="TH"
-            android:textColor="@color/ruby_red"
+            android:textColor="@color/mainColor"
             app:layout_constraintStart_toEndOf="@id/txtRegistered"
             app:layout_constraintTop_toTopOf="@id/txtRegistered" />
 
@@ -153,7 +153,7 @@
             android:maxLines="3"
             android:paddingStart="@dimen/dp5"
             android:text="Preuss School UCSD, 9500 Gilman DR., La Jolla, California\n92093"
-            android:textColor="@color/warmGreyTwo"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imgInflateLocationRegistered"
             app:layout_constraintTop_toTopOf="@id/imgInflateLocationRegistered" />
@@ -203,7 +203,7 @@
             android:layout_marginEnd="@dimen/dp10"
             android:background="@drawable/btn_registered_events"
             android:text="Cancel"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@id/bottomView"
             app:layout_constraintEnd_toEndOf="@id/bottomView"
             app:layout_constraintTop_toTopOf="@id/guideLineHorizontal" />
@@ -235,7 +235,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp10"
             android:text="My LeaderBoard"
-            android:textColor="@color/ruby_red"
+            android:textColor="@color/mainColor"
             app:layout_constraintBottom_toBottomOf="@id/imgLeaderBoard"
             app:layout_constraintStart_toEndOf="@id/imgLeaderBoard"
             app:layout_constraintTop_toTopOf="@id/imgLeaderBoard" />
@@ -257,7 +257,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dp20"
             android:text="My Report"
-            android:textColor="@color/ruby_red"
+            android:textColor="@color/mainColor"
             app:layout_constraintBottom_toBottomOf="@id/imgLeaderBoardReport"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/imgLeaderBoardReport" />

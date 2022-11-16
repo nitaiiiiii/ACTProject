@@ -19,6 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/dialog_bg"
             tools:context=".ui.customDialogFragments.signatureBox.SignatureBoxFragment">
 
             <androidx.constraintlayout.widget.Guideline
@@ -70,7 +71,7 @@
                 android:gravity="center"
                 android:maxLines="1"
                 android:text="Sign with your fingers (or) touch pen."
-                android:textColor="@color/grey"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/imgSignatureRedLine" />
@@ -95,6 +96,7 @@
                 android:layout_width="@dimen/dp40"
                 android:layout_height="@dimen/dp40"
                 android:src="@drawable/refresh"
+                app:tint="@color/light_grey"
                 app:layout_constraintBottom_toBottomOf="@id/edtAccessAccountSignatureMultiLine"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight" />
 
@@ -105,6 +107,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="end"
                 android:text="Clear"
+                android:textColor="@color/light_grey"
                 app:layout_constraintBottom_toBottomOf="@id/imgSignature"
                 app:layout_constraintEnd_toStartOf="@id/imgSignature"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -112,18 +115,21 @@
 
             <com.ci.act.widgets.CustomButton
                 android:id="@+id/btnSignatureBox"
-                style="@style/extra_large_text_semi_bold"
-                android:layout_width="@dimen/dp280"
-                android:layout_height="@dimen/dp70"
-                android:layout_marginTop="@dimen/dp10"
-                android:layout_marginBottom="@dimen/dp30"
+                style="@style/large_text_regular"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp40"
+                android:layout_marginBottom="@dimen/dp20"
                 android:background="@drawable/rounded_button"
-                android:text="Save"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toTopOf="@id/txtSignatureBoxClose"
+                android:backgroundTint="@color/mainBtnColor"
+                android:text="Submit"
+                android:textColor="@color/textColor"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toBottomOf="@id/edtAccessAccountSignatureMultiLine" />
+                app:layout_constraintTop_toBottomOf="@id/txtSignature" />
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtSignatureBoxClose"

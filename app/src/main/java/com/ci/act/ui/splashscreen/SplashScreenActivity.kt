@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
 import com.ci.act.BR
 import com.ci.act.R
@@ -41,14 +42,17 @@ class SplashScreenActivity :
 
     private fun changeScreenTo(mActivity: Class<*>, runningTime: Long) {
         Handler(Looper.myLooper()!!).postDelayed({
-            if (PreferenceHelper.getInstance().isOnBoardingFinished() == true) {
-                val intent = Intent(this, SocialMediaActivity::class.java)
-                startActivity(intent)
-                finish()
+            if (PreferenceHelper.getInstance().isChooseSportsFinished()) {
+                if (PreferenceHelper.getInstance().isOnBoardingFinished() == true) {
+                    val intent = Intent(this, SocialMediaActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    val intent = Intent(this, OnBoardingActivity::class.java)
+                    startActivity(intent)
+                }
             } else {
-                val action = Intent(this, DifferentSportsActivity::class.java)
-                startActivity(action)
-                finish()
+                val intent = Intent(this, DifferentSportsActivity::class.java)
+                startActivity(intent)
             }
 
         }, runningTime)

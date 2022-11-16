@@ -18,7 +18,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/ruby_red"
+            android:background="@drawable/splash"
             tools:context=".ui.home.eventsReport.EventsReportActivity">
 
             <androidx.constraintlayout.widget.Guideline
@@ -56,6 +56,7 @@
                 android:layout_width="@dimen/dp35"
                 android:layout_height="@dimen/dp35"
                 android:layout_marginTop="1dp"
+                app:tint="@color/black"
                 android:src="@drawable/ic_baseline_arrow_back_24"
                 app:layout_constraintBottom_toBottomOf="@id/txtEventsReport"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -66,6 +67,7 @@
                 android:layout_width="@dimen/dp35"
                 android:layout_height="@dimen/dp35"
                 android:layout_marginTop="1dp"
+                app:tint="@color/black"
                 android:src="@drawable/ic_baseline_ios_share_24"
                 app:layout_constraintBottom_toBottomOf="@id/txtEventsReport"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
@@ -138,7 +140,7 @@
                         android:maxLines="3"
                         android:paddingStart="@dimen/dp5"
                         android:text="16800 Shoemaker Ave\nCerittos, California\n90703"
-                        android:textColor="@color/warmGreyTwo"
+                        android:textColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/imgEventsReportFootBallCamp"
                         app:layout_constraintTop_toTopOf="@id/imgEventsReportFootBallCamp" />
@@ -163,7 +165,7 @@
                         android:layout_marginStart="@dimen/dp4"
                         android:maxLines="1"
                         android:text="Participants"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/black"
                         app:layout_constraintBottom_toBottomOf="@id/txtEventsReportsLiveEventsOne"
                         app:layout_constraintStart_toEndOf="@id/txtEventsReportsLiveEventsOne"
                         app:layout_constraintTop_toTopOf="@id/txtEventsReportsLiveEventsOne" />
@@ -177,7 +179,7 @@
                         android:layout_marginEnd="@dimen/dp10"
                         android:gravity="center_horizontal"
                         android:text="11"
-                        android:textColor="@color/ruby_red"
+                        android:textColor="@color/mainColor"
                         app:layout_constraintBottom_toBottomOf="@id/txtEventsReportsParticipated"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@id/txtEventsReportsParticipated" />
@@ -191,7 +193,7 @@
                         android:layout_marginStart="@dimen/dp15"
                         android:gravity="center_horizontal"
                         android:text="TH"
-                        android:textColor="@color/ruby_red"
+                        android:textColor="@color/mainColor"
                         app:layout_constraintBottom_toTopOf="@id/txtEventsReportRegisteredRanker"
                         app:layout_constraintStart_toStartOf="@id/txtEventsReportRegisteredRanker" />
 
@@ -209,13 +211,18 @@
 
                     <com.ci.act.widgets.CustomButton
                         android:id="@+id/btnEventsReport"
-                        style="@style/extra_large_text_semi_bold"
-                        android:layout_width="@dimen/dp280"
-                        android:layout_height="@dimen/dp50"
-                        android:layout_marginTop="@dimen/dp20"
-                        android:background="@drawable/rounded_button"
-                        android:text="Download My Report"
-                        android:textColor="@color/white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp20"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp20"
+                        android:background="@drawable/btn_round_background"
+                        android:backgroundTint="@color/mainBtnColor"
+                        android:padding="@dimen/dp10"
+                        android:text="Download Report"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textColor"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/txtEventsReportsLiveEventsOneRank" />
@@ -280,10 +287,11 @@
                         android:layout_width="@dimen/dp100"
                         android:layout_height="@dimen/dp40"
                         android:background="@drawable/rounded_button"
+                        android:backgroundTint="@color/mainColor1"
                         android:gravity="center"
                         android:padding="@dimen/dp10"
                         android:text="ID: 317"
-                        android:textColor="@color/white"
+                        android:textColor="@color/textColor"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -296,7 +304,7 @@
                         android:layout_marginEnd="@dimen/dp10"
                         android:gravity="center_horizontal"
                         android:text="68.5"
-                        android:textColor="@color/ruby_red"
+                        android:textColor="@color/mainColor"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/txtEventsReportPlayerRedFootBallCamp" />
 
@@ -320,7 +328,7 @@
                         android:layout_marginEnd="@dimen/dp10"
                         android:gravity="center_horizontal"
                         android:text="DB"
-                        android:textColor="@color/ruby_red"
+                        android:textColor="@color/mainColor"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/txtEventsReportsHeightParticipated" />
 
@@ -344,8 +352,7 @@
                         android:layout_marginTop="@dimen/dp10"
                         android:gravity="center"
                         android:text="165"
-
-                        android:textColor="@color/ruby_red"
+                        android:textColor="@color/mainColor"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/txtEventsReportRegisteredInches"
                         app:layout_constraintTop_toBottomOf="@id/txtEventsReportPlayerRedFootBallCamp" />
@@ -373,7 +380,7 @@
                         android:layout_marginEnd="@dimen/dp10"
                         android:gravity="center"
                         android:text="2020"
-                        android:textColor="@color/ruby_red"
+                        android:textColor="@color/mainColor"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/txtEventsReportRegisteredPosition"
                         app:layout_constraintTop_toBottomOf="@id/txtEventsReportsWeightParticipated" />

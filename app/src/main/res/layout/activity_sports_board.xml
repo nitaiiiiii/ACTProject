@@ -58,7 +58,7 @@
             android:layout_marginTop="@dimen/dp5"
             android:gravity="center"
             android:text="LEADERBOARD"
-            android:textColor="@color/white"
+            android:textColor="@color/textColor"
             app:layout_constraintBottom_toBottomOf="@id/imgSportsBoardShare"
             app:layout_constraintEnd_toStartOf="@id/imgSportsBoardShare"
             app:layout_constraintStart_toEndOf="@id/imgSportsBoard"
@@ -92,7 +92,7 @@
             android:layout_marginTop="@dimen/dp10"
             android:maxLines="1"
             android:text="FOOTBALL CAMP"
-            android:textColor="@color/white"
+            android:textColor="@color/textColor"
             app:layout_constraintEnd_toEndOf="@id/imgSportsBoardLiveStream"
             app:layout_constraintStart_toStartOf="@id/imgSportsBoardLiveStream"
             app:layout_constraintTop_toBottomOf="@id/imgSportsBoardLiveStream" />
@@ -113,7 +113,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp20"
             android:text="YOU ARE\nRANKED"
-            android:textColor="@color/black"
+            android:textColor="@color/black1"
             app:layout_constraintEnd_toEndOf="@id/imgMyLeaderBoardRankings"
             app:layout_constraintStart_toStartOf="@id/imgMyLeaderBoardRankings"
             app:layout_constraintTop_toTopOf="@id/imgMyLeaderBoardRankings" />
@@ -141,7 +141,7 @@
             android:layout_marginStart="@dimen/dp15"
             android:gravity="center_horizontal"
             android:text="TH"
-            android:textColor="@color/ruby_red"
+            android:textColor="@color/black1"
             app:layout_constraintBottom_toTopOf="@id/txtSportsBoardRegisteredRanker"
             app:layout_constraintStart_toStartOf="@id/txtSportsBoardRegisteredRanker" />
 
@@ -158,7 +158,8 @@
                 android:id="@+id/mainConstraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/whiteFour">
+                android:background="@color/color_dash_board_bg"
+                >
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideLineLeft2"
@@ -183,7 +184,7 @@
                     android:padding="@dimen/dp20"
                     android:paddingStart="@dimen/dp1"
                     android:text="40 YARD DASH"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_black"
                     app:layout_constraintEnd_toStartOf="@id/txtVertical"
                     app:layout_constraintHorizontal_weight="1"
                     app:layout_constraintStart_toStartOf="@id/guideLineLeft2"
