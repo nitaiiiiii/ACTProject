@@ -36,7 +36,7 @@
         android:layout_marginBottom="@dimen/dp20"
         android:gravity="center"
         android:text="Users"
-        android:textColor="@color/black"
+        android:textColor="@color/white7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/imageViewSports"
         app:layout_constraintStart_toStartOf="@id/imageViewSports"

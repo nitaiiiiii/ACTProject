@@ -68,7 +68,7 @@
                 android:gravity="center"
                 android:maxLines="1"
                 android:text="SIGN IN"
-                android:textColor="@color/white"
+                android:textColor="@color/textColor"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/imgSignInTesting" />
@@ -78,11 +78,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="@color/textColor"
                 android:hint="Email Address"
                 android:inputType="text"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:textColorHint="@color/textColor"
                 android:textCursorDrawable="@null"
                 app:layout_constraintTop_toBottomOf="@id/txtSignIn" />
 
@@ -91,11 +91,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="@color/textColor"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:textColorHint="@color/textColor"
                 android:textCursorDrawable="@null"
                 app:layout_constraintTop_toBottomOf="@id/editText" />
 
@@ -110,7 +110,7 @@
                 android:maxLines="1"
                 android:paddingStart="@dimen/dp5"
                 android:text="Forgot Password?"
-                android:textColor="@color/white"
+                android:textColor="@color/textColor"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
@@ -122,8 +122,9 @@
                 android:layout_height="@dimen/dp50"
                 android:layout_marginTop="@dimen/dp60"
                 android:background="@drawable/orange_freelance"
+                android:backgroundTint="@color/white"
                 android:text="Sign In"
-                android:textColor="@color/ruby_red"
+                android:textColor="@color/mainTextColor"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/txtForgetPasswordHeading" />
@@ -138,7 +139,7 @@
                 android:gravity="center"
                 android:maxLines="1"
                 android:text="Don't Have An Account?"
-                android:textColor="@color/white"
+                android:textColor="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btnSignIn" />
@@ -153,7 +154,7 @@
                 android:gravity="center"
                 android:maxLines="1"
                 android:text="Sign Up"
-                android:textColor="@color/white"
+                android:textColor="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtSocialMediaAccountScreen" />
@@ -168,7 +169,7 @@
                 android:gravity="center"
                 android:maxLines="1"
                 android:text="Can't access your account?"
-                android:textColor="@color/white"
+                android:textColor="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtSignInEmailSignUpScreen" />

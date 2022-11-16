@@ -7,6 +7,7 @@ import com.ci.act.base.BaseDialogFragmentNew
 import com.ci.act.databinding.FragmentPermanentDeleteBinding
 import com.ci.act.ui.authentication.signin.SignInActivity
 import com.ci.act.ui.editProfile.EditProfileActivity
+import com.ci.act.util.showSnackBar
 
 class PermanentDeleteFragment :
     BaseDialogFragmentNew<FragmentPermanentDeleteBinding, PermanentDeleteView, PermanentDeleteViewModel>(),

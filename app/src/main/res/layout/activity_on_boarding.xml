@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/dp15"
             android:text="Skip"
-            android:textColor="@color/white"
+            android:textColor="@color/textColor1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideOnBoardingLeft" />
 
