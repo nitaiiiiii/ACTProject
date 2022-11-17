@@ -13,6 +13,7 @@ import com.ci.act.databinding.ActivitySplashScreenBinding
 import com.ci.act.prefrence.PreferenceHelper
 import com.ci.act.ui.authentication.socialMedia.SocialMediaActivity
 import com.ci.act.ui.differentSports.DifferentSportsActivity
+import com.ci.act.ui.home.myZeroRegisteredEvents.MyZeroRegisteredActivity
 import com.ci.act.ui.onboarding.OnBoardingActivity
 
 class SplashScreenActivity :
@@ -42,7 +43,7 @@ class SplashScreenActivity :
 
     private fun changeScreenTo(mActivity: Class<*>, runningTime: Long) {
         Handler(Looper.myLooper()!!).postDelayed({
-//            if (PreferenceHelper.getInstance().isChooseSportsFinished() == true) {
+            if (PreferenceHelper.getInstance().getUserDetails() == "") {
                 if (PreferenceHelper.getInstance().isOnBoardingFinished() == true) {
                     val intent = Intent(this, SocialMediaActivity::class.java)
                     startActivity(intent)
@@ -50,10 +51,10 @@ class SplashScreenActivity :
                     val intent = Intent(this, DifferentSportsActivity::class.java)
                     startActivity(intent)
                 }
-//            } else {
-//                val intent = Intent(this, DifferentSportsActivity::class.java)
-//                startActivity(intent)
-//            }
+            } else {
+                val intent = Intent(this, MyZeroRegisteredActivity::class.java)
+                startActivity(intent)
+            }
 
         }, runningTime)
     }

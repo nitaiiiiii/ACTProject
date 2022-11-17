@@ -110,6 +110,7 @@ class SignInActivity : BaseActivity<ActivitySignInBinding, SignInView, SignInVie
 
             } else {
                 showSuccessMessage("success...")
+                PreferenceHelper.getInstance().setUserDetails(mViewDataBinding?.editText?.text?.trim().toString())
                 if(PreferenceHelper.getInstance().isPushNotificationFinished()) {
                     val onBoard = Intent(this, MyZeroRegisteredActivity::class.java)
                     startActivity(onBoard)

@@ -1,10 +1,13 @@
 package com.ci.act.ui.customDialogFragments.signOut
 
+import android.content.Intent
 import android.os.Bundle
 import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseDialogFragmentNew
 import com.ci.act.databinding.FragmentSignOutBinding
+import com.ci.act.prefrence.PreferenceHelper
+import com.ci.act.ui.authentication.socialMedia.SocialMediaActivity
 import com.ci.act.ui.editProfile.EditProfileActivity
 import com.ci.act.ui.home.events.EventsActivity
 
@@ -32,6 +35,14 @@ class SignOutFragment :
         mViewDataBinding?.txtSignatureBoxClose?.setOnClickListener {
             EventsActivity.isShowingSignOut = false
             dialog?.dismiss()
+        }
+
+        mViewDataBinding?.btnSignatureBox?.setOnClickListener {
+            PreferenceHelper.getInstance().clearUserDetails()
+            EventsActivity.isShowingSignOut = false
+            dialog?.dismiss()
+            startActivity(Intent(activity, SocialMediaActivity::class.java))
+            requireActivity().finishAffinity()
         }
     }
 

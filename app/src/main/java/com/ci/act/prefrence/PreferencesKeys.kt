@@ -29,5 +29,7 @@ class PreferencesKeys {
         const val userProfileDetails = "userProfileDetails"
         const val signUpDetails = "signUpDetails"
         const val projectsData = "projectsData"
+
+        const val userLoginDetails = "userLoginDetails"
     }
 }

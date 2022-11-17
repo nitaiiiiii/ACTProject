@@ -11,6 +11,7 @@ class PreferenceHelper private constructor() {
 
     private var userPrefs: SharedPreferences? = null
     private var appPrefs: SharedPreferences? = null
+    private var userDetails: SharedPreferences? = null
     private var sharedPreferences: SharedPreferences = MyApplication.getApplicationContext().getSharedPreferences(PreferencesKeys.act, Context.MODE_PRIVATE)
 
 
@@ -18,6 +19,8 @@ class PreferenceHelper private constructor() {
 
         userPrefs = MyApplication.getApplicationContext()
             .getSharedPreferences(BuildConfig.preference_name, Context.MODE_PRIVATE)
+        userDetails = MyApplication.getApplicationContext()
+            .getSharedPreferences(BuildConfig.preference_name+"UserDetails", Context.MODE_PRIVATE)
         appPrefs =
             MyApplication.getApplicationContext().getSharedPreferences(
                 BuildConfig.preference_name.plus("Permanent"),
@@ -145,6 +148,23 @@ class PreferenceHelper private constructor() {
 
     fun clearUserPrefs() {
         userPrefs?.edit {
+            clear()
+        }
+    }
+
+    fun setUserDetails(value: String) {
+        userDetails?.edit {
+            putString(PreferencesKeys.userLoginDetails, value)
+        }
+    }
+
+    fun getUserDetails() : String? {
+        return userDetails?.getString(PreferencesKeys.userLoginDetails, "")
+    }
+
+
+    fun clearUserDetails() {
+        userDetails?.edit {
             clear()
         }
     }
