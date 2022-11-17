@@ -25,6 +25,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 tools:context=".ui.home.events.EventsActivity">
 
                 <androidx.constraintlayout.widget.Guideline
@@ -90,7 +91,7 @@
                     android:maxLines="1"
                     android:paddingStart="@dimen/dp5"
                     android:text="No Events at Present!"
-                    android:textColor="@color/textColor"
+                    android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                     app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                     app:layout_constraintTop_toBottomOf="@id/imgPlaying" />
@@ -105,7 +106,7 @@
                     android:gravity="center"
                     android:maxLines="3"
                     android:text="Our team is working heard to conduct\nevents very soon,W'll display once\nwe are ready."
-                    android:textColor="@color/textColor"
+                    android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                     app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                     app:layout_constraintTop_toBottomOf="@id/txtHintEvents" />
@@ -121,7 +122,7 @@
                     android:maxLines="1"
                     android:paddingStart="@dimen/dp5"
                     android:text="Thanks for your patience!"
-                    android:textColor="@color/textColor"
+                    android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                     app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                     app:layout_constraintTop_toBottomOf="@id/txtFillEvents" />
@@ -154,6 +155,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="end"
+            android:visibility="gone"
             app:headerLayout="@layout/nav_header"
             app:menu="@menu/nav_menu" />
 

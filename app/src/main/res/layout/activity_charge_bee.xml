@@ -14,7 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/ruby_red"
+        android:background="@drawable/splash"
         tools:context=".ui.home.chargebee.ChargeBeeActivity">
 
         <androidx.constraintlayout.widget.Guideline
@@ -101,9 +101,11 @@
 
                     <ImageView
                         android:id="@+id/txtMakingChargeBee"
-                        android:layout_width="@dimen/dp200"
-                        android:layout_height="@dimen/dp80"
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="0dp"
+                        android:adjustViewBounds="true"
                         android:layout_marginTop="@dimen/dp10"
+                        app:tint="@color/black"
                         android:src="@drawable/chargebee_logo_text"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -129,6 +131,7 @@
                         android:layout_marginTop="@dimen/dp15"
                         android:padding="@dimen/dp5"
                         android:src="@drawable/image"
+                        app:tint="@color/black"
                         app:layout_constraintBottom_toBottomOf="@id/txtAccessGuide1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/txtMakeSureChargeBee" />
@@ -158,6 +161,7 @@
                         android:layout_marginTop="@dimen/dp5"
                         android:padding="@dimen/dp5"
                         android:src="@drawable/image"
+                        app:tint="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/txtAccessGuide1" />
 
@@ -184,6 +188,7 @@
                         android:layout_marginStart="@dimen/dp10"
                         android:padding="@dimen/dp5"
                         android:src="@drawable/image"
+                        app:tint="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/txtExpandedGuide1" />
 
@@ -205,16 +210,19 @@
 
                     <com.ci.act.widgets.CustomButton
                         android:id="@+id/btnSignatureBox1"
-                        style="@style/extra_large_text_semi_bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/dp50"
-                        android:layout_marginTop="@dimen/dp90"
-                        android:layout_marginBottom="@dimen/dp30"
-                        android:background="@drawable/rounded_button"
-                        android:paddingStart="@dimen/dp30"
-                        android:paddingEnd="@dimen/dp30"
+                        style="@style/large_text_regular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp40"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:layout_marginEnd="@dimen/dp40"
+                        android:layout_marginBottom="@dimen/dp20"
+                        android:background="@drawable/btn_round_background"
+                        android:backgroundTint="@color/mainBtnColor"
+                        android:padding="@dimen/dp10"
                         android:text="Yes Continue"
-                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textColor"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />

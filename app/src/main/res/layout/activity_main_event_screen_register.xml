@@ -35,6 +35,27 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.97" />
 
+            <ImageView
+                android:id="@+id/imgBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_arrow_white"
+                app:layout_constraintTop_toTopOf="@+id/txtSignatureBox"
+                app:layout_constraintStart_toStartOf="@+id/txtSignatureBox"
+                app:layout_constraintBottom_toBottomOf="@+id/txtSignatureBox"
+                android:layout_marginEnd="10dp"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/imgCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_clear"
+                app:layout_constraintTop_toTopOf="@+id/txtSignatureBox"
+                app:layout_constraintEnd_toEndOf="@+id/txtSignatureBox"
+                app:layout_constraintBottom_toBottomOf="@+id/txtSignatureBox"
+                android:layout_marginEnd="10dp"/>
+
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtSignatureBox"
                 style="@style/extra_large_text_bold"

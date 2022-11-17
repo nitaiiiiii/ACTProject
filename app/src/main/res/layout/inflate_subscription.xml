@@ -28,7 +28,6 @@
                     android:id="@+id/premiumSubscription"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:visibility="gone"
                     >
 
                     <androidx.cardview.widget.CardView
@@ -126,6 +125,7 @@
                         android:layout_marginTop="@dimen/dp20"
                         android:padding="@dimen/dp5"
                         android:src="@drawable/image"
+                        app:tint="@color/black"
                         app:layout_constraintBottom_toBottomOf="@id/txtNationalRanking"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/mainCardSubscription" />
@@ -149,6 +149,7 @@
                         android:layout_marginTop="@dimen/dp5"
                         android:padding="@dimen/dp5"
                         android:src="@drawable/image"
+                        app:tint="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/imgTickCorrect" />
 
@@ -172,7 +173,7 @@
                         android:layout_marginTop="@dimen/dp10"
                         android:maxLines="1"
                         android:text="- Weekly Training Guide"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/black"
                         app:layout_constraintBottom_toBottomOf="@id/imgAccessTickCorrect"
                         app:layout_constraintStart_toEndOf="@id/imgAccessTickCorrect"
                         app:layout_constraintTop_toBottomOf="@id/txtAccessGuide" />
@@ -185,7 +186,7 @@
                         android:layout_marginTop="@dimen/dp5"
                         android:maxLines="1"
                         android:text="- Nutrition"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/black"
                         app:layout_constraintStart_toEndOf="@id/imgAccessTickCorrect"
                         app:layout_constraintTop_toBottomOf="@id/txtWeeklyTraining" />
 
@@ -197,7 +198,7 @@
                         android:layout_marginTop="@dimen/dp5"
                         android:maxLines="1"
                         android:text="- Recruiting"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/black"
                         app:layout_constraintStart_toEndOf="@id/imgAccessTickCorrect"
                         app:layout_constraintTop_toBottomOf="@id/txtNutrition" />
 
@@ -208,6 +209,7 @@
                         android:layout_marginTop="@dimen/dp5"
                         android:padding="@dimen/dp5"
                         android:src="@drawable/image"
+                        app:tint="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/txtRecruiting" />
 
@@ -230,7 +232,7 @@
                         android:layout_marginStart="@dimen/dp30"
                         android:maxLines="1"
                         android:text="- College Ranking"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/black"
                         app:layout_constraintStart_toEndOf="@id/imgUpdatedTickCorrect"
                         app:layout_constraintTop_toBottomOf="@id/txtExpandedGuide" />
 
@@ -242,7 +244,7 @@
                         android:layout_marginTop="@dimen/dp5"
                         android:maxLines="1"
                         android:text="- National Ranking In Each Test"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/black"
                         app:layout_constraintStart_toEndOf="@id/imgUpdatedTickCorrect"
                         app:layout_constraintTop_toBottomOf="@id/txtRankingTraining" />
 
@@ -252,6 +254,7 @@
                         android:layout_height="@dimen/dp25"
                         android:padding="@dimen/dp5"
                         android:src="@drawable/image"
+                        app:tint="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/txtNationalRankingTesting" />
 
@@ -269,16 +272,19 @@
 
                     <com.ci.act.widgets.CustomButton
                         android:id="@+id/btnSignatureBox"
-                        style="@style/extra_large_text_semi_bold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/dp50"
-                        android:layout_marginTop="@dimen/dp30"
-                        android:layout_marginBottom="@dimen/dp30"
-                        android:background="@drawable/rounded_button"
-                        android:paddingStart="@dimen/dp30"
-                        android:paddingEnd="@dimen/dp30"
+                        style="@style/large_text_regular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp40"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:layout_marginEnd="@dimen/dp40"
+                        android:layout_marginBottom="@dimen/dp20"
+                        android:background="@drawable/btn_round_background"
+                        android:backgroundTint="@color/mainBtnColor"
+                        android:padding="@dimen/dp10"
                         android:text="Subscribe Now!"
-                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textColor"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -290,6 +296,7 @@
                     android:id="@+id/platinumSubscription"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:visibility="gone"
                     >
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -339,7 +346,7 @@
                                     android:id="@+id/imgPremiumPlanSubscription1"
                                     android:layout_width="40dp"
                                     android:layout_height="4dp"
-                                    android:background="#E91E63"
+                                    android:background="@color/mainColor"
                                     android:foregroundGravity="center"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -363,7 +370,7 @@
                                     android:layout_height="wrap_content"
                                     android:maxLines="1"
                                     android:text="Per Year"
-                                    android:textColor="@color/ruby_red"
+                                    android:textColor="@color/mainColor"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@id/txtPremiumPlanMonthlyRate1" />
@@ -380,6 +387,7 @@
                             android:layout_marginTop="@dimen/dp30"
                             android:padding="@dimen/dp5"
                             android:src="@drawable/image"
+                            app:tint="@color/black"
                             app:layout_constraintBottom_toBottomOf="@id/txtNationalRanking1"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/mainCardSubscription1" />
@@ -407,6 +415,7 @@
                             app:layout_constraintBottom_toTopOf="@id/imgAccessTickCorrect1"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
+                            app:tint="@color/mainColor"
                             app:layout_constraintTop_toBottomOf="@id/txtNationalRanking1" />
 
                         <ImageView
@@ -416,6 +425,7 @@
                             android:layout_marginTop="@dimen/dp50"
                             android:padding="@dimen/dp5"
                             android:src="@drawable/image"
+                            app:tint="@color/black"
                             app:layout_constraintBottom_toBottomOf="@id/txtAccessGuide1"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/imgTickCorrect1" />
@@ -442,6 +452,7 @@
                             android:layout_marginTop="@dimen/dp5"
                             android:padding="@dimen/dp5"
                             android:src="@drawable/image"
+                            app:tint="@color/black"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/txtAccessGuide1" />
 
@@ -466,6 +477,7 @@
                             android:layout_height="@dimen/dp25"
                             android:padding="@dimen/dp5"
                             android:src="@drawable/image"
+                            app:tint="@color/black"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/txtExpandedGuide1" />
 
@@ -485,16 +497,19 @@
 
                         <com.ci.act.widgets.CustomButton
                             android:id="@+id/btnSignatureBox1"
-                            style="@style/extra_large_text_semi_bold"
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/dp50"
-                            android:layout_marginTop="@dimen/dp90"
-                            android:layout_marginBottom="@dimen/dp30"
-                            android:background="@drawable/rounded_button"
-                            android:paddingStart="@dimen/dp30"
-                            android:paddingEnd="@dimen/dp30"
+                            style="@style/large_text_regular"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp40"
+                            android:layout_marginTop="@dimen/dp20"
+                            android:layout_marginEnd="@dimen/dp40"
+                            android:layout_marginBottom="@dimen/dp20"
+                            android:background="@drawable/btn_round_background"
+                            android:backgroundTint="@color/mainBtnColor"
+                            android:padding="@dimen/dp10"
                             android:text="Subscribe Now!"
-                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:textColor="@color/textColor"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"

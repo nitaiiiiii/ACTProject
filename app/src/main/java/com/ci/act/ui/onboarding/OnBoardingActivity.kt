@@ -99,8 +99,7 @@ class OnBoardingActivity :
     }
 
     override fun skipClick(message: String) {
-
-
+        PreferenceHelper.getInstance().finishOnBoarding()
     }
 
     private fun setOnClickListeners() {

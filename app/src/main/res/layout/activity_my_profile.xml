@@ -18,7 +18,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/light_grey"
+            android:background="@color/color_dash_board_bg"
             tools:context=".ui.home.myProfile.MyProfileActivity">
 
             <androidx.constraintlayout.widget.Guideline
@@ -39,7 +39,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp200"
-                android:background="@color/ruby_red"
+                android:background="@color/mainColor1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -63,7 +63,7 @@
                 android:layout_marginTop="@dimen/dp5"
                 android:gravity="center"
                 android:text="MY PROFILE"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@id/imgMyProfileShare"
                 app:layout_constraintEnd_toStartOf="@id/imgMyProfileShare"
                 app:layout_constraintStart_toEndOf="@id/imgMyProfileEvents"
@@ -231,12 +231,19 @@
 
                     <com.ci.act.widgets.CustomButton
                         android:id="@+id/btnProfile"
-                        android:layout_width="@dimen/dp280"
-                        android:layout_height="@dimen/dp60"
-                        android:layout_marginTop="@dimen/dp20"
-                        android:background="@drawable/rounded_button"
+                        style="@style/extra_large_text_regular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp20"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:layout_marginEnd="@dimen/dp20"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:background="@drawable/btn_round_background"
+                        android:backgroundTint="@color/mainBtnColor"
+                        android:padding="@dimen/dp8"
                         android:text="Subscribe Now!"
-                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textColor"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -304,7 +311,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp10"
                         android:text="Use this bar code at all your events"
-                        android:textColor="@color/ruby_red"
+                        android:textColor="@color/mainColor"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/txtProfileNumberBarcode" />
@@ -721,6 +728,7 @@
                         android:layout_height="@dimen/dp50"
                         android:layout_marginTop="@dimen/dp20"
                         android:src="@drawable/facebook3x"
+                        app:tint="@color/blue"
                         app:layout_constraintEnd_toStartOf="@id/imgSocialLinksHUDL"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/imgSocialLinksRedLine" />

@@ -42,18 +42,18 @@ class SplashScreenActivity :
 
     private fun changeScreenTo(mActivity: Class<*>, runningTime: Long) {
         Handler(Looper.myLooper()!!).postDelayed({
-            if (PreferenceHelper.getInstance().isChooseSportsFinished()) {
+//            if (PreferenceHelper.getInstance().isChooseSportsFinished() == true) {
                 if (PreferenceHelper.getInstance().isOnBoardingFinished() == true) {
                     val intent = Intent(this, SocialMediaActivity::class.java)
                     startActivity(intent)
                 } else {
-                    val intent = Intent(this, OnBoardingActivity::class.java)
+                    val intent = Intent(this, DifferentSportsActivity::class.java)
                     startActivity(intent)
                 }
-            } else {
-                val intent = Intent(this, DifferentSportsActivity::class.java)
-                startActivity(intent)
-            }
+//            } else {
+//                val intent = Intent(this, DifferentSportsActivity::class.java)
+//                startActivity(intent)
+//            }
 
         }, runningTime)
     }

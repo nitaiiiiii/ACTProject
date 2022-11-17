@@ -2,6 +2,7 @@ package com.ci.act.ui.home.mainEventScreenRegister
 
 
 import android.os.Bundle
+import android.view.View
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -24,6 +25,7 @@ class MainEventScreenRegisterActivity :
     var isSelected: Boolean = true
     var checkOnBackPress = false
     var isShowingDigitalSign = false
+    var fragmentPageNumber = 1
 
 
     override fun getContentView(): Int = R.layout.activity_main_event_screen_register
@@ -160,6 +162,106 @@ class MainEventScreenRegisterActivity :
                     )
                 }
             }
+        }
+
+        mViewDataBinding?.imgBackArrow?.setOnClickListener {
+            fragmentPageNumber -= 1
+            checkStatus(fragmentPageNumber)
+            onBackPressed()
+        }
+    }
+
+    private fun checkStatus(fragmentPageNumber: Int) {
+        when (fragmentPageNumber) {
+            1 -> {
+                mViewDataBinding?.imgBackArrow?.visibility = View.GONE
+//                binding.imgPersonDetails.setBackgroundResource(R.drawable.person_circle)
+//                binding.imgBuildingDetails.setBackgroundResource(R.drawable.builiding_details)
+//                binding.imgHomeDetails.setBackgroundResource(R.drawable.house_details)
+//                binding.imgGuardianApproval.setBackgroundResource(R.drawable.builiding_details)
+//                binding.imgPersonDetails.setImageResource(R.drawable.person_24)
+//                binding.imgBuildingDetails.setImageResource(R.drawable.ic_baseline_business_24)
+//                binding.imgBuildingDetails.setColorFilter(ContextCompat.getColor(this, R.color.light_grey))
+//                binding.imgHomeDetails.setImageResource(R.drawable.ic_baseline_home_24)
+//                binding.imgHomeDetails.setColorFilter(ContextCompat.getColor(this, R.color.light_grey))
+//                binding.imgGuardianApproval.setImageResource(R.drawable.ic_baseline_group_24)
+//                binding.imgGuardianApproval.setColorFilter(ContextCompat.getColor(this, R.color.light_grey))
+
+                mViewDataBinding?.imgPersonDetails?.setBackgroundResource(R.drawable.person_circle)
+                mViewDataBinding?.imgBuildingDetails?.setBackgroundResource(R.drawable.builiding_details)
+                mViewDataBinding?.imgHomeDetails?.setBackgroundResource(R.drawable.house_details)
+                mViewDataBinding?.imgGuardianApproval?.setBackgroundResource(R.drawable.builiding_details)
+                mViewDataBinding?.imgBuildingDetails?.setImageResource(R.drawable.ic_baseline_business_24)
+                mViewDataBinding?.imgPersonDetails?.setImageResource(R.drawable.person_24)
+                mViewDataBinding?.imgHomeDetails?.setImageResource(R.drawable.ic_baseline_home_24)
+                mViewDataBinding?.imgGuardianApproval?.setImageResource(R.drawable.ic_baseline_group_24)
+            }
+//
+            2 -> {
+                mViewDataBinding?.imgBackArrow?.visibility = View.VISIBLE
+                mViewDataBinding?.imgPersonDetails?.setBackgroundResource(R.drawable.builiding_details)
+                mViewDataBinding?.imgBuildingDetails?.setBackgroundResource(R.drawable.person_circle)
+                mViewDataBinding?.imgHomeDetails?.setBackgroundResource(R.drawable.house_details)
+                mViewDataBinding?.imgGuardianApproval?.setBackgroundResource(R.drawable.builiding_details)
+                mViewDataBinding?.imgBuildingDetails?.setImageResource(R.drawable.baseline_business_24)
+                mViewDataBinding?.imgPersonDetails?.setImageResource(R.drawable.ic_baseline_person_24)
+                mViewDataBinding?.imgHomeDetails?.setImageResource(R.drawable.ic_baseline_home_24)
+                mViewDataBinding?.imgGuardianApproval?.setImageResource(R.drawable.ic_baseline_group_24)
+            }
+            3 -> {
+                mViewDataBinding?.imgBackArrow?.visibility = View.VISIBLE
+                mViewDataBinding?.imgPersonDetails?.setBackgroundResource(R.drawable.builiding_details)
+                mViewDataBinding?.imgBuildingDetails?.setBackgroundResource(R.drawable.builiding_details)
+                mViewDataBinding?.imgHomeDetails?.setBackgroundResource(R.drawable.person_circle)
+                mViewDataBinding?.imgGuardianApproval?.setBackgroundResource(R.drawable.builiding_details)
+                mViewDataBinding?.imgHomeDetails?.setImageResource(R.drawable.baseline_home_24)
+                mViewDataBinding?.imgBuildingDetails?.setImageResource(R.drawable.ic_baseline_business_24)
+                mViewDataBinding?.imgPersonDetails?.setImageResource(R.drawable.ic_baseline_person_24)
+                mViewDataBinding?.imgGuardianApproval?.setImageResource(R.drawable.ic_baseline_group_24)
+            }
+            4 -> {
+                mViewDataBinding?.imgBackArrow?.visibility = View.VISIBLE
+                mViewDataBinding?.imgPersonDetails?.setBackgroundResource(R.drawable.builiding_details)
+                mViewDataBinding?.imgBuildingDetails?.setBackgroundResource(R.drawable.builiding_details)
+                mViewDataBinding?.imgHomeDetails?.setBackgroundResource(R.drawable.builiding_details)
+                mViewDataBinding?.imgGuardianApproval?.setBackgroundResource(R.drawable.person_circle)
+                mViewDataBinding?.imgGuardianApproval?.setImageResource(R.drawable.baseline_group_24)
+                mViewDataBinding?.imgHomeDetails?.setImageResource(R.drawable.ic_baseline_home_24)
+                mViewDataBinding?.imgBuildingDetails?.setImageResource(R.drawable.ic_baseline_business_24)
+                mViewDataBinding?.imgPersonDetails?.setImageResource(R.drawable.ic_baseline_person_24)
+            }
+//
+            else -> {
+                mViewDataBinding?.imgBackArrow?.visibility = View.GONE
+                mViewDataBinding?.imgPersonDetails?.setBackgroundResource(R.drawable.person_circle)
+                mViewDataBinding?.imgBuildingDetails?.setBackgroundResource(R.drawable.builiding_details)
+                mViewDataBinding?.imgHomeDetails?.setBackgroundResource(R.drawable.house_details)
+                mViewDataBinding?.imgGuardianApproval?.setBackgroundResource(R.drawable.builiding_details)
+                mViewDataBinding?.imgPersonDetails?.setImageResource(R.drawable.person_24)
+                mViewDataBinding?.imgBuildingDetails?.setImageResource(R.drawable.ic_baseline_business_24)
+                mViewDataBinding?.imgBuildingDetails?.setColorFilter(
+                    ContextCompat.getColor(
+                        this,
+                        R.color.light_grey
+                    )
+                )
+                mViewDataBinding?.imgHomeDetails?.setImageResource(R.drawable.ic_baseline_home_24)
+                mViewDataBinding?.imgHomeDetails?.setColorFilter(
+                    ContextCompat.getColor(
+                        this,
+                        R.color.light_grey
+                    )
+                )
+                mViewDataBinding?.imgGuardianApproval?.setImageResource(R.drawable.ic_baseline_group_24)
+                mViewDataBinding?.imgGuardianApproval?.setColorFilter(
+                    ContextCompat.getColor(
+                        this,
+                        R.color.light_grey
+                    )
+                )
+
+            }
+
         }
     }
 
