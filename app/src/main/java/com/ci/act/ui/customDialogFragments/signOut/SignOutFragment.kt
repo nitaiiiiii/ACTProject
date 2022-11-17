@@ -10,6 +10,9 @@ import com.ci.act.prefrence.PreferenceHelper
 import com.ci.act.ui.authentication.socialMedia.SocialMediaActivity
 import com.ci.act.ui.editProfile.EditProfileActivity
 import com.ci.act.ui.home.events.EventsActivity
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.FirebaseAuth
 
 class SignOutFragment :
     BaseDialogFragmentNew<FragmentSignOutBinding, SignOutView, SignOutViewModel>(), SignOutView {
@@ -39,6 +42,14 @@ class SignOutFragment :
 
         mViewDataBinding?.btnSignatureBox?.setOnClickListener {
             PreferenceHelper.getInstance().clearUserDetails()
+            val auth = FirebaseAuth.getInstance()
+            val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .build()
+            val mGoogleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
+            if (auth.currentUser != null) {
+                auth.signOut()
+                mGoogleSignInClient.signOut()
+            }
             EventsActivity.isShowingSignOut = false
             dialog?.dismiss()
             startActivity(Intent(activity, SocialMediaActivity::class.java))

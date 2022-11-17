@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "69171771256",
+    "project_id": "act-app-1abfa",
+    "storage_bucket": "act-app-1abfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69171771256:android:891458ffe5b77d23163a8d",
+        "android_client_info": {
+          "package_name": "com.ci.basearchitecture.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69171771256-94o3ro2jg86su0bekl6krkfrr7f264e1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhx7eIdQfHMiIGVgNl1nBqYX1ovDecLSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "69171771256-94o3ro2jg86su0bekl6krkfrr7f264e1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

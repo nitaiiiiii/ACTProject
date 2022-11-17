@@ -124,7 +124,6 @@
             android:text="Contact Us"
             android:textAllCaps="false"
             android:textColor="@color/textColor"
-            app:layout_constraintBaseline_toBottomOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/txtEmptyRelevantQuestions"
             app:layout_constraintEnd_toEndOf="@id/guideLineRight"
             app:layout_constraintTop_toTopOf="@id/txtEmptyRelevantQuestions" />
