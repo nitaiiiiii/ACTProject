@@ -56,6 +56,7 @@
                 android:layout_width="@dimen/dp35"
                 android:layout_height="@dimen/dp35"
                 android:layout_marginTop="1dp"
+                app:tint="@color/black"
                 android:src="@drawable/ic_baseline_arrow_back_24"
                 app:layout_constraintBottom_toBottomOf="@id/txtAboutUs"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -81,14 +82,32 @@
                 app:layout_constraintStart_toStartOf="@+id/viewPager"
                 app:piv_count="5" />
 
-            <ImageView
-                android:id="@+id/imgSportsAboutUs"
+            <com.ci.act.widgets.CustomTextView
+                android:id="@+id/tvDescription"
+                style="@style/regular_small_text_regular"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:src="@drawable/about_us"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="w, 1:1.5"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp20"
+                android:gravity="center"
+                android:text="Athletic Certifies Testing (ACT) is a mobile app and event testing compoany tha provides athletes an online athlete profile, testing event information, verifies data from their testing, comparisons for that data, and correcive/presriptive videos to impove their performance and testing."
+                app:layout_constraintBottom_toTopOf="@id/imgAboutUsLogi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/viewPager" />
+
+            <ImageView
+                android:id="@+id/imgAboutUsLogi"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp10"
+                android:src="@drawable/act"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

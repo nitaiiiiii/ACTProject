@@ -14,6 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/dialog_bg"
         tools:context=".ui.home.faqEmpty.FaqEmptyActivity">
 
         <androidx.constraintlayout.widget.Guideline
@@ -51,6 +52,7 @@
             android:layout_width="@dimen/dp35"
             android:layout_height="@dimen/dp35"
             android:layout_marginTop="1dp"
+            app:tint="@color/black"
             android:src="@drawable/ic_baseline_arrow_back_24"
             app:layout_constraintBottom_toBottomOf="@id/txtFaqEmpty"
             app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -112,14 +114,17 @@
 
         <com.ci.act.widgets.CustomButton
             android:id="@+id/btnEmptyRelevantQuestions"
-            android:layout_width="wrap_content"
+            style="@style/large_text_regular"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:paddingStart="@dimen/dp40"
-            android:paddingEnd="@dimen/dp40"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/btn_round_background"
+            android:backgroundTint="@color/mainBtnColor"
+            android:padding="@dimen/dp10"
             android:text="Contact Us"
             android:textAllCaps="false"
-            android:textColor="@color/white"
+            android:textColor="@color/textColor"
+            app:layout_constraintBaseline_toBottomOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/txtEmptyRelevantQuestions"
             app:layout_constraintEnd_toEndOf="@id/guideLineRight"
             app:layout_constraintTop_toTopOf="@id/txtEmptyRelevantQuestions" />

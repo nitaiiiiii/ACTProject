@@ -18,7 +18,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_bg"
             tools:context=".ui.home.faqList.FaqListActivity">
 
             <androidx.constraintlayout.widget.Guideline
@@ -56,6 +57,7 @@
                 android:layout_width="@dimen/dp35"
                 android:layout_height="@dimen/dp35"
                 android:layout_marginTop="1dp"
+                app:tint="@color/black"
                 android:src="@drawable/ic_baseline_arrow_back_24"
                 app:layout_constraintBottom_toBottomOf="@id/txtListFAQs"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -70,7 +72,7 @@
                 android:maxLines="1"
                 android:padding="@dimen/dp15"
                 android:text="Payment Information Question"
-                android:textColor="@color/ruby_red"
+                android:textColor="@color/mainColor"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
                 app:layout_constraintTop_toBottomOf="@id/txtListFAQs" />
@@ -109,15 +111,17 @@
 
             <com.ci.act.widgets.CustomButton
                 android:id="@+id/btnRelevantQuestions"
-                android:layout_width="wrap_content"
+                style="@style/large_text_regular"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dp10"
-                android:background="@drawable/rounded_button"
-                android:paddingStart="@dimen/dp40"
-                android:paddingEnd="@dimen/dp40"
+                android:layout_margin="@dimen/dp10"
+                android:background="@drawable/btn_round_background"
+                android:backgroundTint="@color/mainBtnColor"
+                android:padding="@dimen/dp10"
                 android:text="Contact Us"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="@color/textColor"
+                app:layout_constraintStart_toEndOf="@id/txtRelevantQuestions"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintTop_toBottomOf="@id/rvListFAQs" />

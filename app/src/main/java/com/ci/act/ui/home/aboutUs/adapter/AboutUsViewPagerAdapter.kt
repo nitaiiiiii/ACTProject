@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ci.act.R
 import com.ci.act.ui.home.aboutUs.model.AboutUsModel
 import com.ci.act.ui.home.subscriptions.model.SubscriptionModel
+import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.SimpleExoPlayer
@@ -20,6 +21,7 @@ class AboutUsViewPagerAdapter : RecyclerView.Adapter<AboutUsViewPagerAdapter.Abo
 
     val aboutUsArray = ArrayList<AboutUsModel>()
     var playerView: PlayerView? = null
+    private var player: ExoPlayer? = null
     var simpleExoPlayer: SimpleExoPlayer? = null
 
 
@@ -66,5 +68,15 @@ class AboutUsViewPagerAdapter : RecyclerView.Adapter<AboutUsViewPagerAdapter.Abo
         aboutUsArray.clear()
         aboutUsArray.addAll(list)
         notifyDataSetChanged()
+    }
+
+    override fun onViewAttachedToWindow(holder: AboutUsViewHolder) {
+        super.onViewAttachedToWindow(holder)
+//        player?.prepare()
+    }
+
+    override fun onViewDetachedFromWindow(holder: AboutUsViewHolder) {
+        super.onViewDetachedFromWindow(holder)
+        player?.pause()
     }
 }

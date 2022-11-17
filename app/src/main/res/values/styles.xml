@@ -13,6 +13,11 @@
         <item name="colorAccent">@color/ruby_red</item>
     </style>
 
+    <style name="clickableview">
+        <item name="colorControlHighlight">@android:color/darker_gray</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+    </style>
+
     <!-- Base application theme no Actionbar. -->
     <style name="AppThemeNoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
