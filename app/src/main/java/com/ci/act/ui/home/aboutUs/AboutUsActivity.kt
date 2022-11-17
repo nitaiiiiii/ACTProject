@@ -3,6 +3,8 @@ package com.ci.act.ui.home.aboutUs
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
+import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
 import com.ci.act.BR
 import com.ci.act.R
@@ -32,13 +34,11 @@ class AboutUsActivity : BaseActivity<ActivityAboutUsBinding, AboutUsView, AboutU
     override fun initViews(savedInstanceState: Bundle?) {
         setViewPager()
         setOnClickListener()
+        setUpToolBar()
     }
 
     private fun setOnClickListener() {
-        mViewDataBinding?.imgAboutUs?.setOnClickListener {
-            val intent = Intent(this, EventsActivity::class.java)
-            startActivity(intent)
-        }
+
 
     }
 
@@ -65,6 +65,21 @@ class AboutUsActivity : BaseActivity<ActivityAboutUsBinding, AboutUsView, AboutU
             }
         })
 
+    }
+
+    private fun setUpToolBar() {
+        mViewDataBinding?.toolBar?.let{
+            it.txtToolbarHeading.text = "ABOUT US"
+            it.txtToolBarDummyIcon.visibility = View.INVISIBLE
+            it.imgToolBarLeft.setImageResource(R.drawable.ic_back_arrow)
+            it.imgToolBarLeft.setColorFilter(ContextCompat.getColor(this, R.color.light_black))
+            it.imgToolBarRight.visibility = View.INVISIBLE
+
+            it.imgToolBarLeft.setOnClickListener {
+                val intent = Intent(this, EventsActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 
 }

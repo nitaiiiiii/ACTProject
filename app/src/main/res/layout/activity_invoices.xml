@@ -36,32 +36,9 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.97" />
 
-            <com.ci.act.widgets.CustomTextView
-                android:id="@+id/txtInvoices"
-                style="@style/extra_large_text_bold"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_edit_text_settings_email_and_password"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:maxLines="1"
-                android:padding="@dimen/dp20"
-                android:text="INVOICES"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imgInvoices"
-                android:layout_width="@dimen/dp35"
-                android:layout_height="@dimen/dp35"
-                android:layout_marginTop="1dp"
-                app:tint="@color/black"
-                android:src="@drawable/ic_baseline_arrow_back_24"
-                app:layout_constraintBottom_toBottomOf="@id/txtInvoices"
-                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toTopOf="@id/txtInvoices" />
+            <include
+                android:id="@+id/toolBar"
+                layout="@layout/home_tool_bar" />
 
             <ImageView
                 android:id="@+id/imgPlayingInvoices"
@@ -72,7 +49,7 @@
                 android:src="@drawable/empty"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toBottomOf="@id/txtInvoices" />
+                app:layout_constraintTop_toBottomOf="@id/toolBar" />
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtHintInvoices"

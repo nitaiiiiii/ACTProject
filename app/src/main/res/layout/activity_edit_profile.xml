@@ -35,31 +35,11 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.97" />
 
-            <com.ci.act.widgets.CustomTextView
-                android:id="@+id/txtEditProfile"
-                style="@style/extra_large_text_bold"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_edit_text_settings_email_and_password"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:maxLines="1"
-                android:padding="@dimen/dp20"
-                android:text="EDIT PROFILE"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <include
+                android:id="@+id/toolBar"
+                layout="@layout/home_tool_bar" />
 
-            <ImageView
-                android:id="@+id/imgEditProfile"
-                android:layout_width="@dimen/dp35"
-                android:layout_height="@dimen/dp35"
-                android:layout_marginTop="1dp"
-                android:src="@drawable/ic_baseline_close_24"
-                app:layout_constraintBottom_toBottomOf="@id/txtEditProfile"
-                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toTopOf="@id/txtEditProfile" />
+
 
             <ImageView
                 android:id="@+id/imgEditProfilePicture"
@@ -69,7 +49,7 @@
                 android:src="@drawable/profile_picture"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toBottomOf="@id/txtEditProfile" />
+                app:layout_constraintTop_toBottomOf="@id/toolBar" />
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtEditNameProfile"

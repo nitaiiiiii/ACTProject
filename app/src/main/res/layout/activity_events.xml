@@ -42,33 +42,9 @@
                     android:orientation="vertical"
                     app:layout_constraintGuide_percent="0.97" />
 
-                <com.ci.act.widgets.CustomTextView
-                    android:id="@+id/txtEvents"
-                    style="@style/extra_large_lato_regular"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/shape_edit_text_settings_email_and_password"
-                    android:backgroundTint="@color/white"
-                    android:ellipsize="end"
-                    android:gravity="center"
-                    android:maxLines="1"
-                    android:padding="@dimen/dp20"
-                    android:text="EVENTS"
-                    android:textColor="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imgEvents"
-                    android:layout_width="@dimen/dp35"
-                    android:layout_height="@dimen/dp35"
-                    android:layout_marginTop="1dp"
-                    android:src="@drawable/icons_menu_24"
-                    app:tint="@color/black"
-                    app:layout_constraintBottom_toBottomOf="@id/txtEvents"
-                    app:layout_constraintEnd_toEndOf="@id/guideLineRight"
-                    app:layout_constraintTop_toTopOf="@id/txtEvents" />
+                <include
+                    android:id="@+id/toolBar"
+                    layout="@layout/home_tool_bar" />
 
                 <ImageView
                     android:id="@+id/imgPlaying"
@@ -78,7 +54,7 @@
                     android:src="@drawable/homepage"
                     app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                     app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                    app:layout_constraintTop_toBottomOf="@id/txtEvents" />
+                    app:layout_constraintTop_toBottomOf="@id/toolBar" />
 
                 <com.ci.act.widgets.CustomTextView
                     android:id="@+id/txtHintEvents"

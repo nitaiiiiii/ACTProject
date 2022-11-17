@@ -21,6 +21,10 @@
             android:layout_height="wrap_content"
             tools:context=".ui.home.aboutUs.AboutUsActivity">
 
+            <include
+                android:id="@+id/toolBar"
+                layout="@layout/home_tool_bar" />
+
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideLineLeft"
                 android:layout_width="wrap_content"
@@ -35,32 +39,6 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.97" />
 
-            <com.ci.act.widgets.CustomTextView
-                android:id="@+id/txtAboutUs"
-                style="@style/extra_large_text_bold"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_edit_text_settings_email_and_password"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:maxLines="1"
-                android:padding="@dimen/dp20"
-                android:text="ABOUT US"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imgAboutUs"
-                android:layout_width="@dimen/dp35"
-                android:layout_height="@dimen/dp35"
-                android:layout_marginTop="1dp"
-                app:tint="@color/black"
-                android:src="@drawable/ic_baseline_arrow_back_24"
-                app:layout_constraintBottom_toBottomOf="@id/txtAboutUs"
-                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toTopOf="@id/txtAboutUs" />
 
 
             <androidx.viewpager2.widget.ViewPager2
@@ -70,7 +48,7 @@
                 app:layout_constraintDimensionRatio="w, 1:1.5"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtAboutUs" />
+                app:layout_constraintTop_toBottomOf="@id/toolBar" />
 
             <com.rd.PageIndicatorView
                 android:id="@+id/indicator"

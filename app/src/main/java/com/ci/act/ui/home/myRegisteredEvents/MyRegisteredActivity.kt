@@ -3,6 +3,9 @@ package com.ci.act.ui.home.myRegisteredEvents
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import androidx.core.content.ContextCompat
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ci.act.BR
@@ -38,13 +41,11 @@ class MyRegisteredActivity :
 
         recyclerView()
         setOnClickListener()
+        setUpToolBar()
     }
 
     private fun setOnClickListener() {
-        mViewDataBinding?.imgRegisteredEvents?.setOnClickListener {
-            val intent = Intent(this, EventsActivity::class.java)
-            startActivity(intent)
-        }
+
     }
 
 
@@ -87,6 +88,21 @@ class MyRegisteredActivity :
             return null
         }
         return jsonString
+    }
+
+    private fun setUpToolBar() {
+        mViewDataBinding?.toolBar?.let{
+            it.txtToolbarHeading.text = "MY EVENTS"
+            it.txtToolBarDummyIcon.visibility = View.INVISIBLE
+            it.imgToolBarLeft.setImageResource(R.drawable.ic_back_arrow)
+            it.imgToolBarLeft.setColorFilter(ContextCompat.getColor(this, R.color.light_black))
+            it.imgToolBarRight.visibility = View.INVISIBLE
+
+            it.imgToolBarLeft.setOnClickListener {
+                val intent = Intent(this, EventsActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 
 

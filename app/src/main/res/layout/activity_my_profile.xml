@@ -44,40 +44,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imgMyProfileEvents"
-                android:layout_width="@dimen/dp35"
-                android:layout_height="@dimen/dp35"
-                android:layout_marginTop="@dimen/dp5"
-                android:src="@drawable/ic"
-                app:layout_constraintEnd_toStartOf="@id/txtMyProfile"
-                app:layout_constraintHorizontal_chainStyle="spread_inside"
-                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.ci.act.widgets.CustomTextView
-                android:id="@+id/txtMyProfile"
-                style="@style/extra_large_text_bold"
-                android:layout_width="@dimen/dp0"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp5"
-                android:gravity="center"
-                android:text="MY PROFILE"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@id/imgMyProfileShare"
-                app:layout_constraintEnd_toStartOf="@id/imgMyProfileShare"
-                app:layout_constraintStart_toEndOf="@id/imgMyProfileEvents"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imgMyProfileShare"
-                android:layout_width="@dimen/dp35"
-                android:layout_height="@dimen/dp35"
-                android:layout_marginTop="@dimen/dp5"
-                android:src="@drawable/share"
-                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
-                app:layout_constraintStart_toEndOf="@id/txtMyProfile"
-                app:layout_constraintTop_toTopOf="parent" />
+            <include
+                android:id="@+id/toolBar"
+                layout="@layout/inflate_second_tool_bar" />
 
             <ImageView
                 android:id="@+id/imgProfileBasketBallPlayer"
@@ -98,7 +67,7 @@
                 android:background="@color/white"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toBottomOf="@id/imgMyProfileShare">
+                app:layout_constraintTop_toBottomOf="@id/toolBar">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/mainConstraints"

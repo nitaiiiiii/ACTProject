@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ci.act.BR
@@ -32,6 +34,7 @@ import com.ci.act.ui.home.subscriptions.adapter.SubscriptionViewPagerAdapter
 import com.ci.act.ui.invoice.InvoicesActivity
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import org.jetbrains.anko.findOptional
 
 class LiveEventsActivity :
     BaseActivity<ActivityLiveEventsBinding, LiveEventsView, LiveEventsViewModel>(), LiveEventsView {
@@ -64,22 +67,13 @@ class LiveEventsActivity :
 
         mViewDataBinding?.navigation?.bringToFront()
 
-        mViewDataBinding?.imgEvents?.setOnClickListener {
-
-            mViewDataBinding?.mainDrawerLayout?.openDrawer(Gravity.RIGHT)
-
-        }
-
 
         navClick()
         setOnClickListener()
+        setUpToolBar()
     }
 
     private fun setOnClickListener() {
-        mViewDataBinding?.liveEvents?.setOnClickListener {
-            val intent = Intent(this, EventsLiveActivity::class.java)
-            startActivity(intent)
-        }
 
         mViewDataBinding?.btnLiveEvents?.setOnClickListener {
             val enjoyingSportsFragment = EnjoyingSportsFragment()
@@ -190,6 +184,27 @@ class LiveEventsActivity :
                 }
             }
             true
+        }
+    }
+
+    private fun setUpToolBar() {
+        mViewDataBinding?.toolBar?.txtToolbarHeading?.text = "EVENTS"
+        mViewDataBinding?.toolBar?.imgToolBarLeft?.setOnClickListener {
+            val intent = Intent(this,EventsLiveActivity::class.java)
+            startActivity(intent)
+        }
+        mViewDataBinding?.toolBar?.txtToolBarDummyIcon?.setOnClickListener {
+            val intent = Intent(this,EventsLiveActivity::class.java)
+            startActivity(intent)
+        }
+
+        mViewDataBinding?.toolBar?.imgToolBarRight?.setOnClickListener {
+            val drawerLayout = this.findOptional<DrawerLayout>(R.id.mainDrawerLayout)
+            if (drawerLayout?.isDrawerOpen(GravityCompat.END) == true) {
+                drawerLayout.closeDrawer(GravityCompat.END)
+            } else {
+                drawerLayout?.openDrawer(GravityCompat.END)
+            }
         }
     }
 

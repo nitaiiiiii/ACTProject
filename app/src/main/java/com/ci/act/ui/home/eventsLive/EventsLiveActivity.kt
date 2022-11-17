@@ -3,6 +3,9 @@ package com.ci.act.ui.home.eventsLive
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import androidx.core.content.ContextCompat
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ci.act.BR
@@ -35,6 +38,7 @@ class EventsLiveActivity :
     override fun initViews(savedInstanceState: Bundle?) {
         recyclerView()
         setOnClickListeners()
+        setUpToolBar()
 
     }
 
@@ -67,12 +71,26 @@ class EventsLiveActivity :
 
     private fun setOnClickListeners() {
 
-        mViewDataBinding?.imgLiveActiveEvents?.setOnClickListener {
-            val intent = Intent(this, LiveEventsActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
 
+    }
+
+    private fun setUpToolBar() {
+        mViewDataBinding?.toolBar?.let{
+            it.txtToolbarHeading.text = "LIVE EVENTS"
+            it.txtToolBarDummyIcon.visibility = View.INVISIBLE
+            it.imgToolBarLeft.setImageResource(R.drawable.ic_back_arrow)
+            it.imgToolBarLeft.setColorFilter(ContextCompat.getColor(this, R.color.light_black))
+            it.imgToolBarRight.visibility = View.INVISIBLE
+            it.imgToolBarShareRight.visibility = View.VISIBLE
+            it.imgToolBarShareRight.setImageResource(R.drawable.ic_icon_refresh)
+            it.imgToolBarShareRight.setColorFilter(ContextCompat.getColor(this, R.color.light_black))
+
+            it.imgToolBarLeft.setOnClickListener {
+                val intent = Intent(this, LiveEventsActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
     }
 
 

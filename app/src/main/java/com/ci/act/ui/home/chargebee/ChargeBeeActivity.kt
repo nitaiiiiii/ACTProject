@@ -3,6 +3,8 @@ package com.ci.act.ui.home.chargebee
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.navigation.Navigation
 import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseActivity
@@ -23,12 +25,21 @@ class ChargeBeeActivity :
 
     override fun initViews(savedInstanceState: Bundle?) {
         setOnClickListener()
+        setUpToolBar()
     }
 
     private fun setOnClickListener() {
-        mViewDataBinding?.imgPaymentInstructions?.setOnClickListener {
-            val intent = Intent(this, SubscriptionActivity::class.java)
-            startActivity(intent)
+    }
+
+    private fun setUpToolBar() {
+        mViewDataBinding?.toolBar?.let {
+            it.imgToolBarRight.visibility = View.INVISIBLE
+            it.txtToolbarHeading.text = "PAYMENT INSTRUCTIONS"
+            it.txtToolbarHeading.textSize = 18F
+            it.imgToolBarLeft.setOnClickListener {
+                val intent = Intent(this, SubscriptionActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 

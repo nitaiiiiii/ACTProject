@@ -3,6 +3,10 @@ package com.ci.act.ui.home.events
 import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
+import android.view.View
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.Navigation
 import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseActivity
@@ -10,6 +14,7 @@ import com.ci.act.databinding.ActivityEventsBinding
 import com.ci.act.ui.customDialogFragments.signOut.SignOutFragment
 import com.ci.act.ui.home.aboutUs.AboutUsActivity
 import com.ci.act.ui.home.contactUs.ContactUsActivity
+import com.ci.act.ui.home.eventsLive.EventsLiveActivity
 import com.ci.act.ui.home.faqEmpty.FaqEmptyActivity
 import com.ci.act.ui.home.liveEvents.LiveEventsActivity
 import com.ci.act.ui.home.myProfile.MyProfileActivity
@@ -19,6 +24,7 @@ import com.ci.act.ui.home.sendLog.SendLogActivity
 import com.ci.act.ui.home.settingsPage.SettingsPageActivity
 import com.ci.act.ui.home.subscriptions.SubscriptionActivity
 import com.ci.act.ui.invoice.InvoicesActivity
+import org.jetbrains.anko.findOptional
 
 class EventsActivity : BaseActivity<ActivityEventsBinding, EventsView, EventsViewModel>(),
     EventsView {
@@ -42,13 +48,9 @@ class EventsActivity : BaseActivity<ActivityEventsBinding, EventsView, EventsVie
 
         mViewDataBinding?.navigation?.bringToFront()
 
-        mViewDataBinding?.imgEvents?.setOnClickListener {
-
-            mViewDataBinding?.mainDrawerLayout?.openDrawer(Gravity.RIGHT)
-
-        }
         navClick()
         setOnClickListener()
+        setUpToolBar()
 
     }
 
@@ -120,6 +122,23 @@ class EventsActivity : BaseActivity<ActivityEventsBinding, EventsView, EventsVie
                 }
             }
             true
+        }
+    }
+
+    private fun setUpToolBar() {
+        mViewDataBinding?.toolBar?.txtToolbarHeading?.text = "EVENTS"
+        mViewDataBinding?.toolBar?.txtToolBarDummyIcon?.visibility = View.INVISIBLE
+        mViewDataBinding?.toolBar?.imgToolBarLeft?.visibility = View.INVISIBLE
+        mViewDataBinding?.toolBar?.txtToolbarHeading?.textAlignment = View.TEXT_ALIGNMENT_CENTER
+
+
+        mViewDataBinding?.toolBar?.imgToolBarRight?.setOnClickListener {
+            val drawerLayout = this.findOptional<DrawerLayout>(R.id.mainDrawerLayout)
+            if (drawerLayout?.isDrawerOpen(GravityCompat.END) == true) {
+                drawerLayout.closeDrawer(GravityCompat.END)
+            } else {
+                drawerLayout?.openDrawer(GravityCompat.END)
+            }
         }
     }
 

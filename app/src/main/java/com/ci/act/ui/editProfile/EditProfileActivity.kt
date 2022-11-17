@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ci.act.BR
@@ -20,6 +21,7 @@ import com.ci.act.ui.customDialogFragments.cantAccessAccount.CantAccessAccountFr
 import com.ci.act.ui.customDialogFragments.permanentDelete.PermanentDeleteFragment
 import com.ci.act.ui.home.leaderBoard.adapter.BottomSheetRecyclerAdapter
 import com.ci.act.ui.home.mainEventScreenRegister.fragments.personalDetails.model.BottomSheetModel
+import com.ci.act.ui.home.myProfile.MyProfileActivity
 import com.ci.act.widgets.CustomEditText
 import com.ci.act.widgets.CustomTextView
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -52,6 +54,7 @@ class EditProfileActivity :
     override fun initViews(savedInstanceState: Bundle?) {
 
         setOnClickListener()
+        setUpToolBar()
     }
 
     private fun setOnClickListener() {
@@ -205,6 +208,21 @@ class EditProfileActivity :
             it.setTitle("Date of Birth")
             it.setMessage("Date of Birth")
             it.datePicker.maxDate = System.currentTimeMillis()
+        }
+    }
+
+    private fun setUpToolBar() {
+        mViewDataBinding?.toolBar?.let {
+            it.txtToolbarHeading.text = "EDIT PROFILE"
+            it.txtToolBarDummyIcon.visibility = View.INVISIBLE
+            it.imgToolBarLeft.setImageResource(R.drawable.ic_close)
+            it.imgToolBarLeft.setColorFilter(ContextCompat.getColor(this, R.color.black))
+            it.imgToolBarRight.visibility = View.INVISIBLE
+
+            it.imgToolBarLeft.setOnClickListener {
+                val intent = Intent(this, MyProfileActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 

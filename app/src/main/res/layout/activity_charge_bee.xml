@@ -31,30 +31,10 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.97" />
 
-        <com.ci.act.widgets.CustomTextView
-            android:id="@+id/txtPaymentInstructions"
-            style="@style/extra_large_text_bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="1"
-            android:padding="@dimen/dp20"
-            android:text="PAYMENT INSTRUCTIONS"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/inflate_second_tool_bar" />
 
-        <ImageView
-            android:id="@+id/imgPaymentInstructions"
-            android:layout_width="@dimen/dp35"
-            android:layout_height="@dimen/dp35"
-            android:layout_marginTop="1dp"
-            android:src="@drawable/ic_baseline_arrow_back_24"
-            app:layout_constraintBottom_toBottomOf="@id/txtPaymentInstructions"
-            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-            app:layout_constraintTop_toTopOf="@id/txtPaymentInstructions" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="@dimen/dp0"
@@ -64,7 +44,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/guideLineRight"
             app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-            app:layout_constraintTop_toBottomOf="@id/txtPaymentInstructions">
+            app:layout_constraintTop_toBottomOf="@id/toolBar">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/platinumSubscription"

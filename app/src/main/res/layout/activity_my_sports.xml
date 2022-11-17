@@ -50,59 +50,9 @@
                 android:orientation="horizontal"
                 app:layout_constraintGuide_percent="0.97" />
 
-            <ImageView
-                android:id="@+id/imgMySportsEvents"
-                android:layout_width="@dimen/dp35"
-                android:layout_height="@dimen/dp35"
-                android:layout_marginTop="1dp"
-                android:elevation="@dimen/dp3"
-                android:src="@drawable/ic_baseline_close_24"
-                app:layout_constraintBottom_toBottomOf="@id/txtMySportsEvents"
-                app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-                app:layout_constraintTop_toTopOf="@id/txtMySportsEvents" />
-
-            <com.ci.act.widgets.CustomTextView
-                android:id="@+id/txtSportsScreen"
-                style="@style/large_text"
-                android:layout_width="@dimen/dp0"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp5"
-                android:layout_marginEnd="@dimen/dp2"
-                android:elevation="@dimen/dp3"
-                android:ellipsize="end"
-                android:gravity="end"
-                android:maxLines="1"
-                android:text="Select All"
-                android:visibility="gone"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@id/imgSelectSports"
-                app:layout_constraintEnd_toStartOf="@id/imgSelectSports"
-                app:layout_constraintTop_toTopOf="@id/guideLineTop" />
-
-            <com.ci.act.widgets.CustomTextView
-                android:id="@+id/txtMySportsEvents"
-                style="@style/extra_large_lato_regular"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_edit_text_settings_email_and_password"
-                android:ellipsize="end"
-                android:gravity="center"
-                android:maxLines="1"
-                android:padding="@dimen/dp20"
-                android:text="MY SPORTS"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imgSelectSports"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/radio_button_unchecked"
-                app:layout_constraintBottom_toBottomOf="@id/txtMySportsEvents"
-                app:layout_constraintEnd_toEndOf="@id/guideLineRight"
-                app:layout_constraintTop_toTopOf="@id/txtMySportsEvents" />
+            <include
+                android:id="@+id/toolBar"
+                layout="@layout/home_tool_bar" />
 
 
             <androidx.recyclerview.widget.RecyclerView
@@ -113,7 +63,7 @@
                 app:layout_constraintBottom_toTopOf="@id/btnMySportsEvents"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtMySportsEvents" />
+                app:layout_constraintTop_toBottomOf="@id/toolBar" />
 
             <com.ci.act.widgets.CustomButton
                 android:id="@+id/btnMySportsEvents"

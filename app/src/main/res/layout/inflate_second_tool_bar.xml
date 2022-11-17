@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp40"
+    android:background="@color/mainColor1">
+
+    <ImageView
+        android:id="@+id/imgToolBarLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:paddingStart="@dimen/dp10"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h, 1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.ci.act.widgets.CustomTextView
+        android:id="@+id/txtToolBarDummyIcon"
+        style="@style/medium_text_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp2"
+        android:layout_marginBottom="@dimen/dp10"
+        android:text="Live"
+        android:textColor="@color/mainColor"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/imgToolBarLeft"
+        app:layout_constraintLeft_toRightOf="@id/imgToolBarLeft" />
+
+    <com.ci.act.widgets.CustomTextView
+        android:id="@+id/txtToolbarHeading"
+        style="@style/large_text_bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp5"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="MY PROFILE"
+        android:textColor="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/txtToolBarDummyIcon"
+        app:layout_constraintRight_toLeftOf="@id/txtToolBarMiddleIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.ci.act.widgets.CustomTextView
+        android:id="@+id/txtToolBarMiddleIcon"
+        style="@style/large_text_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp10"
+        android:padding="@dimen/dp5"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/imgToolBarRight"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgToolBarRight"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp8"
+        android:adjustViewBounds="true"
+        android:padding="@dimen/dp5"
+        android:src="@drawable/forward_icon_bend_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="h, 1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/textColor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

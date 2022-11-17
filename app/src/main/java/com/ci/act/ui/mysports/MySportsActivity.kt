@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.core.content.ContextCompat
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ci.act.BR
@@ -42,6 +44,7 @@ class MySportsActivity : BaseActivity<ActivityMySportsBinding, MySportsView, MyS
     override fun initViews(savedInstanceState: Bundle?) {
         recyclerView()
         setOnClickListeners()
+        setUpToolBar()
     }
 
     private fun recyclerView() {
@@ -79,14 +82,7 @@ class MySportsActivity : BaseActivity<ActivityMySportsBinding, MySportsView, MyS
 
     private fun setOnClickListeners() {
 
-        mViewDataBinding?.imgSelectSports?.setOnClickListener {
-            updateSelectedClick()
-            adapter?.addArray(sports)
-        }
-        mViewDataBinding?.imgMySportsEvents?.setOnClickListener {
-            val intent = Intent(this,MyProfileActivity::class.java)
-            startActivity(intent)
-        }
+
 
     }
 
@@ -107,23 +103,27 @@ class MySportsActivity : BaseActivity<ActivityMySportsBinding, MySportsView, MyS
             for (i in sports.indices) {
                 sports[i].isSelected = false
             }
-            mViewDataBinding?.imgSelectSports?.setImageDrawable(
+            mViewDataBinding?.toolBar?.imgToolBarRight?.setImageDrawable(
                 ContextCompat.getDrawable(
                     this,
                     R.drawable.radio_button_unchecked
                 )
             )
+            mViewDataBinding?.toolBar?.imgToolBarRight?.visibility = View.INVISIBLE
+            mViewDataBinding?.toolBar?.txtToolBarSelectSport?.text = "Select All"
             isSelectAllItems = false
         } else {
             for (i in sports.indices) {
                 sports[i].isSelected = true
             }
-            mViewDataBinding?.imgSelectSports?.setImageDrawable(
+            mViewDataBinding?.toolBar?.imgToolBarRight?.setImageDrawable(
                 ContextCompat.getDrawable(
                     this,
                     R.drawable.check_circle
                 )
             )
+            mViewDataBinding?.toolBar?.txtToolBarSelectSport?.text = "Unselect All"
+            mViewDataBinding?.toolBar?.imgToolBarRight?.visibility = View.VISIBLE
             isSelectAllItems = true
         }
     }
@@ -139,20 +139,40 @@ class MySportsActivity : BaseActivity<ActivityMySportsBinding, MySportsView, MyS
         }
 
         if (isSelectAllItems) {
-            mViewDataBinding?.imgSelectSports?.setImageDrawable(
-                ContextCompat.getDrawable(
-                    this,
-                    R.drawable.check_circle
-                )
-            )
+            mViewDataBinding?.toolBar?.imgToolBarRight?.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_check_circle))
+            mViewDataBinding?.toolBar?.txtToolBarSelectSport?.text = "Unselect All"
+            mViewDataBinding?.toolBar?.imgToolBarRight?.visibility = View.VISIBLE
         } else {
-            mViewDataBinding?.imgSelectSports?.setImageDrawable(
-                ContextCompat.getDrawable(
-                    this,
-                    R.drawable.radio_button_unchecked
-                )
-            )
+            mViewDataBinding?.toolBar?.imgToolBarRight?.visibility = View.INVISIBLE
+            mViewDataBinding?.toolBar?.txtToolBarSelectSport?.text = "Select All"
+            mViewDataBinding?.toolBar?.imgToolBarRight?.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.radio_button_unchecked))
         }
     }
+
+    private fun setUpToolBar() {
+        mViewDataBinding?.toolBar?.let{
+            it.txtToolbarHeading.text = "MY SPORTS"
+            it.txtToolBarDummyIcon.visibility = View.INVISIBLE
+            it.imgToolBarLeft.setImageResource(R.drawable.ic_close)
+            it.imgToolBarLeft.setColorFilter(ContextCompat.getColor(this, R.color.black))
+            it.imgToolBarRight.visibility = View.INVISIBLE
+            it.txtToolBarMiddleIcon.text = "Se"
+
+            it.imgToolBarLeft.setOnClickListener {
+                onBackPressed()
+            }
+
+            it.txtToolBarSelectSport.visibility = View.VISIBLE
+            it.txtToolBarSelectSport.text = "Select All"
+            it.txtToolBarSelectSport.textSize = 14f
+            it.txtToolBarSelectSport.setTextColor(ContextCompat.getColor(this, R.color.mainColor))
+            it.imgToolBarRight.setColorFilter(ContextCompat.getColor(this, R.color.mainColor))
+            it.txtToolBarSelectSport.setOnClickListener {
+                updateSelectedClick()
+                adapter?.addArray(sports)
+            }
+        }
+    }
+
 
 }

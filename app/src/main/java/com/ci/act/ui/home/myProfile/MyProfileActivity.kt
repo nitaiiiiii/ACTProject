@@ -33,7 +33,7 @@ class MyProfileActivity :
     }
 
     private fun setOnClickListener() {
-        mViewDataBinding?.imgMyProfileEvents?.setOnClickListener {
+        mViewDataBinding?.toolBar?.imgToolBarLeft?.setOnClickListener {
             val intent = Intent(this, EventsActivity::class.java)
             startActivity(intent)
         }
