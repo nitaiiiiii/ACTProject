@@ -66,7 +66,7 @@ class PreferenceHelper private constructor() {
 
     fun finishOnBoarding() {
         val edit = userPrefs?.edit()
-        edit?.putBoolean(PreferencesKeys.isOnBoardingFinished, true)
+        edit?.putBoolean(PreferencesKeys.isOnBoardingFinished, false)
         edit?.apply()
     }
 

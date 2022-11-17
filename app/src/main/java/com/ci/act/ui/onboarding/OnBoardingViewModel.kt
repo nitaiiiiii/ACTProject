@@ -7,11 +7,11 @@ import com.ci.act.base.BaseViewModel
  * Created by Vignesh on 22-03-2020.
  */
 class OnBoardingViewModel : BaseViewModel<OnBoardingView>() {
-    fun skipClick() {
-        navigator?.skipClick("Skip Clicked")
-    }
+//    fun skipClick() {
+//        navigator?.skipClick("Skip Clicked")
+//    }
 
-    init {
-        Log.v("ViewModel", "OnBoardingViewModel is created")
-    }
+//    init {
+//        Log.v("ViewModel", "OnBoardingViewModel is created")
+//    }
 }

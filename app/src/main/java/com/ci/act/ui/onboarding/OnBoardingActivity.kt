@@ -80,9 +80,9 @@ class OnBoardingActivity :
 
         })
         mViewDataBinding?.pageIndicatorView?.setViewPager(mViewDataBinding?.viewPagerOnBoardingScreen)
-        mViewDataBinding?.txtSkip?.setOnClickListener {
-            mViewModel?.skipClick()
-        }
+//        mViewDataBinding?.txtSkip?.setOnClickListener {
+//            mViewModel?.skipClick()
+//        }
     }
 
     private fun showGetStarted(show: Boolean) {
@@ -98,9 +98,9 @@ class OnBoardingActivity :
         return introFragment
     }
 
-    override fun skipClick(message: String) {
-        PreferenceHelper.getInstance().finishOnBoarding()
-    }
+//    override fun skipClick(message: String) {
+//        PreferenceHelper.getInstance().finishOnBoarding()
+//    }
 
     private fun setOnClickListeners() {
         mViewDataBinding?.btnGetStarted?.setOnClickListener {
