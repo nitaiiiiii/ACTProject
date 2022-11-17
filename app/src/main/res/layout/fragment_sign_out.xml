@@ -15,6 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/dialog_bg"
         tools:context=".ui.customDialogFragments.signOut.SignOutFragment">
 
         <androidx.constraintlayout.widget.Guideline
@@ -50,7 +51,7 @@
             android:id="@+id/imgSignOut"
             android:layout_width="40dp"
             android:layout_height="4dp"
-            android:background="#E91E63"
+            android:background="@color/mainColor"
             android:foregroundGravity="center"
             app:layout_constraintEnd_toEndOf="@id/guideLineRight"
             app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -66,20 +67,29 @@
             android:gravity="center"
             android:maxLines="2"
             android:text="Are you sure you want to\nSign Out?"
-            android:textColor="@color/grey"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@id/guideLineRight"
             app:layout_constraintStart_toStartOf="@id/guideLineLeft"
             app:layout_constraintTop_toBottomOf="@id/imgSignOut" />
 
         <com.ci.act.widgets.CustomButton
             android:id="@+id/btnSignatureBox"
-            style="@style/extra_large_text_semi_bold"
-            android:layout_width="@dimen/dp120"
-            android:layout_height="@dimen/dp50"
-            android:layout_marginTop="@dimen/dp30"
-            android:background="@drawable/rounded_button"
-            android:text="Ok"
-            android:textColor="@color/white"
+            tyle="@style/extra_large_text_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp30"
+            android:layout_marginBottom="@dimen/dp20"
+            android:background="@drawable/btn_round_background"
+            android:backgroundTint="@color/mainBtnColor"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingStart="@dimen/dp30"
+            android:paddingEnd="@dimen/dp30"
+            android:text="OK"
+            android:textAllCaps="false"
+            android:textColor="@color/textColor"
             app:layout_constraintBottom_toTopOf="@id/txtSignatureBoxClose"
             app:layout_constraintEnd_toEndOf="@id/guideLineRight"
             app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -97,7 +107,7 @@
             android:maxLines="1"
             android:padding="@dimen/dp20"
             android:text="Cancel"
-            android:textColor="@color/ruby_red"
+            android:textColor="@color/mainColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btnSignatureBox" />

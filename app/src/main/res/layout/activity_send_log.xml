@@ -18,7 +18,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_bg"
             tools:context=".ui.home.sendLog.SendLogActivity">
 
             <androidx.constraintlayout.widget.Guideline
@@ -56,6 +57,7 @@
                 android:layout_width="@dimen/dp35"
                 android:layout_height="@dimen/dp35"
                 android:layout_marginTop="1dp"
+                app:tint="@color/black"
                 android:src="@drawable/ic_baseline_arrow_back_24"
                 app:layout_constraintBottom_toBottomOf="@id/txtSendLog"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -73,7 +75,7 @@
                     android:id="@+id/mainConstraintLayoutSendLog"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/whiteFour">
+                    android:background="@color/dialog_bg">
 
                     <androidx.constraintlayout.widget.Guideline
                         android:id="@+id/guideLineLeft2"
@@ -144,13 +146,18 @@
 
             <com.ci.act.widgets.CustomButton
                 android:id="@+id/btnSendLog"
-                style="@style/extra_large_text_semi_bold"
-                android:layout_width="@dimen/dp280"
-                android:layout_height="@dimen/dp70"
-                android:layout_marginTop="@dimen/dp10"
-                android:background="@drawable/rounded_button"
-                android:text="Send Log File"
-                android:textColor="@color/white"
+                style="@style/large_text_regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp40"
+                android:layout_marginEnd="@dimen/dp40"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="@drawable/btn_round_background"
+                android:backgroundTint="@color/mainBtnColor"
+                android:padding="@dimen/dp10"
+                android:text="Send Log Files"
+                android:textAllCaps="false"
+                android:textColor="@color/textColor"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"

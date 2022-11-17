@@ -19,6 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/dialog_bg"
             tools:context=".ui.home.settingsPage.fragments.radiusThirdFragment.RadiusThirdFragment">
 
             <androidx.constraintlayout.widget.Guideline
@@ -54,6 +55,7 @@
                 android:layout_marginTop="@dimen/dp10"
                 android:gravity="center"
                 android:padding="@dimen/dp10"
+                android:textColor="@color/black"
                 android:text="The ACT App will display events based\non your radius"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft"
@@ -87,6 +89,7 @@
                     android:layout_height="300dp"
                     android:layout_margin="@dimen/dp50"
                     android:background="@drawable/shape_circle"
+                    android:backgroundTint="@color/dialog_bg_myevents"
                     app:layout_constraintDimensionRatio="w, 1:1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -203,14 +206,19 @@
 
             <com.ci.act.widgets.CustomButton
                 android:id="@+id/btnSaveRadius"
-                style="@style/extra_large_text_semi_bold"
-                android:layout_width="@dimen/dp0"
-                android:layout_height="@dimen/dp70"
-                android:layout_marginTop="@dimen/dp40"
-                android:layout_marginBottom="@dimen/dp40"
-                android:background="@drawable/rounded_button"
+                style="@style/large_text_regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp40"
+                android:layout_marginBottom="@dimen/dp20"
+                android:background="@drawable/btn_round_background"
+                android:backgroundTint="@color/mainBtnColor"
+                android:padding="@dimen/dp10"
                 android:text="Save Radius"
-                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textColor="@color/textColor"
                 app:layout_constraintTop_toBottomOf="@id/constraintLayout"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"

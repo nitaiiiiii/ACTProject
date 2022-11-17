@@ -13,6 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/dialog_bg"
         tools:context=".ui.home.settingsPage.SettingsPageActivity">
 
         <androidx.constraintlayout.widget.Guideline
@@ -59,7 +60,7 @@
             android:id="@+id/constraintButtons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/ruby_red"
+            android:background="@drawable/splash"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txtSettingsEvents">
@@ -96,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp30"
                 android:text="Notifications"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/imgNotifications"
                 app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft1"
@@ -117,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Locations"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/imgLocations"
                 app:layout_constraintStart_toStartOf="@id/imgLocations"
                 app:layout_constraintTop_toBottomOf="@id/imgNotifications" />
