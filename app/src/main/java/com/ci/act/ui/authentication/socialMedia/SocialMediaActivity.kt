@@ -122,12 +122,12 @@ class SocialMediaActivity :
         mViewDataBinding?.txtSocialMediaEmailLoginScreen?.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
-            finish()
+            finishAffinity()
         }
         mViewDataBinding?.txtSocialMediaEmailSignUpScreen?.setOnClickListener {
             val action = Intent(this, SignUpActivity::class.java)
             startActivity(action)
-            finish()
+            finishAffinity()
         }
 
         mViewDataBinding?.imgGoogleSocialMedia?.setOnClickListener {

@@ -9,6 +9,7 @@ import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityChargeBeeBinding
+import com.ci.act.ui.home.events.EventsActivity
 import com.ci.act.ui.home.subscriptions.SubscriptionActivity
 
 class ChargeBeeActivity :
@@ -29,6 +30,10 @@ class ChargeBeeActivity :
     }
 
     private fun setOnClickListener() {
+        mViewDataBinding?.btnSignatureBox1?.setOnClickListener {
+            val intent = Intent(this,EventsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setUpToolBar() {

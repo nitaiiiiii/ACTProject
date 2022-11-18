@@ -136,18 +136,19 @@ class AccessLocationActivity :
         mViewDataBinding?.imgBackButton?.setOnClickListener {
             val intent = Intent(this, DifferentSportsActivity::class.java)
             startActivity(intent)
-            finish()
+            finishAffinity()
         }
         mViewDataBinding?.txtSkipAccess?.setOnClickListener {
             PreferenceHelper.getInstance().finishedChooseSports()
             val intent = Intent(this, OnBoardingActivity::class.java)
             startActivity(intent)
-            finish()
+            finishAffinity()
         }
         mViewDataBinding?.btnAccessLocation?.setOnClickListener {
             PreferenceHelper.getInstance().finishedChooseSports()
             val intent = Intent(this, PushNotificationActivity::class.java)
             startActivity(intent)
+            finishAffinity()
         }
 
         var switchState: Boolean = false

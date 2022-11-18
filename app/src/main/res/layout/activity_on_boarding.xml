@@ -86,17 +86,21 @@
             android:visibility="visible"
             app:constraint_referenced_ids="pageIndicatorView,txtSkip" />
 
-        <Button
+        <com.ci.act.widgets.CustomButton
             android:id="@+id/btnGetStarted"
+            style="@style/extra_large_text_regular"
             android:layout_width="0dp"
-            style="@style/extra_lato_semi_boldr1"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dp30"
-            android:background="@drawable/orange_freelance"
+            android:layout_height="@dimen/dp60"
+            android:layout_marginStart="@dimen/dp40"
+            android:layout_marginEnd="@dimen/dp40"
+            android:layout_marginBottom="@dimen/dp20"
+            android:background="@drawable/btn_round_background"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/dp10"
             android:text="Get Started"
-            android:visibility="gone"
             android:textAllCaps="false"
-            android:textColor="@color/ruby_red"
+            android:visibility="gone"
+            android:textColor="@color/mainTextColor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="@id/guideOnBoardingLeft"
             app:layout_constraintRight_toRightOf="@id/guideOnBoardingRight" />
