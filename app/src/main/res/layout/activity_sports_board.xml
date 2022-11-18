@@ -34,45 +34,14 @@
             android:id="@+id/viewSportsBoardLocation"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp220"
-            android:background="@color/ruby_red"
+            android:background="@color/mainColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imgSportsBoard"
-            android:layout_width="@dimen/dp35"
-            android:layout_height="@dimen/dp35"
-            android:layout_marginTop="@dimen/dp5"
-            android:src="@drawable/ic"
-            app:layout_constraintEnd_toStartOf="@id/txtSportsBoard"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.ci.act.widgets.CustomTextView
-            android:id="@+id/txtSportsBoard"
-            style="@style/extra_large_text_bold"
-            android:layout_width="@dimen/dp0"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp5"
-            android:gravity="center"
-            android:text="LEADERBOARD"
-            android:textColor="@color/textColor"
-            app:layout_constraintBottom_toBottomOf="@id/imgSportsBoardShare"
-            app:layout_constraintEnd_toStartOf="@id/imgSportsBoardShare"
-            app:layout_constraintStart_toEndOf="@id/imgSportsBoard"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imgSportsBoardShare"
-            android:layout_width="@dimen/dp35"
-            android:layout_height="@dimen/dp35"
-            android:layout_marginTop="@dimen/dp5"
-            android:src="@drawable/share"
-            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
-            app:layout_constraintStart_toEndOf="@id/txtSportsBoard"
-            app:layout_constraintTop_toTopOf="parent" />
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/inflate_second_tool_bar" />
 
         <ImageView
             android:id="@+id/imgSportsBoardLiveStream"
@@ -80,8 +49,8 @@
             android:layout_height="@dimen/dp100"
             android:layout_marginTop="@dimen/dp30"
             android:src="@drawable/football_event"
-            app:layout_constraintStart_toEndOf="@id/imgSportsBoard"
-            app:layout_constraintTop_toBottomOf="@id/txtSportsBoard" />
+            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
 
         <TextView
             android:id="@+id/txtSportsBoardFootBallCamp"

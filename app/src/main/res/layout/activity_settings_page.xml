@@ -30,31 +30,9 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.97" />
 
-        <com.ci.act.widgets.CustomTextView
-            android:id="@+id/txtSettingsEvents"
-            style="@style/extra_large_text_bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_edit_text_settings_email_and_password"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="1"
-            android:padding="@dimen/dp20"
-            android:text="SETTINGS"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imgSettingsEvents"
-            android:layout_width="@dimen/dp35"
-            android:layout_height="@dimen/dp35"
-            android:layout_marginTop="1dp"
-            android:src="@drawable/ic_baseline_arrow_back_24"
-            app:layout_constraintBottom_toBottomOf="@id/txtSettingsEvents"
-            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-            app:layout_constraintTop_toTopOf="@id/txtSettingsEvents" />
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/home_tool_bar" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintButtons"
@@ -63,7 +41,7 @@
             android:background="@drawable/splash"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtSettingsEvents">
+            app:layout_constraintTop_toBottomOf="@id/toolBar">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideLineLeft1"
@@ -97,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp30"
                 android:text="Notifications"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@id/imgNotifications"
                 app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft1"
@@ -118,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Locations"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@id/imgLocations"
                 app:layout_constraintStart_toStartOf="@id/imgLocations"
                 app:layout_constraintTop_toBottomOf="@id/imgNotifications" />

@@ -3,12 +3,16 @@ package com.ci.act.ui.home.upcomingEvents
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import androidx.core.content.ContextCompat
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ci.act.R
 import com.ci.act.BR
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivityUpcomingEventsBinding
+import com.ci.act.ui.home.events.EventsActivity
 import com.ci.act.ui.home.liveEvents.LiveEventsActivity
 import com.ci.act.ui.home.liveEvents.model.LiveEventModel
 import com.ci.act.ui.home.upcomingEvents.adapter.UpcomingEventAdapter
@@ -35,6 +39,7 @@ class UpcomingEventsActivity :
 
         recyclerView()
         setOnClickListeners()
+        setUpToolBar()
     }
 
     private fun recyclerView() {
@@ -66,12 +71,21 @@ class UpcomingEventsActivity :
 
     private fun setOnClickListeners() {
 
-        mViewDataBinding?.imgUpcomingLiveEvents?.setOnClickListener {
-            val intent = Intent(this, LiveEventsActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
+    }
 
+    private fun setUpToolBar() {
+        mViewDataBinding?.toolBar?.let{
+            it.txtToolbarHeading.text = "UPCOMING EVENTS"
+            it.txtToolBarDummyIcon.visibility = View.INVISIBLE
+            it.imgToolBarLeft.setImageResource(R.drawable.ic_back_arrow)
+            it.imgToolBarLeft.setColorFilter(ContextCompat.getColor(this, R.color.light_black))
+            it.imgToolBarRight.visibility = View.INVISIBLE
+
+            it.imgToolBarLeft.setOnClickListener {
+                val intent = Intent(this, EventsActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 
 

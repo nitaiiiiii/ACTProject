@@ -3,6 +3,7 @@ package com.ci.act.ui.home.subscriptions
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
 import com.ci.act.BR
 import com.ci.act.R
@@ -35,14 +36,12 @@ class SubscriptionActivity :
         fragmentView()
         adapterClick()
         setOnClickListener()
+        setUpToolBar()
 
     }
 
     private fun setOnClickListener() {
-        mViewDataBinding?.imgPersonalInfo?.setOnClickListener {
-            val intent = Intent(this, EventsActivity::class.java)
-            startActivity(intent)
-        }
+
     }
 
     private fun fragmentView() {
@@ -80,6 +79,18 @@ class SubscriptionActivity :
             }
 
         })
+    }
+
+    private fun setUpToolBar() {
+        mViewDataBinding?.toolBar?.let {
+            it.imgToolBarRight.visibility = View.INVISIBLE
+            it.txtToolbarHeading.text = "SUBSCRIPTION PLANS"
+            it.txtToolbarHeading.textSize = 18F
+            it.imgToolBarLeft.setOnClickListener {
+                val intent = Intent(this, EventsActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 
 

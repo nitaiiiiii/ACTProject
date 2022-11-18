@@ -1,13 +1,17 @@
 package com.ci.act.ui.home.sportsBoard
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ci.act.BR
 import com.ci.act.R
 import com.ci.act.base.BaseActivity
 import com.ci.act.databinding.ActivitySportsBoardBinding
+import com.ci.act.ui.home.events.EventsActivity
+import com.ci.act.ui.home.myProfile.MyProfileActivity
 import com.ci.act.ui.home.sportsBoard.adapter.SportsBoardAdapter
 import com.ci.act.ui.home.sportsBoard.model.SportsBoardModel
 import com.google.gson.Gson
@@ -32,6 +36,7 @@ class SportsBoardActivity :
 
     override fun initViews(savedInstanceState: Bundle?) {
         recyclerView()
+        setUpToolBar()
     }
 
     private fun recyclerView() {
@@ -61,4 +66,16 @@ class SportsBoardActivity :
         }
         return jsonString
     }
+
+    private fun setUpToolBar() {
+        mViewDataBinding?.toolBar?.let {
+            it.txtToolbarHeading.text = "LEADERBOARD"
+            it.imgToolBarLeft.setOnClickListener {
+                val intent = Intent(this,EventsActivity::class.java)
+                startActivity(intent)
+            }
+            it.imgToolBarRight.setImageResource(R.drawable.ic_icon_refresh)
+        }
+    }
+
 }

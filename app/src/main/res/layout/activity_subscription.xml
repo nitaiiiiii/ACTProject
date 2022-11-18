@@ -14,7 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/ruby_red"
+        android:background="@color/mainColor"
         tools:context=".ui.home.subscriptions.SubscriptionActivity">
 
         <androidx.constraintlayout.widget.Guideline
@@ -31,30 +31,9 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.97" />
 
-        <com.ci.act.widgets.CustomTextView
-            android:id="@+id/txtPersonalInfo"
-            style="@style/extra_large_text_bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="1"
-            android:padding="@dimen/dp20"
-            android:text="SUBSCRIPTIONS PLANS"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imgPersonalInfo"
-            android:layout_width="@dimen/dp35"
-            android:layout_height="@dimen/dp35"
-            android:layout_marginTop="1dp"
-            android:src="@drawable/ic_baseline_arrow_back_24"
-            app:layout_constraintBottom_toBottomOf="@id/txtPersonalInfo"
-            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-            app:layout_constraintTop_toTopOf="@id/txtPersonalInfo" />
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/inflate_second_tool_bar" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager"
@@ -77,7 +56,7 @@
             app:layout_constraintBottom_toTopOf="@id/view_pager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtPersonalInfo"
+            app:layout_constraintTop_toBottomOf="@id/toolBar"
             app:piv_animationType="scale"
             app:piv_count="2"
             app:piv_dynamicCount="true"

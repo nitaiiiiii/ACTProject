@@ -14,58 +14,21 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.home.upcomingEvents.UpcomingEventsActivity">
+        tools:context=".ui.home.pages.events.upcomingEvents.UpcomingEventsActivity">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideLineLeft"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.03" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideLineRight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.97" />
-
-        <com.ci.act.widgets.CustomTextView
-            android:id="@+id/txtUpcomingLiveEvents"
-            style="@style/extra_large_text_bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_edit_text_settings_email_and_password"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="1"
-            android:padding="@dimen/dp20"
-            android:text="UPCOMING EVENTS"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imgUpcomingLiveEvents"
-            android:layout_width="@dimen/dp35"
-            android:layout_height="@dimen/dp35"
-            android:layout_marginTop="1dp"
-            android:src="@drawable/back"
-            app:layout_constraintBottom_toBottomOf="@id/txtUpcomingLiveEvents"
-            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-            app:layout_constraintTop_toTopOf="@id/txtUpcomingLiveEvents" />
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/home_tool_bar" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvUpcomingLiveEvents"
-            android:layout_width="@dimen/dp0"
-            android:layout_height="@dimen/dp0"
-            android:nestedScrollingEnabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:overScrollMode="never"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/guideLineRight"
-            app:layout_constraintStart_toStartOf="@id/guideLineLeft"
-            app:layout_constraintTop_toBottomOf="@id/txtUpcomingLiveEvents" />
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
