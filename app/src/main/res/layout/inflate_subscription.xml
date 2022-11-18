@@ -28,6 +28,7 @@
                     android:id="@+id/premiumSubscription"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:visibility="gone"
                     >
 
                     <androidx.cardview.widget.CardView
@@ -296,7 +297,7 @@
                     android:id="@+id/platinumSubscription"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:visibility="gone"
+
                     >
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -322,8 +323,8 @@
 
                                 <ImageView
                                     android:id="@+id/imgSpecialOffer"
-                                    android:layout_width="@dimen/dp100"
-                                    android:layout_height="@dimen/dp100"
+                                    android:layout_width="@dimen/dp90"
+                                    android:layout_height="@dimen/dp90"
                                     android:layout_marginBottom="@dimen/dp20"
                                     android:src="@drawable/special_offer"
                                     app:layout_constraintBottom_toBottomOf="parent"
