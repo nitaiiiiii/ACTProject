@@ -67,7 +67,8 @@
                 app:layout_constraintEnd_toStartOf="@id/imgLocations"
                 app:layout_constraintHorizontal_chainStyle="spread_inside"
                 app:layout_constraintStart_toStartOf="@id/guideLineLeft1"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white"/>
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtNotifications"
@@ -87,6 +88,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dp10"
                 android:src="@drawable/ic_icon_location"
+                app:tint="@color/light_grey"
                 app:layout_constraintEnd_toStartOf="@id/imgRadius"
                 app:layout_constraintStart_toEndOf="@id/imgNotifications"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -96,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Locations"
-                android:textColor="@color/white"
+                android:textColor="@color/light_grey"
                 app:layout_constraintEnd_toEndOf="@id/imgLocations"
                 app:layout_constraintStart_toStartOf="@id/imgLocations"
                 app:layout_constraintTop_toBottomOf="@id/imgNotifications" />
@@ -107,6 +109,7 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dp10"
                 android:src="@drawable/ic_icon_radius"
+                app:tint="@color/light_grey"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight1"
                 app:layout_constraintStart_toEndOf="@id/imgLocations"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -116,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Radius"
-                android:textColor="@color/white"
+                android:textColor="@color/light_grey"
                 app:layout_constraintEnd_toEndOf="@id/imgRadius"
                 app:layout_constraintStart_toStartOf="@id/imgRadius"
                 app:layout_constraintTop_toBottomOf="@id/imgNotifications" />
