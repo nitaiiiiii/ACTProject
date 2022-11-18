@@ -50,23 +50,25 @@ class PreferenceHelper private constructor() {
     }
 
 
-    fun isOnBoardingFinished(): Boolean? {
-        return userPrefs?.getBoolean(PreferencesKeys.isOnBoardingFinished, false)
+    fun isOnBoardingFinished(): Boolean {
+        return sharedPreferences.getBoolean(PreferencesKeys.isOnBoardingFinished, false)
     }
 
-    fun isChooseSportsFinished() : Boolean? {
-        return userPrefs?.getBoolean(PreferencesKeys.isChooseSportsFinished,  false)
+
+
+    fun isChooseSportsFinished() : Boolean {
+        return sharedPreferences.getBoolean(PreferencesKeys.isChooseSportsFinished,  false)
     }
 
     fun finishedChooseSports() {
-        val edit = userPrefs?.edit()
+        val edit = sharedPreferences.edit()
         edit?.putBoolean(PreferencesKeys.isChooseSportsFinished, true)
         edit?.apply()
     }
 
     fun finishOnBoarding() {
-        val edit = userPrefs?.edit()
-        edit?.putBoolean(PreferencesKeys.isOnBoardingFinished, false)
+        val edit = sharedPreferences.edit()
+        edit?.putBoolean(PreferencesKeys.isOnBoardingFinished, true)
         edit?.apply()
     }
 

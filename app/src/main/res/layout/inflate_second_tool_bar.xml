@@ -8,7 +8,7 @@
     <ImageView
         android:id="@+id/imgToolBarLeft"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/dp60"
         android:adjustViewBounds="true"
         android:paddingStart="@dimen/dp10"
         android:paddingTop="@dimen/dp10"
@@ -34,7 +34,7 @@
 
     <com.ci.act.widgets.CustomTextView
         android:id="@+id/txtToolbarHeading"
-        style="@style/large_text_bold"
+        style="@style/extra_large_text_bold"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp5"
@@ -65,7 +65,7 @@
     <ImageView
         android:id="@+id/imgToolBarRight"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/dp40"
         android:layout_marginTop="@dimen/dp8"
         android:layout_marginEnd="@dimen/dp10"
         android:layout_marginBottom="@dimen/dp8"

@@ -48,7 +48,7 @@ class SplashScreenActivity :
     private fun changeScreenTo(mActivity: Class<*>, runningTime: Long) {
         Handler(Looper.myLooper()!!).postDelayed({
             if (PreferenceHelper.getInstance().getUserDetails() == "") {
-                if (PreferenceHelper.getInstance().isOnBoardingFinished() == false) {
+                if (PreferenceHelper.getInstance().isOnBoardingFinished()) {
                     val intent = Intent(this, SocialMediaActivity::class.java)
                     startActivity(intent)
                     finishAffinity()

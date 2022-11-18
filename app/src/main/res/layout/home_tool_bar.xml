@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/imgToolBarLeft"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/dp50"
         android:paddingStart="@dimen/dp10"
         android:paddingTop="@dimen/dp10"
         android:paddingBottom="@dimen/dp10"
@@ -22,7 +22,7 @@
 
     <com.ci.act.widgets.CustomTextView
         android:id="@+id/txtToolBarDummyIcon"
-        style="@style/medium_text_bold"
+        style="@style/large_text_bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp2"
@@ -34,7 +34,7 @@
 
     <com.ci.act.widgets.CustomTextView
         android:id="@+id/txtToolbarHeading"
-        style="@style/large_text_bold"
+        style="@style/extra_large_text_bold"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp5"
@@ -91,7 +91,7 @@
     <ImageView
         android:id="@+id/imgToolBarRight"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/dp35"
         android:layout_marginTop="@dimen/dp10"
         android:layout_marginEnd="@dimen/dp10"
         android:layout_marginBottom="@dimen/dp10"

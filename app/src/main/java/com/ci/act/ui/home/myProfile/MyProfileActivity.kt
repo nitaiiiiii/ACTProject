@@ -65,7 +65,7 @@ class MyProfileActivity :
                     com.google.android.material.R.style.Theme_MaterialComponents_Light
                 )
             )
-            chip.setTextColor(ContextCompat.getColor(this, R.color.white))
+            chip.setTextColor(ContextCompat.getColor(this, R.color.black))
             chip.text = chipList[i]
             if (i % 2 == 0) {
                 chip.chipBackgroundColor =
