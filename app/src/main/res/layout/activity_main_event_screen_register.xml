@@ -19,6 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/dialog_bg"
             tools:context=".ui.home.mainEventScreenRegister.MainEventScreenRegisterActivity">
 
             <androidx.constraintlayout.widget.Guideline
@@ -54,7 +55,8 @@
                 app:layout_constraintTop_toTopOf="@+id/txtSignatureBox"
                 app:layout_constraintEnd_toEndOf="@+id/txtSignatureBox"
                 app:layout_constraintBottom_toBottomOf="@+id/txtSignatureBox"
-                android:layout_marginEnd="10dp"/>
+                android:layout_marginEnd="10dp"
+                app:tint="@color/black"/>
 
             <com.ci.act.widgets.CustomTextView
                 android:id="@+id/txtSignatureBox"
@@ -101,6 +103,7 @@
                 android:layout_marginTop="@dimen/dp20"
                 android:background="@drawable/builiding_details"
                 android:padding="@dimen/dp15"
+                android:backgroundTint="@color/white"
                 android:src="@drawable/ic_baseline_business_24"
                 app:layout_constraintEnd_toStartOf="@id/imgHomeDetails"
                 app:layout_constraintStart_toEndOf="@id/imgPersonDetails"
@@ -114,6 +117,7 @@
                 android:background="@drawable/house_details"
                 android:padding="@dimen/dp15"
                 android:src="@drawable/ic_baseline_home_24"
+                android:backgroundTint="@color/white"
                 app:layout_constraintEnd_toStartOf="@id/imgGuardianApproval"
                 app:layout_constraintStart_toEndOf="@id/imgBuildingDetails"
                 app:layout_constraintTop_toBottomOf="@id/imgSignatureRedLine" />
@@ -126,6 +130,7 @@
                 android:background="@drawable/house_details"
                 android:padding="@dimen/dp15"
                 android:src="@drawable/ic_baseline_group_24"
+                android:backgroundTint="@color/white"
                 app:layout_constraintEnd_toEndOf="@id/guideLineRight"
                 app:layout_constraintStart_toEndOf="@id/imgHomeDetails"
                 app:layout_constraintTop_toBottomOf="@id/imgSignatureRedLine" />

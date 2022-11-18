@@ -14,7 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/light_grey"
+        android:background="@color/color_dash_board_bg"
         tools:context=".ui.home.myRegisteredEvents.MyRegisteredActivity">
 
         <androidx.constraintlayout.widget.Guideline
@@ -51,7 +51,7 @@
             android:id="@+id/firstView"
             android:layout_width="@dimen/dp0"
             android:layout_height="@dimen/dp100"
-            android:background="@color/ruby_red"
+            android:background="@drawable/splash"
             app:layout_constraintBottom_toTopOf="@id/rvMyRegistered"
             app:layout_constraintEnd_toStartOf="@id/secondView"
             app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +87,7 @@
             android:id="@+id/secondView"
             android:layout_width="@dimen/dp0"
             android:layout_height="@dimen/dp100"
-            android:background="@color/red"
+            android:background="@drawable/splash"
             app:layout_constraintBottom_toTopOf="@id/rvMyRegistered"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/firstView"
