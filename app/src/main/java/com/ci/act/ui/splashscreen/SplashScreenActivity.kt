@@ -1,5 +1,6 @@
 package com.ci.act.ui.splashscreen
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -46,24 +47,26 @@ class SplashScreenActivity :
     }
 
     private fun changeScreenTo(mActivity: Class<*>, runningTime: Long) {
-        Handler(Looper.myLooper()!!).postDelayed({
-            if (PreferenceHelper.getInstance().getUserDetails() == "") {
-                if (PreferenceHelper.getInstance().isOnBoardingFinished()) {
-                    val intent = Intent(this, SocialMediaActivity::class.java)
-                    startActivity(intent)
-                    finishAffinity()
-                } else {
-                    val intent = Intent(this, DifferentSportsActivity::class.java)
-                    startActivity(intent)
-                    finishAffinity()
-                }
-            } else {
-                val intent = Intent(this, MyZeroRegisteredActivity::class.java)
-                startActivity(intent)
-                finishAffinity()
-            }
+        Handler().postDelayed({
+            if (onBoardingFinished()) {
+                val loggedIn = Intent(this, SocialMediaActivity::class.java)
+                startActivity(loggedIn)
 
-        }, runningTime)
+            } else {
+                val intent = Intent(this, DifferentSportsActivity::class.java)
+                startActivity(intent)
+            }
+            finish()
+
+        }, 3000)
+    }
+
+
+
+    private fun onBoardingFinished(): Boolean {
+        val sharedpref = getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+        return sharedpref.getBoolean("finished", false)
+
     }
 
 }
